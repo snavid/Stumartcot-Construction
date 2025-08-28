@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Stumarcot Construction Materials</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-hammer"></i> STUMARCOT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+                    <li class="breadcrumb-item active" id="productBreadcrumb">Product Details</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <!-- Product Images -->
+                <div class="col-lg-6">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <div class="image-placeholder" id="mainProductImage">
+                                <i class="fas fa-th-large"></i>
+                            </div>
+                        </div>
+                        <div class="thumbnail-images">
+                            <div class="thumbnail active">
+                                <i class="fas fa-th-large"></i>
+                            </div>
+                            <div class="thumbnail">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="thumbnail">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <div class="thumbnail">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <div class="product-detail-info">
+                        <h1 id="productTitle">Ceramic Wall Tiles</h1>
+                        <div class="product-rating mb-3">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-text">(24 reviews)</span>
+                        </div>
+
+                        <div class="product-price mb-4">
+                            <span class="current-price" id="productPrice">$45.00</span>
+                            <span class="original-price" id="originalPrice">$55.00</span>
+                            <span class="discount-badge">18% OFF</span>
+                        </div>
+
+                        <div class="product-description mb-4">
+                            <p id="productDescription">Premium ceramic wall tiles perfect for bathrooms and kitchens. These high-quality tiles offer excellent durability, water resistance, and easy maintenance. Available in multiple colors and patterns to match any interior design.</p>
+                        </div>
+
+                        <!-- Product Features -->
+                        <div class="product-features mb-4">
+                            <h5>Key Features:</h5>
+                            <ul id="productFeatures">
+                                <li><i class="fas fa-check text-success me-2"></i>Water resistant and easy to clean</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Durable ceramic construction</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Multiple color options available</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Professional installation support</li>
+                                <li><i class="fas fa-check text-success me-2"></i>5-year manufacturer warranty</li>
+                            </ul>
+                        </div>
+
+                        <!-- Product Options -->
+                        <div class="product-options mb-4">
+                            <div class="option-group mb-3">
+                                <label class="form-label">Size:</label>
+                                <select class="form-select" id="sizeOption">
+                                    <option value="12x12">12" x 12"</option>
+                                    <option value="18x18">18" x 18"</option>
+                                    <option value="24x24">24" x 24"</option>
+                                </select>
+                            </div>
+                            <div class="option-group mb-3">
+                                <label class="form-label">Color:</label>
+                                <div class="color-options">
+                                    <div class="color-option active" data-color="white" style="background: #ffffff;"></div>
+                                    <div class="color-option" data-color="beige" style="background: #f5f5dc;"></div>
+                                    <div class="color-option" data-color="gray" style="background: #808080;"></div>
+                                    <div class="color-option" data-color="blue" style="background: #4169e1;"></div>
+                                </div>
+                            </div>
+                            <div class="option-group mb-3">
+                                <label class="form-label">Quantity:</label>
+                                <div class="quantity-selector">
+                                    <button type="button" class="btn-quantity" onclick="changeQuantity(-1)">-</button>
+                                    <input type="number" id="quantity" value="1" min="1" max="100">
+                                    <button type="button" class="btn-quantity" onclick="changeQuantity(1)">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="product-actions">
+                            <button class="btn-add-cart-large" onclick="addToCartFromDetail()">
+                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                            </button>
+                            <button class="btn-buy-now">
+                                <i class="fas fa-bolt me-2"></i>Buy Now
+                            </button>
+                            <button class="btn-wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <!-- Additional Info -->
+                        <div class="additional-info mt-4">
+                            <div class="info-item">
+                                <i class="fas fa-truck text-success me-2"></i>
+                                <span>Free delivery on orders over $100</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-undo text-primary me-2"></i>
+                                <span>30-day return policy</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-shield-alt text-warning me-2"></i>
+                                <span>5-year warranty included</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">
+                        Description
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" type="button" role="tab">
+                        Specifications
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">
+                        Reviews (24)
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="installation-tab" data-bs-toggle="tab" data-bs-target="#installation" type="button" role="tab">
+                        Installation Guide
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content" id="productTabsContent">
+                <div class="tab-pane fade show active" id="description" role="tabpanel">
+                    <div class="tab-content-inner">
+                        <h4>Product Description</h4>
+                        <p>Our premium ceramic wall tiles are crafted with precision and designed to enhance any space. Made from high-quality ceramic materials, these tiles offer exceptional durability and aesthetic appeal.</p>
+                        <p>Perfect for both residential and commercial applications, these tiles are ideal for bathrooms, kitchens, and other areas where moisture resistance is important. The smooth surface makes cleaning effortless, while the variety of available colors ensures you'll find the perfect match for your design vision.</p>
+                        <h5>Benefits:</h5>
+                        <ul>
+                            <li>Superior water resistance</li>
+                            <li>Easy maintenance and cleaning</li>
+                            <li>Long-lasting durability</li>
+                            <li>Professional appearance</li>
+                            <li>Eco-friendly materials</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="specifications" role="tabpanel">
+                    <div class="tab-content-inner">
+                        <h4>Technical Specifications</h4>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Material</strong></td>
+                                    <td>Premium Ceramic</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Thickness</strong></td>
+                                    <td>8mm</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Water Absorption</strong></td>
+                                    <td>Less than 0.5%</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Surface Finish</strong></td>
+                                    <td>Glossy</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Frost Resistance</strong></td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Slip Resistance</strong></td>
+                                    <td>R9</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Coverage per Box</strong></td>
+                                    <td>10 sq ft</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Weight per Box</strong></td>
+                                    <td>35 lbs</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                    <div class="tab-content-inner">
+                        <div class="reviews-summary">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="rating-overview">
+                                        <div class="average-rating">4.8</div>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="total-reviews">Based on 24 reviews</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="rating-breakdown">
+                                        <div class="rating-bar">
+                                            <span>5 stars</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 75%"></div>
+                                            </div>
+                                            <span>18</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>4 stars</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 20%"></div>
+                                            </div>
+                                            <span>5</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>3 stars</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 4%"></div>
+                                            </div>
+                                            <span>1</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>2 stars</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                            <span>0</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>1 star</span>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="reviewer-details">
+                                        <h6>John M.</h6>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <small class="review-date">2 weeks ago</small>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Excellent quality tiles! Easy to install and they look fantastic in our bathroom. The color is exactly as shown and the finish is perfect.</p>
+                                </div>
+                            </div>
+
+                            <div class="review-item">
+                                <div class="reviewer-info">
+                                    <div class="reviewer-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="reviewer-details">
+                                        <h6>Sarah K.</h6>
+                                        <div class="review-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <small class="review-date">1 month ago</small>
+                                    </div>
+                                </div>
+                                <div class="review-content">
+                                    <p>Good quality tiles, delivered on time. Installation was straightforward. Only minor issue was one tile had a small chip, but customer service was quick to replace it.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="installation" role="tabpanel">
+                    <div class="tab-content-inner">
+                        <h4>Installation Guide</h4>
+                        <div class="installation-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h5>Surface Preparation</h5>
+                                    <p>Ensure the wall surface is clean, dry, and level. Remove any old tiles, wallpaper, or loose paint. Fill any holes or cracks with appropriate filler.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h5>Planning and Layout</h5>
+                                    <p>Measure the wall and plan your tile layout. Start from the center and work outward. Use chalk lines to mark your starting point.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h5>Apply Adhesive</h5>
+                                    <p>Apply tile adhesive to the wall using a notched trowel. Work in small sections to prevent the adhesive from drying out.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h5>Install Tiles</h5>
+                                    <p>Press each tile firmly into the adhesive, using spacers to maintain consistent gaps. Check alignment regularly with a spirit level.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h5>Grouting</h5>
+                                    <p>After 24 hours, remove spacers and apply grout diagonally across the tiles. Clean excess grout immediately with a damp sponge.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="installation-tips">
+                            <h5>Professional Tips:</h5>
+                            <ul>
+                                <li>Always use appropriate safety equipment</li>
+                                <li>Allow proper drying time between steps</li>
+                                <li>Keep tiles at room temperature before installation</li>
+                                <li>Consider hiring a professional for complex layouts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h3 class="section-title">Related Products</h3>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card-shop">
+                        <div class="product-image-shop">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="product-info">
+                            <h5>Porcelain Floor Tiles</h5>
+                            <div class="product-price">
+                                <span class="current-price">$65.00</span>
+                            </div>
+                            <button class="btn-add-cart" onclick="addToCart('porcelain-floor-tiles', 'Porcelain Floor Tiles', 65.00)">
+                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card-shop">
+                        <div class="product-image-shop">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <div class="product-info">
+                            <h5>Mosaic Tiles</h5>
+                            <div class="product-price">
+                                <span class="current-price">$55.00</span>
+                            </div>
+                            <button class="btn-add-cart" onclick="addToCart('mosaic-tiles', 'Mosaic Tiles', 55.00)">
+                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card-shop">
+                        <div class="product-image-shop">
+                            <i class="fas fa-square"></i>
+                        </div>
+                        <div class="product-info">
+                            <h5>Natural Stone Tiles</h5>
+                            <div class="product-price">
+                                <span class="current-price">$85.00</span>
+                            </div>
+                            <button class="btn-add-cart" onclick="addToCart('natural-stone-tiles', 'Natural Stone Tiles', 85.00)">
+                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product-card-shop">
+                        <div class="product-image-shop">
+                            <i class="fas fa-grip-horizontal"></i>
+                        </div>
+                        <div class="product-info">
+                            <h5>Subway Tiles</h5>
+                            <div class="product-price">
+                                <span class="current-price">$40.00</span>
+                            </div>
+                            <button class="btn-add-cart" onclick="addToCart('subway-tiles', 'Subway Tiles', 40.00)">
+                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5><i class="fas fa-hammer me-2"></i>STUMARCOT</h5>
+                    <p>Leading construction products supplier in Tanzania, committed to quality and excellence in every project.</p>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h5>Products</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="products.html">Wall Tiles</a></li>
+                        <li><a href="products.html">Pelvin Blocks</a></li>
+                        <li><a href="products.html">Floor Tiles</a></li>
+                        <li><a href="products.html">Roofing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2">
+                    <h5>Pages</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-phone me-2"></i>+255 123 456 789</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@stumarcot.co.tz</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Tanzania, East Africa</p>
+                    <div class="mt-3">
+                        <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4" style="border-color: #333;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Stumarcot. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Built with excellence in Tanzania 🇹🇿</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
