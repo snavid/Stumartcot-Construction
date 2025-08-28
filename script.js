@@ -81,109 +81,104 @@ function animateStats() {
     });
 }
 
-// Interactive product showcase
+// Interactive company highlights
 document.addEventListener('DOMContentLoaded', function() {
-    const showcaseItems = document.querySelectorAll('.showcase-item');
+    const highlightItems = document.querySelectorAll('.highlight-item');
     
-    showcaseItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const product = this.dataset.product;
-            
-            // Add ripple effect
-            createShowcaseRipple(this);
-            
-            // Scroll to products section with highlight
-            setTimeout(() => {
-                const productsSection = document.getElementById('products');
-                if (productsSection) {
-                    productsSection.scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Highlight relevant product
-                    highlightProduct(product);
-                }
-            }, 300);
-        });
-        
-        // Add hover sound effect (optional)
+    highlightItems.forEach(item => {
+        // Add enhanced hover effects
         item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.05)';
+            this.style.transform = 'translateY(-15px) scale(1.08)';
         });
         
         item.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0px) scale(1)';
         });
+        
+        // Add click interaction for mobile
+        item.addEventListener('click', function() {
+            // Add pulse effect
+            this.style.animation = 'none';
+            setTimeout(() => {
+                this.style.animation = 'highlightFloat 5s ease-in-out infinite';
+            }, 100);
+        });
+    });
+    
+    // Mobile key info interactions
+    const keyInfoItems = document.querySelectorAll('.key-info-item');
+    keyInfoItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const text = this.querySelector('span').textContent;
+            
+            // Handle phone number clicks
+            if (text.includes('+255')) {
+                window.location.href = 'tel:+255123456789';
+            }
+            // Handle location clicks
+            else if (text.includes('Locations')) {
+                const locationsSection = document.getElementById('locations');
+                if (locationsSection) {
+                    locationsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            // Handle delivery info
+            else if (text.includes('Delivery')) {
+                // Could scroll to delivery info or show modal
+                showDeliveryInfo();
+            }
+        });
     });
 });
 
-// Create ripple effect for showcase items
-function createShowcaseRipple(element) {
-    const ripple = document.createElement('div');
-    const rect = element.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    
-    ripple.style.cssText = `
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 215, 0, 0.6);
-        transform: scale(0);
-        animation: showcaseRipple 0.6s linear;
-        width: ${size}px;
-        height: ${size}px;
-        left: ${rect.width / 2 - size / 2}px;
-        top: ${rect.height / 2 - size / 2}px;
-        pointer-events: none;
+// Show delivery information
+function showDeliveryInfo() {
+    // Create a simple notification
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: var(--gradient-1);
+        color: var(--text-dark);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4);
+        z-index: 10000;
+        transform: translateX(400px);
+        transition: transform 0.3s ease;
+        font-weight: 600;
+        max-width: 300px;
     `;
     
-    element.style.position = 'relative';
-    element.appendChild(ripple);
+    notification.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+            <i class="fas fa-truck" style="font-size: 1.2rem;"></i>
+            <strong>Free Delivery Available!</strong>
+        </div>
+        <p style="margin: 0; font-size: 0.9rem; line-height: 1.4;">
+            Free delivery on orders over 500,000 TZS within Dar es Salaam. 
+            Contact us for delivery to other regions.
+        </p>
+    `;
     
-    // Add ripple animation
-    if (!document.querySelector('#showcase-ripple-style')) {
-        const style = document.createElement('style');
-        style.id = 'showcase-ripple-style';
-        style.textContent = `
-            @keyframes showcaseRipple {
-                to {
-                    transform: scale(2);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
+    document.body.appendChild(notification);
     
-    setTimeout(() => ripple.remove(), 600);
-}
-
-// Highlight specific product in products section
-function highlightProduct(productType) {
-    const productCards = document.querySelectorAll('.product-card');
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
     
-    productCards.forEach(card => {
-        const cardContent = card.textContent.toLowerCase();
-        let shouldHighlight = false;
-        
-        switch(productType) {
-            case 'tiles':
-                shouldHighlight = cardContent.includes('tile');
-                break;
-            case 'blocks':
-                shouldHighlight = cardContent.includes('block');
-                break;
-            case 'tools':
-                shouldHighlight = cardContent.includes('tool');
-                break;
-        }
-        
-        if (shouldHighlight) {
-            card.style.transform = 'translateY(-15px) scale(1.05)';
-            card.style.boxShadow = '0 25px 60px rgba(255, 215, 0, 0.4)';
-            
-            setTimeout(() => {
-                card.style.transform = '';
-                card.style.boxShadow = '';
-            }, 3000);
-        }
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        notification.style.transform = 'translateX(400px)';
+        setTimeout(() => notification.remove(), 300);
+    }, 5000);
+    
+    // Click to close
+    notification.addEventListener('click', function() {
+        this.style.transform = 'translateX(400px)';
+        setTimeout(() => this.remove(), 300);
     });
 }
 
@@ -364,8 +359,120 @@ function typeText(element, text, speed) {
     }, speed);
 }
 
+// Mobile-specific enhancements
+function initMobileOptimizations() {
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // Reduce particle count for better performance on mobile
+        const heroBackground = document.querySelector('.hero-background');
+        if (heroBackground) {
+            const canvas = heroBackground.querySelector('canvas');
+            if (canvas) {
+                canvas.style.display = 'none'; // Hide particles on mobile for better performance
+            }
+        }
+        
+        // Optimize animations for mobile
+        const buildingContainer = document.querySelector('.building-container');
+        if (buildingContainer) {
+            buildingContainer.style.animationDuration = '40s'; // Slower rotation on mobile
+        }
+        
+        // Ensure trust indicators are visible
+        const trustIndicators = document.querySelector('.trust-indicators');
+        if (trustIndicators) {
+            trustIndicators.style.opacity = '1';
+            trustIndicators.style.visibility = 'visible';
+        }
+        
+        // Add touch-friendly interactions
+        const showcaseItems = document.querySelectorAll('.showcase-item');
+        showcaseItems.forEach(item => {
+            item.addEventListener('touchstart', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            item.addEventListener('touchend', function() {
+                this.style.transform = 'translateY(0px) scale(1)';
+            });
+        });
+        
+        // Optimize CTA buttons for mobile
+        const ctaButtons = document.querySelectorAll('.cta-button');
+        ctaButtons.forEach(button => {
+            button.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            button.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    }
+}
+
+// Enhanced viewport height fix for mobile browsers
+function setMobileViewportHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    
+    // Update hero section height for mobile
+    const hero = document.querySelector('.hero');
+    if (hero && window.innerWidth <= 768) {
+        hero.style.minHeight = `calc(var(--vh, 1vh) * 100)`;
+    }
+}
+
+// Trust indicators visibility fix
+function ensureTrustIndicatorsVisible() {
+    const trustIndicators = document.querySelector('.trust-indicators');
+    if (trustIndicators) {
+        // Force visibility
+        trustIndicators.style.display = 'grid';
+        trustIndicators.style.opacity = '1';
+        trustIndicators.style.visibility = 'visible';
+        
+        // Add animation delay to ensure they appear
+        setTimeout(() => {
+            trustIndicators.classList.add('visible');
+        }, 1200);
+    }
+}
+
+// Enhanced scroll to section for mobile
+function enhancedScrollToSection(targetId) {
+    const target = document.getElementById(targetId);
+    if (target) {
+        const isMobile = window.innerWidth <= 768;
+        const offset = isMobile ? 70 : 80; // Smaller offset for mobile
+        
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
 // Initialize enhanced effects
 document.addEventListener('DOMContentLoaded', function() {
+    // Set mobile viewport height
+    setMobileViewportHeight();
+    window.addEventListener('resize', setMobileViewportHeight);
+    window.addEventListener('orientationchange', () => {
+        setTimeout(setMobileViewportHeight, 100);
+    });
+    
+    // Initialize mobile optimizations
+    initMobileOptimizations();
+    window.addEventListener('resize', initMobileOptimizations);
+    
+    // Ensure trust indicators are visible
+    ensureTrustIndicatorsVisible();
+    
     // Add loading screen
     const loadingScreen = document.createElement('div');
     loadingScreen.style.cssText = `
@@ -407,10 +514,29 @@ document.addEventListener('DOMContentLoaded', function() {
             loadingScreen.style.opacity = '0';
             setTimeout(() => {
                 loadingScreen.remove();
-                // Initialize typewriter effect after loading
-                // initTypewriterEffect();
+                // Ensure all elements are visible after loading
+                ensureTrustIndicatorsVisible();
             }, 500);
         }, 1000);
+    });
+    
+    // Enhanced mobile navigation
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            enhancedScrollToSection(targetId);
+            
+            // Close mobile menu if open
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                if (navbarToggler) {
+                    navbarToggler.click();
+                }
+            }
+        });
     });
 });
 
