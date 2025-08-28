@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retail Shops - Stumarcot</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><i class="fas fa-hammer"></i> STUMARCOT</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-link" href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1><i class="fas fa-shopping-cart me-3"></i>Retail Shops</h1>
+        <p>Convenient retail locations nationwide for immediate purchase and pickup</p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Retail Shops</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Retail Overview -->
+    <section class="features">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <h2>Convenient <span class="highlight">Retail Network</span></h2>
+          <p class="lead">
+            Our extensive network of retail shops across Tanzania provides convenient access 
+            to construction materials and tools for immediate purchase and pickup.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h4>Immediate Availability</h4>
+              <p>
+                Ready stock of popular construction materials and tools 
+                for immediate purchase without waiting for delivery.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <h4>Nationwide Coverage</h4>
+              <p>
+                Strategic locations across Tanzania ensuring easy access 
+                to our products wherever your project is located.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h4>Personal Service</h4>
+              <p>
+                Knowledgeable staff providing personalized assistance 
+                and expert advice for your construction needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Locations -->
+    <section class="products">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <h2>Shop <span class="highlight">Locations</span></h2>
+          <p class="lead text-light">
+            Find our retail shops in major cities and towns across Tanzania
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card fade-in-left">
+              <div class="product-image">
+                <i class="fas fa-store"></i>
+              </div>
+              <div class="product-content">
+                <h5>Dar es Salaam Outlets</h5>
+                <p>
+                  <strong>Kariakoo Branch:</strong><br>
+                  <i class="fas fa-map-marker-alt me-2"></i>Uhuru Street, Kariakoo<br>
+                  <i class="fas fa-phone me-2"></i>+255 22 234 5678<br><br>
+                  
+                  <strong>Temeke Branch:</strong><br>
+                  <i class="fas fa-map-marker-alt me-2"></i>Nyerere Road, Temeke<br>
+                  <i class="fas fa-phone me-2"></i>+255 22 345 6789
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card fade-in-up">
+              <div class="product-image">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="product-content">
+                <h5>Regional Shops</h5>
+                <p>
+                  <strong>Arusha Shop:</strong><br>
+                  <i class="fas fa-map-marker-alt me-2"></i>Makongoro Road<br>
+                  <i class="fas fa-phone me-2"></i>+255 27 456 7890<br><br>
+                  
+                  <strong>Mwanza Shop:</strong><br>
+                  <i class="fas fa-map-marker-alt me-2"></i>Station Road<br>
+                  <i class="fas fa-phone me-2"></i>+255 28 567 8901
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card fade-in-right">
+              <div class="product-image">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="product-content">
+                <h5>Town Centers</h5>
+                <p>
+                  <strong>Dodoma Shop:</strong><br>
+                  <i class="fas fa-map-marker-alt me-2"></i>Kikuyu Street<br>
+                  <i class="fas fa-phone me-2"></i>+255 26 678 9012<br><br>
+                  
+                  <strong>Mbeya Shop:</strong><br>
+                  <i class="fas fa-map-marker-alt me-2"></i>Jacaranda Street<br>
+                  <i class="fas fa-phone me-2"></i>+255 25 789 0123
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="features">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <h2>Available <span class="highlight">Products</span></h2>
+          <p class="lead">Wide range of construction materials and tools in stock</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="feature-card fade-in-left">
+              <div class="feature-icon">
+                <i class="fas fa-th-large"></i>
+              </div>
+              <h4>Construction Materials</h4>
+              <p>
+                Essential building materials readily available for immediate pickup 
+                including tiles, blocks, cement, and roofing materials.
+              </p>
+              <ul class="mt-3">
+                <li>Wall and floor tiles (various sizes)</li>
+                <li>Pelvin blocks and hollow blocks</li>
+                <li>Roofing sheets and tiles</li>
+                <li>Cement and aggregates</li>
+                <li>Paints and finishing materials</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="feature-card fade-in-right">
+              <div class="feature-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h4>Construction Tools</h4>
+              <p>
+                Professional-grade tools and equipment for construction, 
+                renovation, and maintenance projects of all sizes.
+              </p>
+              <ul class="mt-3">
+                <li>Hand tools and power tools</li>
+                <li>Measuring and leveling equipment</li>
+                <li>Safety equipment and gear</li>
+                <li>Mixing and application tools</li>
+                <li>Hardware and fasteners</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Services -->
+    <section class="locations">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <h2>Shop <span class="highlight">Services</span></h2>
+          <p class="lead">Additional services available at our retail locations</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="location-card fade-in-up">
+              <div class="location-icon">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <h5>Quantity Estimation</h5>
+              <p>
+                Free quantity calculations and material estimates for your 
+                construction projects based on your specifications.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="location-card fade-in-up">
+              <div class="location-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <h5>Local Delivery</h5>
+              <p>
+                Local delivery services available for bulk purchases 
+                within city limits at competitive rates.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="location-card fade-in-up">
+              <div class="location-icon">
+                <i class="fas fa-credit-card"></i>
+              </div>
+              <h5>Flexible Payment</h5>
+              <p>
+                Multiple payment options including cash, mobile money, 
+                bank transfers, and credit facilities for qualified customers.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="location-card fade-in-up">
+              <div class="location-icon">
+                <i class="fas fa-warehouse"></i>
+              </div>
+              <h5>Bulk Orders</h5>
+              <p>
+                Special pricing and arrangements for bulk orders 
+                with advance notice and payment terms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Operating Hours -->
+    <section class="products">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <h2>Operating <span class="highlight">Hours</span></h2>
+          <p class="lead text-light">
+            Convenient hours to serve your construction needs
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card fade-in-left">
+              <div class="product-image">
+                <i class="fas fa-sun"></i>
+              </div>
+              <div class="product-content">
+                <h5>Weekdays</h5>
+                <p>
+                  <strong>Monday - Friday</strong><br>
+                  7:00 AM - 7:00 PM<br><br>
+                  Extended hours to accommodate working professionals 
+                  and contractors with flexible schedules.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card fade-in-up">
+              <div class="product-image">
+                <i class="fas fa-calendar-weekend"></i>
+              </div>
+              <div class="product-content">
+                <h5>Weekends</h5>
+                <p>
+                  <strong>Saturday</strong><br>
+                  8:00 AM - 6:00 PM<br>
+                  <strong>Sunday</strong><br>
+                  9:00 AM - 4:00 PM<br><br>
+                  Weekend hours for DIY enthusiasts and homeowners.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="product-card fade-in-right">
+              <div class="product-image">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="product-content">
+                <h5>Emergency Service</h5>
+                <p>
+                  <strong>24/7 Hotline</strong><br>
+                  +255 123 456 789<br><br>
+                  Emergency contact for urgent construction material 
+                  needs outside regular operating hours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Benefits -->
+    <section class="features">
+      <div class="container">
+        <div class="section-title fade-in-up">
+          <h2>Customer <span class="highlight">Benefits</span></h2>
+          <p class="lead">Why choose Stumarcot retail shops</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">
+                <i class="fas fa-tags"></i>
+              </div>
+              <h4>Competitive Pricing</h4>
+              <p>
+                Factory-direct pricing with regular promotions and discounts 
+                for bulk purchases and loyal customers.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">
+                <i class="fas fa-medal"></i>
+              </div>
+              <h4>Quality Guarantee</h4>
+              <p>
+                All products come with manufacturer warranty and quality 
+                guarantee backed by our reputation for excellence.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">
+                <i class="fas fa-user-friends"></i>
+              </div>
+              <h4>Expert Staff</h4>
+              <p>
+                Knowledgeable staff trained in construction materials 
+                and applications to provide expert advice and support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content fade-in-up">
+          <h2>Visit Our Retail Shops Today</h2>
+          <p>
+            Find the nearest Stumarcot retail shop and get your construction materials immediately
+          </p>
+          <a href="contact.html" class="cta-button me-3">
+            <i class="fas fa-map-marker-alt me-2"></i>Find Nearest Shop
+          </a>
+          <a
+            href="tel:+255123456789"
+            class="cta-button"
+            style="
+              background: transparent;
+              border: 2px solid var(--primary-yellow);
+              color: var(--primary-yellow);
+            "
+          >
+            <i class="fas fa-phone me-2"></i>Call Shop
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h5><i class="fas fa-hammer me-2"></i>STUMARCOT</h5>
+            <p>
+              Leading construction products supplier in Tanzania, committed to
+              quality and excellence in every project.
+            </p>
+          </div>
+
+          <div class="col-lg-2">
+            <h5>Products</h5>
+            <ul class="list-unstyled">
+              <li><a href="products.html">Wall Tiles</a></li>
+              <li><a href="products.html">Pelvin Blocks</a></li>
+              <li><a href="products.html">Floor Tiles</a></li>
+              <li><a href="products.html">Roofing</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2">
+            <h5>Services</h5>
+            <ul class="list-unstyled">
+              <li><a href="construction-consultants.html">Expert Consultation</a></li>
+              <li><a href="technical-support.html">Technical Support</a></li>
+              <li><a href="#">Installation Guide</a></li>
+              <li><a href="#">After Sales Service</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4">
+            <h5>Contact Info</h5>
+            <p><i class="fas fa-phone me-2"></i>+255 123 456 789</p>
+            <p><i class="fas fa-envelope me-2"></i>info@stumarcot.co.tz</p>
+            <p>
+              <i class="fas fa-map-marker-alt me-2"></i>Tanzania, East Africa
+            </p>
+            <div class="mt-3">
+              <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="#" class="me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" style="border-color: #333" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 Stumarcot. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">Built with excellence in Tanzania 🇹🇿</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

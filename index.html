@@ -60,41 +60,227 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="floating-elements">
-        <i class="fas fa-hammer floating-icon"></i>
-        <i class="fas fa-building floating-icon"></i>
-        <i class="fas fa-tools floating-icon"></i>
+      <!-- Animated Background -->
+      <div class="hero-background">
+        <div class="geometric-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+          <div class="shape shape-5"></div>
+        </div>
+        <div class="floating-particles"></div>
       </div>
+
+      <!-- Interactive Construction Elements -->
+      <div class="construction-elements">
+        <div class="construction-crane">
+          <i class="fas fa-hammer floating-icon crane-icon"></i>
+        </div>
+        <div class="building-blocks">
+          <div class="block block-1"></div>
+          <div class="block block-2"></div>
+          <div class="block block-3"></div>
+        </div>
+        <div class="blueprint-lines">
+          <svg class="blueprint-svg" viewBox="0 0 1200 800">
+            <defs>
+              <pattern
+                id="grid"
+                width="50"
+                height="50"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M 50 0 L 0 0 0 50"
+                  fill="none"
+                  stroke="rgba(255,215,0,0.1)"
+                  stroke-width="1"
+                />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <path
+              class="blueprint-line"
+              d="M100,200 L300,200 L300,400 L500,400"
+              stroke="rgba(255,215,0,0.3)"
+              stroke-width="2"
+              fill="none"
+            />
+            <path
+              class="blueprint-line"
+              d="M700,150 L900,150 L900,350 L1100,350"
+              stroke="rgba(255,215,0,0.3)"
+              stroke-width="2"
+              fill="none"
+            />
+          </svg>
+        </div>
+      </div>
+
       <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center min-vh-100">
           <div class="col-lg-6">
             <div class="hero-content">
-              <h1>
-                Build Your Dreams with <span class="highlight">Stumarcot</span>
+              <!-- Animated Badge -->
+              <div class="hero-badge">
+                <span class="badge-text"
+                  >🏆 #1 Construction Materials in Tanzania</span
+                >
+              </div>
+
+              <!-- Main Heading with Typewriter Effect -->
+              <h1 class="hero-title">
+                <span class="title-line">Build Your Dreams</span>
+                <span class="title-line"
+                  >with <span class="highlight-animated">Stumarcot</span></span
+                >
               </h1>
-              <p>
-                Premium construction products, expert advice, and reliable
-                service across Tanzania. From wall tiles to Pelvin blocks, we've
-                got everything you need to create lasting structures.
+
+              <!-- Enhanced Description -->
+              <p class="hero-description">
+                Transform your vision into reality with Tanzania's most trusted
+                construction partner. From premium tiles to structural blocks,
+                we deliver excellence that lasts generations.
               </p>
-              <a href="#products" class="cta-button">
-                <i class="fas fa-arrow-right me-2"></i>Explore Products
-              </a>
+
+              <!-- Stats Counter -->
+              <div class="hero-stats">
+                <div class="stat-item">
+                  <div class="stat-number" data-target="15000">0</div>
+                  <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-target="25">0</div>
+                  <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number" data-target="50">0</div>
+                  <div class="stat-label">Locations</div>
+                </div>
+              </div>
+
+              <!-- Enhanced CTA Buttons -->
+              <div class="hero-actions">
+                <a href="#products" class="cta-button cta-primary">
+                  <span class="btn-text">Explore Products</span>
+                  <span class="btn-icon"
+                    ><i class="fas fa-arrow-right"></i
+                  ></span>
+                  <div class="btn-ripple"></div>
+                </a>
+                <a href="#contact" class="cta-button cta-secondary">
+                  <span class="btn-text">Get Quote</span>
+                  <span class="btn-icon"
+                    ><i class="fas fa-calculator"></i
+                  ></span>
+                  <div class="btn-ripple"></div>
+                </a>
+              </div>
+
+              <!-- Trust Indicators -->
+              <div class="trust-indicators">
+                <div class="trust-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Quality Guaranteed</span>
+                </div>
+                <div class="trust-item">
+                  <i class="fas fa-shipping-fast"></i>
+                  <span>Fast Delivery</span>
+                </div>
+                <div class="trust-item">
+                  <i class="fas fa-tools"></i>
+                  <span>Expert Support</span>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="col-lg-6">
-            <div class="text-center">
-              <i
-                class="fas fa-building"
-                style="
-                  font-size: 15rem;
-                  color: var(--primary-yellow);
-                  opacity: 0.8;
-                  animation: float 4s ease-in-out infinite;
-                "
-              ></i>
+            <div class="hero-visual">
+              <!-- 3D Building Animation -->
+              <div class="building-animation">
+                <div class="building-container">
+                  <!-- Foundation -->
+                  <div class="building-layer foundation">
+                    <div class="layer-blocks">
+                      <div class="building-block"></div>
+                      <div class="building-block"></div>
+                      <div class="building-block"></div>
+                      <div class="building-block"></div>
+                    </div>
+                  </div>
+
+                  <!-- Floor 1 -->
+                  <div class="building-layer floor-1">
+                    <div class="layer-blocks">
+                      <div class="building-block"></div>
+                      <div class="building-block"></div>
+                      <div class="building-block"></div>
+                    </div>
+                  </div>
+
+                  <!-- Floor 2 -->
+                  <div class="building-layer floor-2">
+                    <div class="layer-blocks">
+                      <div class="building-block"></div>
+                      <div class="building-block"></div>
+                    </div>
+                  </div>
+
+                  <!-- Roof -->
+                  <div class="building-layer roof">
+                    <div class="roof-structure">
+                      <i class="fas fa-home"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Construction Tools Animation -->
+                <div class="tools-animation">
+                  <div class="tool-item tool-hammer">
+                    <i class="fas fa-hammer"></i>
+                  </div>
+                  <div class="tool-item tool-wrench">
+                    <i class="fas fa-wrench"></i>
+                  </div>
+                  <div class="tool-item tool-ruler">
+                    <i class="fas fa-ruler"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Product Showcase -->
+              <div class="product-showcase">
+                <div class="showcase-item" data-product="tiles">
+                  <div class="showcase-icon">
+                    <i class="fas fa-th-large"></i>
+                  </div>
+                  <span class="showcase-label">Premium Tiles</span>
+                </div>
+                <div class="showcase-item" data-product="blocks">
+                  <div class="showcase-icon">
+                    <i class="fas fa-cube"></i>
+                  </div>
+                  <span class="showcase-label">Pelvin Blocks</span>
+                </div>
+                <div class="showcase-item" data-product="tools">
+                  <div class="showcase-icon">
+                    <i class="fas fa-tools"></i>
+                  </div>
+                  <span class="showcase-label">Pro Tools</span>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-text">Scroll to explore</div>
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-down"></i>
         </div>
       </div>
     </section>
@@ -274,11 +460,23 @@
               <div class="location-icon">
                 <i class="fas fa-store"></i>
               </div>
-              <h5>Showrooms</h5>
+              <h5>
+                <a
+                  href="showrooms.html"
+                  style="color: inherit; text-decoration: none"
+                  >Showrooms</a
+                >
+              </h5>
               <p>
                 Visit our modern showrooms to see and touch our products.
                 Experience the quality firsthand with expert guidance.
               </p>
+              <a
+                href="showrooms.html"
+                class="btn btn-outline-primary btn-sm mt-2"
+              >
+                <i class="fas fa-arrow-right me-1"></i>Visit Showrooms
+              </a>
             </div>
           </div>
 
@@ -287,11 +485,23 @@
               <div class="location-icon">
                 <i class="fas fa-industry"></i>
               </div>
-              <h5>Factories</h5>
+              <h5>
+                <a
+                  href="factories.html"
+                  style="color: inherit; text-decoration: none"
+                  >Factories</a
+                >
+              </h5>
               <p>
                 State-of-the-art manufacturing facilities ensuring consistent
                 quality and timely production of all our products.
               </p>
+              <a
+                href="factories.html"
+                class="btn btn-outline-primary btn-sm mt-2"
+              >
+                <i class="fas fa-arrow-right me-1"></i>View Facilities
+              </a>
             </div>
           </div>
 
@@ -300,11 +510,23 @@
               <div class="location-icon">
                 <i class="fas fa-shopping-cart"></i>
               </div>
-              <h5>Retail Shops</h5>
+              <h5>
+                <a
+                  href="retail-shops.html"
+                  style="color: inherit; text-decoration: none"
+                  >Retail Shops</a
+                >
+              </h5>
               <p>
                 Convenient retail locations nationwide for immediate purchase
                 and pickup of construction materials and tools.
               </p>
+              <a
+                href="retail-shops.html"
+                class="btn btn-outline-primary btn-sm mt-2"
+              >
+                <i class="fas fa-arrow-right me-1"></i>Find Shops
+              </a>
             </div>
           </div>
         </div>
@@ -327,12 +549,24 @@
               <div class="feature-icon">
                 <i class="fas fa-hard-hat"></i>
               </div>
-              <h4>Construction Consultants</h4>
+              <h4>
+                <a
+                  href="construction-consultants.html"
+                  style="color: inherit; text-decoration: none"
+                  >Construction Consultants</a
+                >
+              </h4>
               <p>
                 Our team of experienced construction professionals provides
                 expert advice on product selection, project planning, and best
                 practices for successful construction projects.
               </p>
+              <a
+                href="construction-consultants.html"
+                class="btn btn-outline-primary btn-sm mt-2"
+              >
+                <i class="fas fa-arrow-right me-1"></i>Meet Our Consultants
+              </a>
             </div>
           </div>
 
@@ -341,12 +575,24 @@
               <div class="feature-icon">
                 <i class="fas fa-clipboard-check"></i>
               </div>
-              <h4>Technical Support</h4>
+              <h4>
+                <a
+                  href="technical-support.html"
+                  style="color: inherit; text-decoration: none"
+                  >Technical Support</a
+                >
+              </h4>
               <p>
                 Get comprehensive technical support including installation
                 guidance, troubleshooting, and maintenance recommendations from
                 our qualified experts.
               </p>
+              <a
+                href="technical-support.html"
+                class="btn btn-outline-primary btn-sm mt-2"
+              >
+                <i class="fas fa-arrow-right me-1"></i>Get Support
+              </a>
             </div>
           </div>
         </div>

@@ -1,29 +1,41 @@
 
-// Smooth scrolling
+// Enhanced Hero Section Functionality
+
+// Smooth scrolling with enhanced easing
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
     });
 });
 
-// Navbar background on scroll
+// Enhanced navbar with glassmorphism effect
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
+    const scrolled = window.pageYOffset;
+    
+    if (scrolled > 50) {
         navbar.style.background = 'rgba(26, 26, 26, 0.98)';
+        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
     } else {
         navbar.style.background = 'rgba(26, 26, 26, 0.95)';
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.boxShadow = 'none';
     }
 });
 
-// Intersection Observer for animations
+// Enhanced Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -33,31 +45,374 @@ const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+            
+            // Trigger counter animation for stats
+            if (entry.target.classList.contains('hero-stats')) {
+                animateStats();
+            }
         }
     });
 }, observerOptions);
 
 // Observe all animated elements
-document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
+document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .hero-stats').forEach(el => {
     observer.observe(el);
 });
 
-// Counter animation for stats (if you want to add stats later)
-function animateCounter(element, target, duration) {
-    let start = 0;
-    const increment = target / (duration / 16);
+// Enhanced counter animation for hero stats
+function animateStats() {
+    const statNumbers = document.querySelectorAll('.stat-number');
     
-    function updateCounter() {
-        start += increment;
-        if (start < target) {
-            element.textContent = Math.floor(start);
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target;
+    statNumbers.forEach(stat => {
+        const target = parseInt(stat.dataset.target);
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                stat.textContent = target.toLocaleString();
+                clearInterval(timer);
+            } else {
+                stat.textContent = Math.floor(current).toLocaleString();
+            }
+        }, 16);
+    });
+}
+
+// Interactive product showcase
+document.addEventListener('DOMContentLoaded', function() {
+    const showcaseItems = document.querySelectorAll('.showcase-item');
+    
+    showcaseItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const product = this.dataset.product;
+            
+            // Add ripple effect
+            createShowcaseRipple(this);
+            
+            // Scroll to products section with highlight
+            setTimeout(() => {
+                const productsSection = document.getElementById('products');
+                if (productsSection) {
+                    productsSection.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Highlight relevant product
+                    highlightProduct(product);
+                }
+            }, 300);
+        });
+        
+        // Add hover sound effect (optional)
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.05)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0px) scale(1)';
+        });
+    });
+});
+
+// Create ripple effect for showcase items
+function createShowcaseRipple(element) {
+    const ripple = document.createElement('div');
+    const rect = element.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    
+    ripple.style.cssText = `
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 215, 0, 0.6);
+        transform: scale(0);
+        animation: showcaseRipple 0.6s linear;
+        width: ${size}px;
+        height: ${size}px;
+        left: ${rect.width / 2 - size / 2}px;
+        top: ${rect.height / 2 - size / 2}px;
+        pointer-events: none;
+    `;
+    
+    element.style.position = 'relative';
+    element.appendChild(ripple);
+    
+    // Add ripple animation
+    if (!document.querySelector('#showcase-ripple-style')) {
+        const style = document.createElement('style');
+        style.id = 'showcase-ripple-style';
+        style.textContent = `
+            @keyframes showcaseRipple {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    setTimeout(() => ripple.remove(), 600);
+}
+
+// Highlight specific product in products section
+function highlightProduct(productType) {
+    const productCards = document.querySelectorAll('.product-card');
+    
+    productCards.forEach(card => {
+        const cardContent = card.textContent.toLowerCase();
+        let shouldHighlight = false;
+        
+        switch(productType) {
+            case 'tiles':
+                shouldHighlight = cardContent.includes('tile');
+                break;
+            case 'blocks':
+                shouldHighlight = cardContent.includes('block');
+                break;
+            case 'tools':
+                shouldHighlight = cardContent.includes('tool');
+                break;
+        }
+        
+        if (shouldHighlight) {
+            card.style.transform = 'translateY(-15px) scale(1.05)';
+            card.style.boxShadow = '0 25px 60px rgba(255, 215, 0, 0.4)';
+            
+            setTimeout(() => {
+                card.style.transform = '';
+                card.style.boxShadow = '';
+            }, 3000);
+        }
+    });
+}
+
+// Enhanced CTA button interactions
+document.addEventListener('DOMContentLoaded', function() {
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    
+    ctaButtons.forEach(button => {
+        // Enhanced hover effect with magnetic attraction
+        button.addEventListener('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            const moveX = x * 0.15;
+            const moveY = y * 0.15;
+            
+            this.style.transform = `translate(${moveX}px, ${moveY}px) translateY(-8px) scale(1.05)`;
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(-8px) scale(1.05)';
+        });
+        
+        // Enhanced click effect
+        button.addEventListener('click', function(e) {
+            const ripple = this.querySelector('.btn-ripple');
+            if (ripple) {
+                ripple.style.width = '300px';
+                ripple.style.height = '300px';
+                
+                setTimeout(() => {
+                    ripple.style.width = '0';
+                    ripple.style.height = '0';
+                }, 600);
+            }
+        });
+    });
+});
+
+// Dynamic particle system for hero background
+class ParticleSystem {
+    constructor() {
+        this.particles = [];
+        this.canvas = null;
+        this.ctx = null;
+        this.init();
+    }
+    
+    init() {
+        // Create canvas for particles
+        this.canvas = document.createElement('canvas');
+        this.canvas.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        `;
+        
+        const heroBackground = document.querySelector('.hero-background');
+        if (heroBackground) {
+            heroBackground.appendChild(this.canvas);
+            this.ctx = this.canvas.getContext('2d');
+            this.resize();
+            this.createParticles();
+            this.animate();
+        }
+        
+        window.addEventListener('resize', () => this.resize());
+    }
+    
+    resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+    }
+    
+    createParticles() {
+        for (let i = 0; i < 50; i++) {
+            this.particles.push({
+                x: Math.random() * this.canvas.width,
+                y: Math.random() * this.canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                size: Math.random() * 2 + 1,
+                opacity: Math.random() * 0.5 + 0.1,
+                color: `rgba(255, 215, 0, ${Math.random() * 0.3 + 0.1})`
+            });
         }
     }
-    updateCounter();
+    
+    animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        this.particles.forEach(particle => {
+            // Update position
+            particle.x += particle.vx;
+            particle.y += particle.vy;
+            
+            // Wrap around edges
+            if (particle.x < 0) particle.x = this.canvas.width;
+            if (particle.x > this.canvas.width) particle.x = 0;
+            if (particle.y < 0) particle.y = this.canvas.height;
+            if (particle.y > this.canvas.height) particle.y = 0;
+            
+            // Draw particle
+            this.ctx.beginPath();
+            this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            this.ctx.fillStyle = particle.color;
+            this.ctx.fill();
+        });
+        
+        requestAnimationFrame(() => this.animate());
+    }
 }
+
+// Initialize particle system
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('.hero')) {
+        new ParticleSystem();
+    }
+});
+
+// Mouse parallax effect for hero elements
+document.addEventListener('mousemove', function(e) {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    
+    const mouseX = e.clientX / window.innerWidth;
+    const mouseY = e.clientY / window.innerHeight;
+    
+    // Parallax for geometric shapes
+    const shapes = document.querySelectorAll('.shape');
+    shapes.forEach((shape, index) => {
+        const speed = (index + 1) * 0.02;
+        const x = (mouseX - 0.5) * speed * 100;
+        const y = (mouseY - 0.5) * speed * 100;
+        
+        shape.style.transform += ` translate(${x}px, ${y}px)`;
+    });
+    
+    // Parallax for building animation
+    const buildingContainer = document.querySelector('.building-container');
+    if (buildingContainer) {
+        const x = (mouseX - 0.5) * 20;
+        const y = (mouseY - 0.5) * 20;
+        
+        buildingContainer.style.transform += ` translate(${x}px, ${y}px)`;
+    }
+});
+
+// Typewriter effect for hero title (enhanced)
+function initTypewriterEffect() {
+    const titleLines = document.querySelectorAll('.title-line');
+    
+    titleLines.forEach((line, index) => {
+        const text = line.textContent;
+        line.textContent = '';
+        line.style.opacity = '1';
+        
+        setTimeout(() => {
+            typeText(line, text, 100);
+        }, index * 800 + 500);
+    });
+}
+
+function typeText(element, text, speed) {
+    let i = 0;
+    const timer = setInterval(() => {
+        if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(timer);
+        }
+    }, speed);
+}
+
+// Initialize enhanced effects
+document.addEventListener('DOMContentLoaded', function() {
+    // Add loading screen
+    const loadingScreen = document.createElement('div');
+    loadingScreen.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2c3e50 50%, #1a1a1a 75%, #0a0a0a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        transition: opacity 0.5s ease;
+    `;
+    
+    loadingScreen.innerHTML = `
+        <div style="text-align: center; color: #FFD700;">
+            <div style="width: 60px; height: 60px; border: 3px solid rgba(255, 215, 0, 0.3); border-top: 3px solid #FFD700; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+            <h3 style="font-family: Inter, sans-serif; font-weight: 600; margin: 0;">Building Excellence...</h3>
+        </div>
+    `;
+    
+    // Add spin animation
+    const spinStyle = document.createElement('style');
+    spinStyle.textContent = `
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    `;
+    document.head.appendChild(spinStyle);
+    
+    document.body.appendChild(loadingScreen);
+    
+    // Remove loading screen after page load
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.remove();
+                // Initialize typewriter effect after loading
+                // initTypewriterEffect();
+            }, 500);
+        }, 1000);
+    });
+});
 
 // Parallax effect for floating icons
 window.addEventListener('scroll', function() {
