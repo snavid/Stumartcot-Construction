@@ -776,7 +776,7 @@ body {
 .hero-visual {
   position: relative;
   z-index: 2;
-  height: 600px;
+ /* height: 600px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -914,7 +914,7 @@ body {
   justify-content: center;
   font-size: 1.5rem;
   color: var(--text-dark);
-  animation: toolFloat 6s ease-in-out infinite;
+ /* animation: toolFloat 6s ease-in-out infinite; */
   box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
 }
 
@@ -966,7 +966,7 @@ body {
   text-align: center;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation: highlightFloat 5s ease-in-out infinite;
+ /* animation: highlightFloat 5s ease-in-out infinite; */
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   min-width: 140px;
 }
