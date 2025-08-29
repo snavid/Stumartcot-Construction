@@ -127,6 +127,26 @@ body {
   width: 100%;
 }
 
+@media (max-width: 576px) {
+  .navbar-brand {
+      font-size: 1.1rem;
+  }
+  
+  .navbar-brand img {
+      width: 30px;
+  }
+
+  .building-animation {
+    display: none;
+  }
+
+  .stat-item {
+    display: none;
+  }
+  .hero-actions .cta-button {
+    display: none;
+  }
+}
 /* Enhanced Hero Section */
 .hero {
   background: linear-gradient(
@@ -1418,7 +1438,7 @@ product-card .views-btn {
 @media (max-width: 768px) {
   /* Hero Section Mobile Optimization */
   .hero {
-    min-height: 100vh;
+    height: 100vh;
     padding: 80px 0 40px;
   }
 
@@ -1428,7 +1448,7 @@ product-card .views-btn {
 
   .hero-content {
     text-align: center;
-    padding: 20px 0;
+    padding: 0px 0;
     order: 1;
   }
 
@@ -1730,7 +1750,7 @@ product-card .views-btn {
   }
 
   .hero-visual {
-    height: 250px;
+    height: 50px;
   }
 
   .building-animation {
