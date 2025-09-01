@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stumarcot - Premium Construction Products Tanzania</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img
+            src="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}"
+            alt=""
+          />
+          STUMARCOT</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart-link" href="/cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ {%block content%}
+
+ {% endblock%}
+   
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h5>
+              <img
+                width="20%"
+                src="./Minimalist_House_Logo_Design-removebg-preview.png"
+                alt=""
+              />STUMARCOT
+            </h5>
+            <p>
+              Leading construction products supplier in Tanzania, committed to
+              quality and excellence in every project.
+            </p>
+          </div>
+
+          <div class="col-lg-2">
+            <h5>Products</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Wall Tiles</a></li>
+              <li><a href="#">Pelvin Blocks</a></li>
+              <li><a href="#">Floor Tiles</a></li>
+              <li><a href="#">Roofing</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2">
+            <h5>Services</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Expert Consultation</a></li>
+              <li><a href="#">Technical Support</a></li>
+              <li><a href="#">Installation Guide</a></li>
+              <li><a href="#">After Sales Service</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4">
+            <h5>Contact Info</h5>
+            <p><i class="fas fa-phone me-2"></i>+255 123 456 789</p>
+            <p><i class="fas fa-envelope me-2"></i>info@stumarcot.co.tz</p>
+            <p>
+              <i class="fas fa-map-marker-alt me-2"></i>Tanzania, East Africa
+            </p>
+            <div class="mt-3">
+              <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" class="me-3"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="#" class="me-3"
+                ><i class="fab fa-instagram fa-2x"></i
+              ></a>
+              <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" style="border-color: #333" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 Stumarcot. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">Built with excellence in Tanzania 🇹🇿</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script>
+      // Immediate overflow fix for mobile
+      (function () {
+        function preventOverflow() {
+          document.documentElement.style.overflowX = "hidden";
+          document.body.style.overflowX = "hidden";
+          document.body.style.maxWidth = "100vw";
+          document.body.style.width = "100%";
+        }
+
+        // Apply immediately
+        preventOverflow();
+
+        // Apply on DOM ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", preventOverflow);
+        }
+
+        // Apply on window load
+        window.addEventListener("load", preventOverflow);
+
+        // Apply on resize
+        window.addEventListener("resize", preventOverflow);
+      })();
+    </script>
+  </body>
+</html>

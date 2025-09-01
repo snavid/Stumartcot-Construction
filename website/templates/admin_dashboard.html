@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard - Dynamic Store{% endblock %}
+
+{% block content %}
+<h1>Admin Dashboard</h1>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                <h5>Total Users</h5>
+                <h2>{{ total_users }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <h5>Total Categories</h5>
+                <h2>{{ total_categories }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-info text-white">
+            <div class="card-body">
+                <h5>Total Products</h5>
+                <h2>{{ total_products }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+                <h5>Quick Actions</h5>
+                <a href="{{ url_for('views.add_category') }}" class="btn btn-light btn-sm">Add Category</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5>Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="{{ url_for('auth.sign_up') }}" class="btn btn-primary">Add New User</a>
+                    <a href="{{ url_for('views.add_category') }}" class="btn btn-success">Add New Category</a>
+                    <a href="{{ url_for('views.add_product') }}" class="btn btn-info">Add New Product</a>
+                    <a href="{{ url_for('views.manage_users') }}" class="btn btn-outline-primary">Manage Users</a>
+                    <a href="{{ url_for('views.manage_categories') }}" class="btn btn-outline-success">Manage Categories</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Recent Products</h5>
+            </div>
+            <div class="card-body">
+                {% if recent_products %}
+                    <div class="list-group">
+                        {% for product in recent_products %}
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">{{ product.name }}</h6>
+                                    <small class="text-muted">{{ product.category.name }} - ${{ "%.2f"|format(product.price) }}</small>
+                                </div>
+                                <small class="text-muted">{{ product.created_at.strftime('%m/%d/%Y') }}</small>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-muted">No products yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

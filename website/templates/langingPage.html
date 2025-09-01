@@ -1,0 +1,529 @@
+{% extends "base2.html"%}
+{%block content%}
+ <!-- Hero Section -->
+ <section id="home" class="hero">
+  <!-- Animated Background -->
+  <div class="hero-background">
+    <div class="geometric-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+    <div class="floating-particles"></div>
+  </div>
+
+  <!-- Interactive Construction Elements -->
+  <div class="construction-elements">
+    <div class="construction-crane">
+      <i class="fas fa-hammer floating-icon crane-icon"></i>
+    </div>
+    <div class="building-blocks">
+      <div class="block block-1"></div>
+      <div class="block block-2"></div>
+      <div class="block block-3"></div>
+    </div>
+    <div class="blueprint-lines">
+      <svg class="blueprint-svg" viewBox="0 0 1200 800">
+        <defs>
+          <pattern
+            id="grid"
+            width="50"
+            height="50"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 50 0 L 0 0 0 50"
+              fill="none"
+              stroke="rgba(255,215,0,0.1)"
+              stroke-width="1"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+        <path
+          class="blueprint-line"
+          d="M100,200 L300,200 L300,400 L500,400"
+          stroke="rgba(255,215,0,0.3)"
+          stroke-width="2"
+          fill="none"
+        />
+        <path
+          class="blueprint-line"
+          d="M700,150 L900,150 L900,350 L1100,350"
+          stroke="rgba(255,215,0,0.3)"
+          stroke-width="2"
+          fill="none"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <!-- Animated Badge -->
+          <div class="hero-badge">
+            <span class="badge-text"
+              >🏆 #1 Construction Materials in Tanzania</span
+            >
+          </div>
+
+          <!-- Main Heading with Typewriter Effect -->
+          <h1 class="hero-title">
+            <span class="title-line">Construct with Confidence</span>
+            <span class="title-line"
+              >Using
+              <span class="highlight-animated">Stumarcot</span>
+              Products</span
+            >
+          </h1>
+
+          <!-- Enhanced Description -->
+          <p class="hero-description">
+            A Nationwide Company offering Quality Construction Products;
+            including Paving Blocks, Floor Tiles, Wall Tiles, Cabstone,
+            Culverts, Rolling Shutter Doors, Sliding Gates (Remote & Manual)
+            etc
+          </p>
+
+          <!-- Mobile Key Info -->
+          <div class="mobile-key-info">
+            <div class="key-info-item" data-action="call">
+              <i class="fas fa-phone"></i>
+              <span>Premium quality</span>
+            </div>
+            <div class="key-info-item" data-action="locations">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>50+ Locations Nationwide</span>
+            </div>
+            <div class="key-info-item" data-action="delivery">
+              <i class="fas fa-truck"></i>
+              <span>Delivery Available</span>
+            </div>
+          </div>
+
+          <!-- Mobile Quick Actions -->
+          <div class="mobile-quick-actions">
+            <a href="tel:+255123456789" class="quick-action-btn call-btn">
+              <i class="fas fa-phone"></i>
+              <span>Call Now</span>
+            </a>
+            <a href="#products" class="quick-action-btn products-btn">
+              <i class="fas fa-th-large"></i>
+              <span>View Products</span>
+            </a>
+            <a href="#contact" class="quick-action-btn quote-btn">
+              <i class="fas fa-calculator"></i>
+              <span>Get Quote</span>
+            </a>
+          </div>
+
+          <!-- Stats Counter -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-target="15000">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="25">0</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label">Locations</div>
+            </div>
+          </div>
+
+          <!-- Enhanced CTA Buttons -->
+          <div class="hero-actions">
+            <a href="#products" class="cta-button cta-primary">
+              <span class="btn-text">Explore Products</span>
+              <span class="btn-icon"
+                ><i class="fas fa-arrow-right"></i
+              ></span>
+              <div class="btn-ripple"></div>
+            </a>
+            <a href="#contact" class="cta-button cta-secondary">
+              <span class="btn-text">Get Quote</span>
+              <span class="btn-icon"
+                ><i class="fas fa-calculator"></i
+              ></span>
+              <div class="btn-ripple"></div>
+            </a>
+          </div>
+
+          <!-- Trust Indicators -->
+          <!-- <div class="trust-indicators">
+            <div class="trust-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Quality Guaranteed</span>
+            </div>
+            <div class="trust-item">
+              <i class="fas fa-shipping-fast"></i>
+              <span>Fast Delivery</span>
+            </div>
+            <div class="trust-item">
+              <i class="fas fa-tools"></i>
+              <span>Expert Support</span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-visual">
+          <!-- 3D Building Animation -->
+          <div class="building-animation">
+            <div class="building-container">
+              <!-- Foundation -->
+              <img
+                src="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}"
+                alt=""
+              />
+            </div>
+
+            <!-- Construction Tools Animation -->
+            <div class="tools-animation">
+              <div class="tool-item tool-hammer">
+                <i class="fas fa-hammer"></i>
+              </div>
+              <div class="tool-item tool-wrench">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <div class="tool-item tool-ruler">
+                <i class="fas fa-ruler"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company Highlights -->
+          <div class="company-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <div class="highlight-content">
+                <span class="highlight-number">No.78368</span>
+                <span class="highlight-label">Certified</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="highlight-content">
+                <span class="highlight-number">10,000+</span>
+                <span class="highlight-label">Happy Clients</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="highlight-content">
+                <span class="highlight-number">24/7</span>
+                <span class="highlight-label">Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-text">Scroll to explore</div>
+    <div class="scroll-arrow">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+  <div class="container">
+    <div class="section-title fade-in-up">
+      <h2>Why Choose <span class="highlight">Stumarcot</span>?</h2>
+      <p class="lead">
+        Experience excellence in every aspect of construction
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 my-1">
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h4>Premium Quality</h4>
+          <p>
+            All our construction products meet international quality
+            standards, ensuring durability and excellence in every project.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 my-1">
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>Expert Consultation</h4>
+          <p>
+            Our experienced professionals provide personalized advice to
+            help you choose the right products for your construction needs.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 my-1">
+        <div class="feature-card fade-in-up">
+          <div class="feature-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h4>Nationwide Presence</h4>
+          <p>
+            With showrooms, factories, and shops across Tanzania, we're
+            always close to serve your construction requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products">
+  <div class="container">
+    <div class="section-title fade-in-up">
+      <h2>Our <span class="highlight">Products</span></h2>
+      <p class="lead text-light">
+        Comprehensive range of construction materials for all your building
+        needs
+      </p>
+    </div>
+
+    {% set animations = ['fade-in-left', 'fade-in-up', 'fade-in-right'] %}
+
+    <div class="row">
+
+      {% for category in categories %}
+      <div class="col-lg-4 col-md-6">
+        <div class="product-card {{ animations[loop.index0 % animations|length] }}">
+          <div class="product-image">
+            {% if category.image %}
+            <img
+              src="{{ url_for('static', filename='uploads/' + category.image) }}"
+              alt=""
+            />
+            {% else %}
+            {% endif %}
+            <!-- <i class="fas fa-th-large"></i> -->
+          </div>
+          <div class="product-content">
+            <h5>{{ category.name }}</h5>
+            <p>
+              {{category.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Locations Section -->
+<section id="locations" class="locations">
+  <div class="container">
+    <div class="section-title fade-in-up">
+      <h2>Our <span class="highlight">Locations</span></h2>
+      <p class="lead">
+        Find us across Tanzania - Showrooms, Factories & Retail Shops
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="location-card fade-in-up">
+          <div class="location-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h5>
+            <a
+              href="/showrooms"
+              style="color: inherit; text-decoration: none"
+              >Showrooms</a
+            >
+          </h5>
+          <p>
+            Visit our modern showrooms to see and touch our products.
+            Experience the quality firsthand with expert guidance.
+          </p>
+          <a
+            href="/showrooms"
+            class="btn btn-outline-primary btn-sm mt-2"
+          >
+            <i class="fas fa-arrow-right me-1"></i>Visit Showrooms
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="location-card fade-in-up">
+          <div class="location-icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h5>
+            <a
+              href="/factories"
+              style="color: inherit; text-decoration: none"
+              >Factories</a
+            >
+          </h5>
+          <p>
+            State-of-the-art manufacturing facilities ensuring consistent
+            quality and timely production of all our products.
+          </p>
+          <a
+            href="/factories"
+            class="btn btn-outline-primary btn-sm mt-2"
+          >
+            <i class="fas fa-arrow-right me-1"></i>View Facilities
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="location-card fade-in-up">
+          <div class="location-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h5>
+            <a
+              href="/retail-shops"
+              style="color: inherit; text-decoration: none"
+              >Retail Shops</a
+            >
+          </h5>
+          <p>
+            Convenient retail locations nationwide for immediate purchase
+            and pickup of construction materials and tools.
+          </p>
+          <a
+            href="/retail-shops"
+            class="btn btn-outline-primary btn-sm mt-2"
+          >
+            <i class="fas fa-arrow-right me-1"></i>Find Shops
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experts Section -->
+<section id="experts" class="features">
+  <div class="container">
+    <div class="section-title fade-in-up">
+      <h2>Meet Our <span class="highlight">Experts</span></h2>
+      <p class="lead">
+        Professional guidance from experienced construction specialists
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="feature-card fade-in-left">
+          <div class="feature-icon">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h4>
+            <a
+              href="/construction-consultants"
+              style="color: inherit; text-decoration: none"
+              >Construction Consultants</a
+            >
+          </h4>
+          <p>
+            Our team of experienced construction professionals provides
+            expert advice on product selection, project planning, and best
+            practices for successful construction projects.
+          </p>
+          <a
+            href="/construction-consultants"
+            class="btn btn-outline-primary btn-sm mt-2"
+          >
+            <i class="fas fa-arrow-right me-1"></i>Meet Our Consultants
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="feature-card fade-in-right">
+          <div class="feature-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h4>
+            <a
+              href="/technical-support"
+              style="color: inherit; text-decoration: none"
+              >Technical Support</a
+            >
+          </h4>
+          <p>
+            Get comprehensive technical support including installation
+            guidance, troubleshooting, and maintenance recommendations from
+            our qualified experts.
+          </p>
+          <a
+            href="/technical-support"
+            class="btn btn-outline-primary btn-sm mt-2"
+          >
+            <i class="fas fa-arrow-right me-1"></i>Get Support
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content fade-in-up">
+      <h2>Ready to Start Your Project?</h2>
+      <p>
+        Connect with our experts today and turn your construction dreams
+        into reality
+      </p>
+      <div class="d-flex justify-content-around" >
+        <a href="#contact" class="cta-button me-3 "  style="
+        background: transparent;
+        border: 2px solid var(--primary-yellow);
+        color:#0d6efd;
+      ">
+          <i class="fas fa-phone me-2"></i>Contact Us
+        </a>
+        <a
+          href="#locations"
+          class="cta-button"
+          style="
+            background: transparent;
+            border: 2px solid var(--primary-yellow);
+            color: var(--primary-yellow);
+          "
+        >
+          <i class="fas fa-map-marker-alt me-2"></i>Find Location
+        </a>
+      </div>
+     
+     
+    </div>
+  </div>
+</section>
+{%endblock%}

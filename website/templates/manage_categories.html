@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Manage Categories - Dynamic Store{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Manage Categories</h1>
+    <a href="{{ url_for('views.add_category') }}" class="btn btn-primary">Add New Category</a>
+</div>
+
+<div class="row">
+    {% for category in categories %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                {% if category.image %}
+                    <img src="{{ url_for('static', filename='uploads/' + category.image) }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                {% else %}
+                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <span class="text-muted">No Image</span>
+                    </div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ category.name }}</h5>
+                    <p class="card-text">{{ category.description[:100] }}{% if category.description|length > 100 %}...{% endif %}</p>
+                    <p class="card-text">
+                        <small class="text-muted">{{ category.products|length }} products</small>
+                    </p>
+                    <div class="btn-group w-100">
+                        <a href="{{ url_for('views.category_products', category_id=category.id) }}" class="btn btn-outline-primary btn-sm">View</a>
+                        <a href="{{ url_for('views.delete_category', category_id=category.id) }}" 
+                           class="btn btn-outline-danger btn-sm" 
+                           onclick="return confirm('Are you sure? This will delete the category and all its products.')">
+                            Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% if not categories %}
+    <div class="text-center py-5">
+        <h5 class="text-muted">No categories yet</h5>
+        <p class="text-muted">Start by adding your first category!</p>
+        <a href="{{ url_for('views.add_category') }}" class="btn btn-primary">Add Category</a>
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Categories - Dynamic Store{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">All Categories</h1>
+
+<div class="row">
+    {% for category in categories %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                {% if category.image %}
+                    <img src="{{ url_for('static', filename='uploads/' + category.image) }}" class="card-img-top" style="height: 250px; object-fit: cover;">
+                {% else %}
+                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 250px;">
+                        <span class="text-muted">No Image</span>
+                    </div>
+                {% endif %}
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">{{ category.name }}</h5>
+                    <p class="card-text flex-grow-1">{{ category.description }}</p>
+                    <p class="card-text">
+                        <small class="text-muted">{{ category.products|length }} products available</small>
+                    </p>
+                    <a href="{{ url_for('views.category_products', category_id=category.id) }}" class="btn btn-primary mt-auto">
+                        View Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% if not categories %}
+    <div class="text-center py-5">
+        <h5 class="text-muted">No categories available</h5>
+        <p class="text-muted">Check back later for new categories!</p>
+    </div>
+{% endif %}
+{% endblock %}
