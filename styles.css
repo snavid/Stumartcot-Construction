@@ -8,7 +8,7 @@
   --primary-yellow: #ffd700;
   --dark-yellow: #ffa500;
   --dark-bg: #1a1a1a;
-  --light-bg: #f8f9fa;
+  --light-bg: #f8f9fa9f;
   --text-dark: #2c3e50;
   --text-light: #ffffff;
   --gradient-1: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
@@ -426,7 +426,7 @@ body {
 }
 
 .title-line {
-  display: block;
+  display: contents;
   animation: titleSlideIn 1s ease-out forwards;
   opacity: 0;
   transform: translateY(50px);
@@ -1120,6 +1120,7 @@ body {
   padding: 100px 0;
   background: var(--light-bg);
   position: relative;
+  overflow-y: hidden;
 }
 
 .section-title {
@@ -1482,11 +1483,12 @@ product-card .views-btn {
     overflow-x: hidden;
     width: 100%;
   }
-  
+
+   
   /* Hero Section Mobile Optimization */
   .hero {
     height: 100vh;
-    padding: 80px 0 40px;
+    padding: 120px 0 30px; /* Increased top padding for mobile navbar */
     width: 100% !important;
     max-width: 100vw !important;
     overflow-x: hidden !important;
@@ -1530,8 +1532,9 @@ product-card .views-btn {
 
   .hero-content {
     text-align: center;
-    padding: 0px 0;
+    padding: 20px 0;
     order: 1;
+    margin-top: 35px; /* Extra margin to ensure visibility */
   }
 
   .hero-badge {
@@ -1731,8 +1734,9 @@ product-card .views-btn {
   /* Mobile Scroll Indicator */
   .scroll-indicator {
     bottom: 20px;
+    display: none;
   }
-
+  
   .scroll-text {
     font-size: 0.8rem;
   }
