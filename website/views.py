@@ -19,7 +19,7 @@ def home():
     return render_template("langingPage.html", categories=categories)
 
 @views.route('/products')
-def prodacts():
+def products():
     categories = Category.query.all()
     products = Product.query.limit(8).all()  # Show latest 8 products
     return render_template("products.html",  categories=categories, products=products)
@@ -57,6 +57,12 @@ def construction_consultants():
 @views.route('technical-support')
 def  technical_support():
     return render_template("technical-support.html")
+
+
+@views.route('/product-single/<int:product_id>')
+def product_single(product_id):
+    product = Product.query.get_or_404(product_id)
+    return render_template("product-single.html", product=product)
 
 @views.route('/sitemap.xml')
 def sitemap():
