@@ -58,6 +58,11 @@ def construction_consultants():
 def  technical_support():
     return render_template("technical-support.html")
 
+@views.route('/sitemap.xml')
+def sitemap():
+    # Generate dynamic sitemap with actual categories and products
+    return render_template("sitemap.xml", categories=Category.query.all(), products=Product.query.all())
+
 @views.route('/dashboard')
 @login_required
 def dashboard():
