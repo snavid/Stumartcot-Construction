@@ -28,9 +28,17 @@ class Product(db.Model):
     name = db.Column(db.String(200), nullable=False)
     description = db.Column(db.Text)
     price = db.Column(db.Float, nullable=False)
-    image = db.Column(db.String(200))
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     
     # Foreign keys
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    
+    # Relationship with product images
+    images = db.relationship('ProductImage', backref='product', lazy=True, cascade="all, delete-orphan")
+
+class ProductImage(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image = db.Column(db.String(200), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)

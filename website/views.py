@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for, current_app
 from flask_login import login_required, current_user
-from .models import User, Category, Product
+from .models import User, Category, Product, ProductImage
 from . import db
 import os
 import uuid
@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 
 views = Blueprint('views', __name__)
 
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'avif'}
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -42,13 +42,11 @@ def home():
 def products():
     categories = Category.query.all()
     products = Product.query.limit(8).all()  # Show latest 8 products
-    return render_template("products.html",  categories=categories, products=products)
-
+    return render_template("products.html", categories=categories, products=products)
 
 @views.route('/blog')
 def blogs():
     return render_template("blog.html")
-
 
 @views.route('/contact')
 def contact():
@@ -70,14 +68,13 @@ def factories():
 def retail_shops():
     return render_template("retail-shops.html")
 
-@views.route('construction-consultants')
+@views.route('/construction-consultants')
 def construction_consultants():
     return render_template("construction-consultants.html")
 
-@views.route('technical-support')
-def  technical_support():
+@views.route('/technical-support')
+def technical_support():
     return render_template("technical-support.html")
-
 
 @views.route('/product-single/<int:product_id>')
 def product_single(product_id):
@@ -113,7 +110,6 @@ def categories():
     categories = Category.query.all()
     return render_template("categories.html", user=current_user, categories=categories)
 
-
 @views.route('/category/<int:category_id>')
 def category_products(category_id):
     category = Category.query.get_or_404(category_id)
@@ -123,7 +119,7 @@ def category_products(category_id):
 @views.route('/product/<int:product_id>')
 def product_detail(product_id):
     product = Product.query.get_or_404(product_id)
-    return render_template("product_detail.html", user=current_user, product=product)# Adm
+    return render_template("product_detail.html", user=current_user, product=product)
 
 @views.route('/manage-categories')
 @login_required
@@ -203,15 +199,7 @@ def add_product():
         available_colors = request.form.get('available_colors')
         tags = request.form.get('tags')
         
-        # Handle file upload
-        image_filename = None
-        if 'image' in request.files:
-            file = request.files['image']
-            if file and file.filename != '' and allowed_file(file.filename):
-                filename = generate_unique_filename(file.filename)
-                file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
-                image_filename = filename
-        
+        # Validate inputs
         if len(name) < 1:
             flash('Product name is required.', category='error')
         elif not price or float(price) <= 0:
@@ -238,6 +226,7 @@ def add_product():
             if tags:
                 tags_list = [t.strip() for t in tags.split(',') if t.strip()]
             
+            # Create new product
             new_product = Product(
                 name=name,
                 description=description,
@@ -245,7 +234,6 @@ def add_product():
                 original_price=float(original_price) if original_price else None,
                 category_id=int(category_id),
                 user_id=current_user.id,
-                image=image_filename,
                 stock_quantity=int(stock_quantity) if stock_quantity else 0,
                 weight=float(weight) if weight else None,
                 dimensions=dimensions,
@@ -255,6 +243,18 @@ def add_product():
                 tags=json.dumps(tags_list) if tags_list else None
             )
             db.session.add(new_product)
+            db.session.flush()  # Get product ID before committing
+            
+            # Handle multiple image uploads
+            if 'images' in request.files:
+                files = request.files.getlist('images')
+                for file in files:
+                    if file and file.filename != '' and allowed_file(file.filename):
+                        filename = generate_unique_filename(file.filename)
+                        file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
+                        product_image = ProductImage(image=filename, product_id=new_product.id)
+                        db.session.add(product_image)
+            
             db.session.commit()
             flash('Product added successfully!', category='success')
             return redirect(url_for('views.dashboard'))
@@ -334,15 +334,9 @@ def edit_product(product_id):
         available_sizes = request.form.get('available_sizes')
         available_colors = request.form.get('available_colors')
         tags = request.form.get('tags')
+        delete_images = request.form.getlist('delete_images')  # Get list of images to delete
         
-        # Handle file upload
-        if 'image' in request.files:
-            file = request.files['image']
-            if file and file.filename != '' and allowed_file(file.filename):
-                filename = generate_unique_filename(file.filename)
-                file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
-                product.image = filename
-        
+        # Validate inputs
         if len(name) < 1:
             flash('Product name is required.', category='error')
         elif not price or float(price) <= 0:
@@ -383,6 +377,27 @@ def edit_product(product_id):
             product.available_colors = json.dumps(colors_list) if colors_list else None
             product.tags = json.dumps(tags_list) if tags_list else None
             
+            # Handle image deletions
+            if delete_images:
+                for image_id in delete_images:
+                    image = ProductImage.query.get(int(image_id))
+                    if image:
+                        # Optionally, delete the file from the filesystem
+                        file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], image.image)
+                        if os.path.exists(file_path):
+                            os.remove(file_path)
+                        db.session.delete(image)
+            
+            # Handle new image uploads
+            if 'images' in request.files:
+                files = request.files.getlist('images')
+                for file in files:
+                    if file and file.filename != '' and allowed_file(file.filename):
+                        filename = generate_unique_filename(file.filename)
+                        file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
+                        product_image = ProductImage(image=filename, product_id=product.id)
+                        db.session.add(product_image)
+            
             db.session.commit()
             flash('Product updated successfully!', category='success')
             return redirect(url_for('views.dashboard'))
@@ -420,6 +435,12 @@ def delete_product(product_id):
     if product.user_id != current_user.id and not current_user.is_admin:
         flash('Access denied.', category='error')
         return redirect(url_for('views.dashboard'))
+    
+    # Delete associated images from filesystem
+    for image in product.images:
+        file_path = os.path.join(current_app.config['UPLOAD_FOLDER'], image.image)
+        if os.path.exists(file_path):
+            os.remove(file_path)
     
     db.session.delete(product)
     db.session.commit()

@@ -39,15 +39,30 @@
                         </div>
                         
                         <div class="mb-3">
-                            <label for="image" class="form-label">Product Image</label>
-                            {% if product.image %}
-                                <div class="mb-2">
-                                    <img src="{{ url_for('static', filename='uploads/' + product.image) }}" alt="Current image" class="img-thumbnail" style="max-width: 200px;">
-                                    <p class="text-muted small">Current image</p>
+                            <label class="form-label">Current Images</label>
+                            {% if product.images %}
+                                <div class="row mb-2">
+                                    {% for image in product.images %}
+                                        <div class="col-md-4 mb-2">
+                                            <div class="card">
+                                                <img src="{{ url_for('static', filename='uploads/' + image.image) }}" alt="Product image" class="card-img-top" style="max-height: 150px; object-fit: cover;">
+                                                <div class="card-body text-center">
+                                                    <input type="checkbox" name="delete_images" value="{{ image.id }}" id="delete_image_{{ image.id }}">
+                                                    <label for="delete_image_{{ image.id }}" class="text-danger small">Delete</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
                                 </div>
+                            {% else %}
+                                <p class="text-muted">No images uploaded for this product.</p>
                             {% endif %}
-                            <input type="file" class="form-control" id="image" name="image" accept="image/*">
-                            <div class="form-text">Upload a new image to replace the current one (optional)</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="images" class="form-label">Add New Images</label>
+                            <input type="file" class="form-control" id="images" name="images" accept="image/*" multiple>
+                            <div class="form-text">Upload new images to add to the product (optional). Supported formats: PNG, JPG, JPEG, GIF.</div>
                         </div>
                         
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">

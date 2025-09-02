@@ -38,9 +38,9 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="image" class="form-label">Product Image</label>
-                        <input type="file" class="form-control" id="image" name="image" accept="image/*">
-                        <div class="form-text">Supported formats: PNG, JPG, JPEG, GIF</div>
+                        <label for="images" class="form-label">Product Images</label>
+                        <input type="file" class="form-control" id="images" name="images" accept="image/*" multiple>
+                        <div class="form-text">Supported formats: PNG, JPG, JPEG, GIF. You can select multiple images.</div>
                     </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                         <a href="{{ url_for('views.dashboard') }}" class="btn btn-secondary">Cancel</a>
@@ -50,5 +50,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 {% endblock %}
