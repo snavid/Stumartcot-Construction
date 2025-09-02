@@ -1,76 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:custom="http://www.example.com/schemas/sitemap-custom">
     <!-- Home page -->
     <url>
         <loc>{{ url_for('views.home', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+        <custom:description>Welcome to our homepage, your gateway to all our products and services.</custom:description>
     </url>
 
     <!-- Static pages -->
     <url>
         <loc>{{ url_for('views.products', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <custom:description>Browse our wide range of products.</custom:description>
     </url>
     <url>
         <loc>{{ url_for('views.blogs', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
+        <custom:description>Read our latest blog posts and updates.</custom:description>
     </url>
     <url>
         <loc>{{ url_for('views.contact', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+        <custom:description>Contact us for inquiries and support.</custom:description>
     </url>
     <url>
         <loc>{{ url_for('views.cart', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.6</priority>
+        <custom:description>View and manage your shopping cart.</custom:description>
     </url>
     <url>
         <loc>{{ url_for('views.showrooms', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+        <custom:description>Explore our showrooms and locations.</custom:description>
     </url>
     <url>
         <loc>{{ url_for('views.factories', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+        <custom:description>Learn about our manufacturing facilities.</custom:description>
     </url>
     <url>
         <loc>{{ url_for('views.retail_shops', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+        <custom:description>Visit our retail shops for exclusive offers.</custom:description>
     </url>
     <url>
         <loc>{{ url_for('views.construction_consultants', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+        <custom:description>Consult with our construction experts.</custom:description>
     </url>
     <url>
         <loc>{{ url_for('views.technical_support', _external=True) }}</loc>
-        <lastmod>{{ datetime.utcnow().strftime('%Y-%m-%d') }}</lastmod>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+        <custom:description>Get technical support for our products.</custom:description>
     </url>
 
     <!-- Dynamic category pages -->
     {% for category in categories %}
     <url>
-        <loc>{{ url_for('views.prodacts', _external=True) }}?category={{ category.id }}</loc>
+        <loc>{{ url_for('views.products', category=category.id, _external=True) }}</loc>
         <lastmod>{{ category.created_at.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <custom:description>{{ category.description | safe }}</custom:description>
     </url>
     {% endfor %}
 
@@ -81,6 +93,7 @@
         <lastmod>{{ product.created_at.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <custom:description>{{ product.description | safe }}</custom:description>
     </url>
     {% endfor %}
 </urlset>

@@ -1,13 +1,13 @@
-{% extends "base2.html"%}
-{% block content%}
+{% extends "base2.html" %}
+{% block content %}
     <!-- Product Detail Section -->
     <section class="product-detail mt-4">
         <div class="container">
-            <nav aria-label="breadcrumb" class=" mb-4">
+            <nav aria-label="breadcrumb" class="mb-4">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="products.html">Products</a></li>
-                    <li class="breadcrumb-item active" id="productBreadcrumb">Product Details</li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('views.home') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('views.products') }}">Products</a></li>
+                    <li class="breadcrumb-item active">{{ product.name }}</li>
                 </ol>
             </nav>
 
@@ -17,82 +17,76 @@
                     <div class="product-images">
                         <div class="main-image">
                             <div class="image-placeholder" id="mainProductImage">
-                                <i class="fas fa-th-large"></i>
+                                {% if product.images %}
+                                    <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}" 
+                                         alt="{{ product.name }}" class="img-fluid">
+                                {% else %}
+                                    <i class="fas fa-image fa-3x text-muted"></i>
+                                    <p class="mt-2">No image available</p>
+                                {% endif %}
                             </div>
                         </div>
-                        <div class="thumbnail-images">
-                            <div class="thumbnail active">
-                                <i class="fas fa-th-large"></i>
+                        {% if product.images|length > 1 %}
+                        <div class="thumbnail-images mt-3">
+                            {% for image in product.images[:4] %}
+                            <div class="thumbnail {% if loop.first %}active{% endif %}" 
+                                 onclick="changeMainImage('{{ url_for('static', filename='uploads/' + image.image) }}', this)">
+                                <img src="{{ url_for('static', filename='uploads/' + image.image) }}" 
+                                     alt="{{ product.name }}" class="img-fluid">
                             </div>
-                            <div class="thumbnail">
-                                <i class="fas fa-image"></i>
-                            </div>
-                            <div class="thumbnail">
-                                <i class="fas fa-images"></i>
-                            </div>
-                            <div class="thumbnail">
-                                <i class="fas fa-camera"></i>
-                            </div>
+                            {% endfor %}
                         </div>
+                        {% endif %}
                     </div>
                 </div>
 
                 <!-- Product Info -->
                 <div class="col-lg-6">
                     <div class="product-detail-info">
-                        <h1 id="productTitle">Ceramic Wall Tiles</h1>
+                        <h1 id="productTitle">{{ product.name }}</h1>
                         <div class="product-rating mb-3">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
                             </div>
-                            <span class="rating-text">(24 reviews)</span>
+                           <!-- <span class="rating-text">(0 reviews)</span>-->
                         </div>
 
                         <div class="product-price mb-4">
-                            <span class="current-price" id="productPrice">$45.00</span>
-                            <span class="original-price" id="originalPrice">$55.00</span>
-                            <span class="discount-badge">18% OFF</span>
+                            <span class="current-price" id="productPrice">${{ "%.2f"|format(product.price) }}</span>
+                            {% if product.price > 50 %}
+                            <span class="original-price">${{ "%.2f"|format(product.price * 1.2) }}</span>
+                            <span class="discount-badge">17% OFF</span>
+                            {% endif %}
                         </div>
 
                         <div class="product-description mb-4">
-                            <p id="productDescription">Premium ceramic wall tiles perfect for bathrooms and kitchens. These high-quality tiles offer excellent durability, water resistance, and easy maintenance. Available in multiple colors and patterns to match any interior design.</p>
+                            <p id="productDescription">
+                                {% if product.description %}
+                                    {{ product.description }}
+                                {% else %}
+                                    High-quality product perfect for your needs. Contact us for more details about specifications and availability.
+                                {% endif %}
+                            </p>
                         </div>
 
                         <!-- Product Features -->
                         <div class="product-features mb-4">
                             <h5>Key Features:</h5>
                             <ul id="productFeatures">
-                                <li><i class="fas fa-check text-success me-2"></i>Water resistant and easy to clean</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Durable ceramic construction</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Multiple color options available</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Professional installation support</li>
-                                <li><i class="fas fa-check text-success me-2"></i>5-year manufacturer warranty</li>
+                                <li><i class="fas fa-check text-success me-2"></i>High-quality construction</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Durable and long-lasting</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Professional grade materials</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Easy installation and maintenance</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Manufacturer warranty included</li>
                             </ul>
                         </div>
 
                         <!-- Product Options -->
                         <div class="product-options mb-4">
-                            <div class="option-group mb-3">
-                                <label class="form-label">Size:</label>
-                                <select class="form-select" id="sizeOption">
-                                    <option value="12x12">12" x 12"</option>
-                                    <option value="18x18">18" x 18"</option>
-                                    <option value="24x24">24" x 24"</option>
-                                </select>
-                            </div>
-                            <div class="option-group mb-3">
-                                <label class="form-label">Color:</label>
-                                <div class="color-options">
-                                    <div class="color-option active" data-color="white" style="background: #ffffff;"></div>
-                                    <div class="color-option" data-color="beige" style="background: #f5f5dc;"></div>
-                                    <div class="color-option" data-color="gray" style="background: #808080;"></div>
-                                    <div class="color-option" data-color="blue" style="background: #4169e1;"></div>
-                                </div>
-                            </div>
                             <div class="option-group mb-3">
                                 <label class="form-label">Quantity:</label>
                                 <div class="quantity-selector">
@@ -105,7 +99,7 @@
 
                         <!-- Action Buttons -->
                         <div class="product-actions">
-                            <button class="btn-add-cart-large" onclick="addToCartFromDetail()">
+                            <button class="btn-add-cart-large" onclick="addToCartFromDetail('{{ product.id }}', '{{ product.name }}', {{ product.price }})">
                                 <i class="fas fa-shopping-cart me-2"></i>Add to Cart
                             </button>
                             <button class="btn-buy-now">
@@ -128,7 +122,11 @@
                             </div>
                             <div class="info-item">
                                 <i class="fas fa-shield-alt text-warning me-2"></i>
-                                <span>5-year warranty included</span>
+                                <span>Warranty included</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar text-info me-2"></i>
+                                <span>Listed on {{ product.created_at.strftime('%B %d, %Y') }}</span>
                             </div>
                         </div>
                     </div>
@@ -151,30 +149,24 @@
                         Specifications
                     </button>
                 </li>
-                <li class="nav-item" role="presentation">
+           <!--    <li class="nav-item" role="presentation">
                     <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">
-                        Reviews (24)
+                        Reviews (0)
                     </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="installation-tab" data-bs-toggle="tab" data-bs-target="#installation" type="button" role="tab">
-                        Installation Guide
-                    </button>
-                </li>
+                </li>--> 
             </ul>
             <div class="tab-content" id="productTabsContent">
                 <div class="tab-pane fade show active" id="description" role="tabpanel">
                     <div class="tab-content-inner">
                         <h4>Product Description</h4>
-                        <p>Our premium ceramic wall tiles are crafted with precision and designed to enhance any space. Made from high-quality ceramic materials, these tiles offer exceptional durability and aesthetic appeal.</p>
-                        <p>Perfect for both residential and commercial applications, these tiles are ideal for bathrooms, kitchens, and other areas where moisture resistance is important. The smooth surface makes cleaning effortless, while the variety of available colors ensures you'll find the perfect match for your design vision.</p>
-                        <h5>Benefits:</h5>
+                        <p>{{ product.description or "Detailed product description coming soon. Contact us for more information about this product's features and specifications." }}</p>
+                        
+                        <h5>Product Details:</h5>
                         <ul>
-                            <li>Superior water resistance</li>
-                            <li>Easy maintenance and cleaning</li>
-                            <li>Long-lasting durability</li>
-                            <li>Professional appearance</li>
-                            <li>Eco-friendly materials</li>
+                            <li><strong>Product ID:</strong> #{{ product.id }}</li>
+                            <li><strong>Category:</strong> {{ product.category.name if product.category else 'General' }}</li>
+                            <li><strong>Listed by:</strong> {{ product.user.username if product.user else 'Store Admin' }}</li>
+                            <li><strong>Date Listed:</strong> {{ product.created_at.strftime('%B %d, %Y') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -184,36 +176,28 @@
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
-                                    <td><strong>Material</strong></td>
-                                    <td>Premium Ceramic</td>
+                                    <td><strong>Product Name</strong></td>
+                                    <td>{{ product.name }}</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Thickness</strong></td>
-                                    <td>8mm</td>
+                                    <td><strong>Product ID</strong></td>
+                                    <td>#{{ product.id }}</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Water Absorption</strong></td>
-                                    <td>Less than 0.5%</td>
+                                    <td><strong>Price</strong></td>
+                                    <td>${{ "%.2f"|format(product.price) }}</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Surface Finish</strong></td>
-                                    <td>Glossy</td>
+                                    <td><strong>Category</strong></td>
+                                    <td>{{ product.category.name if product.category else 'General' }}</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Frost Resistance</strong></td>
-                                    <td>Yes</td>
+                                    <td><strong>Availability</strong></td>
+                                    <td>In Stock</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Slip Resistance</strong></td>
-                                    <td>R9</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Coverage per Box</strong></td>
-                                    <td>10 sq ft</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Weight per Box</strong></td>
-                                    <td>35 lbs</td>
+                                    <td><strong>Date Listed</strong></td>
+                                    <td>{{ product.created_at.strftime('%B %d, %Y') }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -222,157 +206,12 @@
                 <div class="tab-pane fade" id="reviews" role="tabpanel">
                     <div class="tab-content-inner">
                         <div class="reviews-summary">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="rating-overview">
-                                        <div class="average-rating">4.8</div>
-                                        <div class="stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <div class="total-reviews">Based on 24 reviews</div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="rating-breakdown">
-                                        <div class="rating-bar">
-                                            <span>5 stars</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width: 75%"></div>
-                                            </div>
-                                            <span>18</span>
-                                        </div>
-                                        <div class="rating-bar">
-                                            <span>4 stars</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width: 20%"></div>
-                                            </div>
-                                            <span>5</span>
-                                        </div>
-                                        <div class="rating-bar">
-                                            <span>3 stars</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width: 4%"></div>
-                                            </div>
-                                            <span>1</span>
-                                        </div>
-                                        <div class="rating-bar">
-                                            <span>2 stars</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width: 0%"></div>
-                                            </div>
-                                            <span>0</span>
-                                        </div>
-                                        <div class="rating-bar">
-                                            <span>1 star</span>
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width: 0%"></div>
-                                            </div>
-                                            <span>0</span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="text-center py-5">
+                                <i class="fas fa-star fa-3x text-muted mb-3"></i>
+                                <h5>No Reviews Yet</h5>
+                                <p class="text-muted">Be the first to review this product!</p>
+                                <button class="btn btn-primary">Write a Review</button>
                             </div>
-                        </div>
-
-                        <div class="reviews-list">
-                            <div class="review-item">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-avatar">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                    <div class="reviewer-details">
-                                        <h6>John M.</h6>
-                                        <div class="review-rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <small class="review-date">2 weeks ago</small>
-                                    </div>
-                                </div>
-                                <div class="review-content">
-                                    <p>Excellent quality tiles! Easy to install and they look fantastic in our bathroom. The color is exactly as shown and the finish is perfect.</p>
-                                </div>
-                            </div>
-
-                            <div class="review-item">
-                                <div class="reviewer-info">
-                                    <div class="reviewer-avatar">
-                                        <i class="fas fa-user"></i>
-                                    </div>
-                                    <div class="reviewer-details">
-                                        <h6>Sarah K.</h6>
-                                        <div class="review-rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="far fa-star"></i>
-                                        </div>
-                                        <small class="review-date">1 month ago</small>
-                                    </div>
-                                </div>
-                                <div class="review-content">
-                                    <p>Good quality tiles, delivered on time. Installation was straightforward. Only minor issue was one tile had a small chip, but customer service was quick to replace it.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="installation" role="tabpanel">
-                    <div class="tab-content-inner">
-                        <h4>Installation Guide</h4>
-                        <div class="installation-steps">
-                            <div class="step">
-                                <div class="step-number">1</div>
-                                <div class="step-content">
-                                    <h5>Surface Preparation</h5>
-                                    <p>Ensure the wall surface is clean, dry, and level. Remove any old tiles, wallpaper, or loose paint. Fill any holes or cracks with appropriate filler.</p>
-                                </div>
-                            </div>
-                            <div class="step">
-                                <div class="step-number">2</div>
-                                <div class="step-content">
-                                    <h5>Planning and Layout</h5>
-                                    <p>Measure the wall and plan your tile layout. Start from the center and work outward. Use chalk lines to mark your starting point.</p>
-                                </div>
-                            </div>
-                            <div class="step">
-                                <div class="step-number">3</div>
-                                <div class="step-content">
-                                    <h5>Apply Adhesive</h5>
-                                    <p>Apply tile adhesive to the wall using a notched trowel. Work in small sections to prevent the adhesive from drying out.</p>
-                                </div>
-                            </div>
-                            <div class="step">
-                                <div class="step-number">4</div>
-                                <div class="step-content">
-                                    <h5>Install Tiles</h5>
-                                    <p>Press each tile firmly into the adhesive, using spacers to maintain consistent gaps. Check alignment regularly with a spirit level.</p>
-                                </div>
-                            </div>
-                            <div class="step">
-                                <div class="step-number">5</div>
-                                <div class="step-content">
-                                    <h5>Grouting</h5>
-                                    <p>After 24 hours, remove spacers and apply grout diagonally across the tiles. Clean excess grout immediately with a damp sponge.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="installation-tips">
-                            <h5>Professional Tips:</h5>
-                            <ul>
-                                <li>Always use appropriate safety equipment</li>
-                                <li>Allow proper drying time between steps</li>
-                                <li>Keep tiles at room temperature before installation</li>
-                                <li>Consider hiring a professional for complex layouts</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -381,75 +220,99 @@
     </section>
 
     <!-- Related Products -->
+    {% if related_products %}
     <section class="related-products">
         <div class="container">
             <h3 class="section-title">Related Products</h3>
             <div class="row">
+                {% for related_product in related_products %}
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="product-card-shop">
                         <div class="product-image-shop">
-                            <i class="fas fa-layer-group"></i>
+                            <a href="{{ url_for('views.product_single', product_id=related_product.id) }}">
+                                {% if related_product.images %}
+                                    <img src="{{ url_for('static', filename='uploads/' + related_product.images[0].image) }}" 
+                                         alt="{{ related_product.name }}" class="img-fluid">
+                                {% else %}
+                                    <i class="fas fa-image fa-2x text-muted"></i>
+                                {% endif %}
+                            </a>
                         </div>
                         <div class="product-info">
-                            <h5>Porcelain Floor Tiles</h5>
+                            <h5><a href="{{ url_for('views.product_single', product_id=related_product.id) }}">{{ related_product.name }}</a></h5>
                             <div class="product-price">
-                                <span class="current-price">$65.00</span>
+                                <span class="current-price">${{ "%.2f"|format(related_product.price) }}</span>
                             </div>
-                            <button class="btn-add-cart" onclick="addToCart('porcelain-floor-tiles', 'Porcelain Floor Tiles', 65.00)">
+                            <button class="btn-add-cart" onclick="addToCart('{{ related_product.id }}', '{{ related_product.name }}', {{ related_product.price }})">
                                 <i class="fas fa-shopping-cart me-2"></i>Add to Cart
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="product-card-shop">
-                        <div class="product-image-shop">
-                            <i class="fas fa-th"></i>
-                        </div>
-                        <div class="product-info">
-                            <h5>Mosaic Tiles</h5>
-                            <div class="product-price">
-                                <span class="current-price">$55.00</span>
-                            </div>
-                            <button class="btn-add-cart" onclick="addToCart('mosaic-tiles', 'Mosaic Tiles', 55.00)">
-                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="product-card-shop">
-                        <div class="product-image-shop">
-                            <i class="fas fa-square"></i>
-                        </div>
-                        <div class="product-info">
-                            <h5>Natural Stone Tiles</h5>
-                            <div class="product-price">
-                                <span class="current-price">$85.00</span>
-                            </div>
-                            <button class="btn-add-cart" onclick="addToCart('natural-stone-tiles', 'Natural Stone Tiles', 85.00)">
-                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="product-card-shop">
-                        <div class="product-image-shop">
-                            <i class="fas fa-grip-horizontal"></i>
-                        </div>
-                        <div class="product-info">
-                            <h5>Subway Tiles</h5>
-                            <div class="product-price">
-                                <span class="current-price">$40.00</span>
-                            </div>
-                            <button class="btn-add-cart" onclick="addToCart('subway-tiles', 'Subway Tiles', 40.00)">
-                                <i class="fas fa-shopping-cart me-2"></i>Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-{%endblock%}
+    {% endif %}
+
+    <script>
+        // Function to change main product image
+        function changeMainImage(imageSrc, thumbnail) {
+            document.querySelector('#mainProductImage img').src = imageSrc;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        // Function to change quantity
+        function changeQuantity(change) {
+            const quantityInput = document.getElementById('quantity');
+            let currentValue = parseInt(quantityInput.value);
+            let newValue = currentValue + change;
+            
+            if (newValue >= 1 && newValue <= 100) {
+                quantityInput.value = newValue;
+            }
+        }
+
+        // Function to add to cart from detail page
+        function addToCartFromDetail(productId, productName, price) {
+            const quantity = document.getElementById('quantity').value;
+            // Add your cart functionality here
+            console.log('Adding to cart:', {
+                id: productId,
+                name: productName,
+                price: price,
+                quantity: quantity
+            });
+            
+            // Example: You can make an AJAX call to add to cart
+            // fetch('/add-to-cart', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({
+            //         product_id: productId,
+            //         quantity: quantity
+            //     })
+            // });
+            
+            alert('Product added to cart!');
+        }
+
+        // Function to add to cart (for related products)
+        function addToCart(productId, productName, price) {
+            // Add your cart functionality here
+            console.log('Adding to cart:', {
+                id: productId,
+                name: productName,
+                price: price,
+                quantity: 1
+            });
+            
+            alert('Product added to cart!');
+        }
+    </script>
+{% endblock %}

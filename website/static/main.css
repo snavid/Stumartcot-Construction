@@ -3412,3 +3412,217 @@ Ecommerce Styles */
 .nav-link.active::after {
   width: 100%;
 }
+
+
+/* Product Detail Image Fixes */
+.product-images {
+  position: sticky;
+  top: 100px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.main-image {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image-placeholder {
+  height: 400px;
+  width: 100%;
+  max-width: 100%;
+  background: var(--gradient-1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  color: var(--text-dark);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fix for actual product images */
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  display: block;
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 5px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+  background: var(--gradient-1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Fix for thumbnail images */
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  display: block;
+}
+
+.thumbnail.active,
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Product card shop images */
+.product-image-shop {
+  height: 200px;
+  width: 100%;
+  max-width: 100%;
+  background: var(--gradient-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--text-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image-shop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.product-image-shop a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Related products images */
+.related-products .product-image-shop {
+  height: 180px;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+  .product-images {
+    position: relative;
+    top: auto;
+    margin-bottom: 30px;
+  }
+
+  .image-placeholder {
+    height: 300px;
+    font-size: 4rem;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .thumbnail-images {
+    gap: 8px;
+  }
+
+  .product-image-shop {
+    height: 180px;
+    font-size: 2.5rem;
+  }
+
+  .related-products .product-image-shop {
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .image-placeholder {
+    height: 250px;
+    font-size: 3rem;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 1rem;
+  }
+
+  .product-image-shop {
+    height: 160px;
+    font-size: 2rem;
+  }
+
+  .related-products .product-image-shop {
+    height: 140px;
+  }
+}
+
+/* Additional container fixes to prevent any overflow */
+.product-detail .container {
+  
+  overflow-x: hidden;
+}
+
+.product-detail .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.product-detail .col-lg-6 {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
+}
+
+/* Ensure product card containers don't overflow */
+.product-card-shop {
+  max-width: 90%;
+  overflow: hidden;
+}
+
+.products-grid .container {
+  max-width: 90%;
+  overflow-x: hidden;
+}
+
+.related-products .container {
+
+  overflow-x: hidden;
+}

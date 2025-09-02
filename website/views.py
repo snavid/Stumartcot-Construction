@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for, current_app
+from flask import Blueprint, render_template, request, flash, redirect, url_for, current_app, Response
 from flask_login import login_required, current_user
 from .models import User, Category, Product, ProductImage
 from . import db
@@ -79,12 +79,33 @@ def technical_support():
 @views.route('/product-single/<int:product_id>')
 def product_single(product_id):
     product = Product.query.get_or_404(product_id)
-    return render_template("product-single.html", product=product)
+    
+    # Get related products from the same category (excluding current product)
+    related_products = Product.query.filter(
+        Product.category_id == product.category_id,
+        Product.id != product.id
+    ).limit(4).all()
+    
+    # If no products in same category, get random products
+    if not related_products:
+        related_products = Product.query.filter(
+            Product.id != product.id
+        ).limit(4).all()
+    
+    return render_template("product-single.html", 
+                         product=product, 
+                         related_products=related_products)
 
 @views.route('/sitemap.xml')
 def sitemap():
-    # Generate dynamic sitemap with actual categories and products
-    return render_template("sitemap.xml", categories=Category.query.all(), products=Product.query.all())
+    current_time = datetime.utcnow()
+    sitemap_xml = render_template("sitemap.xml", 
+                                categories=Category.query.all(), 
+                                products=Product.query.all(),
+                                current_time=current_time,
+                                moment = current_time)
+    response = Response(sitemap_xml, mimetype='application/xml')
+    return response
 
 @views.route('/dashboard')
 @login_required
