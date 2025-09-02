@@ -115,6 +115,16 @@ def manage_categories():
     categories = Category.query.all()
     return render_template("manage_categories.html", user=current_user, categories=categories)
 
+@views.route('/manage-products')
+@login_required
+def manage_products():
+    if not current_user.is_admin:
+        flash('Access denied. Admin privileges required.', category='error')
+        return redirect(url_for('views.dashboard'))
+    
+    products = Product.query.all()
+    return render_template("manage_products.html", user=current_user, products=products)
+
 @views.route('/add-category', methods=['GET', 'POST'])
 @login_required
 def add_category():
@@ -214,6 +224,80 @@ def delete_user(user_id):
     
     return redirect(url_for('views.manage_users'))
 
+@views.route('/edit-category/<int:category_id>', methods=['GET', 'POST'])
+@login_required
+def edit_category(category_id):
+    if not current_user.is_admin:
+        flash('Access denied. Admin privileges required.', category='error')
+        return redirect(url_for('views.dashboard'))
+    
+    category = Category.query.get_or_404(category_id)
+    
+    if request.method == 'POST':
+        name = request.form.get('name')
+        description = request.form.get('description')
+        
+        # Handle file upload
+        if 'image' in request.files:
+            file = request.files['image']
+            if file and file.filename != '' and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
+                category.image = filename
+        
+        if len(name) < 1:
+            flash('Category name is required.', category='error')
+        else:
+            category.name = name
+            category.description = description
+            db.session.commit()
+            flash('Category updated successfully!', category='success')
+            return redirect(url_for('views.manage_categories'))
+    
+    return render_template("edit_category.html", user=current_user, category=category)
+
+@views.route('/edit-product/<int:product_id>', methods=['GET', 'POST'])
+@login_required
+def edit_product(product_id):
+    product = Product.query.get_or_404(product_id)
+    
+    # Users can only edit their own products, admins can edit any
+    if product.user_id != current_user.id and not current_user.is_admin:
+        flash('Access denied.', category='error')
+        return redirect(url_for('views.dashboard'))
+    
+    if request.method == 'POST':
+        name = request.form.get('name')
+        description = request.form.get('description')
+        price = request.form.get('price')
+        category_id = request.form.get('category_id')
+        
+        # Handle file upload
+        if 'image' in request.files:
+            file = request.files['image']
+            if file and file.filename != '' and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
+                product.image = filename
+        
+        if len(name) < 1:
+            flash('Product name is required.', category='error')
+        elif not price or float(price) <= 0:
+            flash('Valid price is required.', category='error')
+        elif not category_id:
+            flash('Category is required.', category='error')
+        else:
+            product.name = name
+            product.description = description
+            product.price = float(price)
+            product.category_id = int(category_id)
+            db.session.commit()
+            flash('Product updated successfully!', category='success')
+            return redirect(url_for('views.dashboard'))
+    
+    categories = Category.query.all()
+    return render_template("edit_product.html", user=current_user, product=product, categories=categories)
+
 @views.route('/delete-category/<int:category_id>')
 @login_required
 def delete_category(category_id):
@@ -222,13 +306,16 @@ def delete_category(category_id):
         return redirect(url_for('views.dashboard'))
     
     category = Category.query.get_or_404(category_id)
-    # Check if category has products
+    
+    # Delete all products in this category first
     if category.products:
-        flash('Cannot delete category with existing products.', category='error')
-    else:
-        db.session.delete(category)
-        db.session.commit()
-        flash('Category deleted successfully!', category='success')
+        for product in category.products:
+            db.session.delete(product)
+    
+    # Now delete the category
+    db.session.delete(category)
+    db.session.commit()
+    flash('Category and all its products deleted successfully!', category='success')
     
     return redirect(url_for('views.manage_categories'))
 

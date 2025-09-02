@@ -32,6 +32,7 @@
                                 </p>
                                 <div class="btn-group w-100">
                                     <a href="{{ url_for('views.product_detail', product_id=product.id) }}" class="btn btn-outline-primary btn-sm">View</a>
+                                    <a href="{{ url_for('views.edit_product', product_id=product.id) }}" class="btn btn-outline-secondary btn-sm">Edit</a>
                                     <a href="{{ url_for('views.delete_product', product_id=product.id) }}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
                                 </div>
                             </div>
