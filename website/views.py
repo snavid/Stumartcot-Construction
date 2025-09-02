@@ -3,6 +3,8 @@ from flask_login import login_required, current_user
 from .models import User, Category, Product
 from . import db
 import os
+import uuid
+from datetime import datetime
 from werkzeug.utils import secure_filename
 
 views = Blueprint('views', __name__)
@@ -11,6 +13,24 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def generate_unique_filename(original_filename):
+    """Generate a unique filename to prevent overwrites"""
+    if not original_filename:
+        return None
+    
+    # Get the file extension
+    filename = secure_filename(original_filename)
+    name, ext = os.path.splitext(filename)
+    
+    # Generate unique filename using timestamp and UUID
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    unique_id = str(uuid.uuid4())[:8]  # First 8 characters of UUID
+    
+    # Create new filename: originalname_timestamp_uniqueid.ext
+    unique_filename = f"{name}_{timestamp}_{unique_id}{ext}"
+    
+    return unique_filename
 
 @views.route('/')
 def home():
@@ -141,7 +161,7 @@ def add_category():
         if 'image' in request.files:
             file = request.files['image']
             if file and file.filename != '' and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+                filename = generate_unique_filename(file.filename)
                 file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
                 image_filename = filename
         
@@ -173,14 +193,22 @@ def add_product():
         name = request.form.get('name')
         description = request.form.get('description')
         price = request.form.get('price')
+        original_price = request.form.get('original_price')
         category_id = request.form.get('category_id')
+        stock_quantity = request.form.get('stock_quantity', 0)
+        weight = request.form.get('weight')
+        dimensions = request.form.get('dimensions')
+        features = request.form.get('features')
+        available_sizes = request.form.get('available_sizes')
+        available_colors = request.form.get('available_colors')
+        tags = request.form.get('tags')
         
         # Handle file upload
         image_filename = None
         if 'image' in request.files:
             file = request.files['image']
             if file and file.filename != '' and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+                filename = generate_unique_filename(file.filename)
                 file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
                 image_filename = filename
         
@@ -191,13 +219,40 @@ def add_product():
         elif not category_id:
             flash('Category is required.', category='error')
         else:
+            # Convert features to JSON format
+            import json
+            features_list = []
+            if features:
+                features_list = [f.strip() for f in features.split('\n') if f.strip()]
+            
+            # Convert sizes and colors to JSON format
+            sizes_list = []
+            if available_sizes:
+                sizes_list = [s.strip() for s in available_sizes.split(',') if s.strip()]
+            
+            colors_list = []
+            if available_colors:
+                colors_list = [c.strip() for c in available_colors.split(',') if c.strip()]
+            
+            tags_list = []
+            if tags:
+                tags_list = [t.strip() for t in tags.split(',') if t.strip()]
+            
             new_product = Product(
                 name=name,
                 description=description,
                 price=float(price),
+                original_price=float(original_price) if original_price else None,
                 category_id=int(category_id),
                 user_id=current_user.id,
-                image=image_filename
+                image=image_filename,
+                stock_quantity=int(stock_quantity) if stock_quantity else 0,
+                weight=float(weight) if weight else None,
+                dimensions=dimensions,
+                features=json.dumps(features_list) if features_list else None,
+                available_sizes=json.dumps(sizes_list) if sizes_list else None,
+                available_colors=json.dumps(colors_list) if colors_list else None,
+                tags=json.dumps(tags_list) if tags_list else None
             )
             db.session.add(new_product)
             db.session.commit()
@@ -241,7 +296,7 @@ def edit_category(category_id):
         if 'image' in request.files:
             file = request.files['image']
             if file and file.filename != '' and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+                filename = generate_unique_filename(file.filename)
                 file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
                 category.image = filename
         
@@ -270,13 +325,21 @@ def edit_product(product_id):
         name = request.form.get('name')
         description = request.form.get('description')
         price = request.form.get('price')
+        original_price = request.form.get('original_price')
         category_id = request.form.get('category_id')
+        stock_quantity = request.form.get('stock_quantity', 0)
+        weight = request.form.get('weight')
+        dimensions = request.form.get('dimensions')
+        features = request.form.get('features')
+        available_sizes = request.form.get('available_sizes')
+        available_colors = request.form.get('available_colors')
+        tags = request.form.get('tags')
         
         # Handle file upload
         if 'image' in request.files:
             file = request.files['image']
             if file and file.filename != '' and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
+                filename = generate_unique_filename(file.filename)
                 file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
                 product.image = filename
         
@@ -287,10 +350,39 @@ def edit_product(product_id):
         elif not category_id:
             flash('Category is required.', category='error')
         else:
+            # Convert features to JSON format
+            import json
+            features_list = []
+            if features:
+                features_list = [f.strip() for f in features.split('\n') if f.strip()]
+            
+            # Convert sizes and colors to JSON format
+            sizes_list = []
+            if available_sizes:
+                sizes_list = [s.strip() for s in available_sizes.split(',') if s.strip()]
+            
+            colors_list = []
+            if available_colors:
+                colors_list = [c.strip() for c in available_colors.split(',') if c.strip()]
+            
+            tags_list = []
+            if tags:
+                tags_list = [t.strip() for t in tags.split(',') if t.strip()]
+            
+            # Update product fields
             product.name = name
             product.description = description
             product.price = float(price)
+            product.original_price = float(original_price) if original_price else None
             product.category_id = int(category_id)
+            product.stock_quantity = int(stock_quantity) if stock_quantity else 0
+            product.weight = float(weight) if weight else None
+            product.dimensions = dimensions
+            product.features = json.dumps(features_list) if features_list else None
+            product.available_sizes = json.dumps(sizes_list) if sizes_list else None
+            product.available_colors = json.dumps(colors_list) if colors_list else None
+            product.tags = json.dumps(tags_list) if tags_list else None
+            
             db.session.commit()
             flash('Product updated successfully!', category='success')
             return redirect(url_for('views.dashboard'))
