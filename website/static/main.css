@@ -3828,3 +3828,119 @@ Ecommerce Styles */
       font-size: 1.5rem;
   }
 }
+
+
+/* Ensure dropdown menu is visible on small devices */
+.filters-section {
+  position: relative;
+  z-index: 10; /* Ensure filters section is above other content */
+}
+
+/* Fix dropdown menu positioning and visibility */
+.dropdown-menu {
+  z-index: 1000; /* High z-index to ensure dropdown appears above other elements */
+  max-height: 300px; /* Limit dropdown height to prevent it from extending off-screen */
+  overflow-y: auto; /* Allow scrolling if dropdown has many items */
+  width: 100%; /* Full width on small screens for better usability */
+  min-width: 200px; /* Minimum width to ensure readability */
+  border-radius: 8px; /* Consistent border radius */
+  background: #f8f9fa; /* Match your theme */
+  border: 1px solid rgba(255, 215, 0, 0.3); /* Consistent border styling */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for visibility */
+}
+
+/* Ensure dropdown button is styled properly for small screens */
+.dropdown-toggle {
+  width: 100%; /* Full width on small screens */
+  text-align: left; /* Align text for better appearance */
+  padding: 12px 15px; /* Consistent padding */
+  font-size: 0.95rem; /* Slightly smaller font for mobile */
+}
+
+/* Adjust dropdown items for better mobile experience */
+.dropdown-item {
+  font-size: 0.9rem; /* Readable font size */
+  padding: 10px 15px; /* Comfortable padding */
+  color: var(--text-dark); /* Match theme */
+  transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+  background: var(--primary-yellow); /* Highlight on hover/active */
+  color: var(--text-dark);
+}
+
+/* Ensure filters bar doesn't overlap with products on small screens */
+.filters-bar {
+  margin-bottom: 2rem; /* Increased margin to prevent overlap with products */
+  padding: 15px 0; /* Consistent padding */
+}
+
+/* Adjust products grid to ensure no overlap with filters */
+.products-grid {
+  margin-top: 1rem; /* Add space above products to avoid overlap */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .filters-section {
+    padding: 20px 0; /* Reduced padding for mobile */
+  }
+
+  .filters-bar {
+    flex-direction: column; /* Stack filters vertically */
+    align-items: stretch; /* Ensure full width */
+    gap: 15px; /* Consistent gap */
+  }
+
+  .filter-group {
+    min-width: 100%; /* Full width for filter group */
+  }
+
+  .dropdown {
+    position: relative; /* Ensure dropdown stays within parent */
+  }
+
+  .dropdown-menu {
+    position: absolute; /* Keep dropdown positioned correctly */
+    top: 100%; /* Place below the button */
+    left: 0;
+    right: 0;
+    transform: translateY(5px); /* Slight offset for visibility */
+  }
+
+  .dropdown-toggle {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+    padding: 10px 12px; /* Adjust padding */
+  }
+
+  /* Ensure container doesn't clip dropdown */
+  .container {
+    overflow: visible !important; /* Prevent clipping of dropdown */
+  }
+}
+
+@media (max-width: 576px) {
+  .filters-section {
+    padding: 15px 0; /* Further reduced padding */
+  }
+
+  .dropdown-menu {
+    max-height: 250px; /* Slightly smaller height for very small screens */
+    font-size: 0.85rem; /* Smaller font for better fit */
+  }
+
+  .dropdown-toggle {
+    font-size: 0.85rem; /* Even smaller font */
+    padding: 8px 10px; /* Tighter padding */
+  }
+
+  .dropdown-item {
+    padding: 8px 12px; /* Adjust padding for small screens */
+  }
+
+  .filters-bar {
+    margin-bottom: 1.5rem; /* Adjust margin */
+  }
+}
