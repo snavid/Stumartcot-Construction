@@ -97,11 +97,13 @@
                             <h5>{{ product.name }}</h5>
                             <p class="product-description">{{ product.description|truncate(100) }}</p>
                             <div class="product-price">
-                                <span class="current-price">${{ "%.2f"|format(product.price) }}</span>
+                               <!--  <span class="current-price">${{ "%.2f"|format(product.price) }}</span> -->
                             </div>
+                            <!--
                             <button class="btn btn-primary btn-add-cart" onclick="addToCart('{{ product.id }}', '{{ product.name }}', {{ product.price }})">
                                 <i class="fas fa-shopping-cart me-2"></i>Add to Cart
                             </button>
+                            -->
                         </div>
                     </div>
                 </div>

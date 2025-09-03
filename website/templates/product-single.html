@@ -56,11 +56,12 @@
                         </div>
 
                         <div class="product-price mb-4">
-                            <span class="current-price" id="productPrice">${{ "%.2f"|format(product.price) }}</span>
+                            <p class=""><i class="fas fa-phone"></i> CALL 0769 226111</p>
+                            <!-- <span class="current-price" id="productPrice">${{ "%.2f"|format(product.price) }}</span>
                             {% if product.price > 50 %}
                             <span class="original-price">${{ "%.2f"|format(product.price * 1.2) }}</span>
                             <span class="discount-badge">17% OFF</span>
-                            {% endif %}
+                            {% endif %} -->
                         </div>
 
                         <div class="product-description mb-4">
@@ -73,19 +74,23 @@
                             </p>
                         </div>
 
-                        <!-- Product Features -->
+                       <!-- Product Features -->
                         <div class="product-features mb-4">
                             <h5>Key Features:</h5>
                             <ul id="productFeatures">
-                                <li><i class="fas fa-check text-success me-2"></i>High-quality construction</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Durable and long-lasting</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Professional grade materials</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Easy installation and maintenance</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Manufacturer warranty included</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Superior durability and weather resistance</li>
+                                <li><i class="fas fa-check text-success me-2"></i>High-strength, professional-grade materials</li>
+                                <li><i class="fas fa-check text-success me-2"></i>User-friendly installation and low maintenance</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Compliance with industry safety standards</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Eco-friendly and sustainable options</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Comprehensive manufacturer warranty</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Versatile applications for various projects</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Cost-effective performance over time</li>
                             </ul>
                         </div>
 
                         <!-- Product Options -->
+                         <!--
                         <div class="product-options mb-4">
                             <div class="option-group mb-3">
                                 <label class="form-label">Quantity:</label>
@@ -96,33 +101,38 @@
                                 </div>
                             </div>
                         </div>
+                        -->
 
                         <!-- Action Buttons -->
                         <div class="product-actions">
+                            <!--
                             <button class="btn-add-cart-large" onclick="addToCartFromDetail('{{ product.id }}', '{{ product.name }}', {{ product.price }})">
                                 <i class="fas fa-shopping-cart me-2"></i>Add to Cart
                             </button>
+                            -->
+                            
                             <button class="btn-buy-now">
-                                <i class="fas fa-bolt me-2"></i>Buy Now
+                                <i class="fab fa-whatsapp me-2"></i>Contact via WhatsApp
                             </button>
                             <button class="btn-wishlist">
-                                <i class="far fa-heart"></i>
+                                <i class="fab fa-phone"></i>
                             </button>
+                            
                         </div>
 
                         <!-- Additional Info -->
                         <div class="additional-info mt-4">
                             <div class="info-item">
                                 <i class="fas fa-truck text-success me-2"></i>
-                                <span>Free delivery on orders over $100</span>
+                                <span>delivery available</span>
                             </div>
                             <div class="info-item">
                                 <i class="fas fa-undo text-primary me-2"></i>
-                                <span>30-day return policy</span>
+                                <span>Premium Standard</span>
                             </div>
                             <div class="info-item">
                                 <i class="fas fa-shield-alt text-warning me-2"></i>
-                                <span>Warranty included</span>
+                                <span>Quality Product</span>
                             </div>
                             <div class="info-item">
                                 <i class="fas fa-calendar text-info me-2"></i>
@@ -240,12 +250,16 @@
                         </div>
                         <div class="product-info">
                             <h5><a href="{{ url_for('views.product_single', product_id=related_product.id) }}">{{ related_product.name }}</a></h5>
+                            <!--
                             <div class="product-price">
                                 <span class="current-price">${{ "%.2f"|format(related_product.price) }}</span>
                             </div>
+                        -->
+                            <!--
                             <button class="btn-add-cart" onclick="addToCart('{{ related_product.id }}', '{{ related_product.name }}', {{ related_product.price }})">
                                 <i class="fas fa-shopping-cart me-2"></i>Add to Cart
                             </button>
+                            -->
                         </div>
                     </div>
                 </div>
@@ -256,6 +270,11 @@
     {% endif %}
 
     <script>
+                
+        document.querySelector('.btn-buy-now').addEventListener('click', function() {
+            window.location.href = 'https://wa.me/254769226111?text=I%20am%20interested%20in%20your%20product%{{ product.name }}';
+        });
+
         // Function to change main product image
         function changeMainImage(imageSrc, thumbnail) {
             document.querySelector('#mainProductImage img').src = imageSrc;

@@ -313,8 +313,10 @@
 
       {% for category in categories %}
       <div class="col-lg-4 col-md-6">
+        
         <div class="product-card {{ animations[loop.index0 % animations|length] }}">
           <div class="product-image">
+            <a href="https://stumarcot.auriumlabs.com/products?category={{category.id}}" class="views-btn">
             {% if category.image %}
             <img
               src="{{ url_for('static', filename='uploads/' + category.image) }}"
@@ -322,6 +324,7 @@
             />
             {% else %}
             {% endif %}
+          </a>
             <!-- <i class="fas fa-th-large"></i> -->
           </div>
           <div class="product-content">
@@ -329,8 +332,12 @@
             <p>
               {{category.description}}
             </p>
+            
+            
           </div>
         </div>
+       
+
       </div>
       {% endfor %}
     </div>

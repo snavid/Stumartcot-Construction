@@ -1,0 +1,22 @@
+{% extends "base2.html" %}
+{% block content %}
+<div class="error-section">
+    <div class="container">
+        <div class="error-container">
+            <div class="error-content">
+                <h1 class="error-code">{{ error_code }}</h1>
+                <p class="error-message">{{ error_message }}</p>
+                <a href="{{ url_for('views.home') }}" class="cta-button cta-primary">
+                    <span>Return to Home</span>
+                    <i class="fas fa-home btn-icon"></i>
+                </a>
+            </div>
+            <div class="error-visual">
+                <div class="error-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

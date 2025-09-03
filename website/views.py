@@ -83,9 +83,9 @@ def blogs():
 def contact():
     return render_template("contact.html")
 
-@views.route('/cart')
-def cart():
-    return render_template("cart.html")    
+# @views.route('/cart')
+# def cart():
+#     return render_template("cart.html")    
 
 @views.route('/showrooms')
 def showrooms():
