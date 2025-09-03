@@ -2132,10 +2132,11 @@ Ecommerce Styles */
 
 .btn-view {
   background: var(--primary-yellow);
+  opacity: 0.2;
   color: var(--text-dark);
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2145,7 +2146,7 @@ Ecommerce Styles */
 }
 
 .btn-view:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.288);
   color: var(--text-dark);
   transform: scale(1.1);
 }
@@ -3625,4 +3626,98 @@ Ecommerce Styles */
 .related-products .container {
 
   overflow-x: hidden;
+}
+
+.floating-category-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.btn-floating {
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-floating .fas {
+  font-size: 1.2rem;
+}
+
+.filters-bar {
+  margin-bottom: 1.5rem;
+}
+
+.current-category {
+  font-size: 1rem;
+}
+
+.no-image-placeholder {
+  background-color: #f8f9fa;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.product-card-shop {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.product-image-shop {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image-shop img {
+  width: 100%;
+  height: auto;
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.product-card-shop:hover .product-overlay {
+  opacity: 1;
+}
+
+.btn-view {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.btn-add-cart {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+
+.dropdown-item.active, .dropdown-item:active {
+  color: white;
+  text-decoration: none;
+  background-color: var(--dark-yellow);
+}
+
+.active>.page-link, .page-link.active {
+  z-index: 3;
+  color: var(--bs-pagination-active-color);
+  background-color: var(--dark-yellow);
+
 }

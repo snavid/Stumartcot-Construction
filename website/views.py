@@ -6,6 +6,7 @@ import os
 import uuid
 from datetime import datetime
 from werkzeug.utils import secure_filename
+from sqlalchemy.sql.expression import func 
 
 views = Blueprint('views', __name__)
 
@@ -40,9 +41,39 @@ def home():
 
 @views.route('/products')
 def products():
+    page = request.args.get('page', 1, type=int)
+    category_id = request.args.get('category', 'all', type=str)
+    
     categories = Category.query.all()
-    products = Product.query.limit(8).all()  # Show latest 8 products
-    return render_template("products.html", categories=categories, products=products)
+    
+    # Base query
+    query = Product.query
+    
+    # Convert category_id to integer if not 'all'
+    selected_category = None
+    if category_id != 'all':
+        try:
+            selected_category = int(category_id)  # Convert to integer
+            query = query.filter_by(category_id=selected_category)
+        except ValueError:
+            # Handle invalid category_id (optional: redirect or flash error)
+            selected_category = None
+    else:
+        # Randomize products when showing all categories
+        query = query.order_by(func.random())
+    
+    # Paginate results
+    per_page = 20
+    pagination = query.paginate(page=page, per_page=per_page, error_out=False)
+    products = pagination.items
+    
+    return render_template(
+        "products.html",
+        categories=categories,
+        products=products,
+        pagination=pagination,
+        selected_category=selected_category
+    )
 
 @views.route('/blog')
 def blogs():
