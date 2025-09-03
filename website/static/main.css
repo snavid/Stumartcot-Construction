@@ -1487,7 +1487,7 @@ product-card .views-btn {
    
   /* Hero Section Mobile Optimization */
   .hero {
-    height: 100vh;
+    height: auto;
     padding: 120px 0 30px; /* Increased top padding for mobile navbar */
     width: 100% !important;
     max-width: 100vw !important;
@@ -3628,12 +3628,7 @@ Ecommerce Styles */
   overflow-x: hidden;
 }
 
-.floating-category-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
+
 
 .btn-floating {
   border-radius: 50px;
