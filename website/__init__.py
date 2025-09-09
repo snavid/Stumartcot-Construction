@@ -16,7 +16,16 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['UPLOAD_FOLDER'] = 'website/static/uploads'
-    
+
+    app.config['SESSION_COOKIE_DOMAIN'] = ".stumarcot.co.tz" 
+
+    app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+    # Set the session cookie secure flag
+    app.config['SESSION_COOKIE_SECURE'] = True 
+
+    # Set the session cookie httponly flag
+    app.config['SESSION_COOKIE_HTTPONLY'] = False
+        
     # Create upload directory if it doesn't exist
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
     
