@@ -1,0 +1,781 @@
+{
+    "total": 97,
+    "sender_ids": [
+      {
+        "sender_id": "SalamaPay",
+        "name": "SalamaPay",
+        "user_id": "b19e7cf7-6911-4890-a93e-0a3a69ed7fb0",
+        "username": "nassdaq",
+        "approved_at": "2025-09-04T15:17:58.598682",
+        "provider": null
+      },
+      {
+        "sender_id": "MEETPAY",
+        "name": "MEETPAY",
+        "user_id": "277c9fe7-d179-4aaf-92fe-394bc75c3ad4",
+        "username": "eddie",
+        "approved_at": "2025-03-09T23:45:42.416868",
+        "provider": null
+      },
+      {
+        "sender_id": "HudumaBot",
+        "name": "HudumaBot",
+        "user_id": "f68ed347-1316-45ac-9d13-4b5b621e1cd0",
+        "username": "hudumabot",
+        "approved_at": "2025-04-05T11:16:38.112706",
+        "provider": null
+      },
+      {
+        "sender_id": "KIKAKA TECH",
+        "name": "KIKAKA TECH",
+        "user_id": "7d8aa5b0-5bc8-4cfd-8595-0cc38c761afa",
+        "username": "kikaka",
+        "approved_at": "2025-04-05T11:17:47.078936",
+        "provider": null
+      },
+      {
+        "sender_id": "RAC CUHAS",
+        "name": "RAC CUHAS",
+        "user_id": "b6af0c77-a190-4c29-9a56-0a13716b3c42",
+        "username": "Rotaract CUHAS",
+        "approved_at": "2025-04-06T08:32:51.454902",
+        "provider": null
+      },
+      {
+        "sender_id": "KariakoFest",
+        "name": "KariakoFest",
+        "user_id": "01cfb0cc-4e1a-499e-953a-607655676c5a",
+        "username": "Genes",
+        "approved_at": "2025-04-11T18:51:47.033051",
+        "provider": null
+      },
+      {
+        "sender_id": "OpenSpaceTZ",
+        "name": "OpenSpaceTZ",
+        "user_id": "07c81ea6-11c8-459a-8de5-ff1df4b906c8",
+        "username": "Magotech",
+        "approved_at": "2025-04-11T18:53:46.739049",
+        "provider": null
+      },
+      {
+        "sender_id": "KutubSalaf",
+        "name": "KutubSalaf",
+        "user_id": "c412265d-6ef2-4963-bdf0-29e1d7a00a34",
+        "username": "Vitabu Vya Salaf -HQ",
+        "approved_at": "2025-04-15T12:39:10.700413",
+        "provider": null
+      },
+      {
+        "sender_id": "WISENET",
+        "name": "WISENET",
+        "user_id": "165e2acc-063b-466d-a449-3962809d44dd",
+        "username": "Isamuyo",
+        "approved_at": "2025-04-15T12:49:57.865808",
+        "provider": null
+      },
+      {
+        "sender_id": "AuriumLabs",
+        "name": "AuriumLabs",
+        "user_id": "f68ed347-1316-45ac-9d13-4b5b621e1cd0",
+        "username": "hudumabot",
+        "approved_at": "2025-04-15T13:01:33.166126",
+        "provider": null
+      },
+      {
+        "sender_id": "Speaking Hearts",
+        "name": "Speaking Hearts",
+        "user_id": "54bdda42-e914-4105-8707-00871b914405",
+        "username": "Speaking Hearts ",
+        "approved_at": "2025-04-18T16:29:27.813032",
+        "provider": null
+      },
+      {
+        "sender_id": "DEAR EX",
+        "name": "DEAR EX",
+        "user_id": "f4eff2fa-fea4-4e88-8b4c-af237634708a",
+        "username": "innosamuels@gmail.com",
+        "approved_at": "2025-04-18T18:33:05.453621",
+        "provider": null
+      },
+      {
+        "sender_id": "SpeaknHeart",
+        "name": "SpeaknHeart",
+        "user_id": "54bdda42-e914-4105-8707-00871b914405",
+        "username": "Speaking Hearts ",
+        "approved_at": "2025-04-25T09:51:32.783480",
+        "provider": null
+      },
+      {
+        "sender_id": "HIVES",
+        "name": "HIVES",
+        "user_id": "54bdda42-e914-4105-8707-00871b914405",
+        "username": "Speaking Hearts ",
+        "approved_at": "2025-04-25T10:46:32.507150",
+        "provider": null
+      },
+      {
+        "sender_id": "SHENG AGRO",
+        "name": "SHENG AGRO",
+        "user_id": "24474055-ad79-4e25-a512-00062308cc06",
+        "username": "sheng",
+        "approved_at": "2025-05-01T07:41:45.392528",
+        "provider": null
+      },
+      {
+        "sender_id": "QiMS",
+        "name": "QiMS",
+        "user_id": "b01c5852-8874-4f9b-8647-c16af00d6f40",
+        "username": "therealjozbert",
+        "approved_at": "2025-05-05T18:59:12.083927",
+        "provider": null
+      },
+      {
+        "sender_id": "MY QUE",
+        "name": "MY QUE",
+        "user_id": "c1db339f-28a3-49f9-8bfc-212f5d29865d",
+        "username": "winockerick",
+        "approved_at": "2025-05-05T19:01:54.225642",
+        "provider": null
+      },
+      {
+        "sender_id": "Safari Pay",
+        "name": "Safari Pay",
+        "user_id": "dd33aaca-591d-48e3-911f-1823ca27f99b",
+        "username": "Gustavo",
+        "approved_at": "2025-05-06T07:52:07.585052",
+        "provider": null
+      },
+      {
+        "sender_id": "NZURI BF",
+        "name": "NZURI BF",
+        "user_id": "24474055-ad79-4e25-a512-00062308cc06",
+        "username": "sheng",
+        "approved_at": "2025-05-16T07:07:11.924639",
+        "provider": null
+      },
+      {
+        "sender_id": "BUMAG",
+        "name": "BUMAG",
+        "user_id": "4b9e5c7c-b8e8-4890-ba51-c7a9ecbeb403",
+        "username": "donbushiri_",
+        "approved_at": "2025-05-16T11:14:40.852030",
+        "provider": null
+      },
+      {
+        "sender_id": "JUST SMILE",
+        "name": "JUST SMILE",
+        "user_id": "fe6f4212-f07c-4d1f-866a-ade48aa27594",
+        "username": "AGENT OF SMILE",
+        "approved_at": "2025-05-16T11:18:54.133941",
+        "provider": null
+      },
+      {
+        "sender_id": "BB TEC",
+        "name": "BB TECH",
+        "user_id": "517c58bd-fa7a-4061-82a4-a43f59c32685",
+        "username": "bittychris",
+        "approved_at": "2025-05-24T16:00:45.117026",
+        "provider": null
+      },
+      {
+        "sender_id": "RUHORO",
+        "name": "RUHORO",
+        "user_id": "c4d16e75-0020-4794-a90f-2fb84b35f41a",
+        "username": "DEBORAH",
+        "approved_at": "2025-05-31T09:13:12.653727",
+        "provider": null
+      },
+      {
+        "sender_id": "MFALMEJIKO",
+        "name": "MFALMEJIKO",
+        "user_id": "e53f539a-6947-44eb-b586-5432000a809c",
+        "username": "MFALME JIKO",
+        "approved_at": "2025-06-02T11:56:56.495088",
+        "provider": null
+      },
+      {
+        "sender_id": "ShuleFasta",
+        "name": "ShuleFasta",
+        "user_id": "b01c5852-8874-4f9b-8647-c16af00d6f40",
+        "username": "therealjozbert",
+        "approved_at": "2025-06-02T12:04:00.393919",
+        "provider": null
+      },
+      {
+        "sender_id": "HudumaSoft",
+        "name": "HudumaSoft",
+        "user_id": "f68ed347-1316-45ac-9d13-4b5b621e1cd0",
+        "username": "hudumabot",
+        "approved_at": "2025-06-02T12:06:36.115238",
+        "provider": null
+      },
+      {
+        "sender_id": "Tanz-Pay",
+        "name": "Tanz-Pay",
+        "user_id": "d1625d18-4e2d-4a47-b0ed-6dec54bb81c6",
+        "username": "Tanz-Pay",
+        "approved_at": "2025-06-10T17:25:59.234570",
+        "provider": null
+      },
+      {
+        "sender_id": "Lupiar",
+        "name": "Lupiar",
+        "user_id": "de8d892c-d76e-4eac-b356-ffde7702a3ec",
+        "username": "lupiarplatform@gmail.com",
+        "approved_at": "2025-06-14T05:49:47.899756",
+        "provider": null
+      },
+      {
+        "sender_id": "Rotaract Tz",
+        "name": "Rotaract Tz",
+        "user_id": "42ff2a6e-64f4-4510-a9fc-d8834e57ddef",
+        "username": "Rotaract Innovation",
+        "approved_at": "2025-06-14T05:54:02.048188",
+        "provider": null
+      },
+      {
+        "sender_id": "YDM IRINGA",
+        "name": "YDM IRINGA",
+        "user_id": "7d8aa5b0-5bc8-4cfd-8595-0cc38c761afa",
+        "username": "kikaka",
+        "approved_at": "2025-06-14T06:20:15.994881",
+        "provider": null
+      },
+      {
+        "sender_id": "ZenoPay",
+        "name": "ZenoPay",
+        "user_id": "5c6cab68-61b0-4566-865e-c42a1618db79",
+        "username": "ZenoPay",
+        "approved_at": "2025-06-24T00:08:56.764801",
+        "provider": null
+      },
+      {
+        "sender_id": "Tanocean",
+        "name": "Tanocean",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Bactown",
+        "name": "Bactown",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Priortech",
+        "name": "Priortech",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "imepoa",
+        "name": "imepoa",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Sambazah",
+        "name": "Sambazah",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Ghumshadi",
+        "name": "Ghumshadi",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "LEYMAX SHOP",
+        "name": "LEYMAX SHOP",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "PJ Projects",
+        "name": "PJ Projects",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Tangaza",
+        "name": "Tangaza",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "DRREC",
+        "name": "DRREC",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Mariedo",
+        "name": "Mariedo",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "GDG Dar",
+        "name": "GDG Dar",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "FarmNet",
+        "name": "FarmNet",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Ronny",
+        "name": "Ronny",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "SMARTMIND",
+        "name": "SMARTMIND",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Cybercode",
+        "name": "Cybercode",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Makini",
+        "name": "Makini",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "MHB IT",
+        "name": "MHB IT",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "SHAMBA DIR",
+        "name": "SHAMBA DIR",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Maisha Bora",
+        "name": "Maisha Bora",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "ARIS Foods",
+        "name": "ARIS Foods",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Vee Food",
+        "name": "ARIS Foods",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Stara Point",
+        "name": "Stara Point",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Tolly Kitch",
+        "name": "Tolly Kitch",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "PakachaHome",
+        "name": "PakachaHome",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Bibertrendz",
+        "name": "Bibertrendz",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "VIMAH",
+        "name": "VIMAH",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Kahogo Tech",
+        "name": "Kahogo Tech",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Mr.Laptop",
+        "name": "Mr.Laptop",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "GWALUGANO",
+        "name": "GWALUGANO",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Taste Naija",
+        "name": "Taste Naija",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "DesireFoods",
+        "name": "Taste Naija",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Wamachinga",
+        "name": "Wamachinga",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Lobu Rest",
+        "name": "Lobu Rest",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Tipatone",
+        "name": "Tipatone",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "SALAMA LTD",
+        "name": "SALAMA LTD",
+        "user_id": "8087506a-714c-4e3e-8d23-286d07bb286f",
+        "username": "Salama LTD",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Ben Shop",
+        "name": "Ben Shop",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "Oasis Dig",
+        "name": "Oasis Dig",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "SSALVAGE TZ",
+        "name": "SSALVAGE TZ",
+        "user_id": "98f74248-5898-40d4-8912-79e5789e39ae",
+        "username": "zacharia8",
+        "approved_at": "2025-06-25T19:23:48.712429",
+        "provider": null
+      },
+      {
+        "sender_id": "MOVEDODOMA",
+        "name": "MOVEDODOMA",
+        "user_id": "79415449-a512-4651-8dbb-6bdde5ac9e3d",
+        "username": "MODEARSON",
+        "approved_at": "2025-06-26T17:23:42.050696",
+        "provider": null
+      },
+      {
+        "sender_id": "Remotika",
+        "name": "Remotika",
+        "user_id": "c028c25e-0426-4dfe-a9d3-d7f71ef81544",
+        "username": "remotikaafrica",
+        "approved_at": "2025-06-27T12:56:40.307218",
+        "provider": null
+      },
+      {
+        "sender_id": "myPosTech",
+        "name": "myPosTech",
+        "user_id": "02de31a0-e0e3-4362-8e83-fb46d1913d40",
+        "username": "twahir21",
+        "approved_at": "2025-08-29T12:10:51.269861",
+        "provider": null
+      },
+      {
+        "sender_id": "BRIQ OTP",
+        "name": "BRIQ OTP",
+        "user_id": "6b646e2f-43ef-467d-a544-ff7eb22ecf29",
+        "username": "ngajilol@gmail.com",
+        "approved_at": "2025-08-29T20:12:28.568974",
+        "provider": null
+      },
+      {
+        "sender_id": "BRIQ",
+        "name": "BRIQ",
+        "user_id": "277c9fe7-d179-4aaf-92fe-394bc75c3ad4",
+        "username": "eddie",
+        "approved_at": "2025-03-17T10:03:23.658073",
+        "provider": null
+      },
+      {
+        "sender_id": "SIK",
+        "name": "SIK",
+        "user_id": "277c9fe7-d179-4aaf-92fe-394bc75c3ad4",
+        "username": "eddie",
+        "approved_at": "2025-07-13T10:11:27.470346",
+        "provider": null
+      },
+      {
+        "sender_id": "Beracah Ministry",
+        "name": "Beracah Ministry",
+        "user_id": "a88a0159-f988-43b5-90ea-8adacd1421fe",
+        "username": "godliving_frank",
+        "approved_at": "2025-07-13T12:21:45.206676",
+        "provider": null
+      },
+      {
+        "sender_id": "BB TECH",
+        "name": "BB TECH",
+        "user_id": "c4d16e75-0020-4794-a90f-2fb84b35f41a",
+        "username": "DEBORAH",
+        "approved_at": "2025-05-22T17:06:42.949447",
+        "provider": null
+      },
+      {
+        "sender_id": "DUKAN",
+        "name": "DUKAN",
+        "user_id": "79415449-a512-4651-8dbb-6bdde5ac9e3d",
+        "username": "MODEARSON",
+        "approved_at": "2025-05-22T17:06:42.949447",
+        "provider": null
+      },
+      {
+        "sender_id": "LOKO IDEAS",
+        "name": "LOKO IDEAS",
+        "user_id": "3f9542ba-f8f3-46b7-ba56-b47a7d6b4127",
+        "username": "LOKOIDEAS",
+        "approved_at": "2025-05-22T17:06:42.949447",
+        "provider": null
+      },
+      {
+        "sender_id": "MshikoTap",
+        "name": "MshikoTap",
+        "user_id": "26c828f8-f7d2-44b8-b5cb-c1df7106a420",
+        "username": "hackerloum",
+        "approved_at": "2025-05-22T17:06:42.949447",
+        "provider": null
+      },
+      {
+        "sender_id": "MNUNUZI-LTD",
+        "name": "MNUNUZI-LTD",
+        "user_id": "41bfa9c6-894e-45a7-8b91-045c0d1ef3c2",
+        "username": "eddygotya",
+        "approved_at": "2025-06-24T00:08:56.764000",
+        "provider": null
+      },
+      {
+        "sender_id": "MKUWE",
+        "name": "MKUWE",
+        "user_id": "16af985b-d259-4bbb-a73f-265bce3fa4c2",
+        "username": "BriqTest",
+        "approved_at": "2025-05-22T17:06:42.949447",
+        "provider": null
+      },
+      {
+        "sender_id": "REMAPROMA",
+        "name": "REMAPROMA",
+        "user_id": "e53f539a-6947-44eb-b586-5432000a809c",
+        "username": "MFALME JIKO",
+        "approved_at": "2025-07-28T12:37:59.749125",
+        "provider": null
+      },
+      {
+        "sender_id": "T-HUSTLE",
+        "name": "T-HUSTLE",
+        "user_id": "8ae34b09-3982-43fa-85cf-096b1bb55bd9",
+        "username": "T-HUSTLE",
+        "approved_at": "2025-07-30T13:50:06.894825",
+        "provider": null
+      },
+      {
+        "sender_id": "MAHUNA INT",
+        "name": "MAHUNA INT",
+        "user_id": "16af985b-d259-4bbb-a73f-265bce3fa4c2",
+        "username": "BriqTest",
+        "approved_at": "2025-05-22T17:06:42.949447",
+        "provider": null
+      },
+      {
+        "sender_id": "MANYAMA INC",
+        "name": "MANYAMA INC",
+        "user_id": "16af985b-d259-4bbb-a73f-265bce3fa4c2",
+        "username": "BriqTest",
+        "approved_at": "2025-05-22T17:06:42.949447",
+        "provider": null
+      },
+      {
+        "sender_id": "ZAMOTTO",
+        "name": "ZAMOTTO",
+        "user_id": "88ce1dfe-4d86-49bb-b3cf-03eb739034bf",
+        "username": "zamotto",
+        "approved_at": "2025-05-22T17:06:42.949447",
+        "provider": null
+      },
+      {
+        "sender_id": "BUKAGA SDA",
+        "name": "BUKAGA SDA",
+        "user_id": "c5489bd9-7501-40fc-bd30-3bc6156332dd",
+        "username": "Nelson",
+        "approved_at": "2025-07-31T00:11:49.720352",
+        "provider": null
+      },
+      {
+        "sender_id": "smartchat",
+        "name": "smartchat",
+        "user_id": "b5e57b53-c224-40e8-9b1e-d597c0d9611d",
+        "username": "kelvin",
+        "approved_at": "2025-07-31T13:23:32.061710",
+        "provider": null
+      },
+      {
+        "sender_id": "NURU INFO",
+        "name": "NURU INFO",
+        "user_id": "6519277a-231e-4f90-8970-98de201e9060",
+        "username": "Madam Mtiba ",
+        "approved_at": "2025-06-24T00:08:56.764801",
+        "provider": null
+      },
+      {
+        "sender_id": "MyPosTech",
+        "name": "MyPosTech",
+        "user_id": "277c9fe7-d179-4aaf-92fe-394bc75c3ad4",
+        "username": "eddie",
+        "approved_at": "2025-08-24T17:23:14.411399",
+        "provider": null
+      },
+      {
+        "sender_id": "GALACHA",
+        "name": "GALACHA",
+        "user_id": "b19e7cf7-6911-4890-a93e-0a3a69ed7fb0",
+        "username": "nassdaq",
+        "approved_at": "2025-08-21T23:22:20.715555",
+        "provider": null
+      },
+      {
+        "sender_id": "schoolfy",
+        "name": "schoolfy",
+        "user_id": "f08c24da-a409-43db-89c9-6489c3563bef",
+        "username": "AkilaInnocent",
+        "approved_at": "2025-08-29T12:10:02.174309",
+        "provider": null
+      },
+      {
+        "sender_id": "FinMarina",
+        "name": "FinMarina",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712000",
+        "provider": null
+      },
+      {
+        "sender_id": "SamakiAtlas",
+        "name": "SamakiAtlas",
+        "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+        "username": "Ghala",
+        "approved_at": "2025-06-25T19:23:48.712000",
+        "provider": null
+      },
+      {
+        "sender_id": "SeLink SMS",
+        "name": "SeLink SMS",
+        "user_id": "74187063-213f-4cdb-8422-3bab44fd04b4",
+        "username": "lalivinci",
+        "approved_at": "2025-03-09T23:45:42.416000",
+        "provider": null
+      }
+    ]
+  }

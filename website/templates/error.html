@@ -1,4 +1,26 @@
 {% extends "base2.html" %}
+{%- block title -%}
+    {%- if error_code == 404 -%}
+        Page Not Found - Stumarcot Tanzania
+    {%- elif error_code == 500 -%}
+        Server Error - Stumarcot Tanzania
+    {%- else -%}
+        Error {{ error_code }} - Stumarcot Tanzania
+    {%- endif -%}
+{%- endblock -%}
+
+{%- block description -%}
+    {%- if error_code == 404 -%}
+        The page you're looking for doesn't exist. Return to Stumarcot Tanzania's homepage for premium construction materials and expert consultation services.
+    {%- elif error_code == 500 -%}
+        We're experiencing technical difficulties. Please return to Stumarcot Tanzania's homepage for construction materials and building supplies.
+    {%- else -%}
+        An error occurred. Return to Stumarcot Tanzania - your trusted source for quality construction materials and expert advice.
+    {%- endif -%}
+{%- endblock -%}
+
+{%- block keywords -%}Stumarcot Tanzania, construction materials, building supplies, error page{%- endblock -%}
+
 {% block content %}
 <div class="error-section">
     <div class="container">

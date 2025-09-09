@@ -1,5 +1,38 @@
 {% extends "base2.html" %}
 
+{%block title%}{%- if selected_category -%}
+    {%- for category in categories -%}
+        {%- if category.id == selected_category -%}
+            {{- category.name -}} - Premium Construction Products | Stumarcot Tanzania
+        {%- endif -%}
+    {%- endfor -%}
+{%- else -%}
+    All Construction Products - Premium Building Materials | Stumarcot Tanzania
+{%- endif -%}{%endblock%}
+
+{%block description%}{%- if selected_category -%}
+    {%- for category in categories -%}
+        {%- if category.id == selected_category -%}
+            Browse our premium {{category.name}} collection at Stumarcot Tanzania. High-quality construction materials for your projects with nationwide delivery.
+        {%- endif -%}
+    {%- endfor -%}
+{%- else -%}
+    Explore Stumarcot's full range of premium construction products in Tanzania. Paving blocks, tiles, culverts, rolling shutter doors, and more. Quality guaranteed.
+{%- endif -%}{%endblock%}
+
+{%block keywords%}{%- if selected_category -%}
+    {%- for category in categories -%}
+        {%- if category.id == selected_category -%}
+            {{category.name}} Tanzania, construction {{category.name}}, building {{category.name}}, {{- category.name -}} suppliers, {{- category.name -}} Dar es Salaam, Stumarcot {{- category.name -}}
+        {%- endif -%}
+    {%- endfor -%}
+{%- else -%}
+    construction products Tanzania, building materials, paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, sliding gates, construction supplies Dar es Salaam, Stumarcot products
+{%- endif -%}{%endblock%}
+
+
+
+
 {% block content %}
     <!-- Page Header -->
     <section class="page-header">

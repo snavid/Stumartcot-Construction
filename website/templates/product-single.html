@@ -1,4 +1,20 @@
 {% extends "base2.html" %}
+{%- block title -%}{{ product.name }} - Premium Construction Product | Stumarcot Tanzania{%- endblock -%}
+
+{%- block description -%}
+    {%- if product.description -%}
+        {{- product.description|truncate(150) -}}
+    {%- else -%}
+        Premium {{ product.name }} from Stumarcot Tanzania. High-quality construction materials with superior durability. Call +255 769 226111 for pricing and delivery.
+    {%- endif -%}
+{%- endblock -%}
+
+{%- block keywords -%}
+    {{ product.name }}, {%- if product.category -%}{{ product.category.name }}{%- else -%}construction materials{%- endif -%}, building supplies Tanzania, Stumarcot products, construction materials Dar es Salaam, 
+    {%- if product.name.lower().find('block') != -1 -%}paving blocks, {%- endif -%}
+    {%- if product.name.lower().find('tile') != -1 -%}floor tiles, wall tiles, {%- endif -%}
+    quality construction products
+{%- endblock -%}
 {% block content %}
     <!-- Product Detail Section -->
     <section class="product-detail mt-4">
@@ -272,7 +288,7 @@
     <script>
                 
         document.querySelector('.btn-buy-now').addEventListener('click', function() {
-            window.location.href = "https://wa.me/254769226111?text=Hi!%20I%27m%20interested%20in%20your%20{{product.name}}.%20Could%20you%20share%20more%20details%20about%20it%3F";
+            window.location.href = "https://wa.me/255769226111?text=Hi!%20I%27m%20interested%20in%20your%20{{product.name}}.%20Could%20you%20share%20more%20details%20about%20it%3F";
         });
 
         // Function to change main product image

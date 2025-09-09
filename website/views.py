@@ -499,3 +499,28 @@ def delete_product(product_id):
     flash('Product deleted successfully!', category='success')
     
     return redirect(url_for('views.dashboard'))
+
+@views.route("/robots.txt")
+def robots_txt():
+    robots_text = """User-agent: *
+Disallow: /admin/
+Disallow: /dashboard
+Disallow: /categories/
+Disallow: /category/
+Disallow: /manage-categories
+Disallow: /manage-products
+Disallow: /add-category
+Disallow: /manage-users
+Disallow: /manage-products
+Disallow: /add-product
+Disallow: /delete-user/
+Disallow: /edit-category/
+Disallow: /edit-product/
+Disallow: /delete-category/
+Disallow: /delete-product/
+Disallow: /login
+Disallow: /sign-up
+Allow: /
+Sitemap: https://stumarcot.co.tz/sitemap.xml
+"""
+    return Response(robots_text, mimetype="text/plain")
