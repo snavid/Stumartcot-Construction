@@ -7,6 +7,7 @@ import uuid
 from datetime import datetime
 from werkzeug.utils import secure_filename
 from sqlalchemy.sql.expression import func 
+import random
 
 views = Blueprint('views', __name__)
 
@@ -33,6 +34,186 @@ def generate_unique_filename(original_filename):
     
     return unique_filename
 
+
+
+
+def get_balanced_random_products(per_page=20, page=1):
+    """
+    Get products with balanced representation from each category
+    """
+    # Get all categories with their product counts
+    category_stats = db.session.query(
+        Category.id,
+        Category.name,
+        func.count(Product.id).label('product_count')
+    ).join(Product).group_by(Category.id, Category.name).all()
+    
+    if not category_stats:
+        # Fallback if no products
+        return {
+            'items': [],
+            'pagination': create_mock_pagination(page, per_page, 0)
+        }
+    
+    # Calculate how many products to get from each category
+    total_categories = len(category_stats)
+    base_per_category = per_page // total_categories
+    remainder = per_page % total_categories
+    
+    balanced_products = []
+    
+    for i, (cat_id, cat_name, product_count) in enumerate(category_stats):
+        # Distribute remainder among first few categories
+        products_from_this_category = base_per_category
+        if i < remainder:
+            products_from_this_category += 1
+        
+        # Don't try to get more products than available in category
+        products_from_this_category = min(products_from_this_category, product_count)
+        
+        if products_from_this_category > 0:
+            # Get random products from this category
+            category_products = Product.query.filter_by(category_id=cat_id)\
+                .order_by(func.random())\
+                .limit(products_from_this_category)\
+                .all()
+            
+            balanced_products.extend(category_products)
+    
+    # Shuffle the final list to mix categories
+    random.shuffle(balanced_products)
+    
+    # Calculate pagination info
+    total_products = sum(stat.product_count for stat in category_stats)
+    total_pages = (total_products + per_page - 1) // per_page
+    
+    # Handle pagination by getting different random samples for each page
+    start_idx = (page - 1) * per_page
+    end_idx = start_idx + per_page
+    
+    # For simplicity, we'll regenerate random products for each page
+    # In production, you might want to use a seed or cache strategy
+    
+    return {
+        'items': balanced_products[:per_page],  # Take only what we need for current page
+        'pagination': create_mock_pagination(page, per_page, total_products, total_pages)
+    }
+
+def create_mock_pagination(page, per_page, total, total_pages=None):
+    """
+    Create a pagination-like object for balanced random products
+    """
+    if total_pages is None:
+        total_pages = (total + per_page - 1) // per_page
+    
+    class MockPagination:
+        def __init__(self, page, per_page, total, pages):
+            self.page = page
+            self.per_page = per_page
+            self.total = total
+            self.pages = pages
+            self.has_prev = page > 1
+            self.has_next = page < pages
+            self.prev_num = page - 1 if self.has_prev else None
+            self.next_num = page + 1 if self.has_next else None
+        
+        def iter_pages(self, left_edge=2, left_current=2, right_current=3, right_edge=2):
+            """Generate page numbers for pagination display"""
+            last = self.pages
+            for num in range(1, last + 1):
+                if num <= left_edge or \
+                   (self.page - left_current - 1 < num < self.page + right_current) or \
+                   num > last - right_edge:
+                    yield num
+    
+    return MockPagination(page, per_page, total, total_pages)
+
+# ALTERNATIVE APPROACH 1: Weighted Random Selection
+def get_weighted_random_products(per_page=20, page=1):
+    """
+    Alternative approach: Use weighted selection to balance categories
+    """
+    # Get category product counts
+    category_counts = db.session.query(
+        Category.id,
+        func.count(Product.id).label('count')
+    ).join(Product).group_by(Category.id).all()
+    
+    if not category_counts:
+        return {'items': [], 'pagination': create_mock_pagination(page, per_page, 0)}
+    
+    # Calculate weights (inverse of product count for balance)
+    max_count = max(count for _, count in category_counts)
+    category_weights = {
+        cat_id: max_count / count for cat_id, count in category_counts
+    }
+    
+    # Get weighted random products
+    products = []
+    for _ in range(per_page):
+        # Choose category based on weights
+        categories_list = list(category_weights.keys())
+        weights_list = list(category_weights.values())
+        
+        selected_category = random.choices(categories_list, weights=weights_list)[0]
+        
+        # Get random product from selected category
+        product = Product.query.filter_by(category_id=selected_category)\
+            .order_by(func.random())\
+            .first()
+        
+        if product and product not in products:
+            products.append(product)
+    
+    total_products = sum(count for _, count in category_counts)
+    return {
+        'items': products,
+        'pagination': create_mock_pagination(page, per_page, total_products)
+    }
+
+# ALTERNATIVE APPROACH 2: Round-Robin Selection
+def get_round_robin_products(per_page=20, page=1):
+    """
+    Alternative approach: Round-robin selection from categories
+    """
+    # Get random products from each category
+    category_products = {}
+    categories = Category.query.join(Product).distinct().all()
+    
+    for category in categories:
+        products = Product.query.filter_by(category_id=category.id)\
+            .order_by(func.random())\
+            .limit(per_page)\
+            .all()
+        category_products[category.id] = products
+    
+    # Round-robin selection
+    selected_products = []
+    max_iterations = per_page
+    iteration = 0
+    
+    while len(selected_products) < per_page and iteration < max_iterations:
+        for cat_id, products in category_products.items():
+            if len(selected_products) >= per_page:
+                break
+            if iteration < len(products):
+                selected_products.append(products[iteration])
+        iteration += 1
+    
+    # Shuffle final selection
+    random.shuffle(selected_products)
+    
+    total_products = sum(len(products) for products in category_products.values())
+    return {
+        'items': selected_products,
+        'pagination': create_mock_pagination(page, per_page, total_products)
+    }
+
+
+
+
+
+
 @views.route('/')
 def home():
     categories = Category.query.all()
@@ -53,16 +234,22 @@ def products():
     selected_category = None
     if category_id != 'all':
         try:
-            selected_category = int(category_id)  # Convert to integer
+            selected_category = int(category_id)
             query = query.filter_by(category_id=selected_category)
         except ValueError:
-            # Handle invalid category_id (optional: redirect or flash error)
             selected_category = None
     else:
-        # Randomize products when showing all categories
-        query = query.order_by(func.random())
+        # IMPROVED: Balanced randomization when showing all categories
+        products = get_balanced_random_products(per_page=20, page=page)
+        return render_template(
+            "products.html",
+            categories=categories,
+            products=products['items'],
+            pagination=products['pagination'],
+            selected_category=selected_category
+        )
     
-    # Paginate results
+    # For specific category, use regular pagination
     per_page = 20
     pagination = query.paginate(page=page, per_page=per_page, error_out=False)
     products = pagination.items
@@ -74,6 +261,7 @@ def products():
         pagination=pagination,
         selected_category=selected_category
     )
+
 
 @views.route('/blog')
 def blogs():
@@ -241,15 +429,15 @@ def add_product():
         name = request.form.get('name')
         description = request.form.get('description')
         price = request.form.get('price')
-        original_price = request.form.get('original_price')
+        #original_price = request.form.get('original_price')
         category_id = request.form.get('category_id')
-        stock_quantity = request.form.get('stock_quantity', 0)
-        weight = request.form.get('weight')
-        dimensions = request.form.get('dimensions')
-        features = request.form.get('features')
-        available_sizes = request.form.get('available_sizes')
-        available_colors = request.form.get('available_colors')
-        tags = request.form.get('tags')
+        #stock_quantity = request.form.get('stock_quantity', 0)
+        #weight = request.form.get('weight')
+        #dimensions = request.form.get('dimensions')
+        #features = request.form.get('features')
+        #available_sizes = request.form.get('available_sizes')
+        #available_colors = request.form.get('available_colors')
+        #tags = request.form.get('tags')
         
         # Validate inputs
         if len(name) < 1:
@@ -259,40 +447,40 @@ def add_product():
         elif not category_id:
             flash('Category is required.', category='error')
         else:
-            # Convert features to JSON format
-            import json
-            features_list = []
-            if features:
-                features_list = [f.strip() for f in features.split('\n') if f.strip()]
+            # # Convert features to JSON format
+            # import json
+            # features_list = []
+            # if features:
+            #     features_list = [f.strip() for f in features.split('\n') if f.strip()]
             
-            # Convert sizes and colors to JSON format
-            sizes_list = []
-            if available_sizes:
-                sizes_list = [s.strip() for s in available_sizes.split(',') if s.strip()]
+            # # Convert sizes and colors to JSON format
+            # sizes_list = []
+            # if available_sizes:
+            #     sizes_list = [s.strip() for s in available_sizes.split(',') if s.strip()]
             
-            colors_list = []
-            if available_colors:
-                colors_list = [c.strip() for c in available_colors.split(',') if c.strip()]
+            # colors_list = []
+            # if available_colors:
+            #     colors_list = [c.strip() for c in available_colors.split(',') if c.strip()]
             
-            tags_list = []
-            if tags:
-                tags_list = [t.strip() for t in tags.split(',') if t.strip()]
+            # tags_list = []
+            # if tags:
+            #     tags_list = [t.strip() for t in tags.split(',') if t.strip()]
             
             # Create new product
             new_product = Product(
                 name=name,
                 description=description,
                 price=float(price),
-                original_price=float(original_price) if original_price else None,
+                #original_price=float(original_price) if original_price else None,
                 category_id=int(category_id),
                 user_id=current_user.id,
-                stock_quantity=int(stock_quantity) if stock_quantity else 0,
-                weight=float(weight) if weight else None,
-                dimensions=dimensions,
-                features=json.dumps(features_list) if features_list else None,
-                available_sizes=json.dumps(sizes_list) if sizes_list else None,
-                available_colors=json.dumps(colors_list) if colors_list else None,
-                tags=json.dumps(tags_list) if tags_list else None
+                #stock_quantity=int(stock_quantity) if stock_quantity else 0,
+                #weight=float(weight) if weight else None,
+                #dimensions=dimensions,
+                #features=json.dumps(features_list) if features_list else None,
+                #available_sizes=json.dumps(sizes_list) if sizes_list else None,
+                #available_colors=json.dumps(colors_list) if colors_list else None,
+                #tags=json.dumps(tags_list) if tags_list else None
             )
             db.session.add(new_product)
             db.session.flush()  # Get product ID before committing
