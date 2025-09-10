@@ -321,7 +321,7 @@
         
         <div class="product-card {{ animations[loop.index0 % animations|length] }}">
           <div class="product-image">
-            <a href="https://stumarcot.auriumlabs.com/products?category={{category.id}}" class="views-btn">
+            <a href="/products?category={{category.id}}" class="views-btn">
             {% if category.image %}
             <img
               src="{{ url_for('static', filename='uploads/' + category.image) }}"
