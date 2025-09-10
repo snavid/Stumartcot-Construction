@@ -10,6 +10,14 @@
         <custom:description>Welcome to our homepage, your gateway to all our products and services.</custom:description>
     </url>
 
+    <url>
+        <loc>{{ url_for('views.about_page', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <custom:description>Learn about Stumarcot Company Limited - established 2008, Tanzania's leading construction materials manufacturer.</custom:description>
+    </url>
+
     <!-- Static pages -->
     <url>
         <loc>{{ url_for('views.products', _external=True) }}</loc>

@@ -345,6 +345,10 @@ def dashboard():
         user_products = Product.query.filter_by(user_id=current_user.id).all()
         return render_template("user_dashboard.html", user=current_user, products=user_products)
 
+@views.route('/about')
+def about_page():
+    return render_template("about.html")
+
 @views.route('/categories')
 def categories():
     categories = Category.query.all()
