@@ -299,17 +299,17 @@ def technical_support():
 def product_single(product_id):
     product = Product.query.get_or_404(product_id)
     
-    # Get related products from the same category (excluding current product)
+    # Get random related products from the same category (excluding current product)
     related_products = Product.query.filter(
         Product.category_id == product.category_id,
         Product.id != product.id
-    ).limit(4).all()
+    ).order_by(func.random()).limit(4).all()
     
-    # If no products in same category, get random products
+    # If no products in same category, get random products from all categories
     if not related_products:
         related_products = Product.query.filter(
             Product.id != product.id
-        ).limit(4).all()
+        ).order_by(func.random()).limit(4).all()
     
     return render_template("product-single.html", 
                          product=product, 
