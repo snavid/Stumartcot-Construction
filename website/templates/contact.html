@@ -1,365 +1,627 @@
-{%extends "base2.html"%}
-{%- block title -%}Contact Stumarcot Tanzania - Construction Experts & Support{%- endblock -%}
+{% extends "base2.html" %}
+{% block title %}Contact Stumarcot Tanzania - Construction Experts & Support{% endblock %}
+{% block description %}Contact Stumarcot Tanzania for premium construction materials, expert advice, and project support. Call +255 769 226 111, visit our showroom, or message us online.{% endblock %}
+{% block keywords %}contact Stumarcot, construction materials Tanzania, building supplies Dar es Salaam, construction experts, get quote, technical support, visit showroom, Stumarcot contact info{% endblock %}
 
-{%- block description -%}Contact Stumarcot Tanzania for premium construction materials, expert advice, and project support. Call +255 769 226 111, visit our showroom, or message us online.{%- endblock -%}
+{% block content %}
+<style>
+    .btn-directions {
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid white;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
 
-{%- block keywords -%}contact Stumarcot, construction materials Tanzania, building supplies Dar es Salaam, construction experts, get quote, technical support, visit showroom, Stumarcot contact info{%- endblock -%}
+    .btn-directions:hover {
+        background: rgba(255, 255, 255, 0.089);
+        color: var(--primary-color);
+        transform: translateY(-2px);
+    }
 
+    .map-option-item {
+        background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+        border: 2px solid #e2e8f0;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
 
-{%block content%}
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Contact Us</h1>
-                    <p>Get in touch with our construction experts</p>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active">Contact</li>
-                        </ol>
-                    </nav>
-                </div>
+    .map-option-item:hover {
+        border-color: var(--primary-color);
+        background: #e6f3ff;
+        color: rgb(0, 0, 0);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(44, 82, 130, 0.1);
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .map-option-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .map-option-icon {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #1a365d 100%);
+        color: #000000;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .map-option-title {
+        font-weight: 600;
+        color: var(--primary-color);
+        margin: 0;
+    }
+
+    .map-option-desc {
+        color: #000000;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+</style>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our construction experts</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="row">
-                <!-- Contact Form -->
-                <div class="col-lg-8">
-                    <div class="contact-form-container">
-                        <h3>Send us a Message</h3>
-                        <p>Have questions about our products or need expert advice? Fill out the form below and our team will get back to you within 24 hours.</p>
-                        
-                        <form class="contact-form" id="contactForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="firstName">First Name *</label>
-                                        <input type="text" class="form-control" id="firstName" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="lastName">Last Name *</label>
-                                        <input type="text" class="form-control" id="lastName" required>
-                                    </div>
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form-container">
+                    <h3>Send us a Message</h3>
+                    <p>Have questions about our products or need expert advice? Fill out the form below and our team will get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
                                 </div>
                             </div>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email">Email Address *</label>
-                                        <input type="email" class="form-control" id="email" required>
-                                    </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone">Phone Number</label>
-                                        <input type="tel" class="form-control" id="phone">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="company">Company/Organization</label>
-                                <input type="text" class="form-control" id="company">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject *</label>
-                                <select class="form-control" id="subject" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="product-inquiry">Product Inquiry</option>
-                                    <option value="quote-request">Quote Request</option>
-                                    <option value="technical-support">Technical Support</option>
-                                    <option value="partnership">Partnership Opportunity</option>
-                                    <option value="complaint">Complaint</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea class="form-control" id="message" rows="6" placeholder="Please provide details about your inquiry..." required></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="newsletter">
-                                    <label class="form-check-label" for="newsletter">
-                                        Subscribe to our newsletter for construction tips and product updates
-                                    </label>
-                                </div>
-                            </div>
-                            
-                            <button type="submit" class="btn-submit">
-                                <i class="fas fa-paper-plane me-2"></i>Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="col-lg-4">
-                    <div class="contact-info">
-                        <h3>Get in Touch</h3>
-                        <p>Ready to start your construction project? Our team of experts is here to help you every step of the way.</p>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h5>Visit Our Showroom</h5>
-                                <p>123 Construction Avenue<br>
-                                Dar es Salaam, Tanzania<br>
-                                P.O. Box 12345</p>
                             </div>
                         </div>
                         
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
                             </div>
-                            <div class="contact-details">
-                                <h5>Call Us</h5>
-                                <p>Main: +255 123 456 789<br>
-                                Sales: +255 123 456 790<br>
-                                Support: +255 123 456 791</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h5>Email Us</h5>
-                                <p>General: info@stumarcot.co.tz<br>
-                                Sales: sales@stumarcot.co.tz<br>
-                                Support: support@stumarcot.co.tz</p>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
                             </div>
                         </div>
                         
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h5>Business Hours</h5>
-                                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
-                                Saturday: 8:00 AM - 4:00 PM<br>
-                                Sunday: Closed</p>
+                        <div class="form-group mb-3">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" class="form-control" id="company">
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="subject">Subject *</label>
+                            <select class="form-control" id="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="product-inquiry">Product Inquiry</option>
+                                <option value="quote-request">Quote Request</option>
+                                <option value="technical-support">Technical Support</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="message">Message *</label>
+                            <textarea class="form-control" id="message" rows="6" placeholder="Please provide details about your inquiry..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Subscribe to our newsletter for construction tips and product updates
+                                </label>
                             </div>
                         </div>
                         
-                        <div class="social-links">
-                            <h5>Follow Us</h5>
-                            <div class="social-icons">
-                                <a href="#" class="social-icon facebook">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="social-icon twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="social-icon instagram">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="social-icon linkedin">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="social-icon youtube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container-fluid p-0">
-            <div class="map-container">
-                <div class="map-placeholder">
-                    <div class="map-content">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h4>Find Us on the Map</h4>
-                        <p>Located in the heart of Dar es Salaam's construction district</p>
-                        <button class="btn-directions">
-                            <i class="fas fa-directions me-2"></i>Get Directions
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
                         </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Ready to start your construction project? Our team of experts is here to help you every step of the way.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Visit Our Showroom</h5>
+                            <p>123 Construction Avenue<br>
+                            Dar es Salaam, Tanzania<br>
+                            P.O. Box 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Call Us</h5>
+                            <p>Main: +255 123 456 789<br>
+                            Sales: +255 123 456 790<br>
+                            Support: +255 123 456 791</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Email Us</h5>
+                            <p>General: info@stumarcot.co.tz<br>
+                            Sales: sales@stumarcot.co.tz<br>
+                            Support: support@stumarcot.co.tz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Business Hours</h5>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                            Saturday: 8:00 AM - 4:00 PM<br>
+                            Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h5>Follow Us</h5>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Locations Section -->
-    <section class="locations-grid">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Our <span class="highlight">Locations</span></h2>
-                <p>Visit any of our showrooms, factories, or retail shops across Tanzania</p>
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container-fluid p-0">
+        <div class="map-container">
+            <div class="map-placeholder">
+                <div class="map-content">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Find Us on the Map</h4>
+                    <p>Located in the heart of Dar es Salaam's construction district</p>
+                    <button class="btn-directions" data-bs-toggle="modal" data-bs-target="#mapOptionsModal">
+                        <i class="fas fa-directions me-2"></i>Get Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Options Modal -->
+<div class="modal fade" id="mapOptionsModal" tabindex="-1" aria-labelledby="mapOptionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mapOptionsModalLabel">
+                    <i class="fas fa-map-marker-alt me-2"></i>Select Location
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <a href="https://maps.app.goo.gl/aqnWaQSbFYe8z3f47?g_st=iwb" target="_blank" class="map-option-item">
+                    <div class="map-option-header">
+                        <div class="map-option-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div>
+                            <h5 class="map-option-title">Kiluvya</h5>
+                            <p class="map-option-desc">Primary location with full product display and consultation services</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://maps.app.goo.gl/ZkUveVE1kzZc8Jht5?g_st=iwb" target="_blank" class="map-option-item">
+                    <div class="map-option-header">
+                        <div class="map-option-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div>
+                            <h5 class="map-option-title">Dodoma</h5>
+                            <p class="map-option-desc">Factory location for bulk orders and custom manufacturing</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://maps.app.goo.gl/srbRopR2VWAYqsERA?g_st=iwb" target="_blank" class="map-option-item">
+                    <div class="map-option-header">
+                        <div class="map-option-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div>
+                            <h5 class="map-option-title">Mwanza</h5>
+                            <p class="map-option-desc">Warehouse and distribution hub for quick pickup and delivery</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Locations Section -->
+<section class="locations-grid">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Our <span class="highlight">Locations</span></h2>
+            <p>Visit any of our showrooms, factories, or retail shops across Tanzania</p>
+        </div>
+        
+        <div class="row">
+            
+
+
+
+
+            <div class="col-lg-4 col-md-6 my-1">
+                <div class="location-card-detailed">
+                    <div class="location-header">
+                        <div class="location-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h4>Branch Factory - Kisarawe</h4>
+                        <span class="location-type">Factory</span>
+                    </div>
+                    <div class="location-details">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Morogoro Road - Kiluvya Madukani, Kisarawe</p>
+                        <p><i class="fas fa-envelope me-2"></i>P.O. Box 28127</p>
+                        <p><i class="fas fa-phone me-2"></i>0769 226111 / 0677 063041 / 0677 063040</p>
+                        <p><i class="fas fa-clock me-2"></i>Mon-Fri: 7AM-5PM</p>
+                    </div>
+                    <div class="location-services">
+                        <span class="service-tag">Bulk Orders</span>
+                        <span class="service-tag">Custom Manufacturing</span>
+                        <span class="service-tag">Material Production</span>
+                    </div>
+                </div>
             </div>
             
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="location-card-detailed">
-                        <div class="location-header">
-                            <div class="location-icon">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <h4>Main Showroom</h4>
-                            <span class="location-type">Showroom</span>
+            <div class="col-lg-4 col-md-6 my-1">
+                <div class="location-card-detailed">
+                    <div class="location-header">
+                        <div class="location-icon">
+                            <i class="fas fa-industry"></i>
                         </div>
-                        <div class="location-details">
-                            <p><i class="fas fa-map-marker-alt me-2"></i>123 Construction Ave, Dar es Salaam</p>
-                            <p><i class="fas fa-phone me-2"></i>+255 123 456 789</p>
-                            <p><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM, Sat: 8AM-4PM</p>
-                        </div>
-                        <div class="location-services">
-                            <span class="service-tag">Product Display</span>
-                            <span class="service-tag">Expert Consultation</span>
-                            <span class="service-tag">Sample Collection</span>
-                        </div>
+                        <h4>Branch Factory - Dodoma</h4>
+                        <span class="location-type">Factory</span>
+                    </div>
+                    <div class="location-details">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Morogoro Road - Chamwino, Dodoma</p>
+                        <p><i class="fas fa-envelope me-2"></i>P.O. Box 1901</p>
+                        <p><i class="fas fa-phone me-2"></i>0769 226111 / 0677 063043</p>
+                        <p><i class="fas fa-clock me-2"></i>Mon-Fri: 7AM-5PM</p>
+                    </div>
+                    <div class="location-services">
+                        <span class="service-tag">Bulk Orders</span>
+                        <span class="service-tag">Custom Manufacturing</span>
+                        <span class="service-tag">Material Production</span>
                     </div>
                 </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="location-card-detailed">
-                        <div class="location-header">
-                            <div class="location-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <h4>Manufacturing Plant</h4>
-                            <span class="location-type">Factory</span>
-                        </div>
-                        <div class="location-details">
-                            <p><i class="fas fa-map-marker-alt me-2"></i>Industrial Area, Dar es Salaam</p>
-                            <p><i class="fas fa-phone me-2"></i>+255 123 456 792</p>
-                            <p><i class="fas fa-clock me-2"></i>Mon-Fri: 7AM-5PM</p>
-                        </div>
-                        <div class="location-services">
-                            <span class="service-tag">Bulk Orders</span>
-                            <span class="service-tag">Custom Products</span>
-                            <span class="service-tag">Factory Tours</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="location-card-detailed">
-                        <div class="location-header">
-                            <div class="location-icon">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                            <h4>Retail Shop - Mwanza</h4>
-                            <span class="location-type">Retail</span>
-                        </div>
-                        <div class="location-details">
-                            <p><i class="fas fa-map-marker-alt me-2"></i>456 Market Street, Mwanza</p>
-                            <p><i class="fas fa-phone me-2"></i>+255 123 456 793</p>
-                            <p><i class="fas fa-clock me-2"></i>Mon-Sat: 8AM-6PM</p>
-                        </div>
-                        <div class="location-services">
-                            <span class="service-tag">Immediate Pickup</span>
-                            <span class="service-tag">Local Delivery</span>
-                            <span class="service-tag">Installation Support</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-title text-center">
-                <h2>Frequently Asked <span class="highlight">Questions</span></h2>
-                <p>Quick answers to common questions about our products and services</p>
             </div>
             
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-                                    What types of construction materials do you offer?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We offer a comprehensive range of construction materials including wall tiles, floor tiles, Pelvin blocks, hollow blocks, roofing materials, construction tools, paints, and finishing materials. All our products meet international quality standards.
-                                </div>
+            <div class="col-lg-4 col-md-6 my-1">
+                <div class="location-card-detailed">
+                    <div class="location-header">
+                        <div class="location-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4>Showroom - Mwanza</h4>
+                        <span class="location-type">Showroom</span>
+                    </div>
+                    <div class="location-details">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Airport Road - 24 St Makongoro Avenue, Near Nyakahoja</p>
+                        <p><i class="fas fa-phone me-2"></i>0677 063037 / 0754 766022</p>
+                        <p><i class="fas fa-clock me-2"></i>Mon-Sat: 8AM-6PM</p>
+                    </div>
+                    <div class="location-services">
+                        <span class="service-tag">Product Display</span>
+                        <span class="service-tag">Expert Consultation</span>
+                        <span class="service-tag">Sample Collection</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 my-1">
+                <div class="location-card-detailed">
+                    <div class="location-header">
+                        <div class="location-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4>Showroom - Kariakoo</h4>
+                        <span class="location-type">Showroom</span>
+                    </div>
+                    <div class="location-details">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Kiungani / Congo, Kariakoo</p>
+                        <p><i class="fas fa-phone me-2"></i>0784 323886 / 0758 966083 / 0677 063042</p>
+                        <p><i class="fas fa-clock me-2"></i>Mon-Sat: 8AM-6PM</p>
+                    </div>
+                    <div class="location-services">
+                        <span class="service-tag">Product Display</span>
+                        <span class="service-tag">Expert Consultation</span>
+                        <span class="service-tag">Sample Collection</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-lg-4 col-md-6 my-1">
+                <div class="location-card-detailed">
+                    <div class="location-header">
+                        <div class="location-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4>Showroom - Ubungo</h4>
+                        <span class="location-type">Showroom</span>
+                    </div>
+                    <div class="location-details">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>EAST AFRICA COMMERCIAL AND LOGISTICS CENTER</p>
+                        <p><i class="fas fa-phone me-2"></i>0784 323886 / 0758 966083 / 0677 063042</p>
+                        <p><i class="fas fa-clock me-2"></i>Mon-Sat: 8AM-6PM</p>
+                    </div>
+                    <div class="location-services">
+                        <span class="service-tag">Product Display</span>
+                        <span class="service-tag">Expert Consultation</span>
+                        <span class="service-tag">Sample Collection</span>
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+            <p>Quick answers to common questions about our products and services</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                What types of construction materials do you offer?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer a comprehensive range of construction materials including wall tiles, floor tiles, Pelvin blocks, hollow blocks, roofing materials, construction tools, paints, and finishing materials. All our products meet international quality standards.
                             </div>
                         </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-                                    Do you provide delivery services?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Yes, we provide delivery services across Tanzania. We offer free delivery for orders over $100, and our delivery team ensures safe transportation of all materials to your construction site.
-                                </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                Do you provide delivery services?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we provide delivery services across Tanzania. We offer free delivery for orders over $100, and our delivery team ensures safe transportation of all materials to your construction site.
                             </div>
                         </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-                                    Can I get expert consultation for my project?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Absolutely! Our team of experienced construction professionals provides free consultation services. We can help you choose the right materials, estimate quantities, and provide technical guidance for your project.
-                                </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                Can I get expert consultation for my project?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! Our team of experienced construction professionals provides free consultation services. We can help you choose the right materials, estimate quantities, and provide technical guidance for your project.
                             </div>
                         </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-                                    What is your return policy?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We offer a 30-day return policy for unused materials in their original packaging. Custom-made or cut materials may have different return conditions. Please contact our customer service team for specific return requirements.
-                                </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                What is your return policy?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer a 30-day return policy for unused materials in their original packaging. Custom-made or cut materials may have different return conditions. Please contact our customer service team for specific return requirements.
                             </div>
                         </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="faq5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
-                                    Do you offer bulk pricing for large projects?
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Yes, we offer competitive bulk pricing for large construction projects. Contact our sales team with your project details and material requirements for a customized quote with volume discounts.
-                                </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                Do you offer bulk pricing for large projects?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer competitive bulk pricing for large construction projects. Contact our sales team with your project details and material requirements for a customized quote with volume discounts.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-{%endblock%}
+<script>
+    // Contact Form Handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            company: document.getElementById('company').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value,
+            newsletter: document.getElementById('newsletter').checked
+        };
+
+        // Basic validation
+        if (!formData.firstName || !formData.lastName || !formData.email || !formData.subject || !formData.message) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // Simulate form submission
+        const submitButton = document.querySelector('.btn-submit');
+        const originalText = submitButton.innerHTML;
+        
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+        submitButton.disabled = true;
+
+        // Simulate API call
+        setTimeout(() => {
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            document.getElementById('contactForm').reset();
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+        }, 2000);
+    });
+
+    // Add smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.location-card-detailed, .contact-form-container, .contact-info').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+</script>
+{% endblock %}
