@@ -240,7 +240,7 @@ def products():
             selected_category = None
     else:
         # IMPROVED: Balanced randomization when showing all categories
-        products = get_balanced_random_products(per_page=20, page=page)
+        products = get_balanced_random_products(per_page=15, page=page)
         return render_template(
             "products.html",
             categories=categories,
@@ -250,7 +250,7 @@ def products():
         )
     
     # For specific category, use regular pagination
-    per_page = 20
+    per_page = 15
     pagination = query.paginate(page=page, per_page=per_page, error_out=False)
     products = pagination.items
     
