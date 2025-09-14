@@ -96,3 +96,45 @@ def get_balanced_random_products(per_page=20, page=1, seed=None):
 def clear_cache():
     """Helper function to clear cache when products or categories change."""
     cache.delete_memoized(get_balanced_random_products)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import json
+import base64
+
+def decode_jwt(token):
+    parts = token.split('.')
+    # Pad with '=' to make base64 decoding work
+    header = json.loads(base64.urlsafe_b64decode(parts[0] + '===').decode('utf-8'))
+    payload = json.loads(base64.urlsafe_b64decode(parts[1] + '===').decode('utf-8'))
+    return header, payload
+
+# Example usage
+token_a = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYzUxYzMyMy1jMzI1LTRiN2UtODFlOC01NDg1MThjMzQxNDQiLCJleHAiOjE3NTc3NzEzNjJ9.yGEVF5VOipwTfmnylwAiM7e4wInBR9__oTWwE8llTXc'
+header_a, payload_a = decode_jwt(token_a)
+print("Header A:", header_a)  # Output: {'alg': 'HS256', 'typ': 'JWT'}
+print("Payload A:", payload_a)  # Output: {'sub': 'userA', 'role': 'user'}
+
+token_b = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmNjhlZDM0Ny0xMzE2LTQ1YWMtOWQxMy00YjViNjIxZTFjZDAiLCJleHAiOjE3NTc3NzE0Mjh9.VfrNYAFO5GMjfN9Jr94oCZvsjS5ZCtWNqzXJv2TSdxs'
+header_b, payload_b = decode_jwt(token_b)
+print("Header B:", header_b)  # Output: {'alg': 'HS256', 'typ': 'JWT'}
+print("Payload B:", payload_b)  # Output: {'sub': 'uuv runserB', 'role': 'user'}
+

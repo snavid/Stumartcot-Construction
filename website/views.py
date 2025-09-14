@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for, current_app, Response
+from flask import Blueprint, render_template, request, flash, redirect, url_for, current_app, Response, session
 from flask_login import login_required, current_user
 from .models import User, Category, Product, ProductImage
 from . import db
@@ -8,6 +8,8 @@ from datetime import datetime
 from werkzeug.utils import secure_filename
 from sqlalchemy.sql.expression import func 
 import random
+from sqlalchemy import func
+from sqlalchemy.types import String
 
 views = Blueprint('views', __name__)
 
@@ -34,13 +36,51 @@ def generate_unique_filename(original_filename):
     
     return unique_filename
 
-
-
+def create_mock_pagination(page, per_page, total_items, total_pages=None):
+    """
+    Create a mock pagination object compatible with Flask-SQLAlchemy's pagination structure.
+    
+    Args:
+        page (int): Current page number
+        per_page (int): Number of items per page
+        total_items (int): Total number of items across all pages
+        total_pages (int, optional): Total number of pages, if pre-calculated
+        
+    Returns:
+        dict: A dictionary mimicking Flask-SQLAlchemy's pagination object
+    """
+    if total_pages is None:
+        total_pages = (total_items + per_page - 1) // per_page if total_items > 0 else 1
+    
+    # Ensure page is within valid bounds
+    page = max(1, min(page, total_pages))
+    
+    # Create a mock pagination object as a dictionary
+    pagination = {
+        'items': [],  # Will be populated by caller
+        'page': page,
+        'per_page': per_page,
+        'total': total_items,
+        'pages': total_pages,
+        'has_next': page < total_pages,
+        'has_prev': page > 1,
+        'next_num': page + 1 if page < total_pages else None,
+        'prev_num': page - 1 if page > 1 else None,
+        'iter_pages': lambda: range(1, total_pages + 1)  # For template iteration
+    }
+    
+    return pagination
 
 def get_balanced_random_products(per_page=20, page=1):
     """
-    Get products with balanced representation from each category
+    Get products with balanced representation from each category, with consistent pseudo-random order across pages using session seed.
     """
+    # Regenerate seed only on page 1 or if not exists
+    if page == 1 or 'product_seed' not in session:
+        session['product_seed'] = str(random.randint(0, 999999999))
+    
+    seed = session['product_seed']
+    
     # Get all categories with their product counts
     category_stats = db.session.query(
         Category.id,
@@ -55,12 +95,20 @@ def get_balanced_random_products(per_page=20, page=1):
             'pagination': create_mock_pagination(page, per_page, 0)
         }
     
-    # Calculate how many products to get from each category
+    # Set seed for consistent shuffling
+    random.seed(seed)
+    
+    # Shuffle categories for fair distribution
+    category_stats = list(category_stats)
+    random.shuffle(category_stats)
+    
+    # Calculate how many products to get from each category per page
     total_categories = len(category_stats)
     base_per_category = per_page // total_categories
     remainder = per_page % total_categories
     
     balanced_products = []
+    total_available_this_page = 0
     
     for i, (cat_id, cat_name, product_count) in enumerate(category_stats):
         # Distribute remainder among first few categories
@@ -68,65 +116,144 @@ def get_balanced_random_products(per_page=20, page=1):
         if i < remainder:
             products_from_this_category += 1
         
-        # Don't try to get more products than available in category
+        # Don't try to get more than available
         products_from_this_category = min(products_from_this_category, product_count)
         
         if products_from_this_category > 0:
-            # Get random products from this category
+            # Calculate offset and limit for this page
+            offset = (page - 1) * products_from_this_category
+            if offset >= product_count:
+                continue  # This category is depleted for this page
+            
+            limit = products_from_this_category
+            if offset + limit > product_count:
+                limit = product_count - offset
+            
+            # Fetch products for this category
             category_products = Product.query.filter_by(category_id=cat_id)\
-                .order_by(func.random())\
-                .limit(products_from_this_category)\
+                .order_by(Product.id)\
+                .offset(offset)\
+                .limit(limit)\
                 .all()
             
+            # Create deterministic order using seed and product IDs
+            random.seed(seed + str(cat_id))  # Unique seed per category
+            category_products = sorted(category_products, key=lambda p: random.random())
+            
             balanced_products.extend(category_products)
+            total_available_this_page += len(category_products)
     
-    # Shuffle the final list to mix categories
+    # Final shuffle of mixed category products for this page
+    random.seed(seed + str(page))  # Page-specific seed for final shuffle
     random.shuffle(balanced_products)
     
     # Calculate pagination info
     total_products = sum(stat.product_count for stat in category_stats)
     total_pages = (total_products + per_page - 1) // per_page
     
-    # Handle pagination by getting different random samples for each page
-    start_idx = (page - 1) * per_page
-    end_idx = start_idx + per_page
-    
-    # For simplicity, we'll regenerate random products for each page
-    # In production, you might want to use a seed or cache strategy
-    
     return {
-        'items': balanced_products[:per_page],  # Take only what we need for current page
+        'items': balanced_products,
         'pagination': create_mock_pagination(page, per_page, total_products, total_pages)
     }
 
-def create_mock_pagination(page, per_page, total, total_pages=None):
-    """
-    Create a pagination-like object for balanced random products
-    """
-    if total_pages is None:
-        total_pages = (total + per_page - 1) // per_page
+
+
+
+
+
+
+# def get_balanced_random_products(per_page=20, page=1):
+#     """
+#     Get products with balanced representation from each category
+#     """
+#     # Get all categories with their product counts
+#     category_stats = db.session.query(
+#         Category.id,
+#         Category.name,
+#         func.count(Product.id).label('product_count')
+#     ).join(Product).group_by(Category.id, Category.name).all()
     
-    class MockPagination:
-        def __init__(self, page, per_page, total, pages):
-            self.page = page
-            self.per_page = per_page
-            self.total = total
-            self.pages = pages
-            self.has_prev = page > 1
-            self.has_next = page < pages
-            self.prev_num = page - 1 if self.has_prev else None
-            self.next_num = page + 1 if self.has_next else None
+#     if not category_stats:
+#         # Fallback if no products
+#         return {
+#             'items': [],
+#             'pagination': create_mock_pagination(page, per_page, 0)
+#         }
+    
+#     # Calculate how many products to get from each category
+#     total_categories = len(category_stats)
+#     base_per_category = per_page // total_categories
+#     remainder = per_page % total_categories
+    
+#     balanced_products = []
+    
+#     for i, (cat_id, cat_name, product_count) in enumerate(category_stats):
+#         # Distribute remainder among first few categories
+#         products_from_this_category = base_per_category
+#         if i < remainder:
+#             products_from_this_category += 1
         
-        def iter_pages(self, left_edge=2, left_current=2, right_current=3, right_edge=2):
-            """Generate page numbers for pagination display"""
-            last = self.pages
-            for num in range(1, last + 1):
-                if num <= left_edge or \
-                   (self.page - left_current - 1 < num < self.page + right_current) or \
-                   num > last - right_edge:
-                    yield num
+#         # Don't try to get more products than available in category
+#         products_from_this_category = min(products_from_this_category, product_count)
+        
+#         if products_from_this_category > 0:
+#             # Get random products from this category
+#             category_products = Product.query.filter_by(category_id=cat_id)\
+#                 .order_by(func.random())\
+#                 .limit(products_from_this_category)\
+#                 .all()
+            
+#             balanced_products.extend(category_products)
     
-    return MockPagination(page, per_page, total, total_pages)
+#     # Shuffle the final list to mix categories
+#     random.shuffle(balanced_products)
+    
+#     # Calculate pagination info
+#     total_products = sum(stat.product_count for stat in category_stats)
+#     total_pages = (total_products + per_page - 1) // per_page
+    
+#     # Handle pagination by getting different random samples for each page
+#     start_idx = (page - 1) * per_page
+#     end_idx = start_idx + per_page
+    
+#     # For simplicity, we'll regenerate random products for each page
+#     # In production, you might want to use a seed or cache strategy
+    
+#     return {
+#         'items': balanced_products[:per_page],  # Take only what we need for current page
+#         'pagination': create_mock_pagination(page, per_page, total_products, total_pages)
+#     }
+
+# def create_mock_pagination(page, per_page, total, total_pages=None):
+#     """
+#     Create a pagination-like object for balanced random products
+#     """
+#     if total_pages is None:
+#         total_pages = (total + per_page - 1) // per_page
+    
+#     class MockPagination:
+#         def __init__(self, page, per_page, total, pages):
+#             self.page = page
+#             self.per_page = per_page
+#             self.total = total
+#             self.pages = pages
+#             self.has_prev = page > 1
+#             self.has_next = page < pages
+#             self.prev_num = page - 1 if self.has_prev else None
+#             self.next_num = page + 1 if self.has_next else None
+        
+#         def iter_pages(self, left_edge=2, left_current=2, right_current=3, right_edge=2):
+#             """Generate page numbers for pagination display"""
+#             last = self.pages
+#             for num in range(1, last + 1):
+#                 if num <= left_edge or \
+#                    (self.page - left_current - 1 < num < self.page + right_current) or \
+#                    num > last - right_edge:
+#                     yield num
+    
+#     return MockPagination(page, per_page, total, total_pages)
+
+
 
 # ALTERNATIVE APPROACH 1: Weighted Random Selection
 def get_weighted_random_products(per_page=20, page=1):
@@ -220,6 +347,8 @@ def home():
     products = Product.query.limit(8).all()  # Show latest 8 products
     return render_template("langingPage.html", categories=categories)
 
+
+
 @views.route('/products')
 def products():
     page = request.args.get('page', 1, type=int)
@@ -239,8 +368,8 @@ def products():
         except ValueError:
             selected_category = None
     else:
-        # IMPROVED: Balanced randomization when showing all categories
-        products = get_balanced_random_products(per_page=15, page=page)
+        # Balanced randomization when showing all categories
+        products = get_balanced_random_products(per_page=20, page=page)
         return render_template(
             "products.html",
             categories=categories,
@@ -261,6 +390,50 @@ def products():
         pagination=pagination,
         selected_category=selected_category
     )
+
+
+
+# @views.route('/products')
+# def products():
+#     page = request.args.get('page', 1, type=int)
+#     category_id = request.args.get('category', 'all', type=str)
+    
+#     categories = Category.query.all()
+    
+#     # Base query
+#     query = Product.query
+    
+#     # Convert category_id to integer if not 'all'
+#     selected_category = None
+#     if category_id != 'all':
+#         try:
+#             selected_category = int(category_id)
+#             query = query.filter_by(category_id=selected_category)
+#         except ValueError:
+#             selected_category = None
+#     else:
+#         # IMPROVED: Balanced randomization when showing all categories
+#         products = get_balanced_random_products(per_page=15, page=page)
+#         return render_template(
+#             "products.html",
+#             categories=categories,
+#             products=products['items'],
+#             pagination=products['pagination'],
+#             selected_category=selected_category
+#         )
+    
+#     # For specific category, use regular pagination
+#     per_page = 15
+#     pagination = query.paginate(page=page, per_page=per_page, error_out=False)
+#     products = pagination.items
+    
+#     return render_template(
+#         "products.html",
+#         categories=categories,
+#         products=products,
+#         pagination=pagination,
+#         selected_category=selected_category
+#     )
 
 
 @views.route('/blog')

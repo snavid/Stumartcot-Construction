@@ -3944,3 +3944,153 @@ Ecommerce Styles */
     margin-bottom: 1.5rem; /* Adjust margin */
   }
 }
+
+
+
+
+
+
+
+
+
+.testimonials {
+  background: var(--gradient-2);
+  overflow: hidden;
+}
+
+.testimonial-card {
+  transition: all 0.4s ease;
+  background: var(--gradient-1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(255, 215, 0, 0.2);
+  border-color: var(--primary-yellow);
+}
+
+.testimonial-card:hover .reviewer-avatar {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.reviewer-avatar {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 50%;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: var(--gradient-1);
+}
+
+.carousel-indicators button {
+  background-color: var(--text-light);
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+.carousel-indicators .active {
+  background-color: var(--primary-yellow);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+      padding: 60px 0;
+  }
+
+  .section-title h2 {
+      font-size: 2.5rem;
+  }
+
+  .section-title p {
+      font-size: 1rem;
+      padding: 0 15px;
+  }
+
+  .testimonial-card {
+      padding: 20px;
+  }
+
+  .reviewer-avatar {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+  }
+
+  .testimonial-card h5 {
+      font-size: 1.1rem;
+  }
+
+  .testimonial-card p {
+      font-size: 0.9rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+      width: 10%;
+      height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonials {
+      padding: 40px 0;
+  }
+
+  .section-title h2 {
+      font-size: 2rem;
+  }
+
+  .section-title p {
+      font-size: 0.9rem;
+  }
+
+  .testimonial-card {
+      padding: 15px;
+  }
+
+  .reviewer-avatar {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+  }
+
+  .testimonial-card h5 {
+      font-size: 1rem;
+  }
+
+  .testimonial-card p {
+      font-size: 0.85rem;
+  }
+
+  .carousel-indicators button {
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+  }
+}

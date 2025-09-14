@@ -1,1514 +1,1563 @@
 [
-    {
-      "user_id": "8a97f2ee-dbfe-4340-9806-d2b02b5deb57",
-      "username": "steampunk",
-      "email": "steam@punk.com",
-      "full_name": "Steam Punk",
-      "mobile_number": "255744011107",
-      "account_status": "active"
-    },
-    {
-      "user_id": "601626e2-e978-4854-8904-e537e6d6fdbe",
-      "username": "mrimi",
-      "email": "mrimi@gmail.com",
-      "full_name": "mrimi",
-      "mobile_number": "02221111222",
-      "account_status": "active"
-    },
-    {
-      "user_id": "1ff32536-4da3-454d-98ff-938400a9156f",
-      "username": "MRIMI2",
-      "email": "mrimi11@gmail.com",
-      "full_name": "MRIMI",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "00a37f41-2c68-4332-9d3d-5b9e67eb6a3a",
-      "username": "trump",
-      "email": "trump@usa.com",
-      "full_name": "donald trump",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "cf379b9c-3d4f-47e7-a917-76d776c7bf54",
-      "username": "elon",
-      "email": "mask@dodge.com",
-      "full_name": "elon mask",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "eda1f609-5307-4f25-a0f0-f3c230245a25",
-      "username": "getrich",
-      "email": "getrich@get.com",
-      "full_name": "getrich ",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "2c1b02a7-aacb-42ba-a9bc-83d8e414f42a",
-      "username": "met",
-      "email": "met@gmail.com",
-      "full_name": "met",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "df05e584-afac-4dd7-a577-9cd25e16f493",
-      "username": "Major",
-      "email": "sikn@gmail.com",
-      "full_name": "Major Mrimi",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "20f49afb-d6ef-48e5-be5e-4b4456ea47df",
-      "username": "eddiegulay",
-      "email": "edgargulay69@gmail.com",
-      "full_name": "The Supreme Overload",
-      "mobile_number": "+255672204508",
-      "account_status": "active"
-    },
-    {
-      "user_id": "74fbb54c-27b4-46b6-bfeb-078f4ee55982",
-      "username": "Master2",
-      "email": "master2@gmail.com",
-      "full_name": "Master2",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "dd33aaca-591d-48e3-911f-1823ca27f99b",
-      "username": "Gustavo",
-      "email": "laurent@sekotours.com",
-      "full_name": "Gustavo Laurent",
-      "mobile_number": "+255742101191",
-      "account_status": "active"
-    },
-    {
-      "user_id": "014d96d2-a30a-41a6-b555-ffa6b4e80f1f",
-      "username": "Kondo",
-      "email": "kondoramadhani@gmail.com",
-      "full_name": "kondo r kondo",
-      "mobile_number": "+255678453797",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f68ed347-1316-45ac-9d13-4b5b621e1cd0",
-      "username": "hudumabot",
-      "email": "snavidux.official@gmail.com",
-      "full_name": "Yunus Siraju",
-      "mobile_number": "+255749300606",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f67a4220-377e-415e-bf6c-96a0d96deab9",
-      "username": "Faza",
-      "email": "omaryyunus391@gmail.com",
-      "full_name": "Omary Sado ",
-      "mobile_number": "+255710525834",
-      "account_status": "active"
-    },
-    {
-      "user_id": "2706b8be-93a4-4e5b-a2ee-c907020cee01",
-      "username": "TESTER",
-      "email": "tester@briq.tz",
-      "full_name": "TESTER ONE",
-      "mobile_number": "0788344349",
-      "account_status": "active"
-    },
-    {
-      "user_id": "0deb4223-6cff-471f-b32c-1991148683c4",
-      "username": "newman",
-      "email": "newman@test.com",
-      "full_name": "newman. test",
-      "mobile_number": "0999993444",
-      "account_status": "active"
-    },
-    {
-      "user_id": "12cba829-7ab5-46d4-8692-255842b8dbe2",
-      "username": "homeboi",
-      "email": "testemail@test.com",
-      "full_name": "home boi",
-      "mobile_number": "0788344349",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b6af0c77-a190-4c29-9a56-0a13716b3c42",
-      "username": "Rotaract CUHAS",
-      "email": "rotaractcuhas@gmail.com",
-      "full_name": "Rotaract CUHAS",
-      "mobile_number": "+255767605410",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b72dea72-4d73-4db7-b158-927320dbc630",
-      "username": "wills",
-      "email": "williammakarius@gmail.com",
-      "full_name": "William Mdemu",
-      "mobile_number": "+255621144125",
-      "account_status": "active"
-    },
-    {
-      "user_id": "4a0f4ebe-6f14-4432-b833-fec3d8cedac1",
-      "username": "Raymond",
-      "email": "raykongstar@gmail.com",
-      "full_name": "Moses",
-      "mobile_number": "+255762227596",
-      "account_status": "active"
-    },
-    {
-      "user_id": "a39c52cf-f97f-4f02-9034-b8c0622d7c15",
-      "username": "Zainabu kasanga ",
-      "email": "kasangazainabu5@gmail.com",
-      "full_name": "Zainabu seif kasanga ",
-      "mobile_number": "+255623195378",
-      "account_status": "active"
-    },
-    {
-      "user_id": "31614407-3fd4-4c64-ab87-6d5e5c359d1f",
-      "username": "abineri0762@gmail.com",
-      "email": "abineri0762@gmail.com",
-      "full_name": "Abineri Mwanuke",
-      "mobile_number": "0742777003",
-      "account_status": "active"
-    },
-    {
-      "user_id": "368557b2-c91d-46d6-8de8-256195c55ba7",
-      "username": "Dween",
-      "email": "Godwincels@gmail.com",
-      "full_name": "Godwin Celsus Byalugolora",
-      "mobile_number": "+255750299103",
-      "account_status": "active"
-    },
-    {
-      "user_id": "a3b3999f-89b9-4f18-b9fc-59a9ecb7a604",
-      "username": "Jemaka",
-      "email": "justusmk7@gmail.com",
-      "full_name": "Justus Emmanuel ",
-      "mobile_number": "0719380120",
-      "account_status": "active"
-    },
-    {
-      "user_id": "859a5f80-b8de-4d52-ba68-de5a2777fadd",
-      "username": "Jones",
-      "email": "itumbironny@gmail.com",
-      "full_name": "RONNYDAVID J. ITUMBI",
-      "mobile_number": "0768712914",
-      "account_status": "active"
-    },
-    {
-      "user_id": "7d8aa5b0-5bc8-4cfd-8595-0cc38c761afa",
-      "username": "kikaka",
-      "email": "kikaka2023@gmail.com",
-      "full_name": "Kikaka X",
-      "mobile_number": "+255765392888",
-      "account_status": "active"
-    },
-    {
-      "user_id": "63e0949a-c759-44c0-bf90-c2344aa1bcdd",
-      "username": "cyp.rian ",
-      "email": "chalscyprian@gmail.com",
-      "full_name": "Cyprian Maroboto ",
-      "mobile_number": "+255745441945",
-      "account_status": "active"
-    },
-    {
-      "user_id": "07c81ea6-11c8-459a-8de5-ff1df4b906c8",
-      "username": "Magotech",
-      "email": "ceo@magotech.net",
-      "full_name": "Magoiga",
-      "mobile_number": "+255685261018",
-      "account_status": "active"
-    },
-    {
-      "user_id": "2ddc2109-fa53-4d85-8f42-29a6a2318bb3",
-      "username": "santos",
-      "email": "santos@briq.tz",
-      "full_name": "Santos Mnoma",
-      "mobile_number": "0000000000",
-      "account_status": "active"
-    },
-    {
-      "user_id": "8a8e9b9c-3586-44d5-908c-11a6530df0f8",
-      "username": "phort",
-      "email": "middlephort@gmail.com",
-      "full_name": "phort chrispin",
-      "mobile_number": "255787753939",
-      "account_status": "active"
-    },
-    {
-      "user_id": "5fa7fd88-5cf0-4ebf-b417-d67c0b5dab40",
-      "username": "Guzman",
-      "email": "kaisingano@gmail.com",
-      "full_name": "Nathan Singano",
-      "mobile_number": "255622757342",
-      "account_status": "active"
-    },
-    {
-      "user_id": "165e2acc-063b-466d-a449-3962809d44dd",
-      "username": "Isamuyo",
-      "email": "hisamuyo@gmail.com",
-      "full_name": "Hamis Isamuyo",
-      "mobile_number": "255746204519",
-      "account_status": "active"
-    },
-    {
-      "user_id": "79ac4e1f-8630-4111-8705-23e245a0679e",
-      "username": "Mumtaz milk",
-      "email": "abuuaslam.mb@gmail.com",
-      "full_name": "Mumtaz Milk",
-      "mobile_number": "255716371373",
-      "account_status": "active"
-    },
-    {
-      "user_id": "6690b4b3-256d-404b-afd9-895749ae58d2",
-      "username": "Sikjunior",
-      "email": "sms@briq.tz",
-      "full_name": "SIkjunior Mrimi",
-      "mobile_number": "255788344348",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c412265d-6ef2-4963-bdf0-29e1d7a00a34",
-      "username": "Vitabu Vya Salaf -HQ",
-      "email": "abuuthaimin12@gmail.com",
-      "full_name": "JUMA ALLY MTOLO",
-      "mobile_number": "255699636278",
-      "account_status": "active"
-    },
-    {
-      "user_id": "89e43325-e2ad-4ab0-b07b-512a497046cd",
-      "username": "Steven",
-      "email": "workwithboaz@gmail.com",
-      "full_name": "Boaz",
-      "mobile_number": "255742082040",
-      "account_status": "active"
-    },
-    {
-      "user_id": "abe514dd-3faf-4f7c-885f-0aa03a6768de",
-      "username": "Onlyfans",
-      "email": "ol@gmail.com",
-      "full_name": "Only Fans",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "745ffea0-4b67-43ea-a809-e31dc4ff456f",
-      "username": "null",
-      "email": "sikmrimi101@gmail.com",
-      "full_name": "SIKJUNIOR MRIMI",
-      "mobile_number": "255788344348",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b9b34aa2-e7cb-4ec2-b588-4695a780f4d2",
-      "username": "Signup",
-      "email": "test@signup.ui",
-      "full_name": "Testing  Signup",
-      "mobile_number": "255788344348",
-      "account_status": "active"
-    },
-    {
-      "user_id": "54bdda42-e914-4105-8707-00871b914405",
-      "username": "Speaking Hearts ",
-      "email": "gwamak@gmail.com",
-      "full_name": "Gwamaka Ambele Mwakyusa ",
-      "mobile_number": "255685401213",
-      "account_status": "active"
-    },
-    {
-      "user_id": "5e5ed61b-31cf-4366-8a1e-39a16552a134",
-      "username": "babupepya",
-      "email": "babupepya@gmail.com",
-      "full_name": "BABU PEPYA",
-      "mobile_number": "255658474556",
-      "account_status": "active"
-    },
-    {
-      "user_id": "624c9bb5-30ee-449c-a740-2fca120d069e",
-      "username": "firstedson@gmail.com",
-      "email": "ffirstedson@gmail.com",
-      "full_name": "edson kuzengwa",
-      "mobile_number": "255787537628",
-      "account_status": "active"
-    },
-    {
-      "user_id": "7d228271-44ea-498b-8a9d-21253228f81e",
-      "username": "Suhan",
-      "email": "ndanzisued@gmail.com",
-      "full_name": "Sued ndanzi",
-      "mobile_number": "255625726195",
-      "account_status": "active"
-    },
-    {
-      "user_id": "63e1ce03-325d-4814-b469-098a01271de9",
-      "username": "frank_jonathan",
-      "email": "frankmcjonathan17@gmail.com",
-      "full_name": "frank jonathan Mindolo",
-      "mobile_number": "255687772870",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f4eff2fa-fea4-4e88-8b4c-af237634708a",
-      "username": "innosamuels@gmail.com",
-      "email": "innosamuels@gmail.com",
-      "full_name": "Inno Samuels",
-      "mobile_number": null,
-      "account_status": "active"
-    },
-    {
-      "user_id": "13a3b4fc-e184-4dc6-b23d-bd040a2b3485",
-      "username": "mzava25 ",
-      "email": "mzavaaman577@gmail.com",
-      "full_name": "Aman Arira Mnzava",
-      "mobile_number": "255752835670",
-      "account_status": "active"
-    },
-    {
-      "user_id": "9b78ffae-36b7-4caa-b702-90485dbe1d88",
-      "username": "steve",
-      "email": "stephanbazaar99@gmail.com",
-      "full_name": "Steve bazaar",
-      "mobile_number": "255657024691",
-      "account_status": "active"
-    },
-    {
-      "user_id": "a7f32f8f-d172-4ded-b7fd-2a0ca6db5c1e",
-      "username": "John",
-      "email": "JohnDoe@gmail.com",
-      "full_name": "John Doe",
-      "mobile_number": "255788344347",
-      "account_status": "active"
-    },
-    {
-      "user_id": "1f99f97c-f79d-4645-a701-a10435a184aa",
-      "username": "Dr.Zaganza",
-      "email": "accmoshi@gmail.com",
-      "full_name": "Dr.Zaganza",
-      "mobile_number": "255713039875",
-      "account_status": "active"
-    },
-    {
-      "user_id": "0006b35f-58c8-46cd-adc0-2895e0c6f25c",
-      "username": "yonatimotheo2@gmail.com",
-      "email": "yonatimotheo2@gmail.com",
-      "full_name": "Yona Timotheo Yona",
-      "mobile_number": "255757073271",
-      "account_status": "active"
-    },
-    {
-      "user_id": "3d2b5bb2-3eb6-433d-8b94-3b0e6bd582a6",
-      "username": "Kisadoti",
-      "email": "kipagosafi@gmail.com",
-      "full_name": "Juma ali",
-      "mobile_number": "255756532324",
-      "account_status": "active"
-    },
-    {
-      "user_id": "fb7832e1-1513-4265-a354-cebad155ba26",
-      "username": "Philip0904",
-      "email": "smiledelouz@gmail.com",
-      "full_name": "Philip Antony ",
-      "mobile_number": "255756451060",
-      "account_status": "active"
-    },
-    {
-      "user_id": "2db71f65-0ec2-4230-9406-236367002ea6",
-      "username": "winock",
-      "email": "winockerick86@gmail.com",
-      "full_name": "ERICK",
-      "mobile_number": "255626551833",
-      "account_status": "active"
-    },
-    {
-      "user_id": "53f05d92-9221-4f02-b89b-c7100524d139",
-      "username": "abuuiptisam11",
-      "email": "abuuiptisam11@gmail.com",
-      "full_name": "Issa Awadhi",
-      "mobile_number": "255765137245",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ae680992-bbe0-4141-a374-ad27621e029d",
-      "username": "ROYALE HEALING ESSENCE",
-      "email": "husseinfatma466@gmail.com",
-      "full_name": "Fatma Hussein",
-      "mobile_number": "255685986695",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b01c5852-8874-4f9b-8647-c16af00d6f40",
-      "username": "therealjozbert",
-      "email": "jozbertmirambo175@gmail.com",
-      "full_name": "Jozbert James",
-      "mobile_number": "255695613653",
-      "account_status": "active"
-    },
-    {
-      "user_id": "a88a0159-f988-43b5-90ea-8adacd1421fe",
-      "username": "godliving_frank",
-      "email": "ndosigodliving3@gmail.com",
-      "full_name": "Godliving Frank Ndosi",
-      "mobile_number": "255757303812",
-      "account_status": "active"
-    },
-    {
-      "user_id": "517c58bd-fa7a-4061-82a4-a43f59c32685",
-      "username": "bittychris",
-      "email": "beatricebarnabas01@gmail.com",
-      "full_name": "BEATRICE CRISPIN",
-      "mobile_number": "255764037344",
-      "account_status": "active"
-    },
-    {
-      "user_id": "24474055-ad79-4e25-a512-00062308cc06",
-      "username": "sheng",
-      "email": "enocksheng6@gmail.com",
-      "full_name": "Enock Sheng",
-      "mobile_number": "255764142190",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f8959e26-383d-4c14-ab17-9f76594c92ef",
-      "username": "ben",
-      "email": "nashoniben@gmail.com",
-      "full_name": "Ben nashoni ",
-      "mobile_number": "255696517959",
-      "account_status": "active"
-    },
-    {
-      "user_id": "a6d6ad2d-c08b-4380-86a8-6a77a3acccc1",
-      "username": "MWINYIWIWA PHONE ACCESSORIES ",
-      "email": "ahmadmwinyiwiwa09@gmail.com",
-      "full_name": "Ahmad Mohamed Mwinyiwiwa ",
-      "mobile_number": "255784002619",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f989b94f-2ca7-4db5-947d-ce0905073540",
-      "username": "africanhustler ",
-      "email": "sylvesterjohn011@gmail.com",
-      "full_name": "Sylvester john",
-      "mobile_number": "255710881210",
-      "account_status": "active"
-    },
-    {
-      "user_id": "8cbda2b8-6cba-4c1d-b14e-4333ab969d8e",
-      "username": "dosantos",
-      "email": "santos@gmail.com",
-      "full_name": "Santos",
-      "mobile_number": "255613731130",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f667e049-682d-4885-944d-306ff3b69b41",
-      "username": "Joe Phil ",
-      "email": "joeltumain746@gmail.com",
-      "full_name": "Joel Tumain Mathias ",
-      "mobile_number": "255689475484",
-      "account_status": "active"
-    },
-    {
-      "user_id": "d693128e-e629-42a7-ac72-3581d687fb0a",
-      "username": "Inno ",
-      "email": "mungureinnocent11@gmail.com",
-      "full_name": "Mungure ",
-      "mobile_number": "255620753467",
-      "account_status": "active"
-    },
-    {
-      "user_id": "01cfb0cc-4e1a-499e-953a-607655676c5a",
-      "username": "Genes",
-      "email": "genesgasto01@gmail.com",
-      "full_name": "Genes Gasto",
-      "mobile_number": "255747171784",
-      "account_status": "active"
-    },
-    {
-      "user_id": "dbdebc2d-94c1-4f05-a7db-bffa71d39310",
-      "username": "kelvinhemu@gmail.com",
-      "email": "kelvinhemu@gmail.com",
-      "full_name": "Kelvin Hemu",
-      "mobile_number": "255786502070",
-      "account_status": "active"
-    },
-    {
-      "user_id": "8c914f83-a7a9-47de-99da-0879dfef9ce6",
-      "username": "lulupurity",
-      "email": "savagelulu22@gmail.com",
-      "full_name": "Lulu khamis ",
-      "mobile_number": "255769699612",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c1db339f-28a3-49f9-8bfc-212f5d29865d",
-      "username": "winockerick",
-      "email": "winockerick5@gmail.com",
-      "full_name": "winockerick",
-      "mobile_number": "255675321613",
-      "account_status": "active"
-    },
-    {
-      "user_id": "fe6f4212-f07c-4d1f-866a-ade48aa27594",
-      "username": "AGENT OF SMILE",
-      "email": "agentofsmile1@gmail.com",
-      "full_name": "Agent Of Smile",
-      "mobile_number": "255629509773",
-      "account_status": "active"
-    },
-    {
-      "user_id": "49277092-06c9-49fd-bd0b-c65c657555f1",
-      "username": "Mr Concept 17",
-      "email": "mrconcept17@gmail.com",
-      "full_name": "Abiud Adolf James ",
-      "mobile_number": "255683559122",
-      "account_status": "active"
-    },
-    {
-      "user_id": "4b9e5c7c-b8e8-4890-ba51-c7a9ecbeb403",
-      "username": "donbushiri_",
-      "email": "mustafabushiri@zoho.com",
-      "full_name": "Mustafa Bushiri",
-      "mobile_number": "255718607477",
-      "account_status": "active"
-    },
-    {
-      "user_id": "98f74248-5898-40d4-8912-79e5789e39ae",
-      "username": "zacharia8",
-      "email": "zachariabaraka8@gmail.com",
-      "full_name": "Baraka Zacharia",
-      "mobile_number": "255757387009",
-      "account_status": "active"
-    },
-    {
-      "user_id": "dded70bd-a381-4972-ad20-a8a792e68ff3",
-      "username": "maverickweyunga@gmail.com",
-      "email": "maverickweyunga@gmail.com",
-      "full_name": "Eric Kweyunga",
-      "mobile_number": "255781588379",
-      "account_status": "active"
-    },
-    {
-      "user_id": "60f6f975-cddd-46f6-bef4-471c578ecbde",
-      "username": "hekimamwala1@gmail.com",
-      "email": "hekimamwala1@gmail.com",
-      "full_name": "HEKIMA AMBALILE MWALA",
-      "mobile_number": "255747285438",
-      "account_status": "active"
-    },
-    {
-      "user_id": "eba3c3dc-5791-465f-8673-f11aef99b6e7",
-      "username": "Goodluck ",
-      "email": "goodluckstanley20@gmail.com",
-      "full_name": "Goodluck Stanley ",
-      "mobile_number": "255678971494",
-      "account_status": "active"
-    },
-    {
-      "user_id": "73334ce9-e146-46b8-80ea-ff874a0f3520",
-      "username": "Betron",
-      "email": "madatibetron@gmail.com",
-      "full_name": "Betron Madati",
-      "mobile_number": "255779380416",
-      "account_status": "active"
-    },
-    {
-      "user_id": "16af985b-d259-4bbb-a73f-265bce3fa4c2",
-      "username": "BriqTest",
-      "email": "test@briq.tz",
-      "full_name": "Test Account",
-      "mobile_number": "255760487336",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c4d16e75-0020-4794-a90f-2fb84b35f41a",
-      "username": "DEBORAH",
-      "email": "munisideborah46@gmail.com",
-      "full_name": "DEBORAH MUNISI",
-      "mobile_number": "255659691544",
-      "account_status": "active"
-    },
-    {
-      "user_id": "921fc7d2-32d0-4284-90c4-3e90c12b9297",
-      "username": "magesa",
-      "email": "magesa133@gmail.com",
-      "full_name": "Wilson Mathias Magesa ",
-      "mobile_number": "255614853618",
-      "account_status": "active"
-    },
-    {
-      "user_id": "79d4ee33-0dee-43fb-8872-83aa713fcc5f",
-      "username": "calvin",
-      "email": "calvinchuma1@gmail.com",
-      "full_name": "calvin",
-      "mobile_number": "255689472916",
-      "account_status": "active"
-    },
-    {
-      "user_id": "79415449-a512-4651-8dbb-6bdde5ac9e3d",
-      "username": "MODEARSON",
-      "email": "wilfredmbuya8@gmail.com",
-      "full_name": "Wilfred Mbuya",
-      "mobile_number": "255689828983",
-      "account_status": "active"
-    },
-    {
-      "user_id": "87fdfee5-2ca9-4fe3-9992-90d2b5a6ed48",
-      "username": "Jovine",
-      "email": "jovinerobotics@gmail.com",
-      "full_name": "jovine Mutelani",
-      "mobile_number": "255718193343",
-      "account_status": "active"
-    },
-    {
-      "user_id": "de8d892c-d76e-4eac-b356-ffde7702a3ec",
-      "username": "lupiarplatform@gmail.com",
-      "email": "lupiarplatform@gmail.com",
-      "full_name": "Lupiar Platform",
-      "mobile_number": "255687685886",
-      "account_status": "active"
-    },
-    {
-      "user_id": "e53f539a-6947-44eb-b586-5432000a809c",
-      "username": "MFALME JIKO",
-      "email": "nasseebsaidy@gmail.com",
-      "full_name": "Nasibu Saidi",
-      "mobile_number": "255673555506",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b233f8c5-ea0a-47d9-99c1-92f9abf42ada",
-      "username": "Becky ",
-      "email": "rebecajoshua5@gmail.com",
-      "full_name": "Rebeca Joshua ",
-      "mobile_number": "255765537023",
-      "account_status": "active"
-    },
-    {
-      "user_id": "42ff2a6e-64f4-4510-a9fc-d8834e57ddef",
-      "username": "Rotaract Innovation",
-      "email": "beathamalauri@gmail.com",
-      "full_name": "Rotaract e club of Tanzania Youth-Innovation",
-      "mobile_number": "255752423442",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b4ce3075-753e-48be-a81c-df3048d46961",
-      "username": "gervasgerminus ",
-      "email": "gervasgerminus@gmail.com",
-      "full_name": "Gervas Germinus",
-      "mobile_number": "255742532055",
-      "account_status": "active"
-    },
-    {
-      "user_id": "10cdeec3-510d-4172-a332-a882388fdc3b",
-      "username": "Aneth",
-      "email": "anethyusuph358@gmail.com",
-      "full_name": "Aneth Yusuph Samwely",
-      "mobile_number": "255748190924",
-      "account_status": "active"
-    },
-    {
-      "user_id": "d1625d18-4e2d-4a47-b0ed-6dec54bb81c6",
-      "username": "Tanz-Pay",
-      "email": "kumar@tourtech.co.tz",
-      "full_name": "Kumar Pandya",
-      "mobile_number": "255680181901",
-      "account_status": "active"
-    },
-    {
-      "user_id": "021610a7-ac36-44a8-8ff4-74773a82179e",
-      "username": "abdul",
-      "email": "abdulisihaka06@gmail.com",
-      "full_name": "isihaka",
-      "mobile_number": "255762252014",
-      "account_status": "active"
-    },
-    {
-      "user_id": "3a9a3504-01e1-437a-9256-3e5be54adf73",
-      "username": "masterki17",
-      "email": "felichejembe@gmail.com",
-      "full_name": "Feliche",
-      "mobile_number": "255762674000",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c7aea1ce-8ee0-4a66-9c14-978032fe2e45",
-      "username": "mchunguzi",
-      "email": "infotaaluma@gmail.com",
-      "full_name": "infotaaluma company",
-      "mobile_number": "255714323119",
-      "account_status": "active"
-    },
-    {
-      "user_id": "72e0d2d3-cfe3-4824-833e-5c7fe27477c3",
-      "username": "gloria09",
-      "email": "developergloria@gmail.com",
-      "full_name": "Gloria Robinson",
-      "mobile_number": "255719677575",
-      "account_status": "active"
-    },
-    {
-      "user_id": "9a5de23a-8310-4bc6-85e0-400a7de4f241",
-      "username": "seynationdigital@gmail.com",
-      "email": "seynationdigital@gmail.com",
-      "full_name": "OMEGA THOMSON SEYONGWE",
-      "mobile_number": "255684224468",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b5e57b53-c224-40e8-9b1e-d597c0d9611d",
-      "username": "kelvin",
-      "email": "calvinmambosasa@gmail.com",
-      "full_name": "Kelvin Mathew Mambosasa",
-      "mobile_number": "255693553749",
-      "account_status": "active"
-    },
-    {
-      "user_id": "e68a7597-79e6-4181-b547-1149b7318fbd",
-      "username": "423lavender",
-      "email": "423lavender@punkproof.com",
-      "full_name": "lavender punkproof",
-      "mobile_number": "255712345678",
-      "account_status": "active"
-    },
-    {
-      "user_id": "5c6cab68-61b0-4566-865e-c42a1618db79",
-      "username": "ZenoPay",
-      "email": "support@zenopay.net",
-      "full_name": "ZenoPay",
-      "mobile_number": "255652449389",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f2bd12bb-ad88-4a88-af42-4a981e6b1331",
-      "username": "jackkweyunga",
-      "email": "jackkweyunga@gmail.com",
-      "full_name": "Jack Kweyunga",
-      "mobile_number": "255764205701",
-      "account_status": "active"
-    },
-    {
-      "user_id": "7cecc1b4-e6a4-4dbc-9842-232dc4f4d1ac",
-      "username": "user_123",
-      "email": "maulidiadam1234@gmail.com",
-      "full_name": "user_123",
-      "mobile_number": "255689788372",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c028c25e-0426-4dfe-a9d3-d7f71ef81544",
-      "username": "remotikaafrica",
-      "email": "hello@remotikaafrica.org",
-      "full_name": "remotikaafrica",
-      "mobile_number": "255687360065",
-      "account_status": "active"
-    },
-    {
-      "user_id": "fd9c25af-4cc8-46a9-8803-ef22c01144d2",
-      "username": "kefa",
-      "email": "kefastvn@gmail.com",
-      "full_name": "kefa",
-      "mobile_number": "255653990194",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ab10c3b1-5461-4ec6-91e1-0f2b92c28a27",
-      "username": "Ahmed",
-      "email": "zuberyahmed7z@gmail.com",
-      "full_name": "Zubery",
-      "mobile_number": "255766949118",
-      "account_status": "active"
-    },
-    {
-      "user_id": "aeee7229-a330-4d9f-a502-9b7188d97626",
-      "username": "Robert ",
-      "email": "rshejamabu@gmail.com",
-      "full_name": "Shejamabu ",
-      "mobile_number": "255765080801",
-      "account_status": "active"
-    },
-    {
-      "user_id": "baeb8f77-7dbb-49c3-82dd-2f3d2cbef80b",
-      "username": "agromaterialtz",
-      "email": "nyamanditokushaha@gmail.com",
-      "full_name": "Kushaha  Nyamandito",
-      "mobile_number": "255782804400",
-      "account_status": "active"
-    },
-    {
-      "user_id": "4df5149e-1d6f-4317-b056-bfe8f70e6538",
-      "username": "Chando",
-      "email": "sylvesterchando@gmail.com",
-      "full_name": "Julius",
-      "mobile_number": "255712288231",
-      "account_status": "active"
-    },
-    {
-      "user_id": "41bfa9c6-894e-45a7-8b91-045c0d1ef3c2",
-      "username": "eddygotya",
-      "email": "edgar@mnunuzionline.co.tz",
-      "full_name": "EDGAR NYONI",
-      "mobile_number": "255744447401",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
-      "username": "Ghala",
-      "email": "info@sarufi.io",
-      "full_name": "Ghala",
-      "mobile_number": "255757294146",
-      "account_status": "active"
-    },
-    {
-      "user_id": "0104bb59-786d-4a01-b93c-0d45c2e56238",
-      "username": "nakkenda ",
-      "email": "rickphares19@gmail.com",
-      "full_name": "Erick Phares",
-      "mobile_number": "255755329213",
-      "account_status": "active"
-    },
-    {
-      "user_id": "8087506a-714c-4e3e-8d23-286d07bb286f",
-      "username": "Salama LTD",
-      "email": "info@ztm.tz",
-      "full_name": "Salama Bearing",
-      "mobile_number": "255750889443",
-      "account_status": "active"
-    },
-    {
-      "user_id": "d35880ce-fab1-4edd-817a-8a87a1bfa424",
-      "username": "kisekason",
-      "email": "benjaminkiseka80@gmail.com",
-      "full_name": "Benjamini Omary ",
-      "mobile_number": "255657779003",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f2ef724d-7bb2-4539-bff7-e77be2eb02fa",
-      "username": "JOHNGORA",
-      "email": "johnjohngora@gmail.com",
-      "full_name": "JOHN JOHNGORA",
-      "mobile_number": "255717801745",
-      "account_status": "active"
-    },
-    {
-      "user_id": "277c9fe7-d179-4aaf-92fe-394bc75c3ad4",
-      "username": "eddie",
-      "email": "groundhalt@gmail.com",
-      "full_name": "Ground Helio",
-      "mobile_number": "255672204508",
-      "account_status": "active"
-    },
-    {
-      "user_id": "74187063-213f-4cdb-8422-3bab44fd04b4",
-      "username": "lalivinci",
-      "email": "nyalali@protonmail.com",
-      "full_name": "Isaiah Nyalali",
-      "mobile_number": "255744400401",
-      "account_status": "active"
-    },
-    {
-      "user_id": "7adc28ae-f299-427c-ab04-7f3ab427823f",
-      "username": "sciah",
-      "email": "mmind140405@gmail.com",
-      "full_name": "Sciah Leo ",
-      "mobile_number": "255628391698",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c6267479-2eee-40e6-875b-98c14d336d40",
-      "username": "Ludovick",
-      "email": "ludovickpancras@gmail.com",
-      "full_name": "Ludovick pancras",
-      "mobile_number": "255625369871",
-      "account_status": "active"
-    },
-    {
-      "user_id": "be05383c-e696-4fdd-95af-bc13bbd02f57",
-      "username": "aasde6370",
-      "email": "1@fextemp.com",
-      "full_name": "aasde aasde",
-      "mobile_number": "255628214132",
-      "account_status": "active"
-    },
-    {
-      "user_id": "26c828f8-f7d2-44b8-b5cb-c1df7106a420",
-      "username": "hackerloum",
-      "email": "hackerloum@gmail.com",
-      "full_name": "Mohamed Ally Mohamed",
-      "mobile_number": "255760442000",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ea57aa06-7842-49ed-a360-0c33fa2ba171",
-      "username": "hekimapro",
-      "email": "info@hekima.pro",
-      "full_name": "Hekima Peter",
-      "mobile_number": "255756628215",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ef6c310c-3f52-4559-9cbc-68aa7ce5f959",
-      "username": "Bachu",
-      "email": "bachubiraprincipius@gmail.com",
-      "full_name": "Principius Bachubira",
-      "mobile_number": "255754933646",
-      "account_status": "active"
-    },
-    {
-      "user_id": "87cfcfa6-96f4-4d80-96ad-e3ba4e8b217a",
-      "username": "devmaxwell",
-      "email": "trendifysmm@gmail.com",
-      "full_name": "Maxwell",
-      "mobile_number": "255676751603",
-      "account_status": "active"
-    },
-    {
-      "user_id": "67d3164f-f3b2-4248-a339-1f07932ce38f",
-      "username": "daniel",
-      "email": "danielswitbert3@gmail.com",
-      "full_name": "Daniel Switbert",
-      "mobile_number": "255756016546",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ec5d752b-1a71-42e3-84b0-2d66b437e1a9",
-      "username": "brimedge",
-      "email": "omarysimba2010@gmail.com",
-      "full_name": "Omary simba ",
-      "mobile_number": "255750424704",
-      "account_status": "active"
-    },
-    {
-      "user_id": "18bd1674-7e0d-4674-bd50-d174b8cf5547",
-      "username": "EDEN",
-      "email": "jovic9002@gmail.com",
-      "full_name": "Joseph Vicent Kway",
-      "mobile_number": "255678370128",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c533b62e-fa5b-4a21-8bb8-4ce3b7f1aea9",
-      "username": "Mr.promise",
-      "email": "mrpromise2030@gmail.com",
-      "full_name": "Thomas John Msisi",
-      "mobile_number": "255657178424",
-      "account_status": "active"
-    },
-    {
-      "user_id": "cc816cfa-ac1c-4013-9bc8-33dd994dc93c",
-      "username": "Charles",
-      "email": "biz@restova.co.tz",
-      "full_name": "Shola",
-      "mobile_number": "255654334383",
-      "account_status": "active"
-    },
-    {
-      "user_id": "a24985cb-b3ad-4a87-8cbb-ab785ef3079b",
-      "username": "innosgram",
-      "email": "innocentcecy@gmail.com",
-      "full_name": "Innocent Manda",
-      "mobile_number": "255744090187",
-      "account_status": "active"
-    },
-    {
-      "user_id": "37af6eaf-24d3-4244-ac64-c6365aeecf4b",
-      "username": "MBARAK",
-      "email": "mbarakbsn@gmail.com",
-      "full_name": "MBARAK ABDALLAH",
-      "mobile_number": "255694318960",
-      "account_status": "active"
-    },
-    {
-      "user_id": "3f9542ba-f8f3-46b7-ba56-b47a7d6b4127",
-      "username": "LOKOIDEAS",
-      "email": "msigwatz@gmail.com",
-      "full_name": "LOKOIDEAS",
-      "mobile_number": "255659677868",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c5489bd9-7501-40fc-bd30-3bc6156332dd",
-      "username": "Nelson",
-      "email": "msugulinelson123@gmail.com",
-      "full_name": "Nelson Prosper",
-      "mobile_number": "255754641894",
-      "account_status": "active"
-    },
-    {
-      "user_id": "a6fc8926-4c2e-41a9-8c01-72896ea58ca5",
-      "username": "Robert",
-      "email": "robertsegwenda@gmail.com",
-      "full_name": "Robert Segwenda",
-      "mobile_number": "255712778087",
-      "account_status": "active"
-    },
-    {
-      "user_id": "51d22580-cad4-422a-8781-c1991ae69b6f",
-      "username": "Briq_Auth",
-      "email": "auth@briq.tz",
-      "full_name": "Briq Authentication Service",
-      "mobile_number": "255760487336",
-      "account_status": "active"
-    },
-    {
-      "user_id": "5cbaf395-77d5-45d6-96df-3230f2c8bdcb",
-      "username": "notlikeus",
-      "email": "Tztanganyika@gmail.com",
-      "full_name": "Bezaleel",
-      "mobile_number": "255757047012",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ec5a6344-1cf1-4e04-9466-bcda579ca37e",
-      "username": "Alinanuswe",
-      "email": "info@theprintsofdsm.com",
-      "full_name": "Alinanuswe Mwaipaja",
-      "mobile_number": "255685389464",
-      "account_status": "active"
-    },
-    {
-      "user_id": "8ae34b09-3982-43fa-85cf-096b1bb55bd9",
-      "username": "T-HUSTLE",
-      "email": "info@t-hustle.com",
-      "full_name": "T-HUSTLE AFRICA",
-      "mobile_number": "255782712501",
-      "account_status": "active"
-    },
-    {
-      "user_id": "e2fbaa60-15f1-4752-88a5-35fdacced99c",
-      "username": "Mwakyusa",
-      "email": "nyonyoma@gmail.com",
-      "full_name": "Nyonyoma Mwakyusa",
-      "mobile_number": "255788345346",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f29d8457-305f-4c10-beda-f7072ad7f6b4",
-      "username": "kcpcard",
-      "email": "kcpcard@gmail.com",
-      "full_name": "KCP CARDS Salum",
-      "mobile_number": "255762541514",
-      "account_status": "active"
-    },
-    {
-      "user_id": "5b1aaac8-79fb-4779-b0c6-42702c5b8788",
-      "username": "lazack404",
-      "email": "lazaromtaju12@gmail.com",
-      "full_name": "LAZARO MTAJU",
-      "mobile_number": "255613868502",
-      "account_status": "active"
-    },
-    {
-      "user_id": "1702fc3c-a58b-438b-940c-ec16cbcb1a4b",
-      "username": "ras",
-      "email": "bezaleel0@protonmail.com",
-      "full_name": "Bezaleel livingstone",
-      "mobile_number": "255750959528",
-      "account_status": "active"
-    },
-    {
-      "user_id": "553c1976-bddc-4134-91e0-0aeb28b4c6f6",
-      "username": "herry",
-      "email": "salvatoryherry@gmail.com",
-      "full_name": "salvatory",
-      "mobile_number": "255717864249",
-      "account_status": "active"
-    },
-    {
-      "user_id": "eb8dfbb9-2f9a-4adb-9710-497f2f060c4d",
-      "username": "Graca",
-      "email": "candancegrae@gmail.com",
-      "full_name": "Graca",
-      "mobile_number": "255793392904",
-      "account_status": "active"
-    },
-    {
-      "user_id": "45125f50-93d0-45d1-9384-365e6f17237c",
-      "username": "vicent.simon",
-      "email": "vicent.simon@bigbee.io",
-      "full_name": "Vicent Simon",
-      "mobile_number": "255626047315",
-      "account_status": "active"
-    },
-    {
-      "user_id": "d9c8f092-71ad-4e91-8a6e-38d2444fdf32",
-      "username": "ericksollo",
-      "email": "ericksollo92@gmail.com",
-      "full_name": "Erick Sollo",
-      "mobile_number": "255743856654",
-      "account_status": "active"
-    },
-    {
-      "user_id": "aef53cc7-7a35-4604-8750-c148f52a1efd",
-      "username": "habarilive",
-      "email": "habarilive@gmail.com",
-      "full_name": "habarilive habarilive",
-      "mobile_number": "255622535962",
-      "account_status": "active"
-    },
-    {
-      "user_id": "cec75514-f0b5-452a-82c3-f359abafbe95",
-      "username": "local",
-      "email": "test@test.com",
-      "full_name": "test",
-      "mobile_number": "255788344371",
-      "account_status": "active"
-    },
-    {
-      "user_id": "accec0df-4691-4e70-8a8c-8377950bad1f",
-      "username": "locala",
-      "email": "test@test.ccm",
-      "full_name": "test",
-      "mobile_number": "255788344373",
-      "account_status": "active"
-    },
-    {
-      "user_id": "6ab8ca9b-aad8-45a8-8460-3209a0926b2c",
-      "username": "nedderlaz97",
-      "email": "rickpenny00@gmail.com",
-      "full_name": "nedder lazreg",
-      "mobile_number": "14086628310",
-      "account_status": "active"
-    },
-    {
-      "user_id": "88ce1dfe-4d86-49bb-b3cf-03eb739034bf",
-      "username": "zamotto",
-      "email": "zamottoo@gmail.com",
-      "full_name": "Niko Banane",
-      "mobile_number": "255622578977",
-      "account_status": "active"
-    },
-    {
-      "user_id": "6519277a-231e-4f90-8970-98de201e9060",
-      "username": "Madam Mtiba ",
-      "email": "mtibajaneth@gmail.com",
-      "full_name": "Janeth Mtiba",
-      "mobile_number": "255757030396",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b1afcf10-b15f-4b92-8a80-b3fb1cd4f2f4",
-      "username": "Fainess",
-      "email": "mr.emaunganya@gmail.com",
-      "full_name": "King ",
-      "mobile_number": "255754332693",
-      "account_status": "active"
-    },
-    {
-      "user_id": "e18263df-a7c9-4ed9-b651-50bed47edaab",
-      "username": "annamichaellukindo@gmail.com",
-      "email": "annamichaellukindo@gmail.com",
-      "full_name": "Anna Michael lukindo ",
-      "mobile_number": "255681144333",
-      "account_status": "active"
-    },
-    {
-      "user_id": "a77b2e34-699e-4431-8f60-eef2bfc6172e",
-      "username": "chausiku  Yohana Nkwabi ",
-      "email": "chausikunkwabi@gmail.com",
-      "full_name": "Chausiku Yohana Nkwabi ",
-      "mobile_number": "255710915368",
-      "account_status": "active"
-    },
-    {
-      "user_id": "fc0dbacf-e714-416e-94bd-de1041387c87",
-      "username": "njimbadeus@gmail.com",
-      "email": "njimbadeus@gmail.com",
-      "full_name": "Njimba Deus",
-      "mobile_number": "255678814955",
-      "account_status": "active"
-    },
-    {
-      "user_id": "f08c24da-a409-43db-89c9-6489c3563bef",
-      "username": "AkilaInnocent",
-      "email": "akilainnocent@yahoo.com",
-      "full_name": "AKILA INNOCENT GWIMO",
-      "mobile_number": "255629645877",
-      "account_status": "active"
-    },
-    {
-      "user_id": "07ac0c39-95e1-4946-b8b1-8fa95f929544",
-      "username": "percyegno",
-      "email": "percyegno@gmail.com",
-      "full_name": "pecy egno mwageni",
-      "mobile_number": "255624451311",
-      "account_status": "active"
-    },
-    {
-      "user_id": "7171444d-4c66-4abb-954c-821e1ca9b923",
-      "username": "mern",
-      "email": "athumanahmed795@gmail.com",
-      "full_name": "Athumani Ahmed",
-      "mobile_number": "255768156839",
-      "account_status": "active"
-    },
-    {
-      "user_id": "4ce33c67-efa1-457d-b3e5-f42b6970f070",
-      "username": "dreysixteen",
-      "email": "sixteenvisual@gmail.com",
-      "full_name": "dennis shayo",
-      "mobile_number": "255711752950",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b1784544-de90-4556-a213-e50fa10e094c",
-      "username": "silassungura",
-      "email": "saelasjosephsungura@gmail.com",
-      "full_name": "silas joseph sungura",
-      "mobile_number": "255718893117",
-      "account_status": "active"
-    },
-    {
-      "user_id": "53bf94a0-4990-451f-917e-09ac0a101717",
-      "username": "ramawakil",
-      "email": "ramadhanwakil19@gmail.com",
-      "full_name": "Ramadhan Wakili Marijani",
-      "mobile_number": "255684209959",
-      "account_status": "active"
-    },
-    {
-      "user_id": "02de31a0-e0e3-4362-8e83-fb46d1913d40",
-      "username": "twahir21",
-      "email": "twahirsudy3@gmail.com",
-      "full_name": "twahir sudy",
-      "mobile_number": "255674291587",
-      "account_status": "active"
-    },
-    {
-      "user_id": "7baafa52-22d7-4e5b-81d3-78bdab7ad889",
-      "username": "Esotech",
-      "email": "elickphilemon@gmail.com",
-      "full_name": "Erick Philemon",
-      "mobile_number": "255743693885",
-      "account_status": "active"
-    },
-    {
-      "user_id": "e8733a6f-d5b9-4cd8-a403-ca6dcfea897c",
-      "username": "adolfalfred",
-      "email": "adolfalfred321@gmail.com",
-      "full_name": "Adolf Alfred",
-      "mobile_number": "255746710355",
-      "account_status": "active"
-    },
-    {
-      "user_id": "9b2d8f10-0eb9-40ba-af7c-1fc8f97245bf",
-      "username": "Amoni04",
-      "email": "mameshaibraah@gmail.com",
-      "full_name": "Alenuo Shitiraeli Urassa ",
-      "mobile_number": "255756982104",
-      "account_status": "active"
-    },
-    {
-      "user_id": "65a8fb5c-85e0-4c98-b610-1e96d0547b9b",
-      "username": "Fintech",
-      "email": "fintech@briq.tz",
-      "full_name": "Fintech Reloaded",
-      "mobile_number": "255788344349",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ef6ed6f2-75f9-4464-8191-6e5f1fae31f2",
-      "username": "kitimaihussein9@gmail.com",
-      "email": "kitimaihussein9@gmail.com",
-      "full_name": "HUSSEIN SALUM KITIMAI",
-      "mobile_number": "255614103439",
-      "account_status": "active"
-    },
-    {
-      "user_id": "36d45590-7253-40f7-a878-a90ff025d006",
-      "username": "saidi abdallah kilindo",
-      "email": "kilindosaid771@gmail.com",
-      "full_name": "Said",
-      "mobile_number": "255683859574",
-      "account_status": "active"
-    },
-    {
-      "user_id": "6c0f20ac-4c6f-4fc2-9680-14a6473d61dc",
-      "username": "taze",
-      "email": "bbamfu@gmail.com",
-      "full_name": "taze nyampha",
-      "mobile_number": "255714343162",
-      "account_status": "active"
-    },
-    {
-      "user_id": "80fe9d42-2433-44f3-834b-05cbf1799982",
-      "username": "samurai",
-      "email": "23polocapalot@gmail.com",
-      "full_name": "sostenes ngowi",
-      "mobile_number": "255615009985",
-      "account_status": "active"
-    },
-    {
-      "user_id": "8e0ae81e-cbac-4986-9bbe-320d684757e1",
-      "username": "festomanolo",
-      "email": "festomanolofm@gmail.com",
-      "full_name": "festo manolo",
-      "mobile_number": "255784953866",
-      "account_status": "active"
-    },
-    {
-      "user_id": "03b7c4f0-d798-492f-a3a4-3beacff07ed1",
-      "username": "khan",
-      "email": "javan51523@chaublog.com",
-      "full_name": "bilalkhan",
-      "mobile_number": "593991063219",
-      "account_status": "active"
-    },
-    {
-      "user_id": "49856f16-8c08-4906-beed-bd470142ea56",
-      "username": "henrylee",
-      "email": "henrydionizi@gmail.com",
-      "full_name": "Henry Mwombeck",
-      "mobile_number": "255687492700",
-      "account_status": "active"
-    },
-    {
-      "user_id": "9ca2e88f-523f-4a65-9f0a-0dc6a1677c77",
-      "username": "ecode",
-      "email": "erickmanyasi5@gmail.com",
-      "full_name": "ERICK MANYASI",
-      "mobile_number": "255778751910",
-      "account_status": "active"
-    },
-    {
-      "user_id": "6b646e2f-43ef-467d-a544-ff7eb22ecf29",
-      "username": "ngajilol@gmail.com",
-      "email": "ngajilol@gmail.com",
-      "full_name": "LukeloNgajilo",
-      "mobile_number": "255788827074",
-      "account_status": "active"
-    },
-    {
-      "user_id": "b19e7cf7-6911-4890-a93e-0a3a69ed7fb0",
-      "username": "nassdaq",
-      "email": "mwaijegakelvin@gmail.com",
-      "full_name": "Kelvin Mwaijega",
-      "mobile_number": "255652012755",
-      "account_status": "active"
-    },
-    {
-      "user_id": "07aca226-b8bb-47f5-a185-4b4baac0805f",
-      "username": "Tumafast",
-      "email": "tumafast.tz@gmail.con",
-      "full_name": "MUSSA KIBO",
-      "mobile_number": "255750417575",
-      "account_status": "active"
-    },
-    {
-      "user_id": "de06ff3b-e23c-42a6-a802-f24aa4f05fc3",
-      "username": "PROCHES",
-      "email": "mrossoshop5@gmail.com",
-      "full_name": "proches didas mrosso",
-      "mobile_number": "255745808771",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c09ad257-dddd-413a-b034-36db357f3339",
-      "username": "jduhdtfuhvdyg",
-      "email": "mercy675d37@i2.pigeonprotocol.com",
-      "full_name": "Rahimi monaim",
-      "mobile_number": "212696930174",
-      "account_status": "active"
-    },
-    {
-      "user_id": "1fd107c3-dd6c-4dac-9d6f-ea2f72fb5883",
-      "username": "yusuph",
-      "email": "kangyashir@gmail.com",
-      "full_name": "Yusuph Said Kilanga",
-      "mobile_number": "255656205130",
-      "account_status": "active"
-    },
-    {
-      "user_id": "145bccde-5f81-4365-b7f0-9330e093e12b",
-      "username": "hngonyani",
-      "email": "hngonyani.md@gmail.com",
-      "full_name": "Humphrey Kaspar Ngonyani",
-      "mobile_number": "255753703744",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ff5f31e2-4861-4de1-88ef-b43221851550",
-      "username": "maokotto",
-      "email": "simpezebest@gmail.com",
-      "full_name": "Kelvin Nicholaus",
-      "mobile_number": "255788649986",
-      "account_status": "active"
-    },
-    {
-      "user_id": "78fbe853-bb17-4687-9daf-b1b64f36c21a",
-      "username": "ALEX ",
-      "email": "alexbagumashop@gmail.com",
-      "full_name": "ALEX BAGUMA SHOP ",
-      "mobile_number": "255793378719",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ce0673c5-bfcc-4400-a658-6dabf6f46937",
-      "username": "nainggolan",
-      "email": "kelvinsdechaw@gmail.com",
-      "full_name": "Kelvin Chaula",
-      "mobile_number": "255768498799",
-      "account_status": "active"
-    },
-    {
-      "user_id": "c628f42d-4f69-4d37-8546-09ff3ccd53ab",
-      "username": "Gracious Mswia",
-      "email": "megam8618@gmail.com",
-      "full_name": "Gracious Mswia",
-      "mobile_number": "255778167401",
-      "account_status": "active"
-    },
-    {
-      "user_id": "ab9f05fb-8a49-46ca-8620-39574bf2d227",
-      "username": "Surveyor Kivuyo ",
-      "email": "deedrax99@gmail.com",
-      "full_name": "Emmanuel Kivuyo ",
-      "mobile_number": "255627232581",
-      "account_status": "active"
-    },
-    {
-      "user_id": "fea2badb-400a-4d2b-acc8-3e4c62118000",
-      "username": "JABU ",
-      "email": "wholemike2703@gmail.com",
-      "full_name": "Kilo",
-      "mobile_number": "255674002284",
-      "account_status": "active"
-    },
-    {
-      "user_id": "8d05232b-e39d-4da3-bbfe-d0264f5b788b",
-      "username": "james",
-      "email": "dbachriskarengi178@gmail.com",
-      "full_name": "james ndongwa mligo",
-      "mobile_number": "255658182795",
-      "account_status": "active"
-    },
-    {
-      "user_id": "da0f5c07-89c1-4284-8de0-3aa11b0905b2",
-      "username": "WABABA MWAJASI",
-      "email": "kichawelefelix84@gmail.com",
-      "full_name": "Felix Kichawele",
-      "mobile_number": "255712267344",
-      "account_status": "active"
-    },
-    {
-      "user_id": "0245eb7b-9c74-412b-b839-dcbf8b766f1b",
-      "username": "brandkidigitali ",
-      "email": "bkidigitali@gmail.com",
-      "full_name": "Brand ",
-      "mobile_number": "255687680811",
-      "account_status": "active"
-    },
-    {
-      "user_id": "e58a9237-dc03-4444-bc92-ee26228b6cc0",
-      "username": "MWANUZI",
-      "email": "mwanuzi.babyegeya@gmail.com",
-      "full_name": "Mwanuzi Babyegeya",
-      "mobile_number": "255753000102",
-      "account_status": "active"
-    }
-  ]
+  {
+    "user_id": "8a97f2ee-dbfe-4340-9806-d2b02b5deb57",
+    "username": "steampunk",
+    "email": "steam@punk.com",
+    "full_name": "Steam Punk",
+    "mobile_number": "255744011107",
+    "account_status": "active"
+  },
+  {
+    "user_id": "601626e2-e978-4854-8904-e537e6d6fdbe",
+    "username": "mrimi",
+    "email": "mrimi@gmail.com",
+    "full_name": "mrimi",
+    "mobile_number": "02221111222",
+    "account_status": "active"
+  },
+  {
+    "user_id": "1ff32536-4da3-454d-98ff-938400a9156f",
+    "username": "MRIMI2",
+    "email": "mrimi11@gmail.com",
+    "full_name": "MRIMI",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "00a37f41-2c68-4332-9d3d-5b9e67eb6a3a",
+    "username": "trump",
+    "email": "trump@usa.com",
+    "full_name": "donald trump",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "cf379b9c-3d4f-47e7-a917-76d776c7bf54",
+    "username": "elon",
+    "email": "mask@dodge.com",
+    "full_name": "elon mask",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "eda1f609-5307-4f25-a0f0-f3c230245a25",
+    "username": "getrich",
+    "email": "getrich@get.com",
+    "full_name": "getrich ",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "2c1b02a7-aacb-42ba-a9bc-83d8e414f42a",
+    "username": "met",
+    "email": "met@gmail.com",
+    "full_name": "met",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "df05e584-afac-4dd7-a577-9cd25e16f493",
+    "username": "Major",
+    "email": "sikn@gmail.com",
+    "full_name": "Major Mrimi",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "20f49afb-d6ef-48e5-be5e-4b4456ea47df",
+    "username": "eddiegulay",
+    "email": "edgargulay69@gmail.com",
+    "full_name": "The Supreme Overload",
+    "mobile_number": "+255672204508",
+    "account_status": "active"
+  },
+  {
+    "user_id": "74fbb54c-27b4-46b6-bfeb-078f4ee55982",
+    "username": "Master2",
+    "email": "master2@gmail.com",
+    "full_name": "Master2",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "dd33aaca-591d-48e3-911f-1823ca27f99b",
+    "username": "Gustavo",
+    "email": "laurent@sekotours.com",
+    "full_name": "Gustavo Laurent",
+    "mobile_number": "+255742101191",
+    "account_status": "active"
+  },
+  {
+    "user_id": "014d96d2-a30a-41a6-b555-ffa6b4e80f1f",
+    "username": "Kondo",
+    "email": "kondoramadhani@gmail.com",
+    "full_name": "kondo r kondo",
+    "mobile_number": "+255678453797",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f68ed347-1316-45ac-9d13-4b5b621e1cd0",
+    "username": "hudumabot",
+    "email": "snavidux.official@gmail.com",
+    "full_name": "Yunus Siraju",
+    "mobile_number": "+255749300606",
+    
+    "account_status": "active"
+  },
+  {
+    "user_id": "f67a4220-377e-415e-bf6c-96a0d96deab9",
+    "username": "Faza",
+    "email": "omaryyunus391@gmail.com",
+    "full_name": "Omary Sado ",
+    "mobile_number": "+255710525834",
+    "account_status": "active"
+  },
+  {
+    "user_id": "2706b8be-93a4-4e5b-a2ee-c907020cee01",
+    "username": "TESTER",
+    "email": "tester@briq.tz",
+    "full_name": "TESTER ONE",
+    "mobile_number": "0788344349",
+    "account_status": "active"
+  },
+  {
+    "user_id": "0deb4223-6cff-471f-b32c-1991148683c4",
+    "username": "newman",
+    "email": "newman@test.com",
+    "full_name": "newman. test",
+    "mobile_number": "0999993444",
+    "account_status": "active"
+  },
+  {
+    "user_id": "12cba829-7ab5-46d4-8692-255842b8dbe2",
+    "username": "homeboi",
+    "email": "testemail@test.com",
+    "full_name": "home boi",
+    "mobile_number": "0788344349",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b6af0c77-a190-4c29-9a56-0a13716b3c42",
+    "username": "Rotaract CUHAS",
+    "email": "rotaractcuhas@gmail.com",
+    "full_name": "Rotaract CUHAS",
+    "mobile_number": "+255767605410",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b72dea72-4d73-4db7-b158-927320dbc630",
+    "username": "wills",
+    "email": "williammakarius@gmail.com",
+    "full_name": "William Mdemu",
+    "mobile_number": "+255621144125",
+    "account_status": "active"
+  },
+  {
+    "user_id": "4a0f4ebe-6f14-4432-b833-fec3d8cedac1",
+    "username": "Raymond",
+    "email": "raykongstar@gmail.com",
+    "full_name": "Moses",
+    "mobile_number": "+255762227596",
+    "account_status": "active"
+  },
+  {
+    "user_id": "a39c52cf-f97f-4f02-9034-b8c0622d7c15",
+    "username": "Zainabu kasanga ",
+    "email": "kasangazainabu5@gmail.com",
+    "full_name": "Zainabu seif kasanga ",
+    "mobile_number": "+255623195378",
+    "account_status": "active"
+  },
+  {
+    "user_id": "31614407-3fd4-4c64-ab87-6d5e5c359d1f",
+    "username": "abineri0762@gmail.com",
+    "email": "abineri0762@gmail.com",
+    "full_name": "Abineri Mwanuke",
+    "mobile_number": "0742777003",
+    "account_status": "active"
+  },
+  {
+    "user_id": "368557b2-c91d-46d6-8de8-256195c55ba7",
+    "username": "Dween",
+    "email": "Godwincels@gmail.com",
+    "full_name": "Godwin Celsus Byalugolora",
+    "mobile_number": "+255750299103",
+    "account_status": "active"
+  },
+  {
+    "user_id": "a3b3999f-89b9-4f18-b9fc-59a9ecb7a604",
+    "username": "Jemaka",
+    "email": "justusmk7@gmail.com",
+    "full_name": "Justus Emmanuel ",
+    "mobile_number": "0719380120",
+    "account_status": "active"
+  },
+  {
+    "user_id": "859a5f80-b8de-4d52-ba68-de5a2777fadd",
+    "username": "Jones",
+    "email": "itumbironny@gmail.com",
+    "full_name": "RONNYDAVID J. ITUMBI",
+    "mobile_number": "0768712914",
+    "account_status": "active"
+  },
+  {
+    "user_id": "7d8aa5b0-5bc8-4cfd-8595-0cc38c761afa",
+    "username": "kikaka",
+    "email": "kikaka2023@gmail.com",
+    "full_name": "Kikaka X",
+    "mobile_number": "+255765392888",
+    "account_status": "active"
+  },
+  {
+    "user_id": "63e0949a-c759-44c0-bf90-c2344aa1bcdd",
+    "username": "cyp.rian ",
+    "email": "chalscyprian@gmail.com",
+    "full_name": "Cyprian Maroboto ",
+    "mobile_number": "+255745441945",
+    "account_status": "active"
+  },
+  {
+    "user_id": "07c81ea6-11c8-459a-8de5-ff1df4b906c8",
+    "username": "Magotech",
+    "email": "ceo@magotech.net",
+    "full_name": "Magoiga",
+    "mobile_number": "+255685261018",
+    "account_status": "active"
+  },
+  {
+    "user_id": "2ddc2109-fa53-4d85-8f42-29a6a2318bb3",
+    "username": "santos",
+    "email": "santos@briq.tz",
+    "full_name": "Santos Mnoma",
+    "mobile_number": "0000000000",
+    "account_status": "active"
+  },
+  {
+    "user_id": "8a8e9b9c-3586-44d5-908c-11a6530df0f8",
+    "username": "phort",
+    "email": "middlephort@gmail.com",
+    "full_name": "phort chrispin",
+    "mobile_number": "255787753939",
+    "account_status": "active"
+  },
+  {
+    "user_id": "5fa7fd88-5cf0-4ebf-b417-d67c0b5dab40",
+    "username": "Guzman",
+    "email": "kaisingano@gmail.com",
+    "full_name": "Nathan Singano",
+    "mobile_number": "255622757342",
+    "account_status": "active"
+  },
+  {
+    "user_id": "165e2acc-063b-466d-a449-3962809d44dd",
+    "username": "Isamuyo",
+    "email": "hisamuyo@gmail.com",
+    "full_name": "Hamis Isamuyo",
+    "mobile_number": "255746204519",
+    "account_status": "active"
+  },
+  {
+    "user_id": "79ac4e1f-8630-4111-8705-23e245a0679e",
+    "username": "Mumtaz milk",
+    "email": "abuuaslam.mb@gmail.com",
+    "full_name": "Mumtaz Milk",
+    "mobile_number": "255716371373",
+    "account_status": "active"
+  },
+  {
+    "user_id": "6690b4b3-256d-404b-afd9-895749ae58d2",
+    "username": "Sikjunior",
+    "email": "sms@briq.tz",
+    "full_name": "SIkjunior Mrimi",
+    "mobile_number": "255788344348",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c412265d-6ef2-4963-bdf0-29e1d7a00a34",
+    "username": "Vitabu Vya Salaf -HQ",
+    "email": "abuuthaimin12@gmail.com",
+    "full_name": "JUMA ALLY MTOLO",
+    "mobile_number": "255699636278",
+    "account_status": "active"
+  },
+  {
+    "user_id": "89e43325-e2ad-4ab0-b07b-512a497046cd",
+    "username": "Steven",
+    "email": "workwithboaz@gmail.com",
+    "full_name": "Boaz",
+    "mobile_number": "255742082040",
+    "account_status": "active"
+  },
+  {
+    "user_id": "abe514dd-3faf-4f7c-885f-0aa03a6768de",
+    "username": "Onlyfans",
+    "email": "ol@gmail.com",
+    "full_name": "Only Fans",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "745ffea0-4b67-43ea-a809-e31dc4ff456f",
+    "username": "null",
+    "email": "sikmrimi101@gmail.com",
+    "full_name": "SIKJUNIOR MRIMI",
+    "mobile_number": "255788344348",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b9b34aa2-e7cb-4ec2-b588-4695a780f4d2",
+    "username": "Signup",
+    "email": "test@signup.ui",
+    "full_name": "Testing  Signup",
+    "mobile_number": "255788344348",
+    "account_status": "active"
+  },
+  {
+    "user_id": "54bdda42-e914-4105-8707-00871b914405",
+    "username": "Speaking Hearts ",
+    "email": "gwamak@gmail.com",
+    "full_name": "Gwamaka Ambele Mwakyusa ",
+    "mobile_number": "255685401213",
+    "account_status": "active"
+  },
+  {
+    "user_id": "5e5ed61b-31cf-4366-8a1e-39a16552a134",
+    "username": "babupepya",
+    "email": "babupepya@gmail.com",
+    "full_name": "BABU PEPYA",
+    "mobile_number": "255658474556",
+    "account_status": "active"
+  },
+  {
+    "user_id": "624c9bb5-30ee-449c-a740-2fca120d069e",
+    "username": "firstedson@gmail.com",
+    "email": "ffirstedson@gmail.com",
+    "full_name": "edson kuzengwa",
+    "mobile_number": "255787537628",
+    "account_status": "active"
+  },
+  {
+    "user_id": "7d228271-44ea-498b-8a9d-21253228f81e",
+    "username": "Suhan",
+    "email": "ndanzisued@gmail.com",
+    "full_name": "Sued ndanzi",
+    "mobile_number": "255625726195",
+    "account_status": "active"
+  },
+  {
+    "user_id": "63e1ce03-325d-4814-b469-098a01271de9",
+    "username": "frank_jonathan",
+    "email": "frankmcjonathan17@gmail.com",
+    "full_name": "frank jonathan Mindolo",
+    "mobile_number": "255687772870",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f4eff2fa-fea4-4e88-8b4c-af237634708a",
+    "username": "innosamuels@gmail.com",
+    "email": "innosamuels@gmail.com",
+    "full_name": "Inno Samuels",
+    "mobile_number": null,
+    "account_status": "active"
+  },
+  {
+    "user_id": "13a3b4fc-e184-4dc6-b23d-bd040a2b3485",
+    "username": "mzava25 ",
+    "email": "mzavaaman577@gmail.com",
+    "full_name": "Aman Arira Mnzava",
+    "mobile_number": "255752835670",
+    "account_status": "active"
+  },
+  {
+    "user_id": "9b78ffae-36b7-4caa-b702-90485dbe1d88",
+    "username": "steve",
+    "email": "stephanbazaar99@gmail.com",
+    "full_name": "Steve bazaar",
+    "mobile_number": "255657024691",
+    "account_status": "active"
+  },
+  {
+    "user_id": "a7f32f8f-d172-4ded-b7fd-2a0ca6db5c1e",
+    "username": "John",
+    "email": "JohnDoe@gmail.com",
+    "full_name": "John Doe",
+    "mobile_number": "255788344347",
+    "account_status": "active"
+  },
+  {
+    "user_id": "1f99f97c-f79d-4645-a701-a10435a184aa",
+    "username": "Dr.Zaganza",
+    "email": "accmoshi@gmail.com",
+    "full_name": "Dr.Zaganza",
+    "mobile_number": "255713039875",
+    "account_status": "active"
+  },
+  {
+    "user_id": "0006b35f-58c8-46cd-adc0-2895e0c6f25c",
+    "username": "yonatimotheo2@gmail.com",
+    "email": "yonatimotheo2@gmail.com",
+    "full_name": "Yona Timotheo Yona",
+    "mobile_number": "255757073271",
+    "account_status": "active"
+  },
+  {
+    "user_id": "3d2b5bb2-3eb6-433d-8b94-3b0e6bd582a6",
+    "username": "Kisadoti",
+    "email": "kipagosafi@gmail.com",
+    "full_name": "Juma ali",
+    "mobile_number": "255756532324",
+    "account_status": "active"
+  },
+  {
+    "user_id": "fb7832e1-1513-4265-a354-cebad155ba26",
+    "username": "Philip0904",
+    "email": "smiledelouz@gmail.com",
+    "full_name": "Philip Antony ",
+    "mobile_number": "255756451060",
+    "account_status": "active"
+  },
+  {
+    "user_id": "2db71f65-0ec2-4230-9406-236367002ea6",
+    "username": "winock",
+    "email": "winockerick86@gmail.com",
+    "full_name": "ERICK",
+    "mobile_number": "255626551833",
+    "account_status": "active"
+  },
+  {
+    "user_id": "53f05d92-9221-4f02-b89b-c7100524d139",
+    "username": "abuuiptisam11",
+    "email": "abuuiptisam11@gmail.com",
+    "full_name": "Issa Awadhi",
+    "mobile_number": "255765137245",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ae680992-bbe0-4141-a374-ad27621e029d",
+    "username": "ROYALE HEALING ESSENCE",
+    "email": "husseinfatma466@gmail.com",
+    "full_name": "Fatma Hussein",
+    "mobile_number": "255685986695",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b01c5852-8874-4f9b-8647-c16af00d6f40",
+    "username": "therealjozbert",
+    "email": "jozbertmirambo175@gmail.com",
+    "full_name": "Jozbert James",
+    "mobile_number": "255695613653",
+    "account_status": "active"
+  },
+  {
+    "user_id": "a88a0159-f988-43b5-90ea-8adacd1421fe",
+    "username": "godliving_frank",
+    "email": "ndosigodliving3@gmail.com",
+    "full_name": "Godliving Frank Ndosi",
+    "mobile_number": "255757303812",
+    "account_status": "active"
+  },
+  {
+    "user_id": "517c58bd-fa7a-4061-82a4-a43f59c32685",
+    "username": "bittychris",
+    "email": "beatricebarnabas01@gmail.com",
+    "full_name": "BEATRICE CRISPIN",
+    "mobile_number": "255764037344",
+    "account_status": "active"
+  },
+  {
+    "user_id": "24474055-ad79-4e25-a512-00062308cc06",
+    "username": "sheng",
+    "email": "enocksheng6@gmail.com",
+    "full_name": "Enock Sheng",
+    "mobile_number": "255764142190",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f8959e26-383d-4c14-ab17-9f76594c92ef",
+    "username": "ben",
+    "email": "nashoniben@gmail.com",
+    "full_name": "Ben nashoni ",
+    "mobile_number": "255696517959",
+    "account_status": "active"
+  },
+  {
+    "user_id": "a6d6ad2d-c08b-4380-86a8-6a77a3acccc1",
+    "username": "MWINYIWIWA PHONE ACCESSORIES ",
+    "email": "ahmadmwinyiwiwa09@gmail.com",
+    "full_name": "Ahmad Mohamed Mwinyiwiwa ",
+    "mobile_number": "255784002619",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f989b94f-2ca7-4db5-947d-ce0905073540",
+    "username": "africanhustler ",
+    "email": "sylvesterjohn011@gmail.com",
+    "full_name": "Sylvester john",
+    "mobile_number": "255710881210",
+    "account_status": "active"
+  },
+  {
+    "user_id": "8cbda2b8-6cba-4c1d-b14e-4333ab969d8e",
+    "username": "dosantos",
+    "email": "santos@gmail.com",
+    "full_name": "Santos",
+    "mobile_number": "255613731130",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f667e049-682d-4885-944d-306ff3b69b41",
+    "username": "Joe Phil ",
+    "email": "joeltumain746@gmail.com",
+    "full_name": "Joel Tumain Mathias ",
+    "mobile_number": "255689475484",
+    "account_status": "active"
+  },
+  {
+    "user_id": "d693128e-e629-42a7-ac72-3581d687fb0a",
+    "username": "Inno ",
+    "email": "mungureinnocent11@gmail.com",
+    "full_name": "Mungure ",
+    "mobile_number": "255620753467",
+    "account_status": "active"
+  },
+  {
+    "user_id": "01cfb0cc-4e1a-499e-953a-607655676c5a",
+    "username": "Genes",
+    "email": "genesgasto01@gmail.com",
+    "full_name": "Genes Gasto",
+    "mobile_number": "255747171784",
+    "account_status": "active"
+  },
+  {
+    "user_id": "dbdebc2d-94c1-4f05-a7db-bffa71d39310",
+    "username": "kelvinhemu@gmail.com",
+    "email": "kelvinhemu@gmail.com",
+    "full_name": "Kelvin Hemu",
+    "mobile_number": "255786502070",
+    "account_status": "active"
+  },
+  {
+    "user_id": "8c914f83-a7a9-47de-99da-0879dfef9ce6",
+    "username": "lulupurity",
+    "email": "savagelulu22@gmail.com",
+    "full_name": "Lulu khamis ",
+    "mobile_number": "255769699612",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c1db339f-28a3-49f9-8bfc-212f5d29865d",
+    "username": "winockerick",
+    "email": "winockerick5@gmail.com",
+    "full_name": "winockerick",
+    "mobile_number": "255675321613",
+    "account_status": "active"
+  },
+  {
+    "user_id": "fe6f4212-f07c-4d1f-866a-ade48aa27594",
+    "username": "AGENT OF SMILE",
+    "email": "agentofsmile1@gmail.com",
+    "full_name": "Agent Of Smile",
+    "mobile_number": "255629509773",
+    "account_status": "active"
+  },
+  {
+    "user_id": "49277092-06c9-49fd-bd0b-c65c657555f1",
+    "username": "Mr Concept 17",
+    "email": "mrconcept17@gmail.com",
+    "full_name": "Abiud Adolf James ",
+    "mobile_number": "255683559122",
+    "account_status": "active"
+  },
+  {
+    "user_id": "4b9e5c7c-b8e8-4890-ba51-c7a9ecbeb403",
+    "username": "donbushiri_",
+    "email": "mustafabushiri@zoho.com",
+    "full_name": "Mustafa Bushiri",
+    "mobile_number": "255718607477",
+    "account_status": "active"
+  },
+  {
+    "user_id": "98f74248-5898-40d4-8912-79e5789e39ae",
+    "username": "zacharia8",
+    "email": "zachariabaraka8@gmail.com",
+    "full_name": "Baraka Zacharia",
+    "mobile_number": "255757387009",
+    "account_status": "active"
+  },
+  {
+    "user_id": "dded70bd-a381-4972-ad20-a8a792e68ff3",
+    "username": "maverickweyunga@gmail.com",
+    "email": "maverickweyunga@gmail.com",
+    "full_name": "Eric Kweyunga",
+    "mobile_number": "255781588379",
+    "account_status": "active"
+  },
+  {
+    "user_id": "60f6f975-cddd-46f6-bef4-471c578ecbde",
+    "username": "hekimamwala1@gmail.com",
+    "email": "hekimamwala1@gmail.com",
+    "full_name": "HEKIMA AMBALILE MWALA",
+    "mobile_number": "255747285438",
+    "account_status": "active"
+  },
+  {
+    "user_id": "eba3c3dc-5791-465f-8673-f11aef99b6e7",
+    "username": "Goodluck ",
+    "email": "goodluckstanley20@gmail.com",
+    "full_name": "Goodluck Stanley ",
+    "mobile_number": "255678971494",
+    "account_status": "active"
+  },
+  {
+    "user_id": "73334ce9-e146-46b8-80ea-ff874a0f3520",
+    "username": "Betron",
+    "email": "madatibetron@gmail.com",
+    "full_name": "Betron Madati",
+    "mobile_number": "255779380416",
+    "account_status": "active"
+  },
+  {
+    "user_id": "16af985b-d259-4bbb-a73f-265bce3fa4c2",
+    "username": "BriqTest",
+    "email": "test@briq.tz",
+    "full_name": "Test Account",
+    "mobile_number": "255760487336",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c4d16e75-0020-4794-a90f-2fb84b35f41a",
+    "username": "DEBORAH",
+    "email": "munisideborah46@gmail.com",
+    "full_name": "DEBORAH MUNISI",
+    "mobile_number": "255659691544",
+    "account_status": "active"
+  },
+  {
+    "user_id": "921fc7d2-32d0-4284-90c4-3e90c12b9297",
+    "username": "magesa",
+    "email": "magesa133@gmail.com",
+    "full_name": "Wilson Mathias Magesa ",
+    "mobile_number": "255614853618",
+    "account_status": "active"
+  },
+  {
+    "user_id": "79d4ee33-0dee-43fb-8872-83aa713fcc5f",
+    "username": "calvin",
+    "email": "calvinchuma1@gmail.com",
+    "full_name": "calvin",
+    "mobile_number": "255689472916",
+    "account_status": "active"
+  },
+  {
+    "user_id": "79415449-a512-4651-8dbb-6bdde5ac9e3d",
+    "username": "MODEARSON",
+    "email": "wilfredmbuya8@gmail.com",
+    "full_name": "Wilfred Mbuya",
+    "mobile_number": "255689828983",
+    "account_status": "active"
+  },
+  {
+    "user_id": "87fdfee5-2ca9-4fe3-9992-90d2b5a6ed48",
+    "username": "Jovine",
+    "email": "jovinerobotics@gmail.com",
+    "full_name": "jovine Mutelani",
+    "mobile_number": "255718193343",
+    "account_status": "active"
+  },
+  {
+    "user_id": "de8d892c-d76e-4eac-b356-ffde7702a3ec",
+    "username": "lupiarplatform@gmail.com",
+    "email": "lupiarplatform@gmail.com",
+    "full_name": "Lupiar Platform",
+    "mobile_number": "255687685886",
+    "account_status": "active"
+  },
+  {
+    "user_id": "e53f539a-6947-44eb-b586-5432000a809c",
+    "username": "MFALME JIKO",
+    "email": "nasseebsaidy@gmail.com",
+    "full_name": "Nasibu Saidi",
+    "mobile_number": "255673555506",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b233f8c5-ea0a-47d9-99c1-92f9abf42ada",
+    "username": "Becky ",
+    "email": "rebecajoshua5@gmail.com",
+    "full_name": "Rebeca Joshua ",
+    "mobile_number": "255765537023",
+    "account_status": "active"
+  },
+  {
+    "user_id": "42ff2a6e-64f4-4510-a9fc-d8834e57ddef",
+    "username": "Rotaract Innovation",
+    "email": "beathamalauri@gmail.com",
+    "full_name": "Rotaract e club of Tanzania Youth-Innovation",
+    "mobile_number": "255752423442",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b4ce3075-753e-48be-a81c-df3048d46961",
+    "username": "gervasgerminus ",
+    "email": "gervasgerminus@gmail.com",
+    "full_name": "Gervas Germinus",
+    "mobile_number": "255742532055",
+    "account_status": "active"
+  },
+  {
+    "user_id": "10cdeec3-510d-4172-a332-a882388fdc3b",
+    "username": "Aneth",
+    "email": "anethyusuph358@gmail.com",
+    "full_name": "Aneth Yusuph Samwely",
+    "mobile_number": "255748190924",
+    "account_status": "active"
+  },
+  {
+    "user_id": "d1625d18-4e2d-4a47-b0ed-6dec54bb81c6",
+    "username": "Tanz-Pay",
+    "email": "kumar@tourtech.co.tz",
+    "full_name": "Kumar Pandya",
+    "mobile_number": "255680181901",
+    "account_status": "active"
+  },
+  {
+    "user_id": "021610a7-ac36-44a8-8ff4-74773a82179e",
+    "username": "abdul",
+    "email": "abdulisihaka06@gmail.com",
+    "full_name": "isihaka",
+    "mobile_number": "255762252014",
+    "account_status": "active"
+  },
+  {
+    "user_id": "3a9a3504-01e1-437a-9256-3e5be54adf73",
+    "username": "masterki17",
+    "email": "felichejembe@gmail.com",
+    "full_name": "Feliche",
+    "mobile_number": "255762674000",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c7aea1ce-8ee0-4a66-9c14-978032fe2e45",
+    "username": "mchunguzi",
+    "email": "infotaaluma@gmail.com",
+    "full_name": "infotaaluma company",
+    "mobile_number": "255714323119",
+    "account_status": "active"
+  },
+  {
+    "user_id": "72e0d2d3-cfe3-4824-833e-5c7fe27477c3",
+    "username": "gloria09",
+    "email": "developergloria@gmail.com",
+    "full_name": "Gloria Robinson",
+    "mobile_number": "255719677575",
+    "account_status": "active"
+  },
+  {
+    "user_id": "9a5de23a-8310-4bc6-85e0-400a7de4f241",
+    "username": "seynationdigital@gmail.com",
+    "email": "seynationdigital@gmail.com",
+    "full_name": "OMEGA THOMSON SEYONGWE",
+    "mobile_number": "255684224468",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b5e57b53-c224-40e8-9b1e-d597c0d9611d",
+    "username": "kelvin",
+    "email": "calvinmambosasa@gmail.com",
+    "full_name": "Kelvin Mathew Mambosasa",
+    "mobile_number": "255693553749",
+    "account_status": "active"
+  },
+  {
+    "user_id": "e68a7597-79e6-4181-b547-1149b7318fbd",
+    "username": "423lavender",
+    "email": "423lavender@punkproof.com",
+    "full_name": "lavender punkproof",
+    "mobile_number": "255712345678",
+    "account_status": "active"
+  },
+  {
+    "user_id": "5c6cab68-61b0-4566-865e-c42a1618db79",
+    "username": "ZenoPay",
+    "email": "support@zenopay.net",
+    "full_name": "ZenoPay",
+    "mobile_number": "255652449389",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f2bd12bb-ad88-4a88-af42-4a981e6b1331",
+    "username": "jackkweyunga",
+    "email": "jackkweyunga@gmail.com",
+    "full_name": "Jack Kweyunga",
+    "mobile_number": "255764205701",
+    "account_status": "active"
+  },
+  {
+    "user_id": "7cecc1b4-e6a4-4dbc-9842-232dc4f4d1ac",
+    "username": "user_123",
+    "email": "maulidiadam1234@gmail.com",
+    "full_name": "user_123",
+    "mobile_number": "255689788372",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c028c25e-0426-4dfe-a9d3-d7f71ef81544",
+    "username": "remotikaafrica",
+    "email": "hello@remotikaafrica.org",
+    "full_name": "remotikaafrica",
+    "mobile_number": "255687360065",
+    "account_status": "active"
+  },
+  {
+    "user_id": "fd9c25af-4cc8-46a9-8803-ef22c01144d2",
+    "username": "kefa",
+    "email": "kefastvn@gmail.com",
+    "full_name": "kefa",
+    "mobile_number": "255653990194",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ab10c3b1-5461-4ec6-91e1-0f2b92c28a27",
+    "username": "Ahmed",
+    "email": "zuberyahmed7z@gmail.com",
+    "full_name": "Zubery",
+    "mobile_number": "255766949118",
+    "account_status": "active"
+  },
+  {
+    "user_id": "aeee7229-a330-4d9f-a502-9b7188d97626",
+    "username": "Robert ",
+    "email": "rshejamabu@gmail.com",
+    "full_name": "Shejamabu ",
+    "mobile_number": "255765080801",
+    "account_status": "active"
+  },
+  {
+    "user_id": "baeb8f77-7dbb-49c3-82dd-2f3d2cbef80b",
+    "username": "agromaterialtz",
+    "email": "nyamanditokushaha@gmail.com",
+    "full_name": "Kushaha  Nyamandito",
+    "mobile_number": "255782804400",
+    "account_status": "active"
+  },
+  {
+    "user_id": "4df5149e-1d6f-4317-b056-bfe8f70e6538",
+    "username": "Chando",
+    "email": "sylvesterchando@gmail.com",
+    "full_name": "Julius",
+    "mobile_number": "255712288231",
+    "account_status": "active"
+  },
+  {
+    "user_id": "41bfa9c6-894e-45a7-8b91-045c0d1ef3c2",
+    "username": "eddygotya",
+    "email": "edgar@mnunuzionline.co.tz",
+    "full_name": "EDGAR NYONI",
+    "mobile_number": "255744447401",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b4090062-3b12-4fd9-83c5-bf1cbdad767e",
+    "username": "Ghala",
+    "email": "info@sarufi.io",
+    "full_name": "Ghala",
+    "mobile_number": "255757294146",
+    "account_status": "active"
+  },
+  {
+    "user_id": "0104bb59-786d-4a01-b93c-0d45c2e56238",
+    "username": "nakkenda ",
+    "email": "rickphares19@gmail.com",
+    "full_name": "Erick Phares",
+    "mobile_number": "255755329213",
+    "account_status": "active"
+  },
+  {
+    "user_id": "8087506a-714c-4e3e-8d23-286d07bb286f",
+    "username": "Salama LTD",
+    "email": "info@ztm.tz",
+    "full_name": "Salama Bearing",
+    "mobile_number": "255750889443",
+    "account_status": "active"
+  },
+  {
+    "user_id": "d35880ce-fab1-4edd-817a-8a87a1bfa424",
+    "username": "kisekason",
+    "email": "benjaminkiseka80@gmail.com",
+    "full_name": "Benjamini Omary ",
+    "mobile_number": "255657779003",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f2ef724d-7bb2-4539-bff7-e77be2eb02fa",
+    "username": "JOHNGORA",
+    "email": "johnjohngora@gmail.com",
+    "full_name": "JOHN JOHNGORA",
+    "mobile_number": "255717801745",
+    "account_status": "active"
+  },
+  {
+    "user_id": "277c9fe7-d179-4aaf-92fe-394bc75c3ad4",
+    "username": "eddie",
+    "email": "groundhalt@gmail.com",
+    "full_name": "Ground Helio",
+    "mobile_number": "255672204508",
+    "account_status": "active"
+  },
+  {
+    "user_id": "74187063-213f-4cdb-8422-3bab44fd04b4",
+    "username": "lalivinci",
+    "email": "nyalali@protonmail.com",
+    "full_name": "Isaiah Nyalali",
+    "mobile_number": "255744400401",
+    "account_status": "active"
+  },
+  {
+    "user_id": "7adc28ae-f299-427c-ab04-7f3ab427823f",
+    "username": "sciah",
+    "email": "mmind140405@gmail.com",
+    "full_name": "Sciah Leo ",
+    "mobile_number": "255628391698",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c6267479-2eee-40e6-875b-98c14d336d40",
+    "username": "Ludovick",
+    "email": "ludovickpancras@gmail.com",
+    "full_name": "Ludovick pancras",
+    "mobile_number": "255625369871",
+    "account_status": "active"
+  },
+  {
+    "user_id": "be05383c-e696-4fdd-95af-bc13bbd02f57",
+    "username": "aasde6370",
+    "email": "1@fextemp.com",
+    "full_name": "aasde aasde",
+    "mobile_number": "255628214132",
+    "account_status": "active"
+  },
+  {
+    "user_id": "26c828f8-f7d2-44b8-b5cb-c1df7106a420",
+    "username": "hackerloum",
+    "email": "hackerloum@gmail.com",
+    "full_name": "Mohamed Ally Mohamed",
+    "mobile_number": "255760442000",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ea57aa06-7842-49ed-a360-0c33fa2ba171",
+    "username": "hekimapro",
+    "email": "info@hekima.pro",
+    "full_name": "Hekima Peter",
+    "mobile_number": "255756628215",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ef6c310c-3f52-4559-9cbc-68aa7ce5f959",
+    "username": "Bachu",
+    "email": "bachubiraprincipius@gmail.com",
+    "full_name": "Principius Bachubira",
+    "mobile_number": "255754933646",
+    "account_status": "active"
+  },
+  {
+    "user_id": "87cfcfa6-96f4-4d80-96ad-e3ba4e8b217a",
+    "username": "devmaxwell",
+    "email": "trendifysmm@gmail.com",
+    "full_name": "Maxwell",
+    "mobile_number": "255676751603",
+    "account_status": "active"
+  },
+  {
+    "user_id": "67d3164f-f3b2-4248-a339-1f07932ce38f",
+    "username": "daniel",
+    "email": "danielswitbert3@gmail.com",
+    "full_name": "Daniel Switbert",
+    "mobile_number": "255756016546",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ec5d752b-1a71-42e3-84b0-2d66b437e1a9",
+    "username": "brimedge",
+    "email": "omarysimba2010@gmail.com",
+    "full_name": "Omary simba ",
+    "mobile_number": "255750424704",
+    "account_status": "active"
+  },
+  {
+    "user_id": "18bd1674-7e0d-4674-bd50-d174b8cf5547",
+    "username": "EDEN",
+    "email": "jovic9002@gmail.com",
+    "full_name": "Joseph Vicent Kway",
+    "mobile_number": "255678370128",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c533b62e-fa5b-4a21-8bb8-4ce3b7f1aea9",
+    "username": "Mr.promise",
+    "email": "mrpromise2030@gmail.com",
+    "full_name": "Thomas John Msisi",
+    "mobile_number": "255657178424",
+    "account_status": "active"
+  },
+  {
+    "user_id": "cc816cfa-ac1c-4013-9bc8-33dd994dc93c",
+    "username": "Charles",
+    "email": "biz@restova.co.tz",
+    "full_name": "Shola",
+    "mobile_number": "255654334383",
+    "account_status": "active"
+  },
+  {
+    "user_id": "a24985cb-b3ad-4a87-8cbb-ab785ef3079b",
+    "username": "innosgram",
+    "email": "innocentcecy@gmail.com",
+    "full_name": "Innocent Manda",
+    "mobile_number": "255744090187",
+    "account_status": "active"
+  },
+  {
+    "user_id": "37af6eaf-24d3-4244-ac64-c6365aeecf4b",
+    "username": "MBARAK",
+    "email": "mbarakbsn@gmail.com",
+    "full_name": "MBARAK ABDALLAH",
+    "mobile_number": "255694318960",
+    "account_status": "active"
+  },
+  {
+    "user_id": "3f9542ba-f8f3-46b7-ba56-b47a7d6b4127",
+    "username": "LOKOIDEAS",
+    "email": "msigwatz@gmail.com",
+    "full_name": "LOKOIDEAS",
+    "mobile_number": "255659677868",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c5489bd9-7501-40fc-bd30-3bc6156332dd",
+    "username": "Nelson",
+    "email": "msugulinelson123@gmail.com",
+    "full_name": "Nelson Prosper",
+    "mobile_number": "255754641894",
+    "account_status": "active"
+  },
+  {
+    "user_id": "a6fc8926-4c2e-41a9-8c01-72896ea58ca5",
+    "username": "Robert",
+    "email": "robertsegwenda@gmail.com",
+    "full_name": "Robert Segwenda",
+    "mobile_number": "255712778087",
+    "account_status": "active"
+  },
+  {
+    "user_id": "51d22580-cad4-422a-8781-c1991ae69b6f",
+    "username": "Briq_Auth",
+    "email": "auth@briq.tz",
+    "full_name": "Briq Authentication Service",
+    "mobile_number": "255760487336",
+    "account_status": "active"
+  },
+  {
+    "user_id": "5cbaf395-77d5-45d6-96df-3230f2c8bdcb",
+    "username": "notlikeus",
+    "email": "Tztanganyika@gmail.com",
+    "full_name": "Bezaleel",
+    "mobile_number": "255757047012",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ec5a6344-1cf1-4e04-9466-bcda579ca37e",
+    "username": "Alinanuswe",
+    "email": "info@theprintsofdsm.com",
+    "full_name": "Alinanuswe Mwaipaja",
+    "mobile_number": "255685389464",
+    "account_status": "active"
+  },
+  {
+    "user_id": "8ae34b09-3982-43fa-85cf-096b1bb55bd9",
+    "username": "T-HUSTLE",
+    "email": "info@t-hustle.com",
+    "full_name": "T-HUSTLE AFRICA",
+    "mobile_number": "255782712501",
+    "account_status": "active"
+  },
+  {
+    "user_id": "e2fbaa60-15f1-4752-88a5-35fdacced99c",
+    "username": "Mwakyusa",
+    "email": "nyonyoma@gmail.com",
+    "full_name": "Nyonyoma Mwakyusa",
+    "mobile_number": "255788345346",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f29d8457-305f-4c10-beda-f7072ad7f6b4",
+    "username": "kcpcard",
+    "email": "kcpcard@gmail.com",
+    "full_name": "KCP CARDS Salum",
+    "mobile_number": "255762541514",
+    "account_status": "active"
+  },
+  {
+    "user_id": "5b1aaac8-79fb-4779-b0c6-42702c5b8788",
+    "username": "lazack404",
+    "email": "lazaromtaju12@gmail.com",
+    "full_name": "LAZARO MTAJU",
+    "mobile_number": "255613868502",
+    "account_status": "active"
+  },
+  {
+    "user_id": "1702fc3c-a58b-438b-940c-ec16cbcb1a4b",
+    "username": "ras",
+    "email": "bezaleel0@protonmail.com",
+    "full_name": "Bezaleel livingstone",
+    "mobile_number": "255750959528",
+    "account_status": "active"
+  },
+  {
+    "user_id": "553c1976-bddc-4134-91e0-0aeb28b4c6f6",
+    "username": "herry",
+    "email": "salvatoryherry@gmail.com",
+    "full_name": "salvatory",
+    "mobile_number": "255717864249",
+    "account_status": "active"
+  },
+  {
+    "user_id": "eb8dfbb9-2f9a-4adb-9710-497f2f060c4d",
+    "username": "Graca",
+    "email": "candancegrae@gmail.com",
+    "full_name": "Graca",
+    "mobile_number": "255793392904",
+    "account_status": "active"
+  },
+  {
+    "user_id": "45125f50-93d0-45d1-9384-365e6f17237c",
+    "username": "vicent.simon",
+    "email": "vicent.simon@bigbee.io",
+    "full_name": "Vicent Simon",
+    "mobile_number": "255626047315",
+    "account_status": "active"
+  },
+  {
+    "user_id": "d9c8f092-71ad-4e91-8a6e-38d2444fdf32",
+    "username": "ericksollo",
+    "email": "ericksollo92@gmail.com",
+    "full_name": "Erick Sollo",
+    "mobile_number": "255743856654",
+    "account_status": "active"
+  },
+  {
+    "user_id": "aef53cc7-7a35-4604-8750-c148f52a1efd",
+    "username": "habarilive",
+    "email": "habarilive@gmail.com",
+    "full_name": "habarilive habarilive",
+    "mobile_number": "255622535962",
+    "account_status": "active"
+  },
+  {
+    "user_id": "cec75514-f0b5-452a-82c3-f359abafbe95",
+    "username": "local",
+    "email": "test@test.com",
+    "full_name": "test",
+    "mobile_number": "255788344371",
+    "account_status": "active"
+  },
+  {
+    "user_id": "accec0df-4691-4e70-8a8c-8377950bad1f",
+    "username": "locala",
+    "email": "test@test.ccm",
+    "full_name": "test",
+    "mobile_number": "255788344373",
+    "account_status": "active"
+  },
+  {
+    "user_id": "6ab8ca9b-aad8-45a8-8460-3209a0926b2c",
+    "username": "nedderlaz97",
+    "email": "rickpenny00@gmail.com",
+    "full_name": "nedder lazreg",
+    "mobile_number": "14086628310",
+    "account_status": "active"
+  },
+  {
+    "user_id": "88ce1dfe-4d86-49bb-b3cf-03eb739034bf",
+    "username": "zamotto",
+    "email": "zamottoo@gmail.com",
+    "full_name": "Niko Banane",
+    "mobile_number": "255622578977",
+    "account_status": "active"
+  },
+  {
+    "user_id": "6519277a-231e-4f90-8970-98de201e9060",
+    "username": "Madam Mtiba ",
+    "email": "mtibajaneth@gmail.com",
+    "full_name": "Janeth Mtiba",
+    "mobile_number": "255757030396",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b1afcf10-b15f-4b92-8a80-b3fb1cd4f2f4",
+    "username": "Fainess",
+    "email": "mr.emaunganya@gmail.com",
+    "full_name": "King ",
+    "mobile_number": "255754332693",
+    "account_status": "active"
+  },
+  {
+    "user_id": "e18263df-a7c9-4ed9-b651-50bed47edaab",
+    "username": "annamichaellukindo@gmail.com",
+    "email": "annamichaellukindo@gmail.com",
+    "full_name": "Anna Michael lukindo ",
+    "mobile_number": "255681144333",
+    "account_status": "active"
+  },
+  {
+    "user_id": "a77b2e34-699e-4431-8f60-eef2bfc6172e",
+    "username": "chausiku  Yohana Nkwabi ",
+    "email": "chausikunkwabi@gmail.com",
+    "full_name": "Chausiku Yohana Nkwabi ",
+    "mobile_number": "255710915368",
+    "account_status": "active"
+  },
+  {
+    "user_id": "fc0dbacf-e714-416e-94bd-de1041387c87",
+    "username": "njimbadeus@gmail.com",
+    "email": "njimbadeus@gmail.com",
+    "full_name": "Njimba Deus",
+    "mobile_number": "255678814955",
+    "account_status": "active"
+  },
+  {
+    "user_id": "f08c24da-a409-43db-89c9-6489c3563bef",
+    "username": "AkilaInnocent",
+    "email": "akilainnocent@yahoo.com",
+    "full_name": "AKILA INNOCENT GWIMO",
+    "mobile_number": "255629645877",
+    "account_status": "active"
+  },
+  {
+    "user_id": "07ac0c39-95e1-4946-b8b1-8fa95f929544",
+    "username": "percyegno",
+    "email": "percyegno@gmail.com",
+    "full_name": "pecy egno mwageni",
+    "mobile_number": "255624451311",
+    "account_status": "active"
+  },
+  {
+    "user_id": "7171444d-4c66-4abb-954c-821e1ca9b923",
+    "username": "mern",
+    "email": "athumanahmed795@gmail.com",
+    "full_name": "Athumani Ahmed",
+    "mobile_number": "255768156839",
+    "account_status": "active"
+  },
+  {
+    "user_id": "4ce33c67-efa1-457d-b3e5-f42b6970f070",
+    "username": "dreysixteen",
+    "email": "sixteenvisual@gmail.com",
+    "full_name": "dennis shayo",
+    "mobile_number": "255711752950",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b1784544-de90-4556-a213-e50fa10e094c",
+    "username": "silassungura",
+    "email": "saelasjosephsungura@gmail.com",
+    "full_name": "silas joseph sungura",
+    "mobile_number": "255718893117",
+    "account_status": "active"
+  },
+  {
+    "user_id": "53bf94a0-4990-451f-917e-09ac0a101717",
+    "username": "ramawakil",
+    "email": "ramadhanwakil19@gmail.com",
+    "full_name": "Ramadhan Wakili Marijani",
+    "mobile_number": "255684209959",
+    "account_status": "active"
+  },
+  {
+    "user_id": "02de31a0-e0e3-4362-8e83-fb46d1913d40",
+    "username": "twahir21",
+    "email": "twahirsudy3@gmail.com",
+    "full_name": "twahir sudy",
+    "mobile_number": "255674291587",
+    "account_status": "active"
+  },
+  {
+    "user_id": "7baafa52-22d7-4e5b-81d3-78bdab7ad889",
+    "username": "Esotech",
+    "email": "elickphilemon@gmail.com",
+    "full_name": "Erick Philemon",
+    "mobile_number": "255743693885",
+    "account_status": "active"
+  },
+  {
+    "user_id": "e8733a6f-d5b9-4cd8-a403-ca6dcfea897c",
+    "username": "adolfalfred",
+    "email": "adolfalfred321@gmail.com",
+    "full_name": "Adolf Alfred",
+    "mobile_number": "255746710355",
+    "account_status": "active"
+  },
+  {
+    "user_id": "9b2d8f10-0eb9-40ba-af7c-1fc8f97245bf",
+    "username": "Amoni04",
+    "email": "mameshaibraah@gmail.com",
+    "full_name": "Alenuo Shitiraeli Urassa ",
+    "mobile_number": "255756982104",
+    "account_status": "active"
+  },
+  {
+    "user_id": "65a8fb5c-85e0-4c98-b610-1e96d0547b9b",
+    "username": "Fintech",
+    "email": "fintech@briq.tz",
+    "full_name": "Fintech Reloaded",
+    "mobile_number": "255788344349",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ef6ed6f2-75f9-4464-8191-6e5f1fae31f2",
+    "username": "kitimaihussein9@gmail.com",
+    "email": "kitimaihussein9@gmail.com",
+    "full_name": "HUSSEIN SALUM KITIMAI",
+    "mobile_number": "255614103439",
+    "account_status": "active"
+  },
+  {
+    "user_id": "36d45590-7253-40f7-a878-a90ff025d006",
+    "username": "saidi abdallah kilindo",
+    "email": "kilindosaid771@gmail.com",
+    "full_name": "Said",
+    "mobile_number": "255683859574",
+    "account_status": "active"
+  },
+  {
+    "user_id": "6c0f20ac-4c6f-4fc2-9680-14a6473d61dc",
+    "username": "taze",
+    "email": "bbamfu@gmail.com",
+    "full_name": "taze nyampha",
+    "mobile_number": "255714343162",
+    "account_status": "active"
+  },
+  {
+    "user_id": "80fe9d42-2433-44f3-834b-05cbf1799982",
+    "username": "samurai",
+    "email": "23polocapalot@gmail.com",
+    "full_name": "sostenes ngowi",
+    "mobile_number": "255615009985",
+    "account_status": "active"
+  },
+  {
+    "user_id": "8e0ae81e-cbac-4986-9bbe-320d684757e1",
+    "username": "festomanolo",
+    "email": "festomanolofm@gmail.com",
+    "full_name": "festo manolo",
+    "mobile_number": "255784953866",
+    "account_status": "active"
+  },
+  {
+    "user_id": "03b7c4f0-d798-492f-a3a4-3beacff07ed1",
+    "username": "khan",
+    "email": "javan51523@chaublog.com",
+    "full_name": "bilalkhan",
+    "mobile_number": "593991063219",
+    "account_status": "active"
+  },
+  {
+    "user_id": "49856f16-8c08-4906-beed-bd470142ea56",
+    "username": "henrylee",
+    "email": "henrydionizi@gmail.com",
+    "full_name": "Henry Mwombeck",
+    "mobile_number": "255687492700",
+    "account_status": "active"
+  },
+  {
+    "user_id": "9ca2e88f-523f-4a65-9f0a-0dc6a1677c77",
+    "username": "ecode",
+    "email": "erickmanyasi5@gmail.com",
+    "full_name": "ERICK MANYASI",
+    "mobile_number": "255778751910",
+    "account_status": "active"
+  },
+  {
+    "user_id": "6b646e2f-43ef-467d-a544-ff7eb22ecf29",
+    "username": "ngajilol@gmail.com",
+    "email": "ngajilol@gmail.com",
+    "full_name": "LukeloNgajilo",
+    "mobile_number": "255788827074",
+    "account_status": "active"
+  },
+  {
+    "user_id": "b19e7cf7-6911-4890-a93e-0a3a69ed7fb0",
+    "username": "nassdaq",
+    "email": "mwaijegakelvin@gmail.com",
+    "full_name": "Kelvin Mwaijega",
+    "mobile_number": "255652012755",
+    "account_status": "active"
+  },
+  {
+    "user_id": "07aca226-b8bb-47f5-a185-4b4baac0805f",
+    "username": "Tumafast",
+    "email": "tumafast.tz@gmail.con",
+    "full_name": "MUSSA KIBO",
+    "mobile_number": "255750417575",
+    "account_status": "active"
+  },
+  {
+    "user_id": "de06ff3b-e23c-42a6-a802-f24aa4f05fc3",
+    "username": "PROCHES",
+    "email": "mrossoshop5@gmail.com",
+    "full_name": "proches didas mrosso",
+    "mobile_number": "255745808771",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c09ad257-dddd-413a-b034-36db357f3339",
+    "username": "jduhdtfuhvdyg",
+    "email": "mercy675d37@i2.pigeonprotocol.com",
+    "full_name": "Rahimi monaim",
+    "mobile_number": "212696930174",
+    "account_status": "active"
+  },
+  {
+    "user_id": "1fd107c3-dd6c-4dac-9d6f-ea2f72fb5883",
+    "username": "yusuph",
+    "email": "kangyashir@gmail.com",
+    "full_name": "Yusuph Said Kilanga",
+    "mobile_number": "255656205130",
+    "account_status": "active"
+  },
+  {
+    "user_id": "145bccde-5f81-4365-b7f0-9330e093e12b",
+    "username": "hngonyani",
+    "email": "hngonyani.md@gmail.com",
+    "full_name": "Humphrey Kaspar Ngonyani",
+    "mobile_number": "255753703744",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ff5f31e2-4861-4de1-88ef-b43221851550",
+    "username": "maokotto",
+    "email": "simpezebest@gmail.com",
+    "full_name": "Kelvin Nicholaus",
+    "mobile_number": "255788649986",
+    "account_status": "active"
+  },
+  {
+    "user_id": "78fbe853-bb17-4687-9daf-b1b64f36c21a",
+    "username": "ALEX ",
+    "email": "alexbagumashop@gmail.com",
+    "full_name": "ALEX BAGUMA SHOP ",
+    "mobile_number": "255793378719",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ce0673c5-bfcc-4400-a658-6dabf6f46937",
+    "username": "nainggolan",
+    "email": "kelvinsdechaw@gmail.com",
+    "full_name": "Kelvin Chaula",
+    "mobile_number": "255768498799",
+    "account_status": "active"
+  },
+  {
+    "user_id": "c628f42d-4f69-4d37-8546-09ff3ccd53ab",
+    "username": "Gracious Mswia",
+    "email": "megam8618@gmail.com",
+    "full_name": "Gracious Mswia",
+    "mobile_number": "255778167401",
+    "account_status": "active"
+  },
+  {
+    "user_id": "ab9f05fb-8a49-46ca-8620-39574bf2d227",
+    "username": "Surveyor Kivuyo ",
+    "email": "deedrax99@gmail.com",
+    "full_name": "Emmanuel Kivuyo ",
+    "mobile_number": "255627232581",
+    "account_status": "active"
+  },
+  {
+    "user_id": "fea2badb-400a-4d2b-acc8-3e4c62118000",
+    "username": "JABU ",
+    "email": "wholemike2703@gmail.com",
+    "full_name": "Kilo",
+    "mobile_number": "255674002284",
+    "account_status": "active"
+  },
+  {
+    "user_id": "8d05232b-e39d-4da3-bbfe-d0264f5b788b",
+    "username": "james",
+    "email": "dbachriskarengi178@gmail.com",
+    "full_name": "james ndongwa mligo",
+    "mobile_number": "255658182795",
+    "account_status": "active"
+  },
+  {
+    "user_id": "da0f5c07-89c1-4284-8de0-3aa11b0905b2",
+    "username": "WABABA MWAJASI",
+    "email": "kichawelefelix84@gmail.com",
+    "full_name": "Felix Kichawele",
+    "mobile_number": "255712267344",
+    "account_status": "active"
+  },
+  {
+    "user_id": "0245eb7b-9c74-412b-b839-dcbf8b766f1b",
+    "username": "brandkidigitali ",
+    "email": "bkidigitali@gmail.com",
+    "full_name": "Brand ",
+    "mobile_number": "255687680811",
+    "account_status": "active"
+  },
+  {
+    "user_id": "e58a9237-dc03-4444-bc92-ee26228b6cc0",
+    "username": "MWANUZI",
+    "email": "mwanuzi.babyegeya@gmail.com",
+    "full_name": "Mwanuzi Babyegeya",
+    "mobile_number": "255753000102",
+    "account_status": "active"
+  },
+  {
+    "user_id": "3e90cf3d-2778-4007-a1d6-e384da347510",
+    "username": "kinje",
+    "email": "kinjemundi@gmail.com",
+    "full_name": "Kinje mundi",
+    "mobile_number": "255752101032",
+    "account_status": "active"
+  },
+  {
+    "user_id": "d56437d2-6b20-48b8-b808-29deed3616fc",
+    "username": "latifveloper",
+    "email": "pume665@gmail.com",
+    "full_name": "ABDULATIFU ",
+    "mobile_number": "255780975050",
+    "account_status": "active"
+  },
+  {
+    "user_id": "e0effa50-bb63-48a3-81b0-c0800e49babf",
+    "username": "selestine",
+    "email": "selestinejohn117@gmail.com",
+    "full_name": "selestine john ",
+    "mobile_number": "255749959899",
+    "account_status": "active"
+  },
+  {
+    "user_id": "61633f37-6097-4b97-84f3-3a9b68406a94",
+    "username": "godfreyenos360@gmail.com",
+    "email": "godfreyenos360@gmail.com",
+    "full_name": "Godfrey Mussa Enosh",
+    "mobile_number": "255689737839",
+    "account_status": "active"
+  },
+  {
+    "user_id": "aa3aa4b7-1cbc-49a7-94f5-4cc9c57aa836",
+    "username": "huks",
+    "email": "usamakabona@gmail.com",
+    "full_name": "Usama Kabona",
+    "mobile_number": "255714510014",
+    "account_status": "active"
+  },
+  {
+    "user_id": "bc51c323-c325-4b7e-81e8-548518c34144",
+    "username": "john102",
+    "email": "JohnMavandarika7453@gmail.com",
+    "full_name": "John Mavandarika",
+    "mobile_number": "255750411717",
+    "account_status": "active"
+  }
+]
