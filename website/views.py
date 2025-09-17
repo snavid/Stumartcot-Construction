@@ -605,7 +605,7 @@ def add_product():
     if request.method == 'POST':
         name = request.form.get('name')
         description = request.form.get('description')
-        price = request.form.get('price')
+        #price = request.form.get('price')
         #original_price = request.form.get('original_price')
         category_id = request.form.get('category_id')
         #stock_quantity = request.form.get('stock_quantity', 0)
@@ -619,8 +619,8 @@ def add_product():
         # Validate inputs
         if len(name) < 1:
             flash('Product name is required.', category='error')
-        elif not price or float(price) <= 0:
-            flash('Valid price is required.', category='error')
+        # elif not price or float(price) <= 0:
+        #    flash('Valid price is required.', category='error')
         elif not category_id:
             flash('Category is required.', category='error')
         else:
@@ -647,7 +647,7 @@ def add_product():
             new_product = Product(
                 name=name,
                 description=description,
-                price=float(price),
+                price=float(0.02),
                 #original_price=float(original_price) if original_price else None,
                 category_id=int(category_id),
                 user_id=current_user.id,
