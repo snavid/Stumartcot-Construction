@@ -22,9 +22,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                     <p class="card-text">{{ product.description[:100] if product.description }}{% if product.description and product.description|length > 100 %}...{% endif %}</p>
-                    <p class="card-text">
+                    <!-- <p class="card-text">
                         <strong class="text-success">${{ "%.2f"|format(product.price) }}</strong>
-                    </p>
+                    </p> -->
                     <p class="card-text">
                         <small class="text-muted">Category: {{ product.category.name }}</small><br>
                         <small class="text-muted">Added by: {{ product.user.username }}</small>
