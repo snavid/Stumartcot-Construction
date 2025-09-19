@@ -24,8 +24,8 @@
     {% for product in products %}
         <div class="col-md-4 mb-4">
             <div class="card h-100">
-                {% if product.image %}
-                    <img src="{{ url_for('static', filename='uploads/' + product.image) }}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                {% if product.images %}
+                    <img src="{{ url_for('static', filename='uploads/' +  product.images[0].image) }}" class="card-img-top" style="height: 200px; object-fit: cover;">
                 {% else %}
                     <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
                         <span class="text-muted">No Image</span>
