@@ -4,8 +4,8 @@
 {% block content %}
 <div class="row">
     <div class="col-md-6">
-        {% if product.image %}
-            <img src="{{ url_for('static', filename='uploads/' + product.image) }}" class="img-fluid rounded">
+        {% if product.images %}
+            <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}" class="img-fluid rounded">
         {% else %}
             <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height: 400px;">
                 <span class="text-muted">No Image Available</span>
