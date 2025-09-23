@@ -48,7 +48,5 @@ jobs:
           #key_path: /tmp/deploy_key
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /var/www/Stumartcot-Construction
-            git pull 
-            #pip install -r requirements.txt
+            sudo git -C /var/www/Stumartcot-Construction pull 
             sudo systemctl restart stumarcot
