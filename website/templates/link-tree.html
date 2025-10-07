@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUMARCOT - Connect With Us</title>
+    <meta name="description" content="Connect with STUMARCOT Construction - Your trusted partner for quality construction materials and services in Tanzania">
+    <meta name="keywords" content="construction, Tanzania, building materials, contact, social media">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    
+    <style>
+        :root {
+            --primary-yellow: #ffd700;
+            --dark-yellow: #ffa500;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f8f9fa;
+            --text-dark: #2c3e50;
+            --text-light: #ffffff;
+            --gradient-1: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
+            --gradient-2: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            --gradient-3: linear-gradient(45deg, #ffd700, #ffa500, #ffd700);
+            --gradient-4: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.05));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--gradient-2);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a, #2c3e50, #1a1a1a, #0a0a0a);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .linktree-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .linktree-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            border-radius: 30px;
+            padding: 30px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 215, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            animation: cardEntrance 1s ease-out;
+            position: relative;
+            overflow: hidden;
+            transform: scale(0.9);
+        }
+
+        .linktree-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-1);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes cardEntrance {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .profile-section {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            box-shadow: 
+                0 8px 25px rgba(255, 215, 0, 0.3),
+                0 0 0 3px rgba(255, 215, 0, 0.1);
+            animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, rgba(255, 215, 0, 0.3), transparent);
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3), 0 0 0 4px rgba(255, 215, 0, 0.1); }
+            50% { box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5), 0 0 0 8px rgba(255, 215, 0, 0.2); }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .company-name {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-3);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+            animation: textShimmer 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        @keyframes textShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .company-tagline {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .link-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+            animation: slideInUp 0.6s ease-out both;
+        }
+
+        .link-item:nth-child(1) { animation-delay: 0.1s; }
+        .link-item:nth-child(2) { animation-delay: 0.2s; }
+        .link-item:nth-child(3) { animation-delay: 0.3s; }
+        .link-item:nth-child(4) { animation-delay: 0.4s; }
+        .link-item:nth-child(5) { animation-delay: 0.5s; }
+        .link-item:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .link-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .link-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .link-item:hover::before {
+            left: 100%;
+        }
+
+        .link-item:hover::after {
+            opacity: 0.1;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 215, 0, 0.15);
+            border-color: var(--primary-yellow);
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 
+                0 20px 40px rgba(255, 215, 0, 0.3),
+                0 0 0 1px rgba(255, 215, 0, 0.5);
+            color: var(--text-light);
+        }
+
+        .link-item:active {
+            transform: translateY(-2px) scale(1.01);
+        }
+
+        .link-item i {
+            font-size: 1.1rem;
+            color: var(--primary-yellow);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-item:hover i {
+            transform: scale(1.3) rotate(10deg);
+            color: var(--primary-yellow);
+        }
+
+        .link-item span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            padding: 6px;
+            border-radius: 8px;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item i {
+            color: var(--primary-yellow);
+            width: 18px;
+            font-size: 1rem;
+        }
+
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            animation: bounceIn 0.6s ease-out both;
+        }
+
+        .social-link:nth-child(1) { animation-delay: 0.1s; }
+        .social-link:nth-child(2) { animation-delay: 0.2s; }
+        .social-link:nth-child(3) { animation-delay: 0.3s; }
+        .social-link:nth-child(4) { animation-delay: 0.4s; }
+        .social-link:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes bounceIn {
+            from {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .social-link:hover::before {
+            opacity: 1;
+        }
+
+        .social-link:hover {
+            color: var(--text-dark);
+            transform: translateY(-8px) scale(1.15);
+            box-shadow: 
+                0 15px 30px rgba(255, 215, 0, 0.4),
+                0 0 0 3px rgba(255, 215, 0, 0.2);
+        }
+
+        .social-link i {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover i {
+            transform: scale(1.2) rotate(15deg);
+        }
+
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            background: var(--gradient-4);
+            border-radius: 50%;
+            animation: floatShape 8s ease-in-out infinite;
+            filter: blur(1px);
+        }
+
+        .shape-1 {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape-3 {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        .shape-4 {
+            width: 60px;
+            height: 60px;
+            top: 30%;
+            right: 30%;
+            animation-delay: 1s;
+        }
+
+        .shape-5 {
+            width: 120px;
+            height: 120px;
+            bottom: 40%;
+            left: 60%;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatShape {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.3;
+            }
+            50% { 
+                transform: translateY(-30px) rotate(180deg) scale(1.1);
+                opacity: 0.6;
+            }
+        }
+
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .linktree-container {
+                padding: 10px;
+                min-height: 100vh;
+            }
+
+            .linktree-card {
+                padding: 25px 20px;
+                border-radius: 20px;
+                max-width: 100%;
+                margin: 0 auto;
+                transform: scale(0.85);
+            }
+
+            .company-name {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .company-tagline {
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
+
+            .link-item {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+                border-radius: 12px;
+            }
+
+            .profile-image {
+                width: 90px;
+                height: 90px;
+                font-size: 2.2rem;
+            }
+
+            .social-links {
+                gap: 12px;
+                justify-content: center;
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .contact-info {
+                padding: 15px;
+                margin-top: 20px;
+            }
+
+            .contact-item {
+                font-size: 0.8rem;
+                padding: 5px;
+            }
+
+            .shape {
+                opacity: 0.2;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .linktree-container {
+                padding: 8px;
+            }
+
+            .linktree-card {
+                padding: 20px 15px;
+                border-radius: 15px;
+                transform: scale(0.8);
+            }
+
+            .company-name {
+                font-size: 1.6rem;
+            }
+
+            .company-tagline {
+                font-size: 0.85rem;
+            }
+
+            .link-item {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+                border-radius: 10px;
+            }
+
+            .profile-image {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+
+            .social-links {
+                gap: 10px;
+            }
+
+            .social-link {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+
+            .contact-info {
+                padding: 15px;
+            }
+
+            .contact-item {
+                font-size: 0.75rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 4px;
+            }
+
+            .contact-item i {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .linktree-card {
+                padding: 15px 12px;
+                transform: scale(0.75);
+            }
+
+            .company-name {
+                font-size: 1.4rem;
+            }
+
+            .link-item {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+
+            .profile-image {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+            }
+
+            .social-link {
+                width: 32px;
+                height: 32px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Landscape Mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .linktree-container {
+                padding: 5px;
+            }
+
+            .linktree-card {
+                padding: 15px;
+                max-width: 95%;
+                transform: scale(0.7);
+            }
+
+            .profile-section {
+                margin-bottom: 15px;
+            }
+
+            .profile-image {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .company-name {
+                font-size: 1.4rem;
+            }
+
+            .company-tagline {
+                font-size: 0.8rem;
+                margin-bottom: 15px;
+            }
+
+            .links-container {
+                gap: 8px;
+                margin-bottom: 15px;
+            }
+
+            .link-item {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+
+            .contact-info {
+                padding: 12px;
+                margin-top: 15px;
+            }
+
+            .social-links {
+                margin-top: 15px;
+                gap: 8px;
+            }
+        }
+
+        /* High DPI Displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .linktree-card {
+                box-shadow: 
+                    0 20px 60px rgba(0, 0, 0, 0.4),
+                    0 0 0 1px rgba(255, 215, 0, 0.1),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .linktree-card {
+                background: rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 215, 0, 0.4);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <div class="linktree-container">
+        <!-- Floating Background Shapes -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+
+        <div class="linktree-card">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}" alt="STUMARCOT Logo">
+                </div>
+                <h1 class="company-name">STUMARCOT</h1>
+                <p class="company-tagline">Leading Construction Materials Supplier in Tanzania</p>
+            </div>
+
+            <!-- Main Links -->
+            <div class="links-container">
+                <a href="/" class="link-item">
+                    <i class="fas fa-home"></i>
+                    <span>Visit Our Website</span>
+                </a>
+                
+                <a href="https://wa.me/255769226111" class="link-item" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp Us</span>
+                </a>
+                
+                <a href="https://www.instagram.com/stumarcot" class="link-item" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Follow on Instagram</span>
+                </a>
+                
+                <a href="https://www.tiktok.com/@stumarcot" class="link-item" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                    <span>Follow on TikTok</span>
+                </a>
+                
+                <a href="/products" class="link-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>View Products</span>
+                </a>
+                
+                <!-- <a href="/contact" class="link-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Us</span>
+                </a> -->
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+255 769 226 111</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@stumarcot.co.tz</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Tanzania, East Africa</span>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/stumarcot" class="social-link" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/stumarcot" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@stumarcot" class="social-link" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://wa.me/255769226111" class="social-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/stumarcot" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Enhanced interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animations
+            initializeAnimations();
+            
+            // Add click tracking and effects
+            setupClickEffects();
+            
+            // Add scroll-based animations
+            setupScrollAnimations();
+            
+            // Add touch interactions for mobile
+            setupTouchInteractions();
+            
+            // Add keyboard navigation
+            setupKeyboardNavigation();
+        });
+
+        function initializeAnimations() {
+            const card = document.querySelector('.linktree-card');
+            const links = document.querySelectorAll('.link-item');
+            const socialLinks = document.querySelectorAll('.social-link');
+            
+            // Staggered entrance animation
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px) scale(0.9)';
+            
+            setTimeout(() => {
+                card.style.transition = 'all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0) scale(1)';
+            }, 200);
+
+            // Animate links with delay
+            links.forEach((link, index) => {
+                link.style.opacity = '0';
+                link.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    link.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                    link.style.opacity = '1';
+                    link.style.transform = 'translateY(0)';
+                }, 500 + (index * 100));
+            });
+
+            // Animate social links
+            socialLinks.forEach((link, index) => {
+                link.style.opacity = '0';
+                link.style.transform = 'scale(0.3)';
+                
+                setTimeout(() => {
+                    link.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                    link.style.opacity = '1';
+                    link.style.transform = 'scale(1)';
+                }, 1000 + (index * 100));
+            });
+        }
+
+        function setupClickEffects() {
+            const links = document.querySelectorAll('.link-item, .social-link');
+            
+            links.forEach(link => {
+                // Add ripple effect on click
+                link.addEventListener('click', function(e) {
+                    createRippleEffect(e, this);
+                    
+                    // Analytics tracking (optional)
+                    console.log('Link clicked:', this.href);
+                    
+                    // Add click animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+
+                // Add hover sound effect (optional)
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                });
+
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+        }
+
+        function createRippleEffect(event, element) {
+            const ripple = document.createElement('span');
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255, 215, 0, 0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+                z-index: 1000;
+            `;
+            
+            element.style.position = 'relative';
+            element.style.overflow = 'hidden';
+            element.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+        function setupScrollAnimations() {
+            // Add parallax effect to floating shapes
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const shapes = document.querySelectorAll('.shape');
+                
+                shapes.forEach((shape, index) => {
+                    const speed = 0.5 + (index * 0.1);
+                    const yPos = -(scrolled * speed);
+                    shape.style.transform = `translateY(${yPos}px)`;
+                });
+            });
+
+            // Add scroll-based card tilt effect
+            const card = document.querySelector('.linktree-card');
+            let ticking = false;
+
+            function updateCardTilt(event) {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const x = event.clientX / window.innerWidth;
+                        const y = event.clientY / window.innerHeight;
+                        
+                        const tiltX = (y - 0.5) * 10;
+                        const tiltY = (x - 0.5) * -10;
+                        
+                        card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            document.addEventListener('mousemove', updateCardTilt);
+        }
+
+        function setupTouchInteractions() {
+            // Add touch feedback for mobile devices
+            const touchElements = document.querySelectorAll('.link-item, .social-link');
+            
+            touchElements.forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                    this.style.transition = 'transform 0.1s ease';
+                });
+
+                element.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                    this.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                });
+            });
+
+            // Add swipe gestures for mobile
+            let startX, startY, endX, endY;
+            
+            document.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+            });
+
+            document.addEventListener('touchend', function(e) {
+                endX = e.changedTouches[0].clientX;
+                endY = e.changedTouches[0].clientY;
+                
+                const diffX = startX - endX;
+                const diffY = startY - endY;
+                
+                // Add subtle animation based on swipe direction
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                    const card = document.querySelector('.linktree-card');
+                    card.style.transform = `translateX(${diffX * 0.1}px)`;
+                    setTimeout(() => {
+                        card.style.transform = '';
+                    }, 300);
+                }
+            });
+        }
+
+        function setupKeyboardNavigation() {
+            // Add keyboard navigation support
+            const focusableElements = document.querySelectorAll('.link-item, .social-link');
+            
+            focusableElements.forEach((element, index) => {
+                element.setAttribute('tabindex', '0');
+                
+                element.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                    
+                    // Arrow key navigation
+                    if (e.key === 'ArrowDown' && index < focusableElements.length - 1) {
+                        e.preventDefault();
+                        focusableElements[index + 1].focus();
+                    }
+                    
+                    if (e.key === 'ArrowUp' && index > 0) {
+                        e.preventDefault();
+                        focusableElements[index - 1].focus();
+                    }
+                });
+            });
+        }
+
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Performance optimization: Reduce animations on low-end devices
+        if (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) {
+            document.documentElement.style.setProperty('--animation-duration', '0.3s');
+        }
+
+        // Add loading state management
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

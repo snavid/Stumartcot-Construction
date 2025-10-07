@@ -499,6 +499,12 @@ def sitemap():
     response = Response(sitemap_xml, mimetype='application/xml')
     return response
 
+
+@views.route('/link-tree')
+def link_tree():
+    return render_template("link-tree.html")
+
+
 @views.route('/dashboard')
 @login_required
 def dashboard():
