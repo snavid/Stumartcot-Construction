@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for,
 from flask_login import login_required, current_user
 from .models import User, Category, Product, ProductImage
 from . import db
+from .indexnow_service import indexnow_service
 import os
 import uuid
 from datetime import datetime
@@ -683,6 +684,10 @@ def add_category():
             new_category = Category(name=name, description=description, image=image_filename)
             db.session.add(new_category)
             db.session.commit()
+            
+            # Notify IndexNow about new category
+            indexnow_service.notify_category_change(new_category.id, "add")
+            
             flash('Category added successfully!', category='success')
             return redirect(url_for('views.manage_categories'))
     
@@ -772,6 +777,10 @@ def add_product():
                         db.session.add(product_image)
             
             db.session.commit()
+            
+            # Notify IndexNow about new product
+            indexnow_service.notify_product_change(new_product.id, "add")
+            
             flash('Product added successfully!', category='success')
             return redirect(url_for('views.dashboard'))
     
@@ -822,6 +831,10 @@ def edit_category(category_id):
             category.name = name
             category.description = description
             db.session.commit()
+            
+            # Notify IndexNow about category update
+            indexnow_service.notify_category_change(category.id, "update")
+            
             flash('Category updated successfully!', category='success')
             return redirect(url_for('views.manage_categories'))
     
@@ -915,6 +928,10 @@ def edit_product(product_id):
                         db.session.add(product_image)
             
             db.session.commit()
+            
+            # Notify IndexNow about product update
+            indexnow_service.notify_product_change(product.id, "update")
+            
             flash('Product updated successfully!', category='success')
             return redirect(url_for('views.dashboard'))
     
@@ -930,6 +947,9 @@ def delete_category(category_id):
     
     category = Category.query.get_or_404(category_id)
     
+    # Store category ID before deletion for IndexNow notification
+    category_id_for_notification = category.id
+    
     # Delete all products in this category first
     if category.products:
         for product in category.products:
@@ -938,6 +958,10 @@ def delete_category(category_id):
     # Now delete the category
     db.session.delete(category)
     db.session.commit()
+    
+    # Notify IndexNow about category deletion
+    indexnow_service.notify_category_change(category_id_for_notification, "delete")
+    
     flash('Category and all its products deleted successfully!', category='success')
     
     return redirect(url_for('views.manage_categories'))
@@ -958,8 +982,15 @@ def delete_product(product_id):
         if os.path.exists(file_path):
             os.remove(file_path)
     
+    # Store product ID before deletion for IndexNow notification
+    product_id = product.id
+    
     db.session.delete(product)
     db.session.commit()
+    
+    # Notify IndexNow about product deletion
+    indexnow_service.notify_product_change(product_id, "delete")
+    
     flash('Product deleted successfully!', category='success')
     
     return redirect(url_for('views.dashboard'))
@@ -1034,3 +1065,8 @@ Allow: /link-tree
 Sitemap: https://stumarcot.co.tz/sitemap.xml
 """
     return Response(robots_text, mimetype="text/plain")
+
+@views.route('/ad293330bfa04dea8c2efb331d1ccfa7.txt')
+def indexnow_key():
+    """Serve IndexNow API key file for domain verification"""
+    return Response("ad293330bfa04dea8c2efb331d1ccfa7", mimetype="text/plain")

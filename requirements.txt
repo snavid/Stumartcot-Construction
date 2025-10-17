@@ -4,3 +4,4 @@ Flask-Login==0.6.3
 Flask-Migrate==4.0.5
 qrcode[pil]==7.4.2
 Pillow>=10.4.0
+requests>=2.31.0
