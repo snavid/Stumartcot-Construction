@@ -470,55 +470,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileOptimizations();
     window.addEventListener('resize', initMobileOptimizations);
     
-    // Ensure trust indicators are visible
+    // Ensure trust indicators are visible immediately for SEO
     ensureTrustIndicatorsVisible();
-    
-    // Add loading screen
-    const loadingScreen = document.createElement('div');
-    loadingScreen.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2c3e50 50%, #1a1a1a 75%, #0a0a0a 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10000;
-        transition: opacity 0.5s ease;
-    `;
-    
-    loadingScreen.innerHTML = `
-        <div style="text-align: center; color: #FFD700;">
-            <div style="width: 60px; height: 60px; border: 3px solid rgba(255, 215, 0, 0.3); border-top: 3px solid #FFD700; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
-            <h3 style="font-family: Inter, sans-serif; font-weight: 600; margin: 0;">Building Excellence...</h3>
-        </div>
-    `;
-    
-    // Add spin animation
-    const spinStyle = document.createElement('style');
-    spinStyle.textContent = `
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    `;
-    document.head.appendChild(spinStyle);
-    
-    document.body.appendChild(loadingScreen);
-    
-    // Remove loading screen after page load
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            loadingScreen.style.opacity = '0';
-            setTimeout(() => {
-                loadingScreen.remove();
-                // Ensure all elements are visible after loading
-                ensureTrustIndicatorsVisible();
-            }, 500);
-        }, 1000);
-    });
     
     // Enhanced mobile navigation
     const navLinks = document.querySelectorAll('.nav-link[href^="#"]');

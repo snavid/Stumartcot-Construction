@@ -25,9 +25,9 @@ def center_text(draw, text, font, y, fill, total_width):
     draw.text((x, y), text, fill=fill, font=font)
 
 
-def create_stumarcot_qr():
+def create_stumarcot_qr(logo_path=None, transparent=True):
     """
-    Create a well-designed QR code for STUMARCOT link tree
+    Create a well-designed QR code for STUMARCOT link tree with optional logo and transparent background
     """
     # URL to encode
     url = "https://stumarcot.co.tz/link-tree"
@@ -53,20 +53,44 @@ def create_stumarcot_qr():
     qr.add_data(url)
     qr.make(fit=True)
     
-    # Create styled QR code with gradient
-    qr_image = qr.make_image(
-        image_factory=StyledPilImage,
-        module_drawer=RoundedModuleDrawer(),
-        color_mask=RadialGradiantColorMask(
-            back_color=background_rgb,
-            center_color=primary_rgb,
-            edge_color=secondary_rgb
+    if transparent:
+        # Create simple QR code with transparent background
+        qr_image = qr.make_image(
+            fill_color=primary_rgb,
+            back_color=(255, 255, 255)  # White background first
         )
-    )
+        
+        # Convert to RGBA and make background transparent
+        qr_image = qr_image.convert('RGBA')
+        data = qr_image.getdata()
+        
+        # Make white pixels transparent
+        new_data = []
+        for item in data:
+            if item[0] == 255 and item[1] == 255 and item[2] == 255:  # White pixel
+                new_data.append((255, 255, 255, 0))  # Transparent
+            else:
+                new_data.append(item)  # Keep original color
+        
+        qr_image.putdata(new_data)
+        
+    else:
+        # Create styled QR code with gradient
+        qr_image = qr.make_image(
+            image_factory=StyledPilImage,
+            module_drawer=RoundedModuleDrawer(),
+            color_mask=RadialGradiantColorMask(
+                back_color=background_rgb,
+                center_color=primary_rgb,
+                edge_color=secondary_rgb
+            )
+        )
+    
+    # Add logo if provided
+    if logo_path and os.path.exists(logo_path):
+        qr_image = add_logo_to_qr(qr_image, logo_path)
     
     return qr_image
-
-
 def create_simple_qr():
     """
     Create a simple QR code with basic styling
@@ -234,9 +258,4 @@ def find_logo():
         
 
 if __name__ == "__main__":
-    logo_path = find_logo()
-    print(f"Logo path: {logo_path}")
-    qr_image = create_stumarcot_qr()
-    qr_image_with_logo = add_logo_to_qr(qr_image, logo_path)
-    qr_image_with_logo.save("qr_with_logo.png", "PNG")
-    print("✅ QR code with logo saved as 'qr_with_logo.png'")
+    main()
