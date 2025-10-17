@@ -3,9 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{%block title%} {%endblock%}</title>
-    <meta name="description" content="{%block description%} {%endblock%}" />
-    <meta name="keywords" content="{%block keywords%} {%endblock%}" />
+    <title>{%block title%}Stumarcot Tanzania - Premium Construction Materials{%endblock%}</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{%block description%}Stumarcot Tanzania: Premium construction materials including paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, and sliding gates. 50+ locations nationwide with expert consultation and quality guaranteed.{%endblock%}" />
+    <meta name="keywords" content="{%block keywords%}construction materials Tanzania, paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, sliding gates, building materials Tanzania, construction products Dar es Salaam, quality construction supplies, Stumarcot products{%endblock%}" />
+    <meta name="author" content="Stumarcot Company Limited">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.url }}">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{{ self.description() }}{% endblock %}">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:site_name" content="Stumarcot Tanzania">
+    <meta property="og:image" content="{% block og_image %}{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}{% endblock %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_TZ">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}{{ self.title() }}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{{ self.description() }}{% endblock %}">
+    <meta name="twitter:image" content="{% block twitter_image %}{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}{% endblock %}">
+    
+    <!-- Geo Tags for Tanzania -->
+    <meta name="geo.region" content="TZ">
+    <meta name="geo.country" content="Tanzania">
+    <meta name="geo.placename" content="Dar es Salaam">
+    
+    <!-- Performance Hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Stylesheets -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,15 +59,171 @@
     />
     <link rel="icon" sizes="48x48" type="image/png" href="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    
+    <!-- Bing Webmaster Tools Verification -->
+    <!-- Replace YOUR_BING_VERIFICATION_CODE with actual code from Bing Webmaster Tools -->
+    <!-- <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE"> -->
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://stumarcot.co.tz/#organization",
+          "name": "Stumarcot Company Limited",
+          "alternateName": "Stumarcot Tanzania",
+          "url": "https://stumarcot.co.tz",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}",
+            "width": 200,
+            "height": 200
+          },
+          "description": "Leading construction materials manufacturer and supplier in Tanzania, established 2008. Premium quality paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, and sliding gates.",
+          "foundingDate": "2008",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "TZ",
+            "addressRegion": "Dar es Salaam",
+            "addressLocality": "Tanzania"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+255-769-226-111",
+            "contactType": "customer service",
+            "email": "info@stumarcot.co.tz",
+            "availableLanguage": ["English", "Swahili"]
+          },
+          "sameAs": [
+            "https://www.facebook.com/stumarcot",
+            "https://www.twitter.com/stumarcot",
+            "https://www.instagram.com/stumarcot",
+            "https://www.linkedin.com/company/stumarcot"
+          ],
+          "areaServed": {
+            "@type": "Country",
+            "name": "Tanzania"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Construction Materials",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Paving Blocks"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Floor Tiles"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Wall Tiles"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Cabstone"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Culverts"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Rolling Shutter Doors"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Product",
+                  "name": "Sliding Gates"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://stumarcot.co.tz/#localbusiness",
+          "name": "Stumarcot Company Limited",
+          "image": "{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}",
+          "description": "Premium construction materials manufacturer and supplier with 50+ locations across Tanzania",
+          "url": "https://stumarcot.co.tz",
+          "telephone": "+255-769-226-111",
+          "email": "info@stumarcot.co.tz",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "TZ",
+            "addressRegion": "Dar es Salaam",
+            "addressLocality": "Tanzania"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-6.7924",
+            "longitude": "39.2083"
+          },
+          "openingHours": "Mo-Fr 08:00-17:00, Sa 08:00-13:00",
+          "priceRange": "$$",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "150"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Construction Materials Catalog"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://stumarcot.co.tz/#website",
+          "url": "https://stumarcot.co.tz",
+          "name": "Stumarcot Tanzania",
+          "description": "Premium construction materials and building supplies in Tanzania",
+          "publisher": {
+            "@id": "https://stumarcot.co.tz/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://stumarcot.co.tz/products?search={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="/"
           ><img
             src="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}"
-            alt=""
+            alt="Stumarcot Company Logo - Premium Construction Materials Tanzania"
           />
           STUMARCOT</a
         >
@@ -84,8 +279,8 @@
             <h5>
               <img
                 width="20%"
-                src="./Minimalist_House_Logo_Design-removebg-preview.png"
-                alt=""
+                src="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}"
+                alt="Stumarcot Company Logo - Premium Construction Materials Tanzania"
               />STUMARCOT
             </h5>
             <p>

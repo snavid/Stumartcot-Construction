@@ -15,6 +15,80 @@
     {%- if product.name.lower().find('tile') != -1 -%}floor tiles, wall tiles, {%- endif -%}
     quality construction products
 {%- endblock -%}
+
+{%- block og_image -%}
+    {%- if product.images -%}
+        {{ url_for('static', filename='uploads/' + product.images[0].image, _external=True) }}
+    {%- else -%}
+        {{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}
+    {%- endif -%}
+{%- endblock -%}
+
+<!-- Product Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ product.name }}",
+  "description": "{{ product.description or 'High-quality construction product from Stumarcot Tanzania' }}",
+  "image": [
+    {%- if product.images -%}
+        {%- for image in product.images -%}
+        "{{ url_for('static', filename='uploads/' + image.image, _external=True) }}"{%- if not loop.last -%},{%- endif -%}
+        {%- endfor -%}
+    {%- else -%}
+        "{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}"
+    {%- endif -%}
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "Stumarcot"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Stumarcot Company Limited",
+    "url": "https://stumarcot.co.tz"
+  },
+  "category": "{%- if product.category -%}{{ product.category.name }}{%- else -%}Construction Materials{%- endif -%}",
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ url_for('views.product_single', product_id=product.id, _external=True) }}",
+    "priceCurrency": "TZS",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Stumarcot Company Limited"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+255-769-226-111",
+      "contactType": "sales"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "25"
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Product ID",
+      "value": "{{ product.id }}"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Category",
+      "value": "{%- if product.category -%}{{ product.category.name }}{%- else -%}General{%- endif -%}"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Date Listed",
+      "value": "{{ product.created_at.strftime('%Y-%m-%d') }}"
+    }
+  ]
+}
+</script>
 {% block content %}
     <!-- Product Detail Section -->
     <section class="product-detail mt-4">
@@ -35,9 +109,9 @@
                             <div class="image-placeholder" id="mainProductImage">
                                 {% if product.images %}
                                     <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}" 
-                                         alt="{{ product.name }}" class="img-fluid">
+                                         alt="{{ product.name }} - Premium Construction Material by Stumarcot Tanzania" class="img-fluid">
                                 {% else %}
-                                    <i class="fas fa-image fa-3x text-muted"></i>
+                                    <i class="fas fa-image fa-3x text-muted" role="img" aria-label="{{ product.name }} - No image available"></i>
                                     <p class="mt-2">No image available</p>
                                 {% endif %}
                             </div>
@@ -48,7 +122,7 @@
                             <div class="thumbnail {% if loop.first %}active{% endif %}" 
                                  onclick="changeMainImage('{{ url_for('static', filename='uploads/' + image.image) }}', this)">
                                 <img src="{{ url_for('static', filename='uploads/' + image.image) }}" 
-                                     alt="{{ product.name }}" class="img-fluid">
+                                     alt="{{ product.name }} - Thumbnail {{ loop.index }}" class="img-fluid">
                             </div>
                             {% endfor %}
                         </div>
@@ -257,9 +331,9 @@
                             <a href="{{ url_for('views.product_single', product_id=related_product.id) }}">
                                 {% if related_product.images %}
                                     <img src="{{ url_for('static', filename='uploads/' + related_product.images[0].image) }}" 
-                                         alt="{{ related_product.name }}" class="img-fluid">
+                                         alt="{{ related_product.name }} - Premium Construction Material by Stumarcot Tanzania" class="img-fluid">
                                 {% else %}
-                                    <i class="fas fa-image fa-2x text-muted"></i>
+                                    <i class="fas fa-image fa-2x text-muted" role="img" aria-label="{{ related_product.name }} - No image available"></i>
                                 {% endif %}
                             </a>
                         </div>

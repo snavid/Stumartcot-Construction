@@ -30,6 +30,54 @@
     construction products Tanzania, building materials, paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, sliding gates, construction supplies Dar es Salaam, Stumarcot products
 {%- endif -%}{%endblock%}
 
+<!-- ItemList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "{%- if selected_category -%}
+    {%- for category in categories -%}
+        {%- if category.id == selected_category -%}
+            {{- category.name -}} Products
+        {%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+    All Construction Products
+  {%- endif -%}",
+  "description": "{%- if selected_category -%}
+    {%- for category in categories -%}
+        {%- if category.id == selected_category -%}
+            Browse our premium {{category.name}} collection at Stumarcot Tanzania
+        {%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+    Explore Stumarcot's full range of premium construction products in Tanzania
+  {%- endif -%}",
+  "url": "{{ request.url }}",
+  "numberOfItems": "{{ products|length }}",
+  "itemListElement": [
+    {%- for product in products -%}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "Product",
+        "name": "{{ product.name }}",
+        "description": "{{ product.description[:150] if product.description else 'High-quality construction product from Stumarcot Tanzania' }}",
+        "url": "{{ url_for('views.product_single', product_id=product.id, _external=True) }}",
+        "image": "{%- if product.images -%}{{ url_for('static', filename='uploads/' + product.images[0].image, _external=True) }}{%- else -%}{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}{%- endif -%}",
+        "brand": {
+          "@type": "Brand",
+          "name": "Stumarcot"
+        },
+        "category": "{%- if product.category -%}{{ product.category.name }}{%- else -%}Construction Materials{%- endif -%}"
+      }
+    }{%- if not loop.last -%},{%- endif -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+
 
 
 
@@ -115,10 +163,10 @@
                     <div class="product-card-shop">
                         <div class="product-image-shop">
                             {% if product.images %}
-                                <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}" alt="{{ product.name }}" class="img-fluid">
+                                <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}" alt="{{ product.name }} - Premium Construction Material by Stumarcot Tanzania" class="img-fluid">
                             {% else %}
                                 <!-- Placeholder if no image -->
-                                <div class="no-image-placeholder">No Image</div>
+                                <div class="no-image-placeholder" role="img" aria-label="{{ product.name }} - No image available">No Image</div>
                             {% endif %}
                             <div class="product-overlay">
                                 <a href="{{ url_for('views.product_single', product_id=product.id) }}" class="btn-view">

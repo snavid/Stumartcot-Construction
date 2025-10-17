@@ -499,6 +499,99 @@ def sitemap():
     response = Response(sitemap_xml, mimetype='application/xml')
     return response
 
+@views.route('/sitemap_index.xml')
+def sitemap_index():
+    current_time = datetime.utcnow()
+    sitemap_index_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://stumarcot.co.tz/sitemap.xml</loc>
+        <lastmod>{current_time.strftime('%Y-%m-%d')}</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://stumarcot.co.tz/sitemap_products.xml</loc>
+        <lastmod>{current_time.strftime('%Y-%m-%d')}</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://stumarcot.co.tz/sitemap_categories.xml</loc>
+        <lastmod>{current_time.strftime('%Y-%m-%d')}</lastmod>
+    </sitemap>
+</sitemapindex>"""
+    response = Response(sitemap_index_xml, mimetype='application/xml')
+    return response
+
+@views.route('/sitemap_products.xml')
+def sitemap_products():
+    current_time = datetime.utcnow()
+    products = Product.query.all()
+    
+    sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">"""
+    
+    for product in products:
+        sitemap_xml += f"""
+    <url>
+        <loc>https://stumarcot.co.tz/product-single/{product.id}</loc>
+        <lastmod>{product.created_at.strftime('%Y-%m-%d')}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>"""
+        
+        if product.images:
+            for image in product.images:
+                sitemap_xml += f"""
+        <image:image>
+            <image:loc>https://stumarcot.co.tz/static/uploads/{image.image}</image:loc>
+            <image:title>{product.name}</image:title>
+            <image:caption>{product.description[:200] if product.description else product.name}</image:caption>
+        </image:image>"""
+        
+        sitemap_xml += """
+    </url>"""
+    
+    sitemap_xml += """
+</urlset>"""
+    
+    response = Response(sitemap_xml, mimetype='application/xml')
+    return response
+
+@views.route('/sitemap_categories.xml')
+def sitemap_categories():
+    current_time = datetime.utcnow()
+    categories = Category.query.all()
+    
+    sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">"""
+    
+    for category in categories:
+        sitemap_xml += f"""
+    <url>
+        <loc>https://stumarcot.co.tz/category/{category.id}</loc>
+        <lastmod>{category.created_at.strftime('%Y-%m-%d')}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>"""
+    
+    sitemap_xml += """
+</urlset>"""
+    
+    response = Response(sitemap_xml, mimetype='application/xml')
+    return response
+
+@views.route('/browserconfig.xml')
+def browserconfig():
+    browserconfig_xml = """<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="/static/Minimalist_House_Logo_Design-removebg-preview.png"/>
+            <TileColor>#0d6efd</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>"""
+    response = Response(browserconfig_xml, mimetype='application/xml')
+    return response
+
 
 @views.route('/link-tree')
 def link_tree():
@@ -874,24 +967,70 @@ def delete_product(product_id):
 @views.route("/robots.txt")
 def robots_txt():
     robots_text = """User-agent: *
+Allow: /
+Allow: /static/
+Allow: /products
+Allow: /categories
+Allow: /about
+Allow: /contact
+Allow: /showrooms
+Allow: /factories
+Allow: /retail-shops
+Allow: /construction-consultants
+Allow: /technical-support
+Allow: /blog
+Allow: /link-tree
+
+# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /dashboard
-Disallow: /categories/
-Disallow: /category/
 Disallow: /manage-categories
 Disallow: /manage-products
-Disallow: /add-category
 Disallow: /manage-users
-Disallow: /manage-products
+Disallow: /add-category
 Disallow: /add-product
-Disallow: /delete-user/
 Disallow: /edit-category/
 Disallow: /edit-product/
+Disallow: /delete-user/
 Disallow: /delete-category/
 Disallow: /delete-product/
 Disallow: /login
 Disallow: /sign-up
+
+# Bing-specific directives
+User-agent: BingBot
 Allow: /
+Allow: /static/
+Allow: /products
+Allow: /categories
+Allow: /about
+Allow: /contact
+Allow: /showrooms
+Allow: /factories
+Allow: /retail-shops
+Allow: /construction-consultants
+Allow: /technical-support
+Allow: /blog
+Allow: /link-tree
+Crawl-delay: 1
+
+# Google-specific directives
+User-agent: Googlebot
+Allow: /
+Allow: /static/
+Allow: /products
+Allow: /categories
+Allow: /about
+Allow: /contact
+Allow: /showrooms
+Allow: /factories
+Allow: /retail-shops
+Allow: /construction-consultants
+Allow: /technical-support
+Allow: /blog
+Allow: /link-tree
+
+# Sitemap location
 Sitemap: https://stumarcot.co.tz/sitemap.xml
 """
     return Response(robots_text, mimetype="text/plain")
