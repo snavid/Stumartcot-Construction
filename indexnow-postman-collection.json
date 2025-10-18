@@ -1,0 +1,162 @@
+{
+  "info": {
+    "name": "IndexNow API Testing - Stumarcot",
+    "description": "Collection for testing IndexNow API submissions for stumarcot.co.tz",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Submit Single URL",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"host\": \"stumarcot.co.tz\",\n  \"key\": \"ad293330bfa04dea8c2efb331d1ccfa7\",\n  \"urlList\": [\n    \"https://stumarcot.co.tz/products\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "https://api.indexnow.org/indexnow",
+          "protocol": "https",
+          "host": [
+            "api",
+            "indexnow",
+            "org"
+          ],
+          "path": [
+            "indexnow"
+          ]
+        },
+        "description": "Submit a single URL to IndexNow API"
+      }
+    },
+    {
+      "name": "Submit Multiple URLs",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"host\": \"stumarcot.co.tz\",\n  \"key\": \"ad293330bfa04dea8c2efb331d1ccfa7\",\n  \"urlList\": [\n    \"https://stumarcot.co.tz/\",\n    \"https://stumarcot.co.tz/products\",\n    \"https://stumarcot.co.tz/categories\",\n    \"https://stumarcot.co.tz/sitemap.xml\",\n    \"https://stumarcot.co.tz/sitemap_products.xml\",\n    \"https://stumarcot.co.tz/sitemap_categories.xml\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "https://api.indexnow.org/indexnow",
+          "protocol": "https",
+          "host": [
+            "api",
+            "indexnow",
+            "org"
+          ],
+          "path": [
+            "indexnow"
+          ]
+        },
+        "description": "Submit multiple URLs to IndexNow API"
+      }
+    },
+    {
+      "name": "Submit Product URLs",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"host\": \"stumarcot.co.tz\",\n  \"key\": \"ad293330bfa04dea8c2efb331d1ccfa7\",\n  \"urlList\": [\n    \"https://stumarcot.co.tz/product-single/1\",\n    \"https://stumarcot.co.tz/products\",\n    \"https://stumarcot.co.tz/sitemap_products.xml\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "https://api.indexnow.org/indexnow",
+          "protocol": "https",
+          "host": [
+            "api",
+            "indexnow",
+            "org"
+          ],
+          "path": [
+            "indexnow"
+          ]
+        },
+        "description": "Submit product-related URLs (replace product ID as needed)"
+      }
+    },
+    {
+      "name": "Submit Category URLs",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"host\": \"stumarcot.co.tz\",\n  \"key\": \"ad293330bfa04dea8c2efb331d1ccfa7\",\n  \"urlList\": [\n    \"https://stumarcot.co.tz/category/1\",\n    \"https://stumarcot.co.tz/categories\",\n    \"https://stumarcot.co.tz/sitemap_categories.xml\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "https://api.indexnow.org/indexnow",
+          "protocol": "https",
+          "host": [
+            "api",
+            "indexnow",
+            "org"
+          ],
+          "path": [
+            "indexnow"
+          ]
+        },
+        "description": "Submit category-related URLs (replace category ID as needed)"
+      }
+    },
+    {
+      "name": "Verify API Key File",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://stumarcot.co.tz/ad293330bfa04dea8c2efb331d1ccfa7.txt",
+          "protocol": "https",
+          "host": [
+            "stumarcot",
+            "co",
+            "tz"
+          ],
+          "path": [
+            "ad293330bfa04dea8c2efb331d1ccfa7.txt"
+          ]
+        },
+        "description": "Verify that the API key file is accessible (should return: ad293330bfa04dea8c2efb331d1ccfa7)"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://stumarcot.co.tz",
+      "type": "string"
+    },
+    {
+      "key": "api_key",
+      "value": "ad293330bfa04dea8c2efb331d1ccfa7",
+      "type": "string"
+    },
+    {
+      "key": "indexnow_endpoint",
+      "value": "https://api.indexnow.org/indexnow",
+      "type": "string"
+    }
+  ]
+}
