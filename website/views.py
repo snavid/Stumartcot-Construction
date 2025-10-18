@@ -501,6 +501,19 @@ def sitemap():
     return render_template('sitemap.xml', categories=categories, products=products,moment = current_time, current_time=current_time)
     #return response
 
+
+@views.route('/sitemap_real.xml')
+def sitemap_real():
+    current_time = datetime.utcnow()
+    # sitemap_xml = render_template("sitemap.xml", 
+    #                             categories=Category.query.all(), 
+    #                             products=Product.query.all(),
+    #                             current_time=current_time,
+    #                             moment = current_time)
+    #response = Response(sitemap_xml, mimetype='application/xml')
+    return render_template('sitemap.xml', categories=categories, products=products,moment = current_time, current_time=current_time)
+    #return response
+
 @views.route('/sitemap_index.xml')
 def sitemap_index():
     current_time = datetime.utcnow()
