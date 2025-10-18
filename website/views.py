@@ -533,7 +533,7 @@ def sitemap_products():
     for product in products:
         sitemap_xml += f"""
     <url>
-        <loc>https://stumarcot.co.tz/product-single/{product.id}</loc>
+        <loc>{url_for('views.product_single', product_id=product.id, _external=True)}</loc>
         <lastmod>{product.created_at.strftime('%Y-%m-%d')}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>"""
@@ -542,7 +542,7 @@ def sitemap_products():
             for image in product.images:
                 sitemap_xml += f"""
         <image:image>
-            <image:loc>https://stumarcot.co.tz/static/uploads/{image.image}</image:loc>
+            <image:loc>{url_for('static', filename='uploads/' + image.image, _external=True)}</image:loc>
             <image:title>{product.name}</image:title>
             <image:caption>{product.description[:200] if product.description else product.name}</image:caption>
         </image:image>"""
@@ -567,7 +567,7 @@ def sitemap_categories():
     for category in categories:
         sitemap_xml += f"""
     <url>
-        <loc>https://stumarcot.co.tz/category/{category.id}</loc>
+        <loc>{url_for('views.category_products', category_id=category.id, _external=True)}</loc>
         <lastmod>{category.created_at.strftime('%Y-%m-%d')}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
