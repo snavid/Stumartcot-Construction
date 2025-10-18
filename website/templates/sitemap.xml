@@ -4,7 +4,7 @@
 
     <!-- Home page -->
     <url>
-        <loc>{{ url_for('views.home', _external=True) }}</loc>
+        <loc>{{ url_for('views.home') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -12,7 +12,7 @@
 
     <!-- About page -->
     <url>
-        <loc>{{ url_for('views.about_page', _external=True) }}</loc>
+        <loc>{{ url_for('views.about_page') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -20,7 +20,7 @@
 
     <!-- Products page -->
     <url>
-        <loc>{{ url_for('views.products', _external=True) }}</loc>
+        <loc>{{ url_for('views.products') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -28,7 +28,7 @@
 
     <!-- Blog page -->
     <url>
-        <loc>{{ url_for('views.blogs', _external=True) }}</loc>
+        <loc>{{ url_for('views.blogs') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -36,7 +36,7 @@
 
     <!-- Contact page -->
     <url>
-        <loc>{{ url_for('views.contact', _external=True) }}</loc>
+        <loc>{{ url_for('views.contact') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -44,35 +44,35 @@
 
     <!-- Service pages -->
     <url>
-        <loc>{{ url_for('views.showrooms', _external=True) }}</loc>
+        <loc>{{ url_for('views.showrooms') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>{{ url_for('views.factories', _external=True) }}</loc>
+        <loc>{{ url_for('views.factories') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>{{ url_for('views.retail_shops', _external=True) }}</loc>
+        <loc>{{ url_for('views.retail_shops') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>{{ url_for('views.construction_consultants', _external=True) }}</loc>
+        <loc>{{ url_for('views.construction_consultants') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>{{ url_for('views.technical_support', _external=True) }}</loc>
+        <loc>{{ url_for('views.technical_support') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -80,7 +80,7 @@
 
     <!-- Categories page -->
     <url>
-        <loc>{{ url_for('views.categories', _external=True) }}</loc>
+        <loc>{{ url_for('views.categories') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -88,7 +88,7 @@
 
     <!-- Link tree page -->
     <url>
-        <loc>{{ url_for('views.link_tree', _external=True) }}</loc>
+        <loc>{{ url_for('views.link_tree') }}</loc>
         <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -97,7 +97,7 @@
     <!-- Dynamic category pages -->
     {% for category in categories %}
     <url>
-        <loc>{{ url_for('views.category_products', category_id=category.id, _external=True) }}</loc>
+        <loc>{{ url_for('views.category_products', category_id=category.id) }}</loc>
         <lastmod>{{ category.created_at.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -107,14 +107,14 @@
     <!-- Dynamic product pages -->
     {% for product in products %}
     <url>
-        <loc>{{ url_for('views.product_single', product_id=product.id, _external=True) }}</loc>
+        <loc>{{ url_for('views.product_single', product_id=product.id) }}</loc>
         <lastmod>{{ product.created_at.strftime('%Y-%m-%d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         {% if product.images %}
         {% for image in product.images %}
         <image:image>
-            <image:loc>{{ url_for('static', filename='uploads/' + image.image, _external=True) }}</image:loc>
+            <image:loc>{{ url_for('static', filename='uploads/' + image.image) }}</image:loc>
             <image:title>{{ product.name }}</image:title>
             <image:caption>{{ product.description[:200] if product.description else product.name }}</image:caption>
         </image:image>
