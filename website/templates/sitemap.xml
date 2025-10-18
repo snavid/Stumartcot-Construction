@@ -1,984 +1,126 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<!--  Home page  -->
-<url>
-<loc>https://stumarcot.co.tz/</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>daily</changefreq>
-<priority>1.0</priority>
-</url>
-<!--  About page  -->
-<url>
-<loc>https://stumarcot.co.tz/about</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.8</priority>
-</url>
-<!--  Products page  -->
-<url>
-<loc>https://stumarcot.co.tz/products</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<!--  Blog page  -->
-<url>
-<loc>https://stumarcot.co.tz/blog</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.7</priority>
-</url>
-<!--  Contact page  -->
-<url>
-<loc>https://stumarcot.co.tz/contact</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<!--  Service pages  -->
-<url>
-<loc>https://stumarcot.co.tz/showrooms</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/factories</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/retail-shops</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/construction-consultants</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/technical-support</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-<!--  Categories page  -->
-<url>
-<loc>https://stumarcot.co.tz/categories</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<!--  Link tree page  -->
-<url>
-<loc>https://stumarcot.co.tz/link-tree</loc>
-<lastmod>2025-10-18</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-<!--  Dynamic category pages  -->
-<url>
-<loc>https://stumarcot.co.tz/category/2</loc>
-<lastmod>2025-09-01</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/category/3</loc>
-<lastmod>2025-09-01</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/category/4</loc>
-<lastmod>2025-09-01</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/category/5</loc>
-<lastmod>2025-09-01</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/category/7</loc>
-<lastmod>2025-09-01</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/category/8</loc>
-<lastmod>2025-09-01</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/category/9</loc>
-<lastmod>2025-09-01</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/category/10</loc>
-<lastmod>2025-09-01</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<!--  Dynamic product pages  -->
-<url>
-<loc>https://stumarcot.co.tz/product-single/2</loc>
-<lastmod>2025-09-02</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/hectagon_20250916_164948_eb07c57b.jpg</image:loc>
-<image:title>40MPIRA (40-8Gon)</image:title>
-<image:caption>This is a concrete floor tile in Size 40*40*2cm Perfect for driveways, patios, walkways, and plazas. These innovative pavers offer a modern aesthetic with a distinctive hectogon (100-sided polygon) </image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0027_20250917_101745_9d127100.jpg</image:loc>
-<image:title>40MPIRA (40-8Gon)</image:title>
-<image:caption>This is a concrete floor tile in Size 40*40*2cm Perfect for driveways, patios, walkways, and plazas. These innovative pavers offer a modern aesthetic with a distinctive hectogon (100-sided polygon) </image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/5</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0122_20250917_093923_48c9576c.jpg</image:loc>
-<image:title>Hollow Blocks 6</image:title>
-<image:caption>Explore our premium 6-inch hollow concrete blocks, engineered for strength, lightweight handling, and versatility in construction projects. Perfect for residential and commercial builds, these blocks </image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/6</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0126_20250917_093815_6b134b37.jpg</image:loc>
-<image:title>Sand Blocks</image:title>
-<image:caption>Size Discover our premium solid concrete blocks, available in 4-inch, 5-inch, and 6-inch sizes, designed for exceptional strength and reliability in construction projects. Perfect for residential, c</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/7</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0124_20250917_094225_c6d719d7.jpg</image:loc>
-<image:title>Concrete Blocks</image:title>
-<image:caption>Explore our versatile range of concrete blocks, available in 4-inch, 5-inch, and 6-inch sizes, engineered for strength, durability, and flexibility in construction projects. Perfect for residential, c</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/8</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/mtungi_20250910_120603_a6b4b4d3.jpg</image:loc>
-<image:title>Mtungi</image:title>
-<image:caption>Transform your outdoor spaces with our premium Mtungi paving solutions, designed for durability, style, and versatility in construction projects. Inspired by the iconic Mtungi (Swahili for jerry can),</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/9</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/SQ-dot_20250910_120759_caa39f89.png</image:loc>
-<image:title>SQ Dots</image:title>
-<image:caption>Enhance your outdoor spaces with our premium SQ Dot paving solutions,40 psc per sqm, designed for modern aesthetics and lasting durability in construction projects. Featuring a distinctive square patt</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/10</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/SQ-MM_20250910_120913_da8671fe.png</image:loc>
-<image:title>SQ MM</image:title>
-<image:caption>Upgrade your outdoor spaces with our premium SQ MM paving solutions, engineered for modern style and exceptional durability in construction projects,32psc per sqm. Featuring a sleek square design with</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/11</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/triol-dots_20250910_121034_61edc0d6.jpg</image:loc>
-<image:title>Trio</image:title>
-<image:caption>Elevate your outdoor spaces with our premium Triol Dots paving solutions,27psc per sqm designed for striking aesthetics and robust durability in construction projects. Featuring a unique pattern of th</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0041_20250917_102311_65af34bd.jpg</image:loc>
-<image:title>Trio</image:title>
-<image:caption>Elevate your outdoor spaces with our premium Triol Dots paving solutions,27psc per sqm designed for striking aesthetics and robust durability in construction projects. Featuring a unique pattern of th</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/12</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/world-cup-square_20250910_123724_6bda3c09.jpg</image:loc>
-<image:title>World Cup</image:title>
-<image:caption>Transform your outdoor spaces with our premium World Cup Square paving solutions,33pcs per sqm, inspired by the global excitement of the FIFA World Cup,they are perfect for creating vibrant driveways,</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0002_20250917_102553_270cf7b8.jpg</image:loc>
-<image:title>World Cup</image:title>
-<image:caption>Transform your outdoor spaces with our premium World Cup Square paving solutions,33pcs per sqm, inspired by the global excitement of the FIFA World Cup,they are perfect for creating vibrant driveways,</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/13</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/23_20250910_121819_d1749459.jpg</image:loc>
-<image:title>Z Plain (H-Paver)</image:title>
-<image:caption>Enhance your outdoor spaces with our premium Z Plain paving solutions,30pcs per sqm, designed for timeless simplicity and exceptional durability in construction projects. Featuring a sleek, smooth sur</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/plain-paving_20250910_121819_c515df76.jpg</image:loc>
-<image:title>Z Plain (H-Paver)</image:title>
-<image:caption>Enhance your outdoor spaces with our premium Z Plain paving solutions,30pcs per sqm, designed for timeless simplicity and exceptional durability in construction projects. Featuring a sleek, smooth sur</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/91073ca3fc8a54f2729d2e564a2d3863_20250910_121819_bb916e2f.jpg</image:loc>
-<image:title>Z Plain (H-Paver)</image:title>
-<image:caption>Enhance your outdoor spaces with our premium Z Plain paving solutions,30pcs per sqm, designed for timeless simplicity and exceptional durability in construction projects. Featuring a sleek, smooth sur</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/14</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/8-cone_20250910_122053_fde53698.jpg</image:loc>
-<image:title>8-Gone Square</image:title>
-<image:caption>Elevate your outdoor spaces with our premium 8-Gone Square paving solutions, featuring a distinctive octagonal design for a bold, geometric aesthetic. Available in a variety of vibrant colors, these p</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0108_20250917_103845_209d25b6.jpg</image:loc>
-<image:title>8-Gone Square</image:title>
-<image:caption>Elevate your outdoor spaces with our premium 8-Gone Square paving solutions, featuring a distinctive octagonal design for a bold, geometric aesthetic. Available in a variety of vibrant colors, these p</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/15</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/culture-768x549-1_20250910_122230_9592dd6c.jpg</image:loc>
-<image:title>Culture </image:title>
-<image:caption>Infuse your outdoor spaces with the timeless charm of our premium Culture paving solutions, 28pcs per sqm,designed to blend heritage-inspired aesthetics with modern durability. Perfect for driveways, </image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/culture-gallery_20250910_122241_971d91d7.jpg</image:loc>
-<image:title>Culture </image:title>
-<image:caption>Infuse your outdoor spaces with the timeless charm of our premium Culture paving solutions, 28pcs per sqm,designed to blend heritage-inspired aesthetics with modern durability. Perfect for driveways, </image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/culture-galley-2_20250910_122241_7daade9e.jpg</image:loc>
-<image:title>Culture </image:title>
-<image:caption>Infuse your outdoor spaces with the timeless charm of our premium Culture paving solutions, 28pcs per sqm,designed to blend heritage-inspired aesthetics with modern durability. Perfect for driveways, </image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/culture-galley-1_20250910_122241_5ec10fee.jpg</image:loc>
-<image:title>Culture </image:title>
-<image:caption>Infuse your outdoor spaces with the timeless charm of our premium Culture paving solutions, 28pcs per sqm,designed to blend heritage-inspired aesthetics with modern durability. Perfect for driveways, </image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/16</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/Raizon-768x549-1_20250910_122501_a3efbe57.png</image:loc>
-<image:title>Raizon Grass Paver</image:title>
-<image:caption>Transform your outdoor spaces with our innovative Raizon Grass Paver, a perfect blend of eco-friendly design and robust functionality for construction projects. These permeable pavers, designed to sup</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20240730-WA0012-100x100_20250910_122514_ab6f99fd.jpg</image:loc>
-<image:title>Raizon Grass Paver</image:title>
-<image:caption>Transform your outdoor spaces with our innovative Raizon Grass Paver, a perfect blend of eco-friendly design and robust functionality for construction projects. These permeable pavers, designed to sup</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0012_20250917_102915_e0808ba7.jpg</image:loc>
-<image:title>Raizon Grass Paver</image:title>
-<image:caption>Transform your outdoor spaces with our innovative Raizon Grass Paver, a perfect blend of eco-friendly design and robust functionality for construction projects. These permeable pavers, designed to sup</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/17</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0022_20250917_103500_c2840fb7.jpg</image:loc>
-<image:title>Square Rough </image:title>
-<image:caption>Size 200*200*80mm and 200*200*60mm Revitalize your outdoor spaces with our premium rectangular paver,50pcs per sqm, designed for rugged durability and a textured, natural aesthetic. Available in a va</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0013_20250917_103528_0a68074e.jpg</image:loc>
-<image:title>Square Rough </image:title>
-<image:caption>Size 200*200*80mm and 200*200*60mm Revitalize your outdoor spaces with our premium rectangular paver,50pcs per sqm, designed for rugged durability and a textured, natural aesthetic. Available in a va</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/18</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/star_20250910_122830_7f3a7179.jpg</image:loc>
-<image:title>Star </image:title>
-<image:caption>Illuminate your outdoor spaces with our premium Star Paver, designed to combine stellar aesthetics with exceptional durability for construction projects. Featuring a distinctive star-shaped pattern, t</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/19</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/triangle_20250910_123017_8f6edcec.jpg</image:loc>
-<image:title>Triangle </image:title>
-<image:caption>Elevate your outdoor spaces with our premium Triangle Paving solutions, designed for striking geometric appeal and robust durability in construction projects. Available in a variety of vibrant colors,</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/20</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/u-dot-gallery_20250910_123257_ce5f5b13.jpg</image:loc>
-<image:title>U Dot Paver</image:title>
-<image:caption>Transform your indoor and outdoor spaces with our premium U Dot Paving solutions, 20psc per sqm,designed for versatile style and exceptional durability in construction projects. Featuring a distinctiv</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/U-DOT2_20250910_123257_14c35097.jpg</image:loc>
-<image:title>U Dot Paver</image:title>
-<image:caption>Transform your indoor and outdoor spaces with our premium U Dot Paving solutions, 20psc per sqm,designed for versatile style and exceptional durability in construction projects. Featuring a distinctiv</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0066_20250917_115905_f9ef2f7b.jpg</image:loc>
-<image:title>U Dot Paver</image:title>
-<image:caption>Transform your indoor and outdoor spaces with our premium U Dot Paving solutions, 20psc per sqm,designed for versatile style and exceptional durability in construction projects. Featuring a distinctiv</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0036_20250917_120156_6abd66ce.jpg</image:loc>
-<image:title>U Dot Paver</image:title>
-<image:caption>Transform your indoor and outdoor spaces with our premium U Dot Paving solutions, 20psc per sqm,designed for versatile style and exceptional durability in construction projects. Featuring a distinctiv</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/21</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0171_20250917_145719_a6f803d7.jpg</image:loc>
-<image:title>V Shape Paver</image:title>
-<image:caption>Durable V-Shape paving blocks, 52pcs per sqm. Perfect for driveways, patios & walkways with a modern design and strong load capacity.</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0163_20250917_145812_c8cedc29.jpg</image:loc>
-<image:title>V Shape Paver</image:title>
-<image:caption>Durable V-Shape paving blocks, 52pcs per sqm. Perfect for driveways, patios & walkways with a modern design and strong load capacity.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/22</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/z-dot_20250910_123830_c34c11b6.jpg</image:loc>
-<image:title> Z Dot</image:title>
-<image:caption>Stylish Z Dot paving blocks, 21pcs per sqm. Available in multiple colors, ideal for driveways, patios & walkways with a strong modern finish.</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0100_20250917_120806_f7864eaf.jpg</image:loc>
-<image:title> Z Dot</image:title>
-<image:caption>Stylish Z Dot paving blocks, 21pcs per sqm. Available in multiple colors, ideal for driveways, patios & walkways with a strong modern finish.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/23</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/zigzag-draft_20250910_123931_9a684ca6.jpg</image:loc>
-<image:title>Zigzag Draft</image:title>
-<image:caption>Durable Zigzag Draft paving blocks for strong, long-lasting surfaces.40pcs per sqm. Perfect for driveways, patios & walkways with a classic interlocking design.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/24</loc>
-<lastmod>2025-09-10</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/zigzag-plain-768x549-2_20250910_124030_12eb614d.jpg</image:loc>
-<image:title> Zigzag Plain</image:title>
-<image:caption>Zigzag Plain paving blocks, 40pcs per sqm. Available in various colors, ideal for driveways, patios & walkways with a durable interlocking design.</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0193_20250917_121123_b095bef6.jpg</image:loc>
-<image:title> Zigzag Plain</image:title>
-<image:caption>Zigzag Plain paving blocks, 40pcs per sqm. Available in various colors, ideal for driveways, patios & walkways with a durable interlocking design.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/25</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/cc50c04c1b1ef652f4946a40babf3802_20250914_150149_c9729dd0.jpg</image:loc>
-<image:title>Culvert 900N</image:title>
-<image:caption>Size 900*1000mm High-quality reinforced concrete pipe culverts with 10mm steel bars Designed for drainage channels, they provide a durable and reliable solution for roads, bridges, and various constr</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/26</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/scratch-dot_20250911_104928_14ecb5a0.jpg</image:loc>
-<image:title>40 Dot</image:title>
-<image:caption>Size 40*40*2cm Premium quality 40 Scratch Dot Floor Tiles designed for durability and style. Ideal for residential and commercial flooring, these tiles offer a strong surface finish that resists wea</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0011_20250917_121620_b806ccb2.jpg</image:loc>
-<image:title>40 Dot</image:title>
-<image:caption>Size 40*40*2cm Premium quality 40 Scratch Dot Floor Tiles designed for durability and style. Ideal for residential and commercial flooring, these tiles offer a strong surface finish that resists wea</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/27</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/8-gone_20250911_105120_ecc90d98.jpg</image:loc>
-<image:title> 8 Gone </image:title>
-<image:caption>Size 30*30*2cm Durable 8 Gone Floor Tiles designed for style and longevity. Available in a variety of colors, making them perfect for residential and commercial flooring in parking areas,walkways, p</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/28</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/buibui_20250911_105225_4f5b0c7c.jpg</image:loc>
-<image:title>Buibui</image:title>
-<image:caption>Size 25*25*2cm Premium Buibui Floor Tiles designed for durability and elegance. Ideal for residential and commercial spaces, these tiles provide a strong, scratch-resistant surface and a modern finis</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/WhatsApp_Image_2025-09-17_at_08.24.23_20250917_122524_c23d97e6.jpeg</image:loc>
-<image:title>Buibui</image:title>
-<image:caption>Size 25*25*2cm Premium Buibui Floor Tiles designed for durability and elegance. Ideal for residential and commercial spaces, these tiles provide a strong, scratch-resistant surface and a modern finis</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/29</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/chuchu-gallery_20250911_105342_f072c74b.jpg</image:loc>
-<image:title>Chuchu</image:title>
-<image:caption>Size 35*35*2cm Durable Chuchu Floor Tiles available in a variety of colors, designed for both residential and commercial spaces. these tiles provide a strong, slip free surface with a modern finish, </image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/chuchu_20250911_105342_de10425b.jpg</image:loc>
-<image:title>Chuchu</image:title>
-<image:caption>Size 35*35*2cm Durable Chuchu Floor Tiles available in a variety of colors, designed for both residential and commercial spaces. these tiles provide a strong, slip free surface with a modern finish, </image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0188_20250917_122859_a47b64a1.jpg</image:loc>
-<image:title>Chuchu</image:title>
-<image:caption>Size 35*35*2cm Durable Chuchu Floor Tiles available in a variety of colors, designed for both residential and commercial spaces. these tiles provide a strong, slip free surface with a modern finish, </image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/30</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/draft-9inch_20250911_105444_f8768709.jpg</image:loc>
-<image:title>Draft 9</image:title>
-<image:caption>Size 30*30*2cm High-quality Floor Tiles designed for durability and style. Perfect for residential and commercial spaces, these tiles offer a strong, scratch-resistant surface and a modern finish tha</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/31</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0181_20250917_123533_0bc1c895.jpg</image:loc>
-<image:title>Halfmoon</image:title>
-<image:caption>Size 40*40*2cm Premium Halfmoon Floor Tiles designed for durability and elegance. Perfect for residential and commercial spaces in parking areas, walkways, lamps for both low and high-traffic zones.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/33</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/MAWINGU_20250911_105938_7e7aa0f0.jpg</image:loc>
-<image:title>Mawingu</image:title>
-<image:caption>Size 40*20*2cm Durable Mawingu floor tiles with scratch-resistant surface. Ideal for residential and commercial spaces, combining strength and modern style.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/34</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/mayai_20250911_110036_8dce98c1.jpg</image:loc>
-<image:title>Mayai</image:title>
-<image:caption>Size 49*46*2cm Durable Mayai Floor Tiles designed for style and long-lasting performance. Ideal for residential and commercial spaces in parking areas, walkways and lamps in both low and high traffic</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/WhatsApp_Image_2025-09-17_at_08.24.30_1_20250917_124628_a50cd049.jpeg</image:loc>
-<image:title>Mayai</image:title>
-<image:caption>Size 49*46*2cm Durable Mayai Floor Tiles designed for style and long-lasting performance. Ideal for residential and commercial spaces in parking areas, walkways and lamps in both low and high traffic</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/36</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/world-cup-1_20250911_112003_11eb1dbd.jpg</image:loc>
-<image:title>World Cup</image:title>
-<image:caption>Size 35*35*2cm Durable World Cup Floor Tiles available in a variety of colors, designed for both residential and commercial spaces in parking areas, walkways, lamps for both low and high traffic area</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0183_20250917_125007_a53be7be.jpg</image:loc>
-<image:title>World Cup</image:title>
-<image:caption>Size 35*35*2cm Durable World Cup Floor Tiles available in a variety of colors, designed for both residential and commercial spaces in parking areas, walkways, lamps for both low and high traffic area</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/37</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0014_20250917_130100_64877465.jpg</image:loc>
-<image:title>Draft Kubwa</image:title>
-<image:caption>Size 49*45*2cm Perfect for residential and commercial spaces, these tiles provide a strong, slip-free finish, ideal for parking areas, walkways and lamps</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/39</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/slab_20250911_112429_0f01303a.jpg</image:loc>
-<image:title>Slab</image:title>
-<image:caption>Size 110*50*3cm Premium Slab Tiles designed for stylish and durability, these tiles are ideal for residential and commercial spaces, With a strong, scratch-resistant and anti-slip surface. They are s</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/gallery-16_20250911_112447_6d38edae.jpg</image:loc>
-<image:title>Slab</image:title>
-<image:caption>Size 110*50*3cm Premium Slab Tiles designed for stylish and durability, these tiles are ideal for residential and commercial spaces, With a strong, scratch-resistant and anti-slip surface. They are s</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/gallery-14_20250911_112447_8c0136e6.jpg</image:loc>
-<image:title>Slab</image:title>
-<image:caption>Size 110*50*3cm Premium Slab Tiles designed for stylish and durability, these tiles are ideal for residential and commercial spaces, With a strong, scratch-resistant and anti-slip surface. They are s</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/gallery-15_20250911_112447_590ee10d.jpg</image:loc>
-<image:title>Slab</image:title>
-<image:caption>Size 110*50*3cm Premium Slab Tiles designed for stylish and durability, these tiles are ideal for residential and commercial spaces, With a strong, scratch-resistant and anti-slip surface. They are s</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/40</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0114_20250917_131212_a552af45.jpg</image:loc>
-<image:title>Banzi</image:title>
-<image:caption>Size 20*10*1cm Premium Banzi Wall Tiles designed for durability and style. Ideal for residential and commercial walls, these tiles provide a strong, easy-to-clean surface with a modern finish. Perfec</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/41</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0111_20250917_132502_7368b270.jpg</image:loc>
-<image:title>Gamba Square</image:title>
-<image:caption>Size 20*10*1cm Perfectly designed wall tile for durability and style,ideal for residential and commercial walls and skirting.</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0192_20250917_132601_bbb993a9.jpg</image:loc>
-<image:title>Gamba Square</image:title>
-<image:caption>Size 20*10*1cm Perfectly designed wall tile for durability and style,ideal for residential and commercial walls and skirting.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/42</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0063_20250917_134339_97da1068.jpg</image:loc>
-<image:title>Ngazi</image:title>
-<image:caption>Size 30*20*1cm Perfectly designed for both residential and commercial wall and skirting. </image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/44</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/WhatsApp_Image_2025-09-17_at_08.12.59_1_20250917_135557_56f16040.jpeg</image:loc>
-<image:title>Gamba </image:title>
-<image:caption>Size 30*15*1cm Designed with style and durability for both residential and commercial use, ideal for exterior and interior wall and skirting.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/45</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/WhatsApp_Image_2025-09-17_at_08.34.33_1_20250917_140018_92c746a6.jpeg</image:loc>
-<image:title>Curbstone 100 Square</image:title>
-<image:caption>Size 100*25*10cm Durable Curbstones suitable for roads, sidewalks, and landscaping. Strong, long-lasting, and ideal for residential and commercial projects.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/47</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/4877c1c90bf3542d0a359a0b5b05e72c_20250911_114342_9bc2141f.jpg</image:loc>
-<image:title>Sliding Gates</image:title>
-<image:caption>Durable Sliding Gates for residential, commercial, and industrial properties. Smooth operation, secure, and built for long-lasting performance.</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/8d5d6b0272cfc4cecf010b5617e0e5f6_20250911_114406_34dc0169.jpg</image:loc>
-<image:title>Sliding Gates</image:title>
-<image:caption>Durable Sliding Gates for residential, commercial, and industrial properties. Smooth operation, secure, and built for long-lasting performance.</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/c1d1fe56653ae5230aa35362bf42d6e1_20250911_114406_309642ef.jpg</image:loc>
-<image:title>Sliding Gates</image:title>
-<image:caption>Durable Sliding Gates for residential, commercial, and industrial properties. Smooth operation, secure, and built for long-lasting performance.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/48</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0061_20250917_140559_e93ddfcb.jpg</image:loc>
-<image:title>Mfuniko Mdogo</image:title>
-<image:caption>Size 50*30* Durable small drain covers for light traffic areas, Strong, safe, and ideal for proper drainage flow.</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0029_20250917_140640_af1a5851.jpg</image:loc>
-<image:title>Mfuniko Mdogo</image:title>
-<image:caption>Size 50*30* Durable small drain covers for light traffic areas, Strong, safe, and ideal for proper drainage flow.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/49</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/culvert-a_20250911_114735_693b17fd.jpg</image:loc>
-<image:title>Mfuniko Bevo</image:title>
-<image:caption>Size 60*40* Durable small drain covers for residential and commercial areas, Strong, safe, and ideal for proper drainage flow. </image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/12_20250911_114749_fbeb1b03.jpg</image:loc>
-<image:title>Mfuniko Bevo</image:title>
-<image:caption>Size 60*40* Durable small drain covers for residential and commercial areas, Strong, safe, and ideal for proper drainage flow. </image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/50</loc>
-<lastmod>2025-09-11</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/WhatsApp_Image_2025-09-17_at_08.12.59_20250917_141542_db64b9a1.jpeg</image:loc>
-<image:title>Mfuniko tundu 6</image:title>
-<image:caption>Size 50*30* Durable reinforced concrete Trench Cover for residential, commercial, and industrial use. Strong, long-lasting, and ensures proper drainage flow.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/51</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0084_20250917_143234_46e312dc.jpg</image:loc>
-<image:title>Culvert 900R</image:title>
-<image:caption>Size 900*1000mm High-quality reinforced concrete pipe culverts with 6mm steel bars Designed for drainage channels, they provide a durable and reliable solution for roads, bridges, and various constru</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/52</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0084_20250917_143333_8f5c5604.jpg</image:loc>
-<image:title>Culvert 600N</image:title>
-<image:caption>Size 600*1000mm High-quality reinforced concrete pipe culverts with 10mm steel bars Designed for drainage channels, they provide a durable and reliable solution for roads, bridges, and various constr</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/53</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0084_20250917_143451_8e7140c6.jpg</image:loc>
-<image:title>Culvert 600R</image:title>
-<image:caption>Size 600*1000mm High-quality reinforced concrete pipe culverts with 6mm steel bars Designed for drainage channels, they provide a durable and reliable solution for roads, bridges, and various constru</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/54</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0084_20250917_143537_8fe58699.jpg</image:loc>
-<image:title>Culvert 400N</image:title>
-<image:caption>Size 400*1000mm High-quality reinforced concrete pipe culverts with 10mm steel bars Designed for drainage channels, they provide a durable and reliable solution for roads, bridges, and various constr</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/55</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0084_20250917_143626_073018d5.jpg</image:loc>
-<image:title>Culvert 400R</image:title>
-<image:caption>Size 400*1000mm High-quality reinforced concrete pipe culverts with 6mm steel bars Designed for drainage channels, they provide a durable and reliable solution for roads, bridges, and various constru</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/56</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0057_20250917_143952_b12610f3.jpg</image:loc>
-<image:title>Curbstone 100Bevo</image:title>
-<image:caption>Size 100*25*10cm Durable Curbstones suitable for roads, sidewalks, and landscaping. Strong, long-lasting, and ideal for residential and commercial projects.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/57</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0058_20250917_144101_23a10dee.jpg</image:loc>
-<image:title>Curbstone 100Panasonic</image:title>
-<image:caption>Size 100*35*10cm Durable Curbstones suitable for roads, sidewalks, and landscaping. Strong, long-lasting, and ideal for residential and commercial projects.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/58</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA00691_20250918_120345_3893ee0c.jpg</image:loc>
-<image:title>Curbstone 80Press</image:title>
-<image:caption>Size 80*30*15cm Durable Curbstones suitable for roads, sidewalks, and landscaping. Strong, long-lasting, and ideal for commercial and industial projects.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/59</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA00681_20250918_120757_66a98c5f.jpg</image:loc>
-<image:title>Curbstone 50Press</image:title>
-<image:caption>Size 50*30*15cm Durable Curbstones suitable for roads, sidewalks, and landscaping. Strong, long-lasting, and ideal for commercial and industial projects.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/60</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0087_20250917_144701_34028b10.jpg</image:loc>
-<image:title>Curbstone 60SQ</image:title>
-<image:caption>Size 60*25*10cm Durable Curbstones suitable for roads, sidewalks, and landscaping. Strong, long-lasting, and ideal for residential and commercial projects.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/61</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0088_20250917_144806_08c2137a.jpg</image:loc>
-<image:title>Curbstone 60 Oval</image:title>
-<image:caption>Size 60*25*10cm Durable Curbstones suitable for roads, sidewalks, and landscaping. Strong, long-lasting, and ideal for residential and commercial projects.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/62</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0086_20250917_144857_3c4bf7a2.jpg</image:loc>
-<image:title>Curbstone 50Bevo</image:title>
-<image:caption>Size 50*25*10cm Durable Curbstones suitable for roads, sidewalks, and landscaping. Strong, long-lasting, and ideal for residential and commercial projects.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/63</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/WhatsApp_Image_2025-09-17_at_08.24.19_20250917_145511_8105a516.jpeg</image:loc>
-<image:title>Mfuniko Mkubwa</image:title>
-<image:caption>Size 60*40* Durable small drain covers for residential and commercial areas, Strong, safe, and ideal for proper drainage flow. </image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/64</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0165_20250917_145947_f7dbbf97.jpg</image:loc>
-<image:title>Kisu Paver</image:title>
-<image:caption>Durable Kisu paving blocks, 40pcs per sqm. Perfect for driveways, patios & walkways with a modern design and strong load capacity.</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0168_20250917_150028_b3007a83.jpg</image:loc>
-<image:title>Kisu Paver</image:title>
-<image:caption>Durable Kisu paving blocks, 40pcs per sqm. Perfect for driveways, patios & walkways with a modern design and strong load capacity.</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/65</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0113_20250917_150911_3602640a.jpg</image:loc>
-<image:title>Mahogany</image:title>
-<image:caption>Size 40*20*1CM Perfectly designed wall tile for durability and style,ideal for residential and commercial walls and skirting</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/66</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0112_20250917_151148_579448e9.jpg</image:loc>
-<image:title>Clouds</image:title>
-<image:caption>Size 40*20*1cm Perfectly designed wall tile for durability and style,ideal for residential and commercial walls and skirting</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/67</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0186_20250917_151511_0fa88856.jpg</image:loc>
-<image:title>Draft </image:title>
-<image:caption>Size 30*30*2cm Durable Draft Floor Tiles designed for style and longevity. Available in a variety of colors, making them perfect for </image:caption>
-</image:image>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0003_20250917_151552_7043ebac.jpg</image:loc>
-<image:title>Draft </image:title>
-<image:caption>Size 30*30*2cm Durable Draft Floor Tiles designed for style and longevity. Available in a variety of colors, making them perfect for </image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/68</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0081_20250917_152416_70114c8c.jpg</image:loc>
-<image:title>50 Plain</image:title>
-<image:caption>Size 50*49*2cm Durable 50 Plain Floor Tiles designed for style and long-lasting performance. Ideal for residential and commercial spaces in parking areas, walkways and lamps in both low and high traf</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/69</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0203_20250917_152238_f3b7b91d.jpg</image:loc>
-<image:title>Combo</image:title>
-<image:caption>Size 80*40*2cm Durable Combo Floor Tiles designed for style and long-lasting performance. Ideal for residential and commercial spaces in parking areas, walkways and lamps in both low and high traffic</image:caption>
-</image:image>
-</url>
-<url>
-<loc>https://stumarcot.co.tz/product-single/70</loc>
-<lastmod>2025-09-17</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-<image:image>
-<image:loc>https://stumarcot.co.tz/static/uploads/IMG-20250917-WA0175_20250917_152624_d67cb192.jpg</image:loc>
-<image:title>Mbao</image:title>
-<image:caption>Size 60*30*2cm Durable Mbao Floor Tiles designed for style and long-lasting performance. Ideal for residential and commercial spaces in parking areas, walkways and lamps in both low and high traffic </image:caption>
-</image:image>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Home page -->
+    <url>
+        <loc>{{ url_for('views.home', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About page -->
+    <url>
+        <loc>{{ url_for('views.about_page', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Products page -->
+    <url>
+        <loc>{{ url_for('views.products', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Blog page -->
+    <url>
+        <loc>{{ url_for('views.blogs', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contact page -->
+    <url>
+        <loc>{{ url_for('views.contact', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Service pages -->
+    <url>
+        <loc>{{ url_for('views.showrooms', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>{{ url_for('views.factories', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>{{ url_for('views.retail_shops', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>{{ url_for('views.construction_consultants', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>{{ url_for('views.technical_support', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Categories page -->
+    <url>
+        <loc>{{ url_for('views.categories', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Link tree page -->
+    <url>
+        <loc>{{ url_for('views.link_tree', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Dynamic category pages -->
+    {% for category in categories %}
+    <url>
+        <loc>{{ url_for('views.category_products', category_id=category.id, _external=True) }}</loc>
+        <lastmod>{{ category.created_at.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    {% endfor %}
+
+    <!-- Dynamic product pages -->
+    {% for product in products %}
+    <url>
+        <loc>{{ url_for('views.product_single', product_id=product.id, _external=True) }}</loc>
+        <lastmod>{{ product.created_at.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        {% if product.images %}
+        {% for image in product.images %}
+        <image:image>
+            <image:loc>{{ url_for('static', filename='uploads/' + image.image, _external=True) }}</image:loc>
+            <image:title>{{ product.name }}</image:title>
+            <image:caption>{{ product.description[:200] if product.description else product.name }}</image:caption>
+        </image:image>
+        {% endfor %}
+        {% endif %}
+    </url>
+    {% endfor %}
+
 </urlset>
