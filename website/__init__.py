@@ -10,7 +10,7 @@ DB_NAME = "database.db"
 
 def create_app():
     app = Flask(__name__, static_folder='static')
-    #app.config["SERVER_NAME"] = "stumarcot.co.tz"
+    app.config["SERVER_NAME"] = "stumarcot.co.tz"
     #app.config["PREFERRED_URL_SCHEME"] = "https"
     app.config['SECRET_KEY'] = 'your-secret-key-here'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
