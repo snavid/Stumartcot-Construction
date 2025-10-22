@@ -408,7 +408,10 @@
         window.addEventListener("resize", preventOverflow);
       })();
 
-      let userId = "Wquk0ZrsB0";
+      function getUserIdFromScript() {
+        return "Wquk0ZrsB0";
+      }
+      let userId = getUserIdFromScript();
 
       // Function to create and show the chatbot button within a Shadow DOM
       function showChatbotButton(theme_color) {
