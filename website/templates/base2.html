@@ -1,219 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{%block title%}Stumarcot Tanzania - Premium Construction Materials{%endblock%}</title>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {%block title%}Stumarcot Tanzania - Premium Construction
+      Materials{%endblock%}
+    </title>
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="{%block description%}Stumarcot Tanzania: Premium construction materials including paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, and sliding gates. 50+ locations nationwide with expert consultation and quality guaranteed.{%endblock%}">
-    <meta name="keywords" content="{%block keywords%}construction materials Tanzania, paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, sliding gates, building materials Tanzania, construction products Dar es Salaam, quality construction supplies, Stumarcot products{%endblock%}">
-    <meta name="author" content="Stumarcot Company Limited">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    
+    <meta
+      name="description"
+      content="{%block description%}Stumarcot Tanzania: Premium construction materials including paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, and sliding gates. 50+ locations nationwide with expert consultation and quality guaranteed.{%endblock%}"
+    />
+    <meta
+      name="keywords"
+      content="{%block keywords%}construction materials Tanzania, paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, sliding gates, building materials Tanzania, construction products Dar es Salaam, quality construction supplies, Stumarcot products{%endblock%}"
+    />
+    <meta name="author" content="Stumarcot Company Limited" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+
     <!-- Canonical URL -->
-    <link rel="canonical" href="{{ request.url }}">
-    
+    <link rel="canonical" href="{{ request.url }}" />
+
     <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{% block og_title %}{{ self.title() }}{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}{{ self.description() }}{% endblock %}">
-    <meta property="og:url" content="{{ request.url }}">
-    <meta property="og:site_name" content="Stumarcot Tanzania">
-    <meta property="og:image" content="{% block og_image %}{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}{% endblock %}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="en_TZ">
-    
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="{% block og_title %}{{ self.title() }}{% endblock %}"
+    />
+    <meta
+      property="og:description"
+      content="{% block og_description %}{{ self.description() }}{% endblock %}"
+    />
+    <meta property="og:url" content="{{ request.url }}" />
+    <meta property="og:site_name" content="Stumarcot Tanzania" />
+    <meta
+      property="og:image"
+      content="{% block og_image %}{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}{% endblock %}"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_TZ" />
+
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% block twitter_title %}{{ self.title() }}{% endblock %}">
-    <meta name="twitter:description" content="{% block twitter_description %}{{ self.description() }}{% endblock %}">
-    <meta name="twitter:image" content="{% block twitter_image %}{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}{% endblock %}">
-    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="{% block twitter_title %}{{ self.title() }}{% endblock %}"
+    />
+    <meta
+      name="twitter:description"
+      content="{% block twitter_description %}{{ self.description() }}{% endblock %}"
+    />
+    <meta
+      name="twitter:image"
+      content="{% block twitter_image %}{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}{% endblock %}"
+    />
+
     <!-- Geo Tags for Tanzania -->
-    <meta name="geo.region" content="TZ">
-    <meta name="geo.country" content="Tanzania">
-    <meta name="geo.placename" content="Dar es Salaam">
-    
+    <meta name="geo.region" content="TZ" />
+    <meta name="geo.country" content="Tanzania" />
+    <meta name="geo.placename" content="Dar es Salaam" />
+
     <!-- Performance Hints -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
     <!-- Stylesheets -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
       rel="stylesheet"
-    >
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
-    >
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
-    >
-    <link rel="icon" sizes="48x48" type="image/png" href="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-    
+    />
+    <link
+      rel="icon"
+      sizes="48x48"
+      type="image/png"
+      href="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
+
     <!-- Bing Webmaster Tools Verification -->
     <!-- Replace YOUR_BING_VERIFICATION_CODE with actual code from Bing Webmaster Tools -->
     <!-- <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE"> -->
-    
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://stumarcot.co.tz/#organization",
-          "name": "Stumarcot Company Limited",
-          "alternateName": "Stumarcot Tanzania",
-          "url": "https://stumarcot.co.tz",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}",
-            "width": 200,
-            "height": 200
-          },
-          "description": "Leading construction materials manufacturer and supplier in Tanzania, established 2008. Premium quality paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, and sliding gates.",
-          "foundingDate": "2008",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "TZ",
-            "addressRegion": "Dar es Salaam",
-            "addressLocality": "Tanzania"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+255-769-226-111",
-            "contactType": "customer service",
-            "email": "info@stumarcot.co.tz",
-            "availableLanguage": ["English", "Swahili"]
-          },
-          "sameAs": [
-            "https://www.facebook.com/stumarcot",
-            "https://www.twitter.com/stumarcot",
-            "https://www.instagram.com/stumarcot",
-            "https://www.linkedin.com/company/stumarcot"
-          ],
-          "areaServed": {
-            "@type": "Country",
-            "name": "Tanzania"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Construction Materials",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Paving Blocks"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Floor Tiles"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Wall Tiles"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Cabstone"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Culverts"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Rolling Shutter Doors"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Product",
-                  "name": "Sliding Gates"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://stumarcot.co.tz/#localbusiness",
-          "name": "Stumarcot Company Limited",
-          "image": "{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}",
-          "description": "Premium construction materials manufacturer and supplier with 50+ locations across Tanzania",
-          "url": "https://stumarcot.co.tz",
-          "telephone": "+255-769-226-111",
-          "email": "info@stumarcot.co.tz",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "TZ",
-            "addressRegion": "Dar es Salaam",
-            "addressLocality": "Tanzania"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "-6.7924",
-            "longitude": "39.2083"
-          },
-          "openingHours": "Mo-Fr 08:00-17:00, Sa 08:00-13:00",
-          "priceRange": "$$",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "150"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Construction Materials Catalog"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://stumarcot.co.tz/#website",
-          "url": "https://stumarcot.co.tz",
-          "name": "Stumarcot Tanzania",
-          "description": "Premium construction materials and building supplies in Tanzania",
-          "publisher": {
-            "@id": "https://stumarcot.co.tz/#organization"
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://stumarcot.co.tz/products?search={search_term_string}"
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://stumarcot.co.tz/#organization",
+            "name": "Stumarcot Company Limited",
+            "alternateName": "Stumarcot Tanzania",
+            "url": "https://stumarcot.co.tz",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}",
+              "width": 200,
+              "height": 200
             },
-            "query-input": "required name=search_term_string"
+            "description": "Leading construction materials manufacturer and supplier in Tanzania, established 2008. Premium quality paving blocks, floor tiles, wall tiles, cabstone, culverts, rolling shutter doors, and sliding gates.",
+            "foundingDate": "2008",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "TZ",
+              "addressRegion": "Dar es Salaam",
+              "addressLocality": "Tanzania"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+255-769-226-111",
+              "contactType": "customer service",
+              "email": "info@stumarcot.co.tz",
+              "availableLanguage": ["English", "Swahili"]
+            },
+            "sameAs": [
+              "https://www.facebook.com/stumarcot",
+              "https://www.twitter.com/stumarcot",
+              "https://www.instagram.com/stumarcot",
+              "https://www.linkedin.com/company/stumarcot"
+            ],
+            "areaServed": {
+              "@type": "Country",
+              "name": "Tanzania"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Construction Materials",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Paving Blocks"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Floor Tiles"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Wall Tiles"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Cabstone"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Culverts"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Rolling Shutter Doors"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Sliding Gates"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://stumarcot.co.tz/#localbusiness",
+            "name": "Stumarcot Company Limited",
+            "image": "{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png', _external=True) }}",
+            "description": "Premium construction materials manufacturer and supplier with 50+ locations across Tanzania",
+            "url": "https://stumarcot.co.tz",
+            "telephone": "+255-769-226-111",
+            "email": "info@stumarcot.co.tz",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "TZ",
+              "addressRegion": "Dar es Salaam",
+              "addressLocality": "Tanzania"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "-6.7924",
+              "longitude": "39.2083"
+            },
+            "openingHours": "Mo-Fr 08:00-17:00, Sa 08:00-13:00",
+            "priceRange": "$$",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "150"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Construction Materials Catalog"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://stumarcot.co.tz/#website",
+            "url": "https://stumarcot.co.tz",
+            "name": "Stumarcot Tanzania",
+            "description": "Premium construction materials and building supplies in Tanzania",
+            "publisher": {
+              "@id": "https://stumarcot.co.tz/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://stumarcot.co.tz/products?search={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
           }
-        }
-      ]
-    }
+        ]
+      }
     </script>
   </head>
   <body>
@@ -224,20 +259,20 @@
           ><img
             src="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}"
             alt="Stumarcot Company Logo - Premium Construction Materials Tanzania"
-          >
+          />
           STUMARCOT</a
         >
         <button
-  class="navbar-toggler custom-toggler text-white"
-  type="button"
-  data-bs-toggle="collapse"
-  data-bs-target="#navbarNav"
-  aria-controls="navbarNav"
-  aria-expanded="false"
-  aria-label="Toggle navigation"
->
-  <i class="fas fa-bars "></i>
-</button>
+          class="navbar-toggler custom-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -267,10 +302,8 @@
         </div>
       </div>
     </nav>
- {%block content%}
+    {%block content%} {% endblock%}
 
- {% endblock%}
-   
     <!-- Footer -->
     <footer id="contact" class="footer">
       <div class="container">
@@ -281,7 +314,7 @@
                 style="width: 20%"
                 src="{{ url_for('static', filename='Minimalist_House_Logo_Design-removebg-preview.png') }}"
                 alt="Stumarcot Company Logo - Premium Construction Materials Tanzania"
-              >STUMARCOT
+              />STUMARCOT
             </h5>
             <p>
               Leading construction products supplier in Tanzania, committed to
@@ -327,14 +360,20 @@
           </div>
         </div>
 
-        <hr class="my-4" style="border-color: #333">
+        <hr class="my-4" style="border-color: #333" />
 
         <div class="row align-items-center">
           <div class="col-md-6">
             <p class="mb-0">&copy; 2025 Stumarcot. All rights reserved.</p>
           </div>
           <div class="col-md-6 text-md-end">
-            <p class="mb-0">Built by <a href="https://www.auriumlabs.com" target="_blank">AuriumLabs Solutions</a> in Tanzania 🇹🇿</p>
+            <p class="mb-0">
+              Built by
+              <a href="https://www.auriumlabs.com" target="_blank"
+                >AuriumLabs Solutions</a
+              >
+              in Tanzania 🇹🇿
+            </p>
           </div>
         </div>
       </div>
@@ -342,7 +381,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://fightforme.hudumabot.com/static/chatbot-v1.50/HudumaBot.js?user_id=Wquk0ZrsB0"></script>
+    <!-- <script src="https://fightforme.hudumabot.com/static/chatbot-v1.50/HudumaBot.js?user_id=Wquk0ZrsB0"></script> -->
     <script src="{{ url_for('static', filename='main.js') }}"></script>
     <script>
       // Immediate overflow fix for mobile
@@ -368,6 +407,324 @@
         // Apply on resize
         window.addEventListener("resize", preventOverflow);
       })();
+
+      let userId = "Wquk0ZrsB0";
+
+      // Function to create and show the chatbot button within a Shadow DOM
+      function showChatbotButton(theme_color) {
+        // Check if button already exists
+        if (document.getElementById("chatbot-toggle-button-container")) {
+          console.error("Chatbot button container already exists.");
+          return;
+        }
+
+        // Create a container for the chatbot button with Shadow DOM
+        const buttonContainer = document.createElement("div");
+        buttonContainer.id = "chatbot-toggle-button-container";
+        buttonContainer.style.position = "fixed";
+        buttonContainer.style.bottom = "2em";
+        buttonContainer.style.right = "2em";
+        buttonContainer.style.zIndex = "20001";
+
+        // Attach Shadow DOM to the button container
+        const buttonShadow = buttonContainer.attachShadow({ mode: "closed" });
+
+        // Create the button element
+        const button = document.createElement("button");
+        button.id = "chatbot-toggle-button";
+        button.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" fill=${theme_color} viewBox="0 0 24 24">
+      <path opacity="1" d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 13.7596 1.41318 15.4228 2.14781 16.8977C2.34303 17.2897 2.40801 17.7377 2.29483 18.1607L1.63966 20.6093C1.35525 21.6723 2.32772 22.6447 3.39068 22.3603L5.83932 21.7052C6.26233 21.592 6.71033 21.657 7.10228 21.8522C8.5772 22.5868 10.2404 23 12 23Z" fill=${theme_color}></path>
+      <path d="M10.9 12.0004C10.9 12.6079 11.3925 13.1004 12 13.1004C12.6075 13.1004 13.1 12.6079 13.1 12.0004C13.1 11.3929 12.6075 10.9004 12 10.9004C11.3925 10.9004 10.9 11.3929 10.9 12.0004Z" fill="white"></path>
+      <path d="M6.5 12.0004C6.5 12.6079 6.99249 13.1004 7.6 13.1004C8.20751 13.1004 8.7 12.6079 8.7 12.0004C8.7 11.3929 8.20751 10.9004 7.6 10.9004C6.99249 10.9004 6.5 11.3929 6.5 12.0004Z" fill="white"></path>
+      <path d="M15.3 12.0004C15.3 12.6079 15.7925 13.1004 16.4 13.1004C17.0075 13.1004 17.5 12.6079 17.5 12.0004C17.5 11.3929 17.0075 10.9004 16.4 10.9004C15.7925 10.9004 15.3 11.3929 15.3 12.0004Z" fill="white"></path>
+    </svg>
+  `;
+
+        // Style the button within Shadow DOM
+        const buttonStyle = document.createElement("style");
+        buttonStyle.textContent = `
+    #chatbot-toggle-button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: none;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #chatbot-toggle-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    }
+  `;
+
+        // Append styles and button to Shadow DOM
+        buttonShadow.appendChild(buttonStyle);
+        buttonShadow.appendChild(button);
+
+        // Append the button container to the body
+        document.body.appendChild(buttonContainer);
+
+        // Add click event to toggle chat window
+        button.addEventListener("click", function () {
+          toggleChatWindow();
+          playSound(); // Play sound when button is clicked
+          hideToastNotification(); // Hide toast when button is clicked
+        });
+
+        fetch(`https://fightforme.hudumabot.com/v1/chatbot/welcome/${userId}`)
+          .then((response) => response.json())
+          .then((data) => {
+            showToastNotification(data.message, data.color);
+          })
+          .catch((error) =>
+            showToastNotification(
+              "Sorry, chat service is currently unavailable",
+              "#ff9900"
+            )
+          );
+        // Show toast notification
+      }
+
+      // Function to show toast notification within Shadow DOM
+      function showToastNotification(welcome_message, theme_color) {
+        // Check if toast already exists
+        if (document.getElementById("toast-notification-container")) {
+          console.error("Toast notification container already exists.");
+          return;
+        }
+
+        // Create a container for the toast with Shadow DOM
+        const toastContainer = document.createElement("div");
+        toastContainer.id = "toast-notification-container";
+        toastContainer.style.position = "fixed";
+        toastContainer.style.bottom = "99px";
+        toastContainer.style.right = "27px";
+        toastContainer.style.width = "280px";
+        toastContainer.style.zIndex = "20001";
+
+        // Attach Shadow DOM to the container
+        const toastShadow = toastContainer.attachShadow({ mode: "closed" });
+
+        // Create the toast element
+        const toast = document.createElement("div");
+        toast.className = "toast-notification";
+        toast.innerHTML = `
+    <span>${welcome_message}</span>
+    <button>&times;</button>
+  `;
+
+        // Style the toast within Shadow DOM
+        const toastStyle = document.createElement("style");
+        toastStyle.textContent = `
+    .toast-notification {
+      background-color: ${theme_color};
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 250px;
+      font-family: Arial, sans-serif;
+    }
+
+    .toast-notification button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  `;
+
+        // Append styles and toast to Shadow DOM
+        toastShadow.appendChild(toastStyle);
+        toastShadow.appendChild(toast);
+
+        // Add event listener to close button
+        toast.querySelector("button").addEventListener("click", () => {
+          toastContainer.style.display = "none";
+        });
+
+        // Append the container to the body
+        document.body.appendChild(toastContainer);
+
+        // Automatically hide the toast after 30 seconds
+        /* setTimeout(() => {
+    if (toastContainer) {
+      toastContainer.style.display = 'none';
+    }
+  }, 30000); */
+      }
+
+      // Function to hide the toast notification
+      function hideToastNotification() {
+        const container = document.getElementById(
+          "toast-notification-container"
+        );
+        if (container) {
+          container.style.display = "none";
+        }
+      }
+
+      // Function to play the sound
+      function playSound() {
+        const audio = new Audio(
+          "https://backend.hudumabot.com/static/chatbot/system.mp3"
+        );
+        audio
+          .play()
+          .catch((error) => console.error("Error playing audio:", error));
+      }
+
+      // Function to toggle the chat window
+      function toggleChatWindow() {
+        const iframe = document.getElementById("chatbot-iframe");
+        const buttonContainer = document.getElementById(
+          "chatbot-toggle-button-container"
+        );
+
+        if (iframe) {
+          if (iframe.style.display === "none") {
+            // Show the iframe
+            iframe.classList.remove("closing");
+            iframe.classList.add("open");
+            iframe.style.display = "block";
+            buttonContainer.style.display = "none"; // Hide the button
+            hideToastNotification();
+            playSound(); // Play sound when opened
+          } else {
+            // Hide the iframe with animation
+            iframe.classList.remove("open");
+            iframe.classList.add("closing");
+            setTimeout(() => {
+              iframe.style.display = "none";
+              buttonContainer.style.display = "flex"; // Show the button again
+              showToastNotification(); // Optionally show the toast again when chat is closed
+            }, 300); // Match CSS transition duration
+          }
+        } else {
+          console.error("Chatbot iframe not found.");
+        }
+      }
+
+      // Initialize the chatbot iframe on DOMContentLoaded
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch(`https://fightforme.hudumabot.com/v1/chatbot/theme/${userId}`)
+          .then((response) => response.json())
+          .then((data) => {
+            showChatbotButton(data.color);
+          })
+          .catch((error) =>
+            showToastNotification(
+              "If you have any problems or inquiries, chat with us!"
+            )
+          );
+
+        showChatbotIframe(); // Create and append the iframe once
+      });
+
+      // Function to create and show the chatbot iframe
+      function showChatbotIframe() {
+        // Create the iframe element if it doesn't exist
+        let iframe = document.getElementById("chatbot-iframe");
+        if (!iframe) {
+          iframe = document.createElement("iframe");
+          iframe.id = "chatbot-iframe";
+          iframe.src = `https://fightforme.hudumabot.com/v1/chatbot/widget/socket/${userId}`; // Use the new widget endpoint
+          iframe.style.position = "fixed";
+          iframe.style.border = "none";
+          iframe.style.borderRadius = "8px";
+          iframe.style.boxShadow =
+            "0 10px 16px rgba(48, 27, 27, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)";
+          iframe.style.zIndex = "10000"; // Ensure it's on top
+          iframe.style.bottom = "1em"; // Final position
+          iframe.style.right = "1em"; // Final position
+          iframe.style.transition =
+            "transform 0.3s ease // Hide initially, opacity 0.3s ease, width 0.3s ease, height 0.3s ease, bottom 0.3s ease, right 0.3s ease";
+          iframe.style.display = "none";
+
+          // Inject CSS for the chatbot iframe directly into the JS
+          const style = document.createElement("style");
+          /*
+    #chatbot-iframe {
+     width: 30vw;
+        height: 70vh;
+        min-width: 350px;
+        max-width: 400px;
+        max-height: 600px;
+    }
+    */
+          style.textContent = `
+
+      #chatbot-iframe {
+        width: 70vw;
+        height: 80vh;
+        min-width: 350px;
+        max-width: 475px;
+        max-height: 700px;
+      }
+       
+      #chatbot-iframe.open {
+        display: block;
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      /* Media query for small devices */
+      @media (max-width: 600px) {
+        #chatbot-iframe.open {
+          width: 95%; /* Take full width on small screens */
+          height: 50vh; /* Use 75% of the viewport height */
+        } 
+
+      #chatbot-iframe.closing {
+        transform: scale(0);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      
+       
+      }
+    `;
+          document.head.appendChild(style);
+
+          // Append the iframe to the body
+          document.body.appendChild(iframe);
+
+          // Add an event listener to ensure the iframe is loaded
+          iframe.onload = function () {
+            console.log("Iframe loaded");
+            const userId = getUserIdFromScript();
+            console.log("Retrieved userId:", userId);
+            if (userId) {
+              iframe.contentWindow.postMessage(
+                { type: "setUserId", userId: userId },
+                "*"
+              );
+              console.log("Sent userId to iframe");
+            }
+          };
+        }
+      }
+
+      // Listen for messages from the iframe
+      window.addEventListener("message", function (event) {
+        if (event.data === "closeChat") {
+          toggleChatWindow();
+        }
+      });
     </script>
   </body>
 </html>
