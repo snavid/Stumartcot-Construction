@@ -492,9 +492,16 @@ def product_single(product_id):
 @views.route('/sitemap.xml')
 def sitemap():
     current_time = datetime.utcnow()
-    sitemap_xml = render_template("sitemap.xml", 
-                                categories=Category.query.all(), 
+    # Only list vacancies that are actually reachable from /careers
+    jobs = JobPosting.query.filter(
+        JobPosting.is_active == True,
+        JobPosting.deadline >= current_time.date()
+    ).order_by(JobPosting.deadline.asc()).all()
+
+    sitemap_xml = render_template("sitemap.xml",
+                                categories=Category.query.all(),
                                 products=Product.query.all(),
+                                jobs=jobs,
                                 current_time=current_time,
                                 moment = current_time)
     response = Response(sitemap_xml, mimetype='application/xml')

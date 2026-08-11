@@ -86,6 +86,14 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Careers page -->
+    <url>
+        <loc>{{ url_for('views.careers', _external=True) }}</loc>
+        <lastmod>{{ current_time.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- Link tree page -->
     <url>
         <loc>{{ url_for('views.link_tree', _external=True) }}</loc>
@@ -93,6 +101,16 @@
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
+
+    <!-- Dynamic job posting pages (open vacancies only) -->
+    {% for job in jobs %}
+    <url>
+        <loc>{{ url_for('views.career_detail', job_id=job.id, _external=True) }}</loc>
+        <lastmod>{{ job.created_at.strftime('%Y-%m-%d') }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    {% endfor %}
 
     <!-- Dynamic category pages -->
     {% for category in categories %}
