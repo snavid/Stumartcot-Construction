@@ -66,37 +66,42 @@ def create_app():
     with app.app_context():
         db.create_all()
         
-        # Create default admin user if it doesn't exist
-        admin = User.query.filter_by(email='admin@admin.com').first()
-        if not admin:
-            from werkzeug.security import generate_password_hash
-            admin_user = User(
-                email='admin@admin.com',
-                username='admin',
-                first_name='Admin',
-                last_name='User',
-                password=generate_password_hash('admin123', method='pbkdf2:sha256'),
-                is_admin=True
-            )
-            db.session.add(admin_user)
-            db.session.commit()
+        # Convenience seeding. Wrapped because this runs at import time under
+        # gunicorn: an exception here kills every worker and takes the whole
+        # site down, which is far worse than skipping a seed.
+        try:
+            # Create default admin user if it doesn't exist
+            admin = User.query.filter_by(email='admin@admin.com').first()
+            if not admin:
+                from werkzeug.security import generate_password_hash
+                admin_user = User(
+                    email='admin@admin.com',
+                    username='admin',
+                    password=generate_password_hash('admin123', method='pbkdf2:sha256'),
+                    is_admin=True
+                )
+                db.session.add(admin_user)
+                db.session.commit()
 
-        # Seed the first job posting if none exist
-        if not JobPosting.query.first():
-            first_job = JobPosting(
-                title='Accountant',
-                description='Stumarcot is looking for a detail-oriented Accountant to join our finance team, responsible for maintaining financial records, processing transactions, preparing reports, and supporting month-end close.',
-                qualifications="Bachelor's degree in Accounting, Finance, or a related field\n"
-                               "Minimum of 2 years of relevant accounting experience\n"
-                               "Strong knowledge of accounting principles and financial reporting\n"
-                               "Proficiency in accounting software and MS Excel\n"
-                               "High attention to detail, accuracy and integrity\n"
-                               "Good communication and reporting skills",
-                deadline=date(2026, 8, 25),
-                application_email='hr@stumarcot.co.tz',
-                is_active=True,
-            )
-            db.session.add(first_job)
-            db.session.commit()
+            # Seed the first job posting if none exist
+            if not JobPosting.query.first():
+                first_job = JobPosting(
+                    title='Accountant',
+                    description='Stumarcot is looking for a detail-oriented Accountant to join our finance team, responsible for maintaining financial records, processing transactions, preparing reports, and supporting month-end close.',
+                    qualifications="Bachelor's degree in Accounting, Finance, or a related field\n"
+                                   "Minimum of 2 years of relevant accounting experience\n"
+                                   "Strong knowledge of accounting principles and financial reporting\n"
+                                   "Proficiency in accounting software and MS Excel\n"
+                                   "High attention to detail, accuracy and integrity\n"
+                                   "Good communication and reporting skills",
+                    deadline=date(2026, 8, 25),
+                    application_email='hr@stumarcot.co.tz',
+                    is_active=True,
+                )
+                db.session.add(first_job)
+                db.session.commit()
+        except Exception as exc:
+            db.session.rollback()
+            app.logger.warning('Startup seeding skipped: %s', exc)
 
     return app
