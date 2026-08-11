@@ -1,41 +1,60 @@
 {% extends "base.html" %}
-{% block title %}Add User - Dynamic Store{% endblock %}
+{% block title %}Add User - Stumarcot Admin{% endblock %}
+{% block page_title %}Add User{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="text-center">Add New User</h3>
+<div class="ad-pagehead">
+    <div>
+        <h2>Add User</h2>
+        <p>Create an account for someone who needs access to this panel.</p>
+    </div>
+    <a href="{{ url_for('views.manage_users') }}" class="ad-btn ad-btn-ghost">
+        <i class="fas fa-arrow-left"></i> Back to users
+    </a>
+</div>
+
+<div class="ad-card" style="max-width: 640px;">
+    <div class="ad-card-body">
+        <form method="POST">
+            <div class="ad-field">
+                <label for="email">Email address <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="name@stumarcot.co.tz" required>
             </div>
-            <div class="card-body">
-                <form method="POST">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password1" name="password1" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password2" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="password2" name="password2" required>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="is_admin" name="is_admin">
-                        <label class="form-check-label" for="is_admin">Admin User</label>
-                    </div>
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Create User</button>
-                    </div>
-                </form>
+
+            <div class="ad-field">
+                <label for="username">Username <span class="req">*</span></label>
+                <input type="text" id="username" name="username" required>
             </div>
-        </div>
+
+            <div class="ad-form-grid">
+                <div class="ad-field">
+                    <label for="password1">Password <span class="req">*</span></label>
+                    <input type="password" id="password1" name="password1" required>
+                </div>
+
+                <div class="ad-field">
+                    <label for="password2">Confirm password <span class="req">*</span></label>
+                    <input type="password" id="password2" name="password2" required>
+                </div>
+            </div>
+
+            <div class="ad-field">
+                <div class="ad-check">
+                    <input type="checkbox" id="is_admin" name="is_admin">
+                    <div>
+                        <label for="is_admin">Administrator</label>
+                        <div class="ad-hint">Administrators can manage products, categories, jobs and other users.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-form-actions">
+                <a href="{{ url_for('views.manage_users') }}" class="ad-btn ad-btn-ghost">Cancel</a>
+                <button type="submit" class="ad-btn ad-btn-primary">
+                    <i class="fas fa-user-plus"></i> Create User
+                </button>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}

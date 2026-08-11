@@ -1,0 +1,107 @@
+{% extends "base2.html"%}
+
+{%block title%} {{ job.title }} | Careers at Stumarcot {%endblock%}
+{%block description%}{{ job.title }} job opening at Stumarcot Company Limited. {{ job.qualifications[:120] }}{%endblock%}
+{%block keywords%}Stumarcot careers, {{ job.title }} job Tanzania, Stumarcot vacancies{%endblock%}
+{%block body_class%}sticky-footer{%endblock%}
+
+{%block content%}
+
+{% set is_open = job.is_active and job.deadline >= today %}
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>{{ job.title }}</h1>
+                <p>Job opening at Stumarcot Company Limited</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url_for('views.careers') }}">Careers</a></li>
+                        <li class="breadcrumb-item active">{{ job.title }}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Job Detail -->
+<section class="careers-section">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Main content -->
+      <div class="col-lg-8">
+        <div class="job-panel">
+          <h2><i class="fas fa-file-alt"></i>Job Description</h2>
+          <p style="white-space: pre-line;">{{ job.description }}</p>
+        </div>
+
+        <div class="job-panel">
+          <h2><i class="fas fa-graduation-cap"></i>Minimum Qualifications</h2>
+          {% set reqs = job.qualifications.split('\n') | map('trim') | select | list %}
+          {% if reqs | length > 1 %}
+            <ul class="job-reqs">
+              {% for req in reqs %}
+                <li>{{ req }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p style="white-space: pre-line;">{{ job.qualifications }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Apply sidebar -->
+      <div class="col-lg-4">
+        <div class="apply-card">
+          <h2>{% if is_open %}Apply for this role{% else %}Position closed{% endif %}</h2>
+
+          <div class="apply-row">
+            <i class="fas fa-calendar-alt"></i>
+            <div>
+              <span class="label">Application deadline</span>
+              <span class="value">{{ job.deadline.strftime('%d %B %Y') }}</span>
+            </div>
+          </div>
+
+          <div class="apply-row">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="label">Send your CV to</span>
+              <a class="value" href="mailto:{{ job.application_email }}">{{ job.application_email }}</a>
+            </div>
+          </div>
+
+          <div class="apply-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="label">Location</span>
+              <span class="value">Tanzania</span>
+            </div>
+          </div>
+
+          {% if is_open %}
+            <a href="mailto:{{ job.application_email }}?subject=Application for {{ job.title }}" class="apply-btn">
+              <i class="fas fa-paper-plane"></i>Email Your CV
+            </a>
+            <p class="apply-note">Attach your CV and any other required documents.</p>
+          {% else %}
+            <div class="apply-closed">
+              The application deadline for this position has passed.
+            </div>
+            <a href="{{ url_for('views.careers') }}" class="apply-btn">
+              <i class="fas fa-briefcase"></i>View Other Openings
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{%endblock%}

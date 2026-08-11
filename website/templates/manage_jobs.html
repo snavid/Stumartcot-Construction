@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Job Postings - Stumarcot Admin{% endblock %}
+{% block page_title %}Job Postings{% endblock %}
+
+{% block content %}
+<div class="ad-pagehead">
+    <div>
+        <h2>Job Postings</h2>
+        <p>Manage the vacancies shown on the public careers page.</p>
+    </div>
+    <a href="{{ url_for('views.add_job') }}" class="ad-btn ad-btn-primary">
+        <i class="fas fa-plus"></i> Add Job
+    </a>
+</div>
+
+<div class="ad-card">
+    {% if jobs %}
+    <div class="ad-table-wrap">
+        <table class="ad-table">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Deadline</th>
+                    <th>Apply to</th>
+                    <th>Status</th>
+                    <th style="text-align:right;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for job in jobs %}
+                    <tr>
+                        <td>
+                            <div class="ad-media">
+                                <div class="ad-thumb-empty"><i class="fas fa-briefcase"></i></div>
+                                <div style="min-width:0;">
+                                    <div class="ad-cell-title">{{ job.title }}</div>
+                                    <div class="ad-cell-sub">Posted {{ job.created_at.strftime('%d %b %Y') }}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>{{ job.deadline.strftime('%d %b %Y') }}</td>
+                        <td><span class="ad-cell-sub">{{ job.application_email }}</span></td>
+                        <td>
+                            {% if not job.is_active %}
+                                <span class="ad-badge grey"><i class="fas fa-eye-slash"></i> Hidden</span>
+                            {% elif job.deadline < today %}
+                                <span class="ad-badge amber"><i class="fas fa-clock"></i> Expired</span>
+                            {% else %}
+                                <span class="ad-badge green"><i class="fas fa-circle-check"></i> Live</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <div class="ad-actions">
+                                <a href="{{ url_for('views.career_detail', job_id=job.id) }}" target="_blank" rel="noopener"
+                                   class="ad-btn ad-btn-ghost ad-btn-sm" title="View on site">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="{{ url_for('views.edit_job', job_id=job.id) }}"
+                                   class="ad-btn ad-btn-ghost ad-btn-sm">
+                                    <i class="fas fa-pen"></i> Edit
+                                </a>
+                                <a href="{{ url_for('views.delete_job', job_id=job.id) }}"
+                                   class="ad-btn ad-btn-danger ad-btn-sm"
+                                   onclick="return confirm('Delete the job posting &quot;{{ job.title }}&quot;? This cannot be undone.')">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <div class="ad-empty">
+            <div class="ad-empty-icon"><i class="fas fa-briefcase"></i></div>
+            <h4>No job postings yet</h4>
+            <p>Create your first vacancy and it will appear on the careers page.</p>
+            <a href="{{ url_for('views.add_job') }}" class="ad-btn ad-btn-primary">
+                <i class="fas fa-plus"></i> Add Job
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

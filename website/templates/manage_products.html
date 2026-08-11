@@ -1,54 +1,84 @@
 {% extends "base.html" %}
-{% block title %}Manage Products - Dynamic Store{% endblock %}
+{% block title %}Products - Stumarcot Admin{% endblock %}
+{% block page_title %}Products{% endblock %}
 
 {% block content %}
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h1>Manage Products</h1>
-    <a href="{{ url_for('views.add_product') }}" class="btn btn-primary">Add New Product</a>
-</div>
-
-<div class="row">
-    {% for product in products %}
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                {% if product.images %}
-                    <!-- Display the first image as the primary image -->
-                    <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="{{ product.name }} image">
-                {% else %}
-                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <span class="text-muted">No Image</span>
-                    </div>
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text">{{ product.description[:100] if product.description }}{% if product.description and product.description|length > 100 %}...{% endif %}</p>
-                    <!-- <p class="card-text">
-                        <strong class="text-success">${{ "%.2f"|format(product.price) }}</strong>
-                    </p> -->
-                    <p class="card-text">
-                        <small class="text-muted">Category: {{ product.category.name }}</small><br>
-                        <small class="text-muted">Added by: {{ product.user.username }}</small>
-                    </p>
-                    <div class="btn-group w-100">
-                        <a href="{{ url_for('views.product_detail', product_id=product.id) }}" class="btn btn-outline-primary btn-sm">View</a>
-                        <a href="{{ url_for('views.edit_product', product_id=product.id) }}" class="btn btn-outline-secondary btn-sm">Edit</a>
-                        <a href="{{ url_for('views.delete_product', product_id=product.id) }}" 
-                           class="btn btn-outline-danger btn-sm" 
-                           onclick="return confirm('Are you sure you want to delete this product?')">
-                            Delete
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-</div>
-
-{% if not products %}
-    <div class="text-center py-5">
-        <h5 class="text-muted">No products yet</h5>
-        <p class="text-muted">Start by adding your first product!</p>
-        <a href="{{ url_for('views.add_product') }}" class="btn btn-primary">Add Product</a>
+<div class="ad-pagehead">
+    <div>
+        <h2>Products</h2>
+        <p>{{ products|length }} product{{ '' if products|length == 1 else 's' }} in the catalog.</p>
     </div>
-{% endif %}
+    <a href="{{ url_for('views.add_product') }}" class="ad-btn ad-btn-primary">
+        <i class="fas fa-plus"></i> Add Product
+    </a>
+</div>
+
+<div class="ad-card">
+    {% if products %}
+    <div class="ad-table-wrap">
+        <table class="ad-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Images</th>
+                    <th>Added by</th>
+                    <th style="text-align:right;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                    <tr>
+                        <td>
+                            <div class="ad-media">
+                                {% if product.images %}
+                                    <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}"
+                                         class="ad-thumb" alt="{{ product.name }}">
+                                {% else %}
+                                    <div class="ad-thumb-empty"><i class="fas fa-image"></i></div>
+                                {% endif %}
+                                <div style="min-width:0;">
+                                    <div class="ad-cell-title">{{ product.name }}</div>
+                                    {% if product.description %}
+                                        <div class="ad-cell-sub">{{ product.description[:70] }}{% if product.description|length > 70 %}...{% endif %}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="ad-badge blue">{{ product.category.name }}</span></td>
+                        <td><span class="ad-cell-sub">{{ product.images|length }}</span></td>
+                        <td><span class="ad-cell-sub">{{ product.user.username }}</span></td>
+                        <td>
+                            <div class="ad-actions">
+                                <a href="{{ url_for('views.product_single', product_id=product.id) }}" target="_blank" rel="noopener"
+                                   class="ad-btn ad-btn-ghost ad-btn-sm" title="View on site">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="{{ url_for('views.edit_product', product_id=product.id) }}"
+                                   class="ad-btn ad-btn-ghost ad-btn-sm">
+                                    <i class="fas fa-pen"></i> Edit
+                                </a>
+                                <a href="{{ url_for('views.delete_product', product_id=product.id) }}"
+                                   class="ad-btn ad-btn-danger ad-btn-sm"
+                                   onclick="return confirm('Delete &quot;{{ product.name }}&quot;? This cannot be undone.')">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <div class="ad-empty">
+            <div class="ad-empty-icon"><i class="fas fa-box-open"></i></div>
+            <h4>No products yet</h4>
+            <p>Start by adding your first product to the catalog.</p>
+            <a href="{{ url_for('views.add_product') }}" class="ad-btn ad-btn-primary">
+                <i class="fas fa-plus"></i> Add Product
+            </a>
+        </div>
+    {% endif %}
+</div>
 {% endblock %}

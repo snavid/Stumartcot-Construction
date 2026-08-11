@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Edit Job - Stumarcot Admin{% endblock %}
+{% block page_title %}Edit Job Posting{% endblock %}
+
+{% block content %}
+<div class="ad-pagehead">
+    <div>
+        <h2>Edit &ldquo;{{ job.title }}&rdquo;</h2>
+        <p>Posted {{ job.created_at.strftime('%d %B %Y') }}.</p>
+    </div>
+    <div style="display:flex; gap:10px;">
+        <a href="{{ url_for('views.career_detail', job_id=job.id) }}" target="_blank" rel="noopener" class="ad-btn ad-btn-ghost">
+            <i class="fas fa-eye"></i> View on site
+        </a>
+        <a href="{{ url_for('views.manage_jobs') }}" class="ad-btn ad-btn-ghost">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+    </div>
+</div>
+
+<div class="ad-card" style="max-width: 820px;">
+    <div class="ad-card-body">
+        <form method="POST">
+            <div class="ad-field">
+                <label for="title">Job title <span class="req">*</span></label>
+                <input type="text" id="title" name="title" value="{{ job.title }}" required>
+            </div>
+
+            <div class="ad-field">
+                <label for="description">Job description <span class="req">*</span></label>
+                <textarea id="description" name="description" rows="5" required>{{ job.description }}</textarea>
+            </div>
+
+            <div class="ad-field">
+                <label for="qualifications">Minimum qualifications <span class="req">*</span></label>
+                <textarea id="qualifications" name="qualifications" rows="7" required>{{ job.qualifications }}</textarea>
+                <div class="ad-hint">
+                    <i class="fas fa-circle-info"></i>
+                    Enter one qualification per line &mdash; each line becomes a bullet point on the careers page.
+                </div>
+            </div>
+
+            <div class="ad-form-grid">
+                <div class="ad-field">
+                    <label for="deadline">Application deadline <span class="req">*</span></label>
+                    <input type="date" id="deadline" name="deadline"
+                           value="{{ job.deadline.strftime('%Y-%m-%d') }}" required>
+                </div>
+
+                <div class="ad-field">
+                    <label for="application_email">Application email <span class="req">*</span></label>
+                    <input type="email" id="application_email" name="application_email"
+                           value="{{ job.application_email }}" required>
+                    <div class="ad-hint">Where candidates should send their CV.</div>
+                </div>
+            </div>
+
+            <div class="ad-field">
+                <div class="ad-check">
+                    <input type="checkbox" id="is_active" name="is_active" {% if job.is_active %}checked{% endif %}>
+                    <div>
+                        <label for="is_active">Published</label>
+                        <div class="ad-hint">Uncheck to hide this posting from the careers page.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-form-actions">
+                <a href="{{ url_for('views.manage_jobs') }}" class="ad-btn ad-btn-ghost">Cancel</a>
+                <button type="submit" class="ad-btn ad-btn-primary">
+                    <i class="fas fa-check"></i> Save Changes
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

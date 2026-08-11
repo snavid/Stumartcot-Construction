@@ -1,47 +1,66 @@
 {% extends "base.html" %}
-{% block title %}{{ product.name }} - Dynamic Store{% endblock %}
+{% block title %}{{ product.name }} - Stumarcot{% endblock %}
+{% block page_title %}{{ product.name }}{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-6">
-        {% if product.images %}
-            <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}" class="img-fluid rounded">
-        {% else %}
-            <div class="bg-light rounded d-flex align-items-center justify-content-center" style="height: 400px;">
-                <span class="text-muted">No Image Available</span>
-            </div>
+<div class="ad-pagehead">
+    <div>
+        <h2>{{ product.name }}</h2>
+        <p>Added by {{ product.user.username }} on {{ product.created_at.strftime('%d %B %Y') }}.</p>
+    </div>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="{{ url_for('views.category_products', category_id=product.category.id) }}" class="ad-btn ad-btn-ghost">
+            <i class="fas fa-arrow-left"></i> {{ product.category.name }}
+        </a>
+        {% if user.is_authenticated and (user.id == product.user_id or user.is_admin) %}
+            <a href="{{ url_for('views.edit_product', product_id=product.id) }}" class="ad-btn ad-btn-ghost">
+                <i class="fas fa-pen"></i> Edit
+            </a>
+            <a href="{{ url_for('views.delete_product', product_id=product.id) }}"
+               class="ad-btn ad-btn-danger"
+               onclick="return confirm('Delete &quot;{{ product.name }}&quot;? This cannot be undone.')">
+                <i class="fas fa-trash"></i> Delete
+            </a>
         {% endif %}
     </div>
-    <div class="col-md-6">
-        <h1>{{ product.name }}</h1>
-        <!-- <p class="lead text-success">${{ "%.2f"|format(product.price) }}</p>
-         -->
-        <div class="mb-3">
-            <span class="badge bg-secondary">{{ product.category.name }}</span>
-        </div>
-        
-        <div class="mb-4">
-            <h5>Description</h5>
-            <p>{{ product.description or "No description available." }}</p>
-        </div>
-        
-        <div class="mb-4">
-            <small class="text-muted">
-                Added by {{ product.user.username }} on {{ product.created_at.strftime('%B %d, %Y') }}
-            </small>
-        </div>
-        
-        <div class="btn-group">
-            <a href="{{ url_for('views.category_products', category_id=product.category.id) }}" class="btn btn-outline-secondary">
-                ← Back to {{ product.category.name }}
-            </a>
-            {% if user.is_authenticated and (user.id == product.user_id or user.is_admin) %}
-                <a href="{{ url_for('views.delete_product', product_id=product.id) }}" 
-                   class="btn btn-outline-danger" 
-                   onclick="return confirm('Are you sure you want to delete this product?')">
-                    Delete Product
-                </a>
+</div>
+
+<div class="row g-4">
+    <div class="col-lg-6">
+        <div class="ad-card" style="overflow:hidden;">
+            {% if product.images %}
+                <img src="{{ url_for('static', filename='uploads/' + product.images[0].image) }}"
+                     alt="{{ product.name }}" style="width:100%; display:block;">
+            {% else %}
+                <div style="height:340px; background:#eef1f5; color:#aab3c0; display:flex; align-items:center; justify-content:center; font-size:2rem;">
+                    <i class="fas fa-image"></i>
+                </div>
             {% endif %}
+        </div>
+
+        {% if product.images|length > 1 %}
+        <div class="row g-2" style="margin-top:12px;">
+            {% for image in product.images[1:] %}
+                <div class="col-3">
+                    <img src="{{ url_for('static', filename='uploads/' + image.image) }}"
+                         alt="{{ product.name }}"
+                         style="width:100%; height:76px; object-fit:cover; border-radius:10px; border:1px solid var(--ad-border);">
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="col-lg-6">
+        <div class="ad-card">
+            <div class="ad-card-body">
+                <span class="ad-badge blue">{{ product.category.name }}</span>
+
+                <h3 style="font-size:1rem; font-weight:700; margin:20px 0 9px;">Description</h3>
+                <p style="color:var(--ad-muted); line-height:1.7; margin:0;">
+                    {{ product.description or "No description available." }}
+                </p>
+            </div>
         </div>
     </div>
 </div>

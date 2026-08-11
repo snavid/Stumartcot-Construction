@@ -4094,3 +4094,300 @@ Ecommerce Styles */
       margin: 0 4px;
   }
 }
+/* ===== Careers ===== */
+.careers-section {
+  padding: 70px 0 90px;
+  background: var(--light-bg);
+}
+
+.job-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.13);
+}
+
+.job-card-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--gradient-1);
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+}
+
+.job-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.job-card p {
+  color: #6c757d;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.job-card .job-meta {
+  margin-top: auto;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.job-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(255, 215, 0, 0.16);
+  color: #8a6d00;
+}
+
+.job-chip.closed {
+  background: rgba(108, 117, 125, 0.15);
+  color: #6c757d;
+}
+
+.job-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.job-link:hover {
+  color: var(--dark-yellow);
+  gap: 14px;
+}
+
+.jobs-empty {
+  background: #fff;
+  border-radius: 18px;
+  padding: 60px 30px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.jobs-empty i {
+  font-size: 2.5rem;
+  color: var(--primary-yellow);
+  margin-bottom: 18px;
+}
+
+/* Job detail page */
+.job-panel {
+  background: #fff;
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 26px;
+}
+
+.job-panel h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.job-panel h2 i {
+  color: var(--dark-yellow);
+  font-size: 1.15rem;
+}
+
+.job-panel p {
+  color: #56616b;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.job-reqs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.job-reqs li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 13px;
+  color: #56616b;
+  line-height: 1.65;
+}
+
+.job-reqs li:last-child {
+  margin-bottom: 0;
+}
+
+.job-reqs li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--dark-yellow);
+  font-size: 0.85rem;
+}
+
+.apply-card {
+  background: var(--gradient-2);
+  color: var(--text-light);
+  border-radius: 18px;
+  padding: 32px;
+  position: sticky;
+  top: 100px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+
+.apply-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  color: var(--primary-yellow);
+}
+
+.apply-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.apply-row:first-of-type {
+  padding-top: 0;
+}
+
+.apply-row i {
+  color: var(--primary-yellow);
+  margin-top: 3px;
+}
+
+.apply-row .label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.65;
+  margin-bottom: 3px;
+}
+
+.apply-row .value {
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.apply-row a.value {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.apply-row a.value:hover {
+  color: var(--primary-yellow);
+}
+
+.apply-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 26px;
+  padding: 15px 24px;
+  border-radius: 50px;
+  background: var(--gradient-1);
+  color: var(--text-dark);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apply-btn:hover {
+  transform: translateY(-3px);
+  color: var(--text-dark);
+  box-shadow: 0 14px 30px rgba(255, 215, 0, 0.35);
+}
+
+.apply-note {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.apply-closed {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 991px) {
+  .apply-card {
+    position: static;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .job-panel,
+  .apply-card,
+  .job-card {
+    padding: 26px 22px;
+  }
+
+  .careers-section {
+    padding: 50px 0 70px;
+  }
+}
+
+/* Sticky footer: keeps the footer at the bottom of the viewport on short pages.
+   Opt-in via {% block body_class %}sticky-footer{% endblock %} in base2.html. */
+body.sticky-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* The main content section grows to fill leftover height so its background
+   reaches the footer, instead of leaving a bare white gap. */
+body.sticky-footer .careers-section {
+  flex: 1 0 auto;
+}
+
+body.sticky-footer .footer {
+  margin-top: auto;
+  flex-shrink: 0;
+}

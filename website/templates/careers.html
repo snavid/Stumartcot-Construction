@@ -1,0 +1,71 @@
+{% extends "base2.html"%}
+
+{%block title%} Careers | Stumarcot - Join Our Team in Tanzania {%endblock%}
+{%block description%}Explore current job openings at Stumarcot Company Limited. Join Tanzania's leading construction materials manufacturer and build your career with us.{%endblock%}
+{%block keywords%}Stumarcot careers, jobs Tanzania, construction jobs Dar es Salaam, Stumarcot vacancies, employment opportunities Tanzania{%endblock%}
+{%block body_class%}sticky-footer{%endblock%}
+
+{%block content%}
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Careers</h1>
+                <p>Build your career with Stumarcot</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active">Careers</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Job Listings -->
+<section class="careers-section">
+  <div class="container">
+    <div class="section-title" style="margin-bottom: 45px;">
+      <h2>Current <span class="highlight">Openings</span></h2>
+      <p class="lead">Join our growing team across Tanzania</p>
+    </div>
+
+    <div class="row g-4">
+      {% for job in jobs %}
+        <div class="col-lg-6">
+          <div class="job-card">
+            <div class="job-card-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>{{ job.title }}</h3>
+            <p>{{ job.description[:170] }}{% if job.description|length > 170 %}...{% endif %}</p>
+            <div class="job-meta">
+              <span class="job-chip">
+                <i class="fas fa-calendar-alt"></i>Apply by {{ job.deadline.strftime('%d %b %Y') }}
+              </span>
+              <span class="job-chip">
+                <i class="fas fa-map-marker-alt"></i>Tanzania
+              </span>
+            </div>
+            <a href="{{ url_for('views.career_detail', job_id=job.id) }}" class="job-link">
+              View Details &amp; Apply <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if not jobs %}
+      <div class="jobs-empty">
+        <i class="fas fa-briefcase d-block"></i>
+        <h5 class="text-muted">No open positions right now</h5>
+        <p class="text-muted mb-0">Please check back soon — new opportunities are posted regularly.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{%endblock%}

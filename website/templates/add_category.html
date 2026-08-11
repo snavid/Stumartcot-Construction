@@ -1,35 +1,45 @@
 {% extends "base.html" %}
-{% block title %}Add Category - Dynamic Store{% endblock %}
+{% block title %}Add Category - Stumarcot Admin{% endblock %}
+{% block page_title %}Add Category{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <div class="card">
-            <div class="card-header">
-                <h3>Add New Category</h3>
+<div class="ad-pagehead">
+    <div>
+        <h2>Add Category</h2>
+        <p>Categories group your products together.</p>
+    </div>
+    <a href="{{ url_for('views.manage_categories') }}" class="ad-btn ad-btn-ghost">
+        <i class="fas fa-arrow-left"></i> Back to categories
+    </a>
+</div>
+
+<div class="ad-card" style="max-width: 720px;">
+    <div class="ad-card-body">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="ad-field">
+                <label for="name">Category name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" placeholder="e.g. Floor Tiles" required>
             </div>
-            <div class="card-body">
-                <form method="POST" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Category Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="image" class="form-label">Category Image</label>
-                        <input type="file" class="form-control" id="image" name="image" accept="image/*">
-                        <div class="form-text">Supported formats: PNG, JPG, JPEG, GIF</div>
-                    </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a href="{{ url_for('views.manage_categories') }}" class="btn btn-secondary">Cancel</a>
-                        <button type="submit" class="btn btn-primary">Add Category</button>
-                    </div>
-                </form>
+
+            <div class="ad-field">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4"
+                          placeholder="Briefly describe this category..."></textarea>
             </div>
-        </div>
+
+            <div class="ad-field">
+                <label for="image">Category image</label>
+                <input type="file" id="image" name="image" accept="image/*">
+                <div class="ad-hint">PNG, JPG, JPEG, GIF or AVIF.</div>
+            </div>
+
+            <div class="ad-form-actions">
+                <a href="{{ url_for('views.manage_categories') }}" class="ad-btn ad-btn-ghost">Cancel</a>
+                <button type="submit" class="ad-btn ad-btn-primary">
+                    <i class="fas fa-check"></i> Add Category
+                </button>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}

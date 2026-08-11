@@ -1,49 +1,82 @@
 {% extends "base.html" %}
-{% block title %}Manage Categories - Dynamic Store{% endblock %}
+{% block title %}Categories - Stumarcot Admin{% endblock %}
+{% block page_title %}Categories{% endblock %}
 
 {% block content %}
-<div class="d-flex justify-content-between align-items-center mb-4">
-    <h1>Manage Categories</h1>
-    <a href="{{ url_for('views.add_category') }}" class="btn btn-primary">Add New Category</a>
-</div>
-
-<div class="row">
-    {% for category in categories %}
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                {% if category.image %}
-                    <img src="{{ url_for('static', filename='uploads/' + category.image) }}" class="card-img-top" style="height: 200px; object-fit: cover;">
-                {% else %}
-                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <span class="text-muted">No Image</span>
-                    </div>
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ category.name }}</h5>
-                    <p class="card-text">{{ category.description[:100] }}{% if category.description|length > 100 %}...{% endif %}</p>
-                    <p class="card-text">
-                        <small class="text-muted">{{ category.products|length }} products</small>
-                    </p>
-                    <div class="btn-group w-100">
-                        <a href="{{ url_for('views.category_products', category_id=category.id) }}" class="btn btn-outline-primary btn-sm">View</a>
-                        <a href="{{ url_for('views.edit_category', category_id=category.id) }}" class="btn btn-outline-secondary btn-sm">Edit</a>
-                        <a href="{{ url_for('views.delete_category', category_id=category.id) }}" 
-                           class="btn btn-outline-danger btn-sm" 
-                           onclick="return confirm('Are you sure? This will delete the category and all its products.')">
-                            Delete
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-</div>
-
-{% if not categories %}
-    <div class="text-center py-5">
-        <h5 class="text-muted">No categories yet</h5>
-        <p class="text-muted">Start by adding your first category!</p>
-        <a href="{{ url_for('views.add_category') }}" class="btn btn-primary">Add Category</a>
+<div class="ad-pagehead">
+    <div>
+        <h2>Categories</h2>
+        <p>{{ categories|length }} categor{{ 'y' if categories|length == 1 else 'ies' }} organising your products.</p>
     </div>
-{% endif %}
+    <a href="{{ url_for('views.add_category') }}" class="ad-btn ad-btn-primary">
+        <i class="fas fa-plus"></i> Add Category
+    </a>
+</div>
+
+<div class="ad-card">
+    {% if categories %}
+    <div class="ad-table-wrap">
+        <table class="ad-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Products</th>
+                    <th>Created</th>
+                    <th style="text-align:right;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for category in categories %}
+                    <tr>
+                        <td>
+                            <div class="ad-media">
+                                {% if category.image %}
+                                    <img src="{{ url_for('static', filename='uploads/' + category.image) }}"
+                                         class="ad-thumb" alt="{{ category.name }}">
+                                {% else %}
+                                    <div class="ad-thumb-empty"><i class="fas fa-layer-group"></i></div>
+                                {% endif %}
+                                <div style="min-width:0;">
+                                    <div class="ad-cell-title">{{ category.name }}</div>
+                                    {% if category.description %}
+                                        <div class="ad-cell-sub">{{ category.description[:70] }}{% if category.description|length > 70 %}...{% endif %}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="ad-badge blue">{{ category.products|length }}</span></td>
+                        <td><span class="ad-cell-sub">{{ category.created_at.strftime('%d %b %Y') }}</span></td>
+                        <td>
+                            <div class="ad-actions">
+                                <a href="{{ url_for('views.category_products', category_id=category.id) }}"
+                                   class="ad-btn ad-btn-ghost ad-btn-sm" title="View products">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="{{ url_for('views.edit_category', category_id=category.id) }}"
+                                   class="ad-btn ad-btn-ghost ad-btn-sm">
+                                    <i class="fas fa-pen"></i> Edit
+                                </a>
+                                <a href="{{ url_for('views.delete_category', category_id=category.id) }}"
+                                   class="ad-btn ad-btn-danger ad-btn-sm"
+                                   onclick="return confirm('Delete &quot;{{ category.name }}&quot; and all {{ category.products|length }} product(s) inside it? This cannot be undone.')">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <div class="ad-empty">
+            <div class="ad-empty-icon"><i class="fas fa-layer-group"></i></div>
+            <h4>No categories yet</h4>
+            <p>Create a category before adding products.</p>
+            <a href="{{ url_for('views.add_category') }}" class="ad-btn ad-btn-primary">
+                <i class="fas fa-plus"></i> Add Category
+            </a>
+        </div>
+    {% endif %}
+</div>
 {% endblock %}

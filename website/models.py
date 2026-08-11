@@ -42,3 +42,13 @@ class ProductImage(db.Model):
     image = db.Column(db.String(200), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+class JobPosting(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(200), nullable=False)
+    description = db.Column(db.Text, nullable=False)
+    qualifications = db.Column(db.Text, nullable=False)
+    deadline = db.Column(db.Date, nullable=False)
+    application_email = db.Column(db.String(150), nullable=False, default='hr@stumarcot.co.tz')
+    is_active = db.Column(db.Boolean, default=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)

@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
+from datetime import date
 import os
 
 db = SQLAlchemy()
@@ -10,7 +11,7 @@ DB_NAME = "database.db"
 
 def create_app():
     app = Flask(__name__, static_folder='static')
-    app.config["SERVER_NAME"] = "stumarcot.co.tz"
+    #app.config["SERVER_NAME"] = "stumarcot.co.tz"
     app.config["PREFERRED_URL_SCHEME"] = "https"
     app.config['SECRET_KEY'] = 'your-secret-key-here'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
@@ -40,7 +41,7 @@ def create_app():
     app.register_blueprint(auth, url_prefix='/')
     app.register_blueprint(error_bp, url_prefix='/')
     
-    from .models import User, Category, Product
+    from .models import User, Category, Product, JobPosting
     
     # Add custom Jinja2 filters
     import json
@@ -79,5 +80,23 @@ def create_app():
             )
             db.session.add(admin_user)
             db.session.commit()
-    
+
+        # Seed the first job posting if none exist
+        if not JobPosting.query.first():
+            first_job = JobPosting(
+                title='Accountant',
+                description='Stumarcot is looking for a detail-oriented Accountant to join our finance team, responsible for maintaining financial records, processing transactions, preparing reports, and supporting month-end close.',
+                qualifications="Bachelor's degree in Accounting, Finance, or a related field\n"
+                               "Minimum of 2 years of relevant accounting experience\n"
+                               "Strong knowledge of accounting principles and financial reporting\n"
+                               "Proficiency in accounting software and MS Excel\n"
+                               "High attention to detail, accuracy and integrity\n"
+                               "Good communication and reporting skills",
+                deadline=date(2026, 8, 25),
+                application_email='hr@stumarcot.co.tz',
+                is_active=True,
+            )
+            db.session.add(first_job)
+            db.session.commit()
+
     return app

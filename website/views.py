@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for, current_app, Response, session
 from flask_login import login_required, current_user
-from .models import User, Category, Product, ProductImage
+from .models import User, Category, Product, ProductImage, JobPosting
 from . import db
 from .indexnow_service import indexnow_service
 import os
@@ -606,13 +606,15 @@ def dashboard():
         total_users = User.query.count()
         total_categories = Category.query.count()
         total_products = Product.query.count()
+        total_jobs = JobPosting.query.count()
         recent_products = Product.query.order_by(Product.created_at.desc()).limit(5).all()
-        
-        return render_template("admin_dashboard.html", 
+
+        return render_template("admin_dashboard.html",
                              user=current_user,
                              total_users=total_users,
                              total_categories=total_categories,
                              total_products=total_products,
+                             total_jobs=total_jobs,
                              recent_products=recent_products)
     else:
         user_products = Product.query.filter_by(user_id=current_user.id).all()
@@ -621,6 +623,21 @@ def dashboard():
 @views.route('/about')
 def about_page():
     return render_template("about.html")
+
+@views.route('/careers')
+def careers():
+    today = datetime.utcnow().date()
+    # Only list postings that are active and still accepting applications
+    jobs = JobPosting.query.filter(
+        JobPosting.is_active == True,
+        JobPosting.deadline >= today
+    ).order_by(JobPosting.deadline.asc()).all()
+    return render_template("careers.html", jobs=jobs, today=today)
+
+@views.route('/careers/<int:job_id>')
+def career_detail(job_id):
+    job = JobPosting.query.get_or_404(job_id)
+    return render_template("career_detail.html", job=job, today=datetime.utcnow().date())
 
 @views.route('/categories')
 def categories():
@@ -647,6 +664,16 @@ def manage_categories():
     
     categories = Category.query.all()
     return render_template("manage_categories.html", user=current_user, categories=categories)
+
+@views.route('/manage-jobs')
+@login_required
+def manage_jobs():
+    if not current_user.is_admin:
+        flash('Access denied. Admin privileges required.', category='error')
+        return redirect(url_for('views.dashboard'))
+
+    jobs = JobPosting.query.order_by(JobPosting.created_at.desc()).all()
+    return render_template("manage_jobs.html", user=current_user, jobs=jobs, today=datetime.utcnow().date())
 
 @views.route('/manage-products')
 @login_required
@@ -692,6 +719,45 @@ def add_category():
             return redirect(url_for('views.manage_categories'))
     
     return render_template("add_category.html", user=current_user)
+
+@views.route('/add-job', methods=['GET', 'POST'])
+@login_required
+def add_job():
+    if not current_user.is_admin:
+        flash('Access denied. Admin privileges required.', category='error')
+        return redirect(url_for('views.dashboard'))
+
+    if request.method == 'POST':
+        title = request.form.get('title')
+        description = request.form.get('description')
+        qualifications = request.form.get('qualifications')
+        deadline = request.form.get('deadline')
+        application_email = request.form.get('application_email') or 'hr@stumarcot.co.tz'
+        is_active = request.form.get('is_active') == 'on'
+
+        if not title or len(title) < 1:
+            flash('Job title is required.', category='error')
+        elif not description or len(description) < 1:
+            flash('Job description is required.', category='error')
+        elif not qualifications or len(qualifications) < 1:
+            flash('Minimum qualifications are required.', category='error')
+        elif not deadline:
+            flash('Application deadline is required.', category='error')
+        else:
+            new_job = JobPosting(
+                title=title,
+                description=description,
+                qualifications=qualifications,
+                deadline=datetime.strptime(deadline, '%Y-%m-%d').date(),
+                application_email=application_email,
+                is_active=is_active
+            )
+            db.session.add(new_job)
+            db.session.commit()
+            flash('Job posting added successfully!', category='success')
+            return redirect(url_for('views.manage_jobs'))
+
+    return render_template("add_job.html", user=current_user)
 
 @views.route('/manage-users')
 @login_required
@@ -840,6 +906,44 @@ def edit_category(category_id):
     
     return render_template("edit_category.html", user=current_user, category=category)
 
+@views.route('/edit-job/<int:job_id>', methods=['GET', 'POST'])
+@login_required
+def edit_job(job_id):
+    if not current_user.is_admin:
+        flash('Access denied. Admin privileges required.', category='error')
+        return redirect(url_for('views.dashboard'))
+
+    job = JobPosting.query.get_or_404(job_id)
+
+    if request.method == 'POST':
+        title = request.form.get('title')
+        description = request.form.get('description')
+        qualifications = request.form.get('qualifications')
+        deadline = request.form.get('deadline')
+        application_email = request.form.get('application_email') or 'hr@stumarcot.co.tz'
+        is_active = request.form.get('is_active') == 'on'
+
+        if not title or len(title) < 1:
+            flash('Job title is required.', category='error')
+        elif not description or len(description) < 1:
+            flash('Job description is required.', category='error')
+        elif not qualifications or len(qualifications) < 1:
+            flash('Minimum qualifications are required.', category='error')
+        elif not deadline:
+            flash('Application deadline is required.', category='error')
+        else:
+            job.title = title
+            job.description = description
+            job.qualifications = qualifications
+            job.deadline = datetime.strptime(deadline, '%Y-%m-%d').date()
+            job.application_email = application_email
+            job.is_active = is_active
+            db.session.commit()
+            flash('Job posting updated successfully!', category='success')
+            return redirect(url_for('views.manage_jobs'))
+
+    return render_template("edit_job.html", user=current_user, job=job)
+
 @views.route('/edit-product/<int:product_id>', methods=['GET', 'POST'])
 @login_required
 def edit_product(product_id):
@@ -963,8 +1067,23 @@ def delete_category(category_id):
     indexnow_service.notify_category_change(category_id_for_notification, "delete")
     
     flash('Category and all its products deleted successfully!', category='success')
-    
+
     return redirect(url_for('views.manage_categories'))
+
+@views.route('/delete-job/<int:job_id>')
+@login_required
+def delete_job(job_id):
+    if not current_user.is_admin:
+        flash('Access denied. Admin privileges required.', category='error')
+        return redirect(url_for('views.dashboard'))
+
+    job = JobPosting.query.get_or_404(job_id)
+    db.session.delete(job)
+    db.session.commit()
+
+    flash('Job posting deleted successfully!', category='success')
+
+    return redirect(url_for('views.manage_jobs'))
 
 @views.route('/delete-product/<int:product_id>')
 @login_required
@@ -1010,6 +1129,7 @@ Allow: /retail-shops
 Allow: /construction-consultants
 Allow: /technical-support
 Allow: /blog
+Allow: /careers
 Allow: /link-tree
 
 # Disallow admin and private areas
@@ -1018,13 +1138,17 @@ Disallow: /dashboard
 Disallow: /manage-categories
 Disallow: /manage-products
 Disallow: /manage-users
+Disallow: /manage-jobs
 Disallow: /add-category
 Disallow: /add-product
+Disallow: /add-job
 Disallow: /edit-category/
 Disallow: /edit-product/
+Disallow: /edit-job/
 Disallow: /delete-user/
 Disallow: /delete-category/
 Disallow: /delete-product/
+Disallow: /delete-job/
 Disallow: /login
 Disallow: /sign-up
 
@@ -1042,6 +1166,7 @@ Allow: /retail-shops
 Allow: /construction-consultants
 Allow: /technical-support
 Allow: /blog
+Allow: /careers
 Allow: /link-tree
 Crawl-delay: 1
 
@@ -1059,6 +1184,7 @@ Allow: /retail-shops
 Allow: /construction-consultants
 Allow: /technical-support
 Allow: /blog
+Allow: /careers
 Allow: /link-tree
 
 # Sitemap location

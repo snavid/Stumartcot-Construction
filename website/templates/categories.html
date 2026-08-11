@@ -1,39 +1,57 @@
 {% extends "base.html" %}
-{% block title %}Categories - Dynamic Store{% endblock %}
+{% block title %}Categories - Stumarcot{% endblock %}
+{% block page_title %}Categories{% endblock %}
 
 {% block content %}
-<h1 class="mb-4">All Categories</h1>
+<div class="ad-pagehead">
+    <div>
+        <h2>All Categories</h2>
+        <p>Browse products by category.</p>
+    </div>
+    {% if user.is_authenticated and user.is_admin %}
+        <a href="{{ url_for('views.manage_categories') }}" class="ad-btn ad-btn-ghost">
+            <i class="fas fa-sliders"></i> Manage categories
+        </a>
+    {% endif %}
+</div>
 
-<div class="row">
+{% if categories %}
+<div class="row g-4">
     {% for category in categories %}
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
+        <div class="col-sm-6 col-lg-4">
+            <div class="ad-card h-100" style="overflow:hidden;">
                 {% if category.image %}
-                    <img src="{{ url_for('static', filename='uploads/' + category.image) }}" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <img src="{{ url_for('static', filename='uploads/' + category.image) }}"
+                         alt="{{ category.name }}" style="width:100%; height:190px; object-fit:cover; display:block;">
                 {% else %}
-                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 250px;">
-                        <span class="text-muted">No Image</span>
+                    <div style="height:190px; background:#eef1f5; color:#aab3c0; display:flex; align-items:center; justify-content:center; font-size:1.6rem;">
+                        <i class="fas fa-layer-group"></i>
                     </div>
                 {% endif %}
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">{{ category.name }}</h5>
-                    <p class="card-text flex-grow-1">{{ category.description }}</p>
-                    <p class="card-text">
-                        <small class="text-muted">{{ category.products|length }} products available</small>
-                    </p>
-                    <a href="{{ url_for('views.category_products', category_id=category.id) }}" class="btn btn-primary mt-auto">
-                        View Products
-                    </a>
+                <div class="ad-card-body">
+                    <h3 style="font-size:1.05rem; font-weight:700; margin-bottom:7px;">{{ category.name }}</h3>
+                    <p class="ad-cell-sub" style="margin-bottom:14px;">{{ category.description or 'No description.' }}</p>
+                    <span class="ad-badge blue" style="margin-bottom:16px;">
+                        {{ category.products|length }} product{{ '' if category.products|length == 1 else 's' }}
+                    </span>
+                    <div>
+                        <a href="{{ url_for('views.category_products', category_id=category.id) }}"
+                           class="ad-btn ad-btn-primary ad-btn-sm" style="margin-top:6px;">
+                            View products <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     {% endfor %}
 </div>
-
-{% if not categories %}
-    <div class="text-center py-5">
-        <h5 class="text-muted">No categories available</h5>
-        <p class="text-muted">Check back later for new categories!</p>
+{% else %}
+<div class="ad-card">
+    <div class="ad-empty">
+        <div class="ad-empty-icon"><i class="fas fa-layer-group"></i></div>
+        <h4>No categories available</h4>
+        <p>Check back later for new categories.</p>
     </div>
+</div>
 {% endif %}
 {% endblock %}

@@ -1,54 +1,55 @@
 {% extends "base.html" %}
-{% block title %}Add Product - Dynamic Store{% endblock %}
+{% block title %}Add Product - Stumarcot Admin{% endblock %}
+{% block page_title %}Add Product{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <div class="card">
-            <div class="card-header">
-                <h3>Add New Product</h3>
-            </div>
-            <div class="card-body">
-                <form method="POST" enctype="multipart/form-data">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Product Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
-                    </div>
-                    <div class="row">
-                        <!-- <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="price" class="form-label">Price ($)</label>
-                                <input type="number" step="0.01" class="form-control" id="price" name="price" required>
-                            </div>
-                        </div> -->
-                        <div class="col-md-12">
-                            <div class="mb-3">
-                                <label for="category_id" class="form-label">Category</label>
-                                <select class="form-control" id="category_id" name="category_id" required>
-                                    <option value="">Select Category</option>
-                                    {% for category in categories %}
-                                        <option value="{{ category.id }}">{{ category.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="images" class="form-label">Product Images</label>
-                        <input type="file" class="form-control" id="images" name="images" accept="image/*" multiple>
-                        <div class="form-text">Supported formats: PNG, JPG, JPEG, GIF. You can select multiple images.</div>
-                    </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a href="{{ url_for('views.dashboard') }}" class="btn btn-secondary">Cancel</a>
-                        <button type="submit" class="btn btn-primary">Add Product</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="ad-pagehead">
+    <div>
+        <h2>Add Product</h2>
+        <p>Add a new item to the product catalog.</p>
     </div>
-</div> 
+    <a href="{{ url_for('views.manage_products') }}" class="ad-btn ad-btn-ghost">
+        <i class="fas fa-arrow-left"></i> Back to products
+    </a>
+</div>
+
+<div class="ad-card" style="max-width: 820px;">
+    <div class="ad-card-body">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="ad-field">
+                <label for="name">Product name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" placeholder="e.g. Interlocking Paving Block" required>
+            </div>
+
+            <div class="ad-field">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4"
+                          placeholder="Describe the product, its sizes and finishes..."></textarea>
+            </div>
+
+            <div class="ad-field">
+                <label for="category_id">Category <span class="req">*</span></label>
+                <select id="category_id" name="category_id" required>
+                    <option value="">Select a category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="ad-field">
+                <label for="images">Product images</label>
+                <input type="file" id="images" name="images" accept="image/*" multiple>
+                <div class="ad-hint">PNG, JPG, JPEG, GIF or AVIF. You can select multiple images at once.</div>
+            </div>
+
+            <div class="ad-form-actions">
+                <a href="{{ url_for('views.manage_products') }}" class="ad-btn ad-btn-ghost">Cancel</a>
+                <button type="submit" class="ad-btn ad-btn-primary">
+                    <i class="fas fa-check"></i> Add Product
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}

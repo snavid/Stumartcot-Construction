@@ -1,0 +1,40 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+
+# ---- Flask instance folder ----
+# Holds the SQLite database and any local secrets. This is runtime data:
+# the server keeps its own copy and it must never be overwritten by a pull.
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# ---- User-uploaded media ----
+# Product and category images uploaded through the admin panel are runtime
+# data, not source. The folder is recreated automatically on startup by
+# create_app() (os.makedirs on UPLOAD_FOLDER).
+website/static/uploads/
+
+# ---- Environment / secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- Editors & OS ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs ----
+*.log
